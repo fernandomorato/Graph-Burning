@@ -1,0 +1,5 @@
+../parsed-datasets/chameleon_edges.txt:
+Tamanho 6
+[1939, 881, 572, 115, 1744, 318]
+Time elapsed: 23.75985s.
+

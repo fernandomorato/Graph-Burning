@@ -1,0 +1,5 @@
+../parsed-datasets/netscience.txt:
+Tamanho 7
+[4, 50, 302, 82, 299, 375, 36]
+Time elapsed: 0.97886s.
+

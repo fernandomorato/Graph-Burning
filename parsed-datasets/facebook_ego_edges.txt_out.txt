@@ -1,0 +1,5 @@
+../parsed-datasets/facebook_ego_edges.txt:
+Tamanho 5
+[107, 3437, 2539, 824, 724]
+Time elapsed: 45.12672s.
+

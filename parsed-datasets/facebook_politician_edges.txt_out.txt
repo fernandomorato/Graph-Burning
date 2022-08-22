@@ -1,0 +1,5 @@
+../parsed-datasets/facebook_politician_edges.txt:
+Tamanho 7
+[5800, 3008, 2060, 4593, 2295, 2208, 2756]
+Time elapsed: 43.52941s.
+

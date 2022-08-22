@@ -1,0 +1,5 @@
+../parsed-datasets/reed98.txt:
+Tamanho 4
+[829, 102, 427, 42]
+Time elapsed: 9.98792s.
+

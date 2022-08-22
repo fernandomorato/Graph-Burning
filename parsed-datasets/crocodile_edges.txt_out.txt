@@ -1,0 +1,5 @@
+../parsed-datasets/crocodile_edges.txt:
+Tamanho 6
+[11256, 10252, 5604, 11601, 11498, 425]
+Time elapsed: 157.84792s.
+

@@ -1,0 +1,5 @@
+../parsed-datasets/squirrel_edges.txt:
+Tamanho 6
+[5112, 1394, 5138, 1803, 2509, 2620]
+Time elapsed: 148.13670s.
+
