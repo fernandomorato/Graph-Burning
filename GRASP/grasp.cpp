@@ -104,7 +104,7 @@ pair<vector<int>, bool> greedy() {
 	return make_pair(sol, true);
 }
 
-void GRASP() {
+vector<int> GRASP() {
 	int best_f = (int) 1e9;
 	vector<int> best_sol;
 	for (int i = 0; i < 1000; i++) {
@@ -121,13 +121,13 @@ void GRASP() {
 			best_sol = sol;
 		}
 	}
-	cout << "Tamanho " << best_f << '\n';
-	cout << '[';
-	for (int i = 0; i < (int) best_sol.size(); i++) {
-		if (i) cout << ", ";
-		cout << best_sol[i];
-	}
-	cout << "]\n";
+	return best_sol;
+	// printf("Tamanho %d\n[", best_f);
+	// for (int i = 0; i < (int) best_sol.size(); i++) {
+	// 	if (i) printf(", ");
+	// 	printf("%d", best_sol[i]);
+	// }
+	// printf("]\n");
 }
 
 void readInput() {
@@ -152,10 +152,12 @@ void readInput() {
 	assert(*st.begin() >= 0 && *st.rbegin() <= n - 1);
 }
 
-int main() {
-	ios::sync_with_stdio(false);
-	cin.tie();
+int main(int argc, char **argv) {
+	// ios::sync_with_stdio(false);
+	// cin.tie();
 	readInput();
-	GRASP();
+	clock_t z = clock();
+	auto v = GRASP();
+	printf("%s,%d,%.5lf", argv[1], (int) v.size(), 1.0 * (clock() - z) / CLOCKS_PER_SEC);
 	return 0;
 }
