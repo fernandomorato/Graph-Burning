@@ -1,3 +1,9 @@
+for filename in ../parsed-datasets/*edges.txt ; do
+	a=$(basename $filename .txt)
+	b=$(head -n 1 "$filename")
+	echo $a $b
+done
+return
 make grasp
 for filename in ../parsed-datasets/*edges.txt ; do
 	k=$(basename $filename .txt)
