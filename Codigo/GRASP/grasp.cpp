@@ -8,6 +8,7 @@ vector<pair<int, vector<int>>> solutions; // {valor, lista}
 
 const int MAXN = 2e5 + 5;
 const double ALFA = 0.5;
+clock_t timer;
 
 struct Node {
 	vector<Node*> vizinhos;
@@ -104,8 +105,10 @@ pair<vector<int>, bool> greedy() {
 	return make_pair(sol, true);
 }
 
-vector<int> GRASP() {
+tuple<int, double, int> GRASP() {
 	int best_f = (int) 1e9;
+	int iteracao = -1;
+	double tempo = 0;
 	vector<int> best_sol;
 	for (int i = 0; i < 1000; i++) {
 		auto ret = greedy();
@@ -117,17 +120,14 @@ vector<int> GRASP() {
 		// sol = busca_local(sol);
 		int f_sol = f(sol);
 		if (f_sol < best_f) {
+			tempo = 1.0 * (clock() - timer) / CLOCKS_PER_SEC;
+			iteracao = i + 1;
 			best_f = f_sol;
 			best_sol = sol;
 		}
 	}
-	return best_sol;
-	// printf("Tamanho %d\n[", best_f);
-	// for (int i = 0; i < (int) best_sol.size(); i++) {
-	// 	if (i) printf(", ");
-	// 	printf("%d", best_sol[i]);
-	// }
-	// printf("]\n");
+	return make_tuple(iteracao, tempo, (int) best_sol.size());
+	// Talvez retornar a sequência obtida
 }
 
 void readInput() {
@@ -152,12 +152,39 @@ void readInput() {
 	assert(*st.begin() >= 0 && *st.rbegin() <= n - 1);
 }
 
+// string converte(char linha[]) {
+// 	printf("%d\n", (int) strlen(linha));
+// 	int tamanho = strlen(linha);
+// 	string s = "";
+// 	for (int i = 0; i < tamanho; i++) {
+// 		s += linha[i];
+// 	}
+// 	return s;
+// }
+
 int main(int argc, char **argv) {
 	// ios::sync_with_stdio(false);
 	// cin.tie();
 	readInput();
-	clock_t z = clock();
+	timer = clock();
 	auto v = GRASP();
-	printf("%s,%d,%.5lf", argv[1], (int) v.size(), 1.0 * (clock() - z) / CLOCKS_PER_SEC);
+	// string nomeInstancia(argv[1]);
+	auto split = [&](string s) {
+		string a = "";
+		int i = 0;
+		for (; i < (int) s.size() && s[i] != ' '; i++) {
+			a += s[i];
+		}
+		string b = "";
+		i++;
+		for (; i < (int) s.size(); i++) {
+			b += s[i];
+		}
+		return pair<string, string>(a, b);
+	};
+	int iteracao = get<0>(v);
+	double tempoParaSolucao = get<1>(v);
+	int bn = get<2>(v);
+	printf("%s,%s,%s,%d,%d,%.5lf,%.5lf", argv[1], argv[2], argv[3], bn, iteracao, tempoParaSolucao, 1.0 * (clock() - timer) / CLOCKS_PER_SEC);
 	return 0;
 }

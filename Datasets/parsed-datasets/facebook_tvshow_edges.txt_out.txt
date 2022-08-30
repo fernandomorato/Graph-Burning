@@ -1,5 +1,0 @@
-../parsed-datasets/facebook_tvshow_edges.txt:
-Tamanho 11
-[1840, 342, 2751, 780, 1726, 1004, 2993, 2194, 1477, 2943, 437]
-Time elapsed: 21.51312s.
-

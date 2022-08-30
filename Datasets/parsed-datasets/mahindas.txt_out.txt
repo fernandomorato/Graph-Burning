@@ -1,5 +1,0 @@
-../parsed-datasets/mahindas.txt:
-Tamanho 6
-[881, 1023, 1010, 1090, 555, 607]
-Time elapsed: 6.11243s.
-

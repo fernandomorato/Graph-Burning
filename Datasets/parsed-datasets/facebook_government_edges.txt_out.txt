@@ -1,5 +1,0 @@
-../parsed-datasets/facebook_government_edges.txt:
-Tamanho 7
-[886, 6231, 4862, 3596, 1665, 3152, 1107]
-Time elapsed: 79.94739s.
-

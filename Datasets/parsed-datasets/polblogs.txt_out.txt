@@ -1,5 +1,0 @@
-../parsed-datasets/polblogs.txt:
-Tamanho 6
-[317, 21, 164, 28, 214, 95]
-Time elapsed: 2.11363s.
-
