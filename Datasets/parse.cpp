@@ -71,16 +71,16 @@ void csv() {
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie();
-	csv();
-	return 0;
+	// csv();
+	// return 0;
 	int a, b, m;
-	cin >> m >> a >> b;
+	cin >> a >> b >> m;
 	vector<int> nodes;
 	set<pair<int, int>> edges;
 	for (int i = 0; i < m; i++) {
 		double p;
 		cin >> a >> b;
-		a--, b--;
+		// a--, b--;
 		if (a == b) continue;
 		nodes.push_back(a);
 		nodes.push_back(b);
