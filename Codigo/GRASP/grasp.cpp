@@ -62,8 +62,8 @@ int escolhe(set<int> &st) {
 
 void printa(set<int> &st) {
 	for (auto x : st)
-		cout << x << ' ';
-	cout << '\n';
+		printf("%d ", x);
+	putchar('\n');
 }
 
 pair<vector<int>, bool> greedy() {
@@ -105,7 +105,7 @@ pair<vector<int>, bool> greedy() {
 	return make_pair(sol, true);
 }
 
-tuple<int, double, int> GRASP() {
+tuple<int, double, vector<int>> GRASP() {
 	int best_f = (int) 1e9;
 	int iteracao = -1;
 	double tempo = 0;
@@ -126,7 +126,7 @@ tuple<int, double, int> GRASP() {
 			best_sol = sol;
 		}
 	}
-	return make_tuple(iteracao, tempo, (int) best_sol.size());
+	return make_tuple(iteracao, tempo, best_sol);
 	// Talvez retornar a sequência obtida
 }
 

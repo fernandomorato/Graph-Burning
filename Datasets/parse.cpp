@@ -73,6 +73,8 @@ int main() {
 	cin.tie();
 	// csv();
 	// return 0;
+	string lixo;
+	getline(cin, lixo);
 	int a, b, m;
 	cin >> a >> b >> m;
 	vector<int> nodes;
