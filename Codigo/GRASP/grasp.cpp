@@ -62,7 +62,7 @@ int escolhe(set<int> &st) {
 
 void printa(set<int> &st) {
 	for (auto x : st)
-		printf("%d ", x);
+		printf("%d ", x + 1);
 	putchar('\n');
 }
 
@@ -136,6 +136,7 @@ void readInput() {
 	for (int i = 0; i < m; i++) {
 		int a, b;
 		cin >> a >> b;
+		a--, b--;
 		if (!st.count(a)) {
 			vertice[a] = new Node(a);
 			st.insert(a);
@@ -184,7 +185,7 @@ int main(int argc, char **argv) {
 	};
 	int iteracao = get<0>(v);
 	double tempoParaSolucao = get<1>(v);
-	int bn = get<2>(v);
+	int bn = (int) get<2>(v).size();
 	printf("%s,%s,%s,%d,%d,%.5lf,%.5lf", argv[1], argv[2], argv[3], bn, iteracao, tempoParaSolucao, 1.0 * (clock() - timer) / CLOCKS_PER_SEC);
 	return 0;
 }
