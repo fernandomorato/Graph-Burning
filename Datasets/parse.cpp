@@ -4,6 +4,8 @@ using namespace std;
 
 mt19937 rng((int) chrono::steady_clock::now().time_since_epoch().count());
 
+
+
 int to_int(string s) {
 	int x = 0;
 	for (int i = 0; i < (int) s.size(); i++) {
