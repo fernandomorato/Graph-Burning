@@ -1,7 +1,7 @@
 Para cada execucao do grasp, passamos os seguintes argumentos.
-- Arquivo de entrada
-- Semente passada para o gerador pseudo-aleatorio
-- Valor de ALPHA utilizado
-- Numero maximo de iteracoes permitidas
-- Valor tabelado indicando a condicao de parada alternativa
-- Valor tabelado indicando qual funcao gulosa sera utilizada
+1. Arquivo de entrada
+2. Semente passada para o gerador pseudo-aleatorio
+3. Valor de ALPHA utilizado
+4. Numero maximo de iteracoes permitidas
+5. Valor tabelado indicando a condicao de parada alternativa
+6. Valor tabelado indicando qual funcao gulosa sera utilizada
