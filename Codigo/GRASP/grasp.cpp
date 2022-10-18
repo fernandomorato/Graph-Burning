@@ -10,6 +10,10 @@ const int MAXN = 2e5 + 5;
 const double ALFA = 0.5;
 clock_t timer;
 
+// OUTPUT
+int densidade, numero_de_vertices, numero_de_arestas, grau_maximo, grau_medio, numero_de_iteracoes, iteracoes_solucao;
+double tempo_total, tempo_solucao;
+
 struct Node {
 	vector<Node*> vizinhos;
 	int id;
@@ -153,39 +157,30 @@ void readInput() {
 	assert(*st.begin() >= 0 && *st.rbegin() <= n - 1);
 }
 
-// string converte(char linha[]) {
-// 	printf("%d\n", (int) strlen(linha));
-// 	int tamanho = strlen(linha);
-// 	string s = "";
-// 	for (int i = 0; i < tamanho; i++) {
-// 		s += linha[i];
-// 	}
-// 	return s;
-// }
-
 int main(int argc, char **argv) {
 	// ios::sync_with_stdio(false);
 	// cin.tie();
 	readInput();
 	timer = clock();
 	auto v = GRASP();
-	// string nomeInstancia(argv[1]);
-	auto split = [&](string s) {
-		string a = "";
-		int i = 0;
-		for (; i < (int) s.size() && s[i] != ' '; i++) {
-			a += s[i];
-		}
-		string b = "";
-		i++;
-		for (; i < (int) s.size(); i++) {
-			b += s[i];
-		}
-		return pair<string, string>(a, b);
-	};
 	int iteracao = get<0>(v);
 	double tempoParaSolucao = get<1>(v);
 	int bn = (int) get<2>(v).size();
 	printf("%s,%s,%s,%d,%d,%.5lf,%.5lf", argv[1], argv[2], argv[3], bn, iteracao, tempoParaSolucao, 1.0 * (clock() - timer) / CLOCKS_PER_SEC);
+	/*
+	Printar: (Seja G o grafo utilizado)
+		Densidade de G
+		Numero de vertices de G
+		Numero de arestas de G
+		Grau maximo dentre os vertices de G
+		Grau medio dentre os vertices de G
+		Numero de iteracoes realizadas
+		Tempo total de execucao considerando todas as iteracoes
+		Iteracao em que a melhor solucao foi obtida
+		Tempo de execucao ate a iteracao em que a melhor solucao foi encontrada
+		-> Para cada iteracao:
+			- Burning Number
+			- Burning Sequence
+	*/
 	return 0;
 }
