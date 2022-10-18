@@ -91,11 +91,7 @@ pair<vector<int>, bool> greedy(double ALPHA = 0.5) {
 			burned.insert(x);
 			safe.erase(x);
 		}
-		// cerr << "quase = " << (int) quase.size() << '\n';
-		// cerr << "burned = " << (int) burned.size() << '\n';
-		// cerr << *burned.begin() << '\n';
 		quase.clear();
-		// printa(burned);
 	}
 	return make_pair(sol, true);
 }
@@ -105,7 +101,7 @@ tuple<int, double, vector<int>> GRASP(int maximo_iteracoes, double ALPHA) {
 	int iteracao = -1;
 	double tempo = 0;
 	vector<int> best_sol;
-	for (int i = 0; i < maximo_iteracoes; i++) {
+	for (int i = 0; i < maximo_iteracoes; i++, numero_de_iteracoes++) {
 		auto ret = greedy(ALPHA);
 		if (!ret.second) continue;
 		vector<int> sol = ret.first;
@@ -120,6 +116,14 @@ tuple<int, double, vector<int>> GRASP(int maximo_iteracoes, double ALPHA) {
 			best_f = f_sol;
 			best_sol = sol;
 		}
+		printf("Iteracao %d\n", i + 1);
+		printf("Burning Number: %d\n", f_sol);
+		printf("Burning Sequence: [");
+		for (int i = 0; i < f_sol; i++) {
+			if (i) printf(", ");
+			printf("%d", sol[i]);
+		}
+		putchar('\n');
 	}
 	return make_tuple(iteracao, tempo, best_sol);
 	// Talvez retornar a sequência obtida
@@ -169,10 +173,21 @@ int main(int argc, char **argv) {
 
 	timer = clock();
 	auto v = GRASP(maximo_iteracoes, ALPHA);
-	int iteracao = get<0>(v);
-	double tempoParaSolucao = get<1>(v);
-	int bn = (int) get<2>(v).size();
-	printf("%s,%s,%s,%d,%d,%.5lf,%.5lf", argv[1], argv[2], argv[3], bn, iteracao, tempoParaSolucao, 1.0 * (clock() - timer) / CLOCKS_PER_SEC);
+	tempo_total = 1.0 * (clock() - timer) / CLOCKS_PER_SEC;
+	int iteracoes_solucao = get<0>(v);
+	double tempo_solucao = get<1>(v);
+	int burning_number = (int) get<2>(v).size();
+	// printf("%s,%s,%s,%d,%d,%.5lf,%.5lf", argv[1], argv[2], argv[3], bn, iteracao, tempoParaSolucao, 1.0 * (clock() - timer) / CLOCKS_PER_SEC);
+	printf("Informacoes da instancia %s\n", argv[1]);
+	printf("Densidade: %d\n", densidade);
+	printf("Numero de vertices: %d\n", numero_de_vertices);
+	printf("Numero de arestas: %d\n", numero_de_arestas);
+	printf("Grau maximo: %d\n", grau_maximo);
+	printf("Grau medio: %d\n", grau_medio);
+	printf("Numero de iteracoes realizadas: %d\n", numero_de_iteracoes);
+	printf("Tempo gasto considerando todas as iteracoes: %.2lfs\n", tempo_total);
+	printf("Iteracao em que a melhor solucao foi obtida: %d\n", iteracoes_solucao);
+	printf("Tempo gasto ate a melhor solucao: %.2lfs\n", tempo_solucao);
 	/*
 	Printar: (Seja G o grafo utilizado)
 		Densidade de G
