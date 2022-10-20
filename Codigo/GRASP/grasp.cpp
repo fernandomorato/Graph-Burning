@@ -2,13 +2,16 @@
 
 using namespace std;
 
-mt19937 rng((int) chrono::steady_clock::now().time_since_epoch().count());
+// mt19937 rng((int) chrono::steady_clock::now().time_since_epoch().count());
 
 vector<pair<int, vector<int>>> solutions; // {valor, lista}
 
 const int MAXN = 2e5 + 5;
-const double ALFA = 0.5;
 clock_t timer;
+
+// OUTPUT
+int densidade, numero_de_vertices, numero_de_arestas, grau_maximo, numero_de_iteracoes, iteracoes_solucao;
+double grau_medio, tempo_total, tempo_solucao;
 
 struct Node {
 	vector<Node*> vizinhos;
@@ -35,11 +38,9 @@ Node *vertice[MAXN];
 vector<int> adj[MAXN];
 int grau[MAXN];
 
-inline int f(vector<int> &sol) { return (int) sol.size(); }
-
 inline int g(int v) { return vertice[v]->grau; }
 
-int escolhe(set<int> &st) {
+int escolhe(set<int> &st, double ALPHA, mt19937 rng) {
 	if (st.empty())
 		return -1;
 	int mx = 0;
@@ -49,7 +50,7 @@ int escolhe(set<int> &st) {
 		mx = max(mx, g(x));
 		mn = min(mn, g(x));
 	}
-	int lowerBound = mx - (int) floor(ALFA * (mx - mn));
+	int lowerBound = mx - (int) floor(ALPHA * (mx - mn));
 	vector<int> v;
 	for (auto &x : st) {
 		if (g(x) >= lowerBound)
@@ -60,13 +61,7 @@ int escolhe(set<int> &st) {
 	return cara;
 }
 
-void printa(set<int> &st) {
-	for (auto x : st)
-		printf("%d ", x + 1);
-	putchar('\n');
-}
-
-pair<vector<int>, bool> greedy() {
+pair<vector<int>, bool> greedy(double ALPHA, mt19937 rng) {
 	set<int> safe; // vertices que estao safe
 	set<int> quase; // vertices que estao quase queimados
 	set<int> burned; // vertices que estao queimados
@@ -82,7 +77,7 @@ pair<vector<int>, bool> greedy() {
 				if (!viz->queimado)
 					quase.insert(viz->id);
 		}
-		int cara = escolhe(safe.empty() ? quase : safe);
+		int cara = escolhe(safe.empty() ? quase : safe, ALPHA, rng);
 		if (cara == -1)
 			return make_pair(sol, false);
 		sol.push_back(cara);
@@ -96,35 +91,43 @@ pair<vector<int>, bool> greedy() {
 			burned.insert(x);
 			safe.erase(x);
 		}
-		// cerr << "quase = " << (int) quase.size() << '\n';
-		// cerr << "burned = " << (int) burned.size() << '\n';
-		// cerr << *burned.begin() << '\n';
 		quase.clear();
-		// printa(burned);
 	}
 	return make_pair(sol, true);
 }
 
-tuple<int, double, vector<int>> GRASP() {
+void printa_bs(int f_sol, vector<int> &sol, int it) {
+	printf("======================= Iteracao %d ==========================\n", it + 1);
+	printf("Burning Number: %d\n", f_sol);
+	printf("Burning Sequence: [");
+	for (int i = 0; i < f_sol; i++) {
+		if (i) printf(", ");
+		printf("%d", sol[i]);
+	}
+	printf("]\n");
+}
+
+tuple<int, double, vector<int>> GRASP(int maximo_iteracoes, double ALPHA, mt19937 rng) {
 	int best_f = (int) 1e9;
 	int iteracao = -1;
 	double tempo = 0;
 	vector<int> best_sol;
-	for (int i = 0; i < 1000; i++) {
-		auto ret = greedy();
+	for (int i = 0; i < maximo_iteracoes; i++, numero_de_iteracoes++) {
+		auto ret = greedy(ALPHA, rng);
 		if (!ret.second) continue;
 		vector<int> sol = ret.first;
 		// assert(valid(sol));
 		// if (!valid(sol))
 		// 	ajeita(sol);
 		// sol = busca_local(sol);
-		int f_sol = f(sol);
+		int f_sol = (int) sol.size();
 		if (f_sol < best_f) {
 			tempo = 1.0 * (clock() - timer) / CLOCKS_PER_SEC;
 			iteracao = i + 1;
 			best_f = f_sol;
 			best_sol = sol;
 		}
+		printa_bs(f_sol, sol, i);
 	}
 	return make_tuple(iteracao, tempo, best_sol);
 	// Talvez retornar a sequência obtida
@@ -133,10 +136,12 @@ tuple<int, double, vector<int>> GRASP() {
 void readInput() {
 	set<int> st;
 	cin >> n >> m;
+	densidade = 2.0 * m / (n * (n - 1));
+	numero_de_vertices = n;
+	numero_de_arestas = m;
 	for (int i = 0; i < m; i++) {
 		int a, b;
 		cin >> a >> b;
-		a--, b--;
 		if (!st.count(a)) {
 			vertice[a] = new Node(a);
 			st.insert(a);
@@ -149,43 +154,58 @@ void readInput() {
 		vertice[b]->addEdge(vertice[a]);
 		grau[a]++;
 		grau[b]++;
+		grau_maximo = max({grau_maximo, grau[a], grau[b]});
 	}
 	assert(*st.begin() >= 0 && *st.rbegin() <= n - 1);
 }
 
-// string converte(char linha[]) {
-// 	printf("%d\n", (int) strlen(linha));
-// 	int tamanho = strlen(linha);
-// 	string s = "";
-// 	for (int i = 0; i < tamanho; i++) {
-// 		s += linha[i];
-// 	}
-// 	return s;
-// }
-
 int main(int argc, char **argv) {
-	// ios::sync_with_stdio(false);
-	// cin.tie();
+	freopen(argv[1], "r", stdin);	// argv[1] = Arquivo de entrada
+	int seed = atoi(argv[2]);				// argv[2] = Seed
+	double ALPHA = atof(argv[3]);			// argv[3] = Valor de ALPHA
+	int maximo_iteracoes = atoi(argv[4]);	// argv[4] = Numero maximo de iteracoes permitida
+	int condicao_parada = atoi(argv[5]);	// argv[5] = Condicao de parada utilizada (nao usado no momento)
+	int criterio_guloso = atoi(argv[6]);	// argv[6] = Funcao gulosa utilizada
+	printf("ALPHA => %.2lf\n", ALPHA);
 	readInput();
+
+	for (int i = 0; i < n; i++) {
+		grau_medio += vertice[i]->grau;
+	}
+	grau_medio /= n;
+
 	timer = clock();
-	auto v = GRASP();
-	// string nomeInstancia(argv[1]);
-	auto split = [&](string s) {
-		string a = "";
-		int i = 0;
-		for (; i < (int) s.size() && s[i] != ' '; i++) {
-			a += s[i];
-		}
-		string b = "";
-		i++;
-		for (; i < (int) s.size(); i++) {
-			b += s[i];
-		}
-		return pair<string, string>(a, b);
-	};
-	int iteracao = get<0>(v);
-	double tempoParaSolucao = get<1>(v);
-	int bn = (int) get<2>(v).size();
-	printf("%s,%s,%s,%d,%d,%.5lf,%.5lf", argv[1], argv[2], argv[3], bn, iteracao, tempoParaSolucao, 1.0 * (clock() - timer) / CLOCKS_PER_SEC);
+	mt19937 rng(seed);
+	auto v = GRASP(maximo_iteracoes, ALPHA, rng);
+	tempo_total = 1.0 * (clock() - timer) / CLOCKS_PER_SEC;
+	int iteracoes_solucao = get<0>(v);
+	double tempo_solucao = get<1>(v);
+	int burning_number = (int) get<2>(v).size();
+	// printf("%s,%s,%s,%d,%d,%.5lf,%.5lf", argv[1], argv[2], argv[3], bn, iteracao, tempoParaSolucao, 1.0 * (clock() - timer) / CLOCKS_PER_SEC);
+	printf("\nInformacoes da instancia %s\n", argv[1]);
+	printf("Densidade: %d\n", densidade);
+	printf("Numero de vertices: %d\n", numero_de_vertices);
+	printf("Numero de arestas: %d\n", numero_de_arestas);
+	printf("Grau maximo: %d\n", grau_maximo);
+	printf("Grau medio: %.2lf\n", grau_medio);
+	printf("Numero de iteracoes realizadas: %d\n", numero_de_iteracoes);
+	printf("Tempo gasto considerando todas as iteracoes: %.2lfs\n", tempo_total);
+	printf("Iteracao em que a melhor solucao foi obtida: %d\n", iteracoes_solucao);
+	printf("Tempo gasto ate a melhor solucao: %.2lfs\n", tempo_solucao);
+	/*
+	Printar: (Seja G o grafo utilizado)
+		Densidade de G
+		Numero de vertices de G
+		Numero de arestas de G
+		Grau maximo dentre os vertices de G
+		Grau medio dentre os vertices de G
+		Numero de iteracoes realizadas
+		Tempo total de execucao considerando todas as iteracoes
+		Iteracao em que a melhor solucao foi obtida
+		Tempo de execucao ate a iteracao em que a melhor solucao foi encontrada
+		-> Para cada iteracao:
+			- Burning Number
+			- Burning Sequence
+	*/
 	return 0;
 }

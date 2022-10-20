@@ -1,9 +1,12 @@
-# for filename in ../../Datasets/parsed-datasets/*edges.txt ; do
-# 	a=$(basename $filename .txt)
-# 	b=$(head -n 1 "$filename")
-# 	echo $a $b
-# done
-
+make grasp
+for filename in ../../Datasets/parsed-datasets/m*edges.txt ; do
+	a=$(basename $filename .txt)
+	b=$(head -n 1 "$filename")
+	./grasp $filename 42 0.5 1000 0 0
+	echo $a $b
+done
+rm grasp
+exit
 # make gen
 # ./gen > random.in
 # make grasp
