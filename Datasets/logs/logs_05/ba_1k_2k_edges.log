@@ -1,0 +1,3020 @@
+======================= Iteracao 1 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 44, 456, 789]
+======================= Iteracao 2 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 28, 255, 984, 770]
+======================= Iteracao 3 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 289, 89]
+======================= Iteracao 4 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 157, 953, 770]
+======================= Iteracao 5 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 79, 242, 975]
+======================= Iteracao 6 ==========================
+Burning Number: 5
+Burning Sequence: [6, 11, 44, 380, 896]
+======================= Iteracao 7 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 128, 232, 603]
+======================= Iteracao 8 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 43, 352, 184]
+======================= Iteracao 9 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 39, 362, 953]
+======================= Iteracao 10 ==========================
+Burning Number: 5
+Burning Sequence: [11, 17, 71, 260, 936]
+======================= Iteracao 11 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 260, 309, 936, 909]
+======================= Iteracao 12 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 53, 184, 362]
+======================= Iteracao 13 ==========================
+Burning Number: 5
+Burning Sequence: [11, 17, 71, 362, 936]
+======================= Iteracao 14 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 117, 486, 456]
+======================= Iteracao 15 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 17, 352, 975]
+======================= Iteracao 16 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 79, 280, 744]
+======================= Iteracao 17 ==========================
+Burning Number: 5
+Burning Sequence: [6, 3, 44, 380, 953]
+======================= Iteracao 18 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 232, 770, 984]
+======================= Iteracao 19 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 362, 975]
+======================= Iteracao 20 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 33, 628, 744]
+======================= Iteracao 21 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 35, 456, 941]
+======================= Iteracao 22 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 117, 260, 257]
+======================= Iteracao 23 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 43, 628, 184]
+======================= Iteracao 24 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 44, 848, 969]
+======================= Iteracao 25 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 35, 260, 936, 909]
+======================= Iteracao 26 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 15, 242, 975]
+======================= Iteracao 27 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 128, 260, 833, 936]
+======================= Iteracao 28 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 125, 456, 770]
+======================= Iteracao 29 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 22, 790, 744]
+======================= Iteracao 30 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 76, 184, 744]
+======================= Iteracao 31 ==========================
+Burning Number: 5
+Burning Sequence: [1, 6, 44, 260, 969]
+======================= Iteracao 32 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 56, 597, 744]
+======================= Iteracao 33 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 62, 128, 783, 770]
+======================= Iteracao 34 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 125, 456, 770]
+======================= Iteracao 35 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 76, 456, 679, 770]
+======================= Iteracao 36 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 17, 362, 833, 909]
+======================= Iteracao 37 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 47, 84, 685, 953]
+======================= Iteracao 38 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 57, 257, 927, 770]
+======================= Iteracao 39 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 28, 232, 770, 984]
+======================= Iteracao 40 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 79, 607, 232]
+======================= Iteracao 41 ==========================
+Burning Number: 6
+Burning Sequence: [1, 17, 76, 257, 770, 679]
+======================= Iteracao 42 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 29, 84, 783, 770]
+======================= Iteracao 43 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 47, 201, 685, 783]
+======================= Iteracao 44 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 44, 352, 896, 802]
+======================= Iteracao 45 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 396, 838]
+======================= Iteracao 46 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 128, 257, 525]
+======================= Iteracao 47 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 38, 260, 936, 833]
+======================= Iteracao 48 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 20, 584, 396]
+======================= Iteracao 49 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 33, 201, 685, 953]
+======================= Iteracao 50 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 35, 362, 909]
+======================= Iteracao 51 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 79, 362, 184]
+======================= Iteracao 52 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 189, 896, 764]
+======================= Iteracao 53 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 35, 432, 362]
+======================= Iteracao 54 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 8, 248, 953, 802]
+======================= Iteracao 55 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 76, 362, 936, 833]
+======================= Iteracao 56 ==========================
+Burning Number: 5
+Burning Sequence: [27, 11, 44, 128, 525]
+======================= Iteracao 57 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 32, 362, 909, 936]
+======================= Iteracao 58 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 62, 612, 802, 896]
+======================= Iteracao 59 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 125, 257, 679, 770]
+======================= Iteracao 60 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 456, 975]
+======================= Iteracao 61 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 128, 584, 975]
+======================= Iteracao 62 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 257, 770, 896]
+======================= Iteracao 63 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 257, 927, 896]
+======================= Iteracao 64 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 17, 607, 975]
+======================= Iteracao 65 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 263, 597, 744]
+======================= Iteracao 66 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 35, 362, 413]
+======================= Iteracao 67 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 26, 360, 783, 770]
+======================= Iteracao 68 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 263, 184, 362]
+======================= Iteracao 69 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 44, 204, 953, 802]
+======================= Iteracao 70 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 79, 432, 975]
+======================= Iteracao 71 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 35, 456, 607]
+======================= Iteracao 72 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 76, 260, 909, 833]
+======================= Iteracao 73 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 76, 362, 184]
+======================= Iteracao 74 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 76, 362, 909]
+======================= Iteracao 75 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 17, 260, 833]
+======================= Iteracao 76 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 396, 742]
+======================= Iteracao 77 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 57, 257, 770, 802]
+======================= Iteracao 78 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 35, 362, 936, 909]
+======================= Iteracao 79 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 257, 953, 896]
+======================= Iteracao 80 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 29, 201, 685, 783]
+======================= Iteracao 81 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 352, 770, 953]
+======================= Iteracao 82 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 263, 525, 744]
+======================= Iteracao 83 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 44, 250, 953, 984]
+======================= Iteracao 84 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 128, 783, 953]
+======================= Iteracao 85 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 42, 204, 896, 764]
+======================= Iteracao 86 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 248, 896, 927]
+======================= Iteracao 87 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 44, 456, 242]
+======================= Iteracao 88 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 35, 255, 908]
+======================= Iteracao 89 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 125, 260, 770, 969]
+======================= Iteracao 90 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 76, 260, 969, 679]
+======================= Iteracao 91 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 128, 396, 975]
+======================= Iteracao 92 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 79, 184, 744]
+======================= Iteracao 93 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 56, 304, 744]
+======================= Iteracao 94 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 38, 362, 493]
+======================= Iteracao 95 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 76, 362, 833]
+======================= Iteracao 96 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 56, 257, 969, 770]
+======================= Iteracao 97 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 38, 362, 481]
+======================= Iteracao 98 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 161, 304, 596]
+======================= Iteracao 99 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 26, 360, 783, 770]
+======================= Iteracao 100 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 56, 257, 770, 679]
+======================= Iteracao 101 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 53, 352, 975]
+======================= Iteracao 102 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 28, 232, 953, 984]
+======================= Iteracao 103 ==========================
+Burning Number: 6
+Burning Sequence: [1, 27, 125, 848, 969, 770]
+======================= Iteracao 104 ==========================
+Burning Number: 5
+Burning Sequence: [6, 3, 44, 380, 953]
+======================= Iteracao 105 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 362, 975]
+======================= Iteracao 106 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 8, 248, 802, 953]
+======================= Iteracao 107 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 125, 456, 770]
+======================= Iteracao 108 ==========================
+Burning Number: 6
+Burning Sequence: [1, 27, 125, 848, 770, 969]
+======================= Iteracao 109 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 17, 260, 909]
+======================= Iteracao 110 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 76, 362, 909]
+======================= Iteracao 111 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 56, 257, 679, 969]
+======================= Iteracao 112 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 84, 927, 783]
+======================= Iteracao 113 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 33, 456, 953, 984]
+======================= Iteracao 114 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 263, 362, 744]
+======================= Iteracao 115 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 79, 242, 975]
+======================= Iteracao 116 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 47, 84, 770, 783]
+======================= Iteracao 117 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 26, 352, 783, 770]
+======================= Iteracao 118 ==========================
+Burning Number: 6
+Burning Sequence: [1, 27, 125, 848, 969, 770]
+======================= Iteracao 119 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 128, 257, 621]
+======================= Iteracao 120 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 44, 628, 953, 984]
+======================= Iteracao 121 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 125, 352, 607]
+======================= Iteracao 122 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 20, 352, 975]
+======================= Iteracao 123 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 32, 362, 909, 936]
+======================= Iteracao 124 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 79, 352, 744]
+======================= Iteracao 125 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 125, 456, 770]
+======================= Iteracao 126 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 35, 143, 761]
+======================= Iteracao 127 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 15, 396, 975]
+======================= Iteracao 128 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 35, 143, 601]
+======================= Iteracao 129 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 17, 584, 975]
+======================= Iteracao 130 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 20, 607, 975]
+======================= Iteracao 131 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 125, 456, 770, 679]
+======================= Iteracao 132 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 57, 461, 953, 764]
+======================= Iteracao 133 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 44, 128, 685, 953]
+======================= Iteracao 134 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 56, 424, 184]
+======================= Iteracao 135 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 260, 848, 621]
+======================= Iteracao 136 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 128, 607, 975]
+======================= Iteracao 137 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 260, 848, 525]
+======================= Iteracao 138 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 89, 481]
+======================= Iteracao 139 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 117, 260, 936, 909]
+======================= Iteracao 140 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 28, 84, 770, 783]
+======================= Iteracao 141 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 15, 400, 975]
+======================= Iteracao 142 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 76, 280, 525]
+======================= Iteracao 143 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 22, 362, 744]
+======================= Iteracao 144 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 17, 362, 833]
+======================= Iteracao 145 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 263, 362, 744]
+======================= Iteracao 146 ==========================
+Burning Number: 6
+Burning Sequence: [1, 17, 125, 260, 679, 770]
+======================= Iteracao 147 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 362, 377]
+======================= Iteracao 148 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 17, 260, 909]
+======================= Iteracao 149 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 47, 128, 685, 927]
+======================= Iteracao 150 ==========================
+Burning Number: 5
+Burning Sequence: [1, 6, 44, 456, 596]
+======================= Iteracao 151 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 125, 257, 679, 770]
+======================= Iteracao 152 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 257, 953, 896]
+======================= Iteracao 153 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 29, 128, 770, 783]
+======================= Iteracao 154 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 43, 362, 184]
+======================= Iteracao 155 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 39, 362, 945]
+======================= Iteracao 156 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 161, 525, 744]
+======================= Iteracao 157 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 43, 352, 770]
+======================= Iteracao 158 ==========================
+Burning Number: 5
+Burning Sequence: [1, 6, 44, 260, 969]
+======================= Iteracao 159 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 38, 362, 833, 936]
+======================= Iteracao 160 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 281, 89]
+======================= Iteracao 161 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 161, 352, 744]
+======================= Iteracao 162 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 57, 145, 927, 764]
+======================= Iteracao 163 ==========================
+Burning Number: 5
+Burning Sequence: [27, 11, 44, 84, 377]
+======================= Iteracao 164 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 263, 525, 744]
+======================= Iteracao 165 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 8, 352, 802, 770]
+======================= Iteracao 166 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 76, 362, 936, 833]
+======================= Iteracao 167 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 125, 257, 969, 679]
+======================= Iteracao 168 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 16, 371, 896, 927]
+======================= Iteracao 169 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 33, 304, 744]
+======================= Iteracao 170 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 33, 201, 685, 738]
+======================= Iteracao 171 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 22, 352, 744]
+======================= Iteracao 172 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 26, 360, 783, 770]
+======================= Iteracao 173 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 22, 362, 909, 936]
+======================= Iteracao 174 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 57, 612, 802, 764]
+======================= Iteracao 175 ==========================
+Burning Number: 5
+Burning Sequence: [11, 6, 56, 362, 833]
+======================= Iteracao 176 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 43, 362, 942]
+======================= Iteracao 177 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 17, 362, 909, 833]
+======================= Iteracao 178 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 38, 260, 478]
+======================= Iteracao 179 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 53, 525, 744]
+======================= Iteracao 180 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 76, 260, 770, 679]
+======================= Iteracao 181 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 35, 352, 432]
+======================= Iteracao 182 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 20, 486, 268]
+======================= Iteracao 183 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 352, 916]
+======================= Iteracao 184 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 400, 975]
+======================= Iteracao 185 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 128, 396, 975]
+======================= Iteracao 186 ==========================
+Burning Number: 5
+Burning Sequence: [1, 17, 44, 257, 789]
+======================= Iteracao 187 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 76, 260, 936, 909]
+======================= Iteracao 188 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 76, 352, 744]
+======================= Iteracao 189 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 35, 607, 232]
+======================= Iteracao 190 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 44, 128, 685, 927]
+======================= Iteracao 191 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 76, 260, 833, 909]
+======================= Iteracao 192 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 362, 764]
+======================= Iteracao 193 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 22, 280, 596]
+======================= Iteracao 194 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 53, 352, 184]
+======================= Iteracao 195 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 20, 396, 362]
+======================= Iteracao 196 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 38, 362, 936, 833]
+======================= Iteracao 197 ==========================
+Burning Number: 5
+Burning Sequence: [1, 11, 44, 260, 257]
+======================= Iteracao 198 ==========================
+Burning Number: 5
+Burning Sequence: [1, 11, 44, 257, 596]
+======================= Iteracao 199 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 44, 87, 953, 984]
+======================= Iteracao 200 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 117, 257, 596]
+======================= Iteracao 201 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 76, 257, 260]
+======================= Iteracao 202 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 128, 783, 770]
+======================= Iteracao 203 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 43, 525, 744]
+======================= Iteracao 204 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 117, 242, 432]
+======================= Iteracao 205 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 56, 352, 744]
+======================= Iteracao 206 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 28, 87, 953, 770]
+======================= Iteracao 207 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 161, 525, 744]
+======================= Iteracao 208 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 33, 84, 685, 770]
+======================= Iteracao 209 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 79, 584, 941]
+======================= Iteracao 210 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 352, 896, 927]
+======================= Iteracao 211 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 125, 257, 770, 679]
+======================= Iteracao 212 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 628, 984, 953]
+======================= Iteracao 213 ==========================
+Burning Number: 5
+Burning Sequence: [1, 11, 44, 257, 528]
+======================= Iteracao 214 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 8, 380, 764, 896]
+======================= Iteracao 215 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 57, 612, 802, 764]
+======================= Iteracao 216 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 33, 84, 685, 927]
+======================= Iteracao 217 ==========================
+Burning Number: 6
+Burning Sequence: [1, 17, 76, 257, 679, 770]
+======================= Iteracao 218 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 20, 362, 975]
+======================= Iteracao 219 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 65, 128, 783, 770]
+======================= Iteracao 220 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 43, 352, 184]
+======================= Iteracao 221 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 22, 242, 856]
+======================= Iteracao 222 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 125, 362, 936, 909]
+======================= Iteracao 223 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 362, 338]
+======================= Iteracao 224 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 56, 362, 744]
+======================= Iteracao 225 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 47, 128, 770, 783]
+======================= Iteracao 226 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 128, 260, 833, 936]
+======================= Iteracao 227 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 76, 362, 744]
+======================= Iteracao 228 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 26, 352, 783, 770]
+======================= Iteracao 229 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 29, 84, 783, 770]
+======================= Iteracao 230 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 260, 525, 744]
+======================= Iteracao 231 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 20, 486, 945]
+======================= Iteracao 232 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 33, 584, 984, 953]
+======================= Iteracao 233 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 79, 184, 770]
+======================= Iteracao 234 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 125, 362, 975]
+======================= Iteracao 235 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 268, 418]
+======================= Iteracao 236 ==========================
+Burning Number: 5
+Burning Sequence: [1, 6, 44, 257, 969]
+======================= Iteracao 237 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 117, 232, 413]
+======================= Iteracao 238 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 17, 362, 833]
+======================= Iteracao 239 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 56, 304, 744]
+======================= Iteracao 240 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 29, 84, 770, 783]
+======================= Iteracao 241 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 44, 848, 969]
+======================= Iteracao 242 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 117, 260, 936, 909]
+======================= Iteracao 243 ==========================
+Burning Number: 5
+Burning Sequence: [27, 11, 44, 128, 601]
+======================= Iteracao 244 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 17, 268, 975]
+======================= Iteracao 245 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 128, 260, 909, 936]
+======================= Iteracao 246 ==========================
+Burning Number: 5
+Burning Sequence: [1, 6, 44, 456, 416]
+======================= Iteracao 247 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 263, 260, 789]
+======================= Iteracao 248 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 16, 257, 770, 927]
+======================= Iteracao 249 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 43, 352, 184]
+======================= Iteracao 250 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 15, 400, 975]
+======================= Iteracao 251 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 618, 984, 953]
+======================= Iteracao 252 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 79, 362, 744]
+======================= Iteracao 253 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 47, 128, 685, 770]
+======================= Iteracao 254 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 263, 304, 744]
+======================= Iteracao 255 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 76, 597, 744]
+======================= Iteracao 256 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 15, 607, 975]
+======================= Iteracao 257 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 257, 927, 953]
+======================= Iteracao 258 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 62, 380, 764, 770]
+======================= Iteracao 259 ==========================
+Burning Number: 5
+Burning Sequence: [11, 17, 56, 260, 909]
+======================= Iteracao 260 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 35, 362, 260]
+======================= Iteracao 261 ==========================
+Burning Number: 5
+Burning Sequence: [11, 17, 71, 362, 936]
+======================= Iteracao 262 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 125, 362, 833, 936]
+======================= Iteracao 263 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 22, 280, 744]
+======================= Iteracao 264 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 35, 260, 909]
+======================= Iteracao 265 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 26, 84, 783, 770]
+======================= Iteracao 266 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 47, 84, 783, 770]
+======================= Iteracao 267 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 76, 260, 909]
+======================= Iteracao 268 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 22, 525, 744]
+======================= Iteracao 269 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 618, 984, 770]
+======================= Iteracao 270 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 62, 257, 764, 896]
+======================= Iteracao 271 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 76, 362, 936, 909]
+======================= Iteracao 272 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 145, 927, 953]
+======================= Iteracao 273 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 65, 189, 770, 802]
+======================= Iteracao 274 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 56, 260, 679, 770]
+======================= Iteracao 275 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 17, 260, 833]
+======================= Iteracao 276 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 263, 362, 761]
+======================= Iteracao 277 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 44, 84, 685, 984]
+======================= Iteracao 278 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 20, 396, 975]
+======================= Iteracao 279 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 157, 984, 770]
+======================= Iteracao 280 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 35, 260, 909, 936]
+======================= Iteracao 281 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 17, 260, 833, 909]
+======================= Iteracao 282 ==========================
+Burning Number: 5
+Burning Sequence: [1, 11, 44, 260, 528]
+======================= Iteracao 283 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 607, 601]
+======================= Iteracao 284 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 47, 128, 770, 783]
+======================= Iteracao 285 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 44, 848, 969]
+======================= Iteracao 286 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 22, 614, 607]
+======================= Iteracao 287 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 125, 257, 679, 969]
+======================= Iteracao 288 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 43, 352, 942]
+======================= Iteracao 289 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 47, 201, 685, 927]
+======================= Iteracao 290 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 35, 362, 909]
+======================= Iteracao 291 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 65, 204, 802, 770]
+======================= Iteracao 292 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 35, 260, 936, 909]
+======================= Iteracao 293 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 26, 360, 783, 770]
+======================= Iteracao 294 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 76, 362, 936, 909]
+======================= Iteracao 295 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 17, 362, 909, 936]
+======================= Iteracao 296 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 161, 525, 744]
+======================= Iteracao 297 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 8, 352, 770, 802]
+======================= Iteracao 298 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 44, 352, 953, 802]
+======================= Iteracao 299 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 35, 362, 936, 909]
+======================= Iteracao 300 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 161, 597, 744]
+======================= Iteracao 301 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 38, 260, 833, 936]
+======================= Iteracao 302 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 56, 260, 679, 770]
+======================= Iteracao 303 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 242, 975]
+======================= Iteracao 304 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 53, 260, 525]
+======================= Iteracao 305 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 38, 362, 621]
+======================= Iteracao 306 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 128, 260, 936, 833]
+======================= Iteracao 307 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 263, 525, 304]
+======================= Iteracao 308 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 16, 518, 764, 770]
+======================= Iteracao 309 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 79, 525, 744]
+======================= Iteracao 310 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 145, 896, 927]
+======================= Iteracao 311 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 79, 432, 975]
+======================= Iteracao 312 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 20, 352, 975]
+======================= Iteracao 313 ==========================
+Burning Number: 5
+Burning Sequence: [1, 5, 44, 257, 969]
+======================= Iteracao 314 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 35, 614, 432]
+======================= Iteracao 315 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 76, 362, 909]
+======================= Iteracao 316 ==========================
+Burning Number: 5
+Burning Sequence: [1, 11, 44, 260, 257]
+======================= Iteracao 317 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 42, 204, 953, 770]
+======================= Iteracao 318 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 53, 628, 942]
+======================= Iteracao 319 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 161, 260, 789]
+======================= Iteracao 320 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 44, 848, 969]
+======================= Iteracao 321 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 848, 304]
+======================= Iteracao 322 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 33, 157, 770, 953]
+======================= Iteracao 323 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 76, 362, 936, 833]
+======================= Iteracao 324 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 17, 260, 833, 909]
+======================= Iteracao 325 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 607, 975]
+======================= Iteracao 326 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 47, 84, 685, 738]
+======================= Iteracao 327 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 46, 260, 936, 909]
+======================= Iteracao 328 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 76, 260, 257]
+======================= Iteracao 329 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 57, 371, 953, 927]
+======================= Iteracao 330 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 17, 362, 936, 833]
+======================= Iteracao 331 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 20, 242, 975]
+======================= Iteracao 332 ==========================
+Burning Number: 5
+Burning Sequence: [1, 5, 44, 260, 969]
+======================= Iteracao 333 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 260, 525, 744]
+======================= Iteracao 334 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 16, 461, 764, 953]
+======================= Iteracao 335 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 17, 362, 833]
+======================= Iteracao 336 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 56, 184, 744]
+======================= Iteracao 337 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 46, 362, 909, 936]
+======================= Iteracao 338 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 161, 280, 744]
+======================= Iteracao 339 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 35, 584, 352]
+======================= Iteracao 340 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 35, 607, 761]
+======================= Iteracao 341 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 8, 461, 802, 764]
+======================= Iteracao 342 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 204, 770, 764]
+======================= Iteracao 343 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 35, 362, 909, 936]
+======================= Iteracao 344 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 16, 518, 764, 770]
+======================= Iteracao 345 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 76, 260, 969, 770]
+======================= Iteracao 346 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 56, 352, 744]
+======================= Iteracao 347 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 189, 953, 770]
+======================= Iteracao 348 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 128, 984, 770]
+======================= Iteracao 349 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 17, 362, 833]
+======================= Iteracao 350 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 33, 84, 770, 783]
+======================= Iteracao 351 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 260, 848, 525]
+======================= Iteracao 352 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 76, 424, 744]
+======================= Iteracao 353 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 33, 128, 685, 783]
+======================= Iteracao 354 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 76, 260, 909]
+======================= Iteracao 355 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 38, 362, 833, 936]
+======================= Iteracao 356 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 44, 255, 984, 953]
+======================= Iteracao 357 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 16, 518, 953, 764]
+======================= Iteracao 358 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 35, 143, 634]
+======================= Iteracao 359 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 35, 352, 396]
+======================= Iteracao 360 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 26, 352, 770, 783]
+======================= Iteracao 361 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 117, 260, 216]
+======================= Iteracao 362 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 22, 790, 744]
+======================= Iteracao 363 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 17, 260, 909]
+======================= Iteracao 364 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 35, 143, 456]
+======================= Iteracao 365 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 400, 975]
+======================= Iteracao 366 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 268, 975]
+======================= Iteracao 367 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 53, 597, 744]
+======================= Iteracao 368 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 33, 352, 744]
+======================= Iteracao 369 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 76, 362, 936, 909]
+======================= Iteracao 370 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 44, 257, 969]
+======================= Iteracao 371 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 22, 424, 489]
+======================= Iteracao 372 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 189, 927, 896]
+======================= Iteracao 373 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 44, 456, 764]
+======================= Iteracao 374 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 56, 260, 770, 679]
+======================= Iteracao 375 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 17, 362, 909, 833]
+======================= Iteracao 376 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 8, 352, 802, 770]
+======================= Iteracao 377 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 20, 432, 838]
+======================= Iteracao 378 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 53, 260, 621]
+======================= Iteracao 379 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 76, 352, 744]
+======================= Iteracao 380 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 56, 260, 679, 770]
+======================= Iteracao 381 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 44, 201, 685, 927]
+======================= Iteracao 382 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 76, 257, 525]
+======================= Iteracao 383 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 62, 128, 770, 783]
+======================= Iteracao 384 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 44, 257, 969]
+======================= Iteracao 385 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 44, 848, 969]
+======================= Iteracao 386 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 268, 400]
+======================= Iteracao 387 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 145, 953, 896]
+======================= Iteracao 388 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 362, 975]
+======================= Iteracao 389 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 56, 790, 744]
+======================= Iteracao 390 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 289, 362]
+======================= Iteracao 391 ==========================
+Burning Number: 6
+Burning Sequence: [1, 27, 125, 848, 770, 969]
+======================= Iteracao 392 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 79, 584, 975]
+======================= Iteracao 393 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 29, 84, 685, 783]
+======================= Iteracao 394 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 97, 362, 936, 833]
+======================= Iteracao 395 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 43, 432, 975]
+======================= Iteracao 396 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 56, 456, 679, 770]
+======================= Iteracao 397 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 76, 362, 909, 833]
+======================= Iteracao 398 ==========================
+Burning Number: 5
+Burning Sequence: [27, 11, 44, 84, 525]
+======================= Iteracao 399 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 44, 303, 953, 984]
+======================= Iteracao 400 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 125, 268, 975]
+======================= Iteracao 401 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 125, 260, 770, 969]
+======================= Iteracao 402 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 371, 896, 927]
+======================= Iteracao 403 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 32, 260, 936, 909]
+======================= Iteracao 404 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 396, 376]
+======================= Iteracao 405 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 84, 927, 738]
+======================= Iteracao 406 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 22, 352, 744]
+======================= Iteracao 407 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 57, 204, 770, 764]
+======================= Iteracao 408 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 47, 128, 685, 953]
+======================= Iteracao 409 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 22, 396, 840]
+======================= Iteracao 410 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 497, 621]
+======================= Iteracao 411 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 57, 204, 764, 953]
+======================= Iteracao 412 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 125, 260, 969, 679]
+======================= Iteracao 413 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 125, 260, 969, 679]
+======================= Iteracao 414 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 33, 84, 685, 927]
+======================= Iteracao 415 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 117, 362, 396]
+======================= Iteracao 416 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 76, 362, 833]
+======================= Iteracao 417 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 128, 783, 738]
+======================= Iteracao 418 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 22, 304, 744]
+======================= Iteracao 419 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 97, 260, 833, 936]
+======================= Iteracao 420 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 125, 260, 679, 770]
+======================= Iteracao 421 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 17, 362, 909]
+======================= Iteracao 422 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 125, 260, 969, 679]
+======================= Iteracao 423 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 128, 257, 528]
+======================= Iteracao 424 ==========================
+Burning Number: 5
+Burning Sequence: [1, 17, 44, 260, 901]
+======================= Iteracao 425 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 79, 525, 744]
+======================= Iteracao 426 ==========================
+Burning Number: 5
+Burning Sequence: [1, 5, 44, 260, 969]
+======================= Iteracao 427 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 76, 257, 679, 969]
+======================= Iteracao 428 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 76, 304, 744]
+======================= Iteracao 429 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 26, 461, 764, 802]
+======================= Iteracao 430 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 47, 201, 685, 770]
+======================= Iteracao 431 ==========================
+Burning Number: 5
+Burning Sequence: [1, 5, 44, 456, 789]
+======================= Iteracao 432 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 56, 790, 744]
+======================= Iteracao 433 ==========================
+Burning Number: 6
+Burning Sequence: [1, 17, 125, 260, 679, 770]
+======================= Iteracao 434 ==========================
+Burning Number: 5
+Burning Sequence: [1, 6, 44, 456, 257]
+======================= Iteracao 435 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 362, 493]
+======================= Iteracao 436 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 32, 362, 936, 909]
+======================= Iteracao 437 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 16, 461, 927, 764]
+======================= Iteracao 438 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 79, 242, 377]
+======================= Iteracao 439 ==========================
+Burning Number: 6
+Burning Sequence: [1, 27, 125, 257, 770, 969]
+======================= Iteracao 440 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 125, 607, 975]
+======================= Iteracao 441 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 42, 204, 764, 770]
+======================= Iteracao 442 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 33, 201, 685, 984]
+======================= Iteracao 443 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 46, 260, 909, 936]
+======================= Iteracao 444 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 17, 362, 833]
+======================= Iteracao 445 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 263, 304, 744]
+======================= Iteracao 446 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 76, 260, 909, 936]
+======================= Iteracao 447 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 35, 362, 413]
+======================= Iteracao 448 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 62, 257, 802, 764]
+======================= Iteracao 449 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 125, 257, 969, 679]
+======================= Iteracao 450 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 76, 260, 936, 909]
+======================= Iteracao 451 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 26, 84, 770, 783]
+======================= Iteracao 452 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 56, 424, 744]
+======================= Iteracao 453 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 35, 607, 377]
+======================= Iteracao 454 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 125, 456, 770]
+======================= Iteracao 455 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 44, 303, 984, 953]
+======================= Iteracao 456 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 76, 525, 744]
+======================= Iteracao 457 ==========================
+Burning Number: 5
+Burning Sequence: [11, 17, 71, 362, 936]
+======================= Iteracao 458 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 56, 362, 525]
+======================= Iteracao 459 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 125, 362, 833, 936]
+======================= Iteracao 460 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 35, 456, 718]
+======================= Iteracao 461 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 35, 362, 909]
+======================= Iteracao 462 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 17, 352, 975]
+======================= Iteracao 463 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 79, 584, 558]
+======================= Iteracao 464 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 263, 525, 352]
+======================= Iteracao 465 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 57, 461, 764, 770]
+======================= Iteracao 466 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 29, 201, 685, 953]
+======================= Iteracao 467 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 42, 204, 764, 770]
+======================= Iteracao 468 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 28, 303, 953, 984]
+======================= Iteracao 469 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 161, 280, 487]
+======================= Iteracao 470 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 125, 456, 770, 679]
+======================= Iteracao 471 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 360, 770, 984]
+======================= Iteracao 472 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 584, 975]
+======================= Iteracao 473 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 848, 304]
+======================= Iteracao 474 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 306, 304]
+======================= Iteracao 475 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 56, 260, 679, 969]
+======================= Iteracao 476 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 44, 157, 984, 953]
+======================= Iteracao 477 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 145, 927, 896]
+======================= Iteracao 478 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 17, 362, 936, 833]
+======================= Iteracao 479 ==========================
+Burning Number: 5
+Burning Sequence: [1, 6, 44, 260, 969]
+======================= Iteracao 480 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 33, 456, 984, 953]
+======================= Iteracao 481 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 125, 607, 413]
+======================= Iteracao 482 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 56, 260, 257]
+======================= Iteracao 483 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 39, 607, 945]
+======================= Iteracao 484 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 263, 362, 936, 909]
+======================= Iteracao 485 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 43, 232, 524]
+======================= Iteracao 486 ==========================
+Burning Number: 5
+Burning Sequence: [1, 5, 44, 260, 969]
+======================= Iteracao 487 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 362, 481]
+======================= Iteracao 488 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 204, 927, 953]
+======================= Iteracao 489 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 125, 456, 770]
+======================= Iteracao 490 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 17, 362, 833]
+======================= Iteracao 491 ==========================
+Burning Number: 6
+Burning Sequence: [1, 17, 76, 260, 770, 679]
+======================= Iteracao 492 ==========================
+Burning Number: 5
+Burning Sequence: [11, 17, 56, 362, 909]
+======================= Iteracao 493 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 22, 280, 489]
+======================= Iteracao 494 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 62, 128, 770, 783]
+======================= Iteracao 495 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 57, 248, 953, 927]
+======================= Iteracao 496 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 67, 380, 764, 770]
+======================= Iteracao 497 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 189, 927, 953]
+======================= Iteracao 498 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 33, 618, 953, 984]
+======================= Iteracao 499 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 42, 204, 770, 953]
+======================= Iteracao 500 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 248, 764, 896]
+======================= Iteracao 501 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 62, 84, 770, 783]
+======================= Iteracao 502 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 65, 128, 770, 783]
+======================= Iteracao 503 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 35, 456, 744]
+======================= Iteracao 504 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 76, 525, 744]
+======================= Iteracao 505 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 33, 84, 770, 783]
+======================= Iteracao 506 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 15, 396, 975]
+======================= Iteracao 507 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 486, 362]
+======================= Iteracao 508 ==========================
+Burning Number: 6
+Burning Sequence: [1, 27, 125, 848, 770, 969]
+======================= Iteracao 509 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 125, 260, 770, 679]
+======================= Iteracao 510 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 76, 257, 679, 770]
+======================= Iteracao 511 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 56, 456, 770, 679]
+======================= Iteracao 512 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 35, 352, 524]
+======================= Iteracao 513 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 125, 260, 679, 770]
+======================= Iteracao 514 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 35, 362, 936, 909]
+======================= Iteracao 515 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 76, 456, 770, 679]
+======================= Iteracao 516 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 76, 362, 936, 909]
+======================= Iteracao 517 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 76, 184, 744]
+======================= Iteracao 518 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 76, 362, 833]
+======================= Iteracao 519 ==========================
+Burning Number: 5
+Burning Sequence: [1, 11, 44, 260, 621]
+======================= Iteracao 520 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 38, 260, 493]
+======================= Iteracao 521 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 76, 257, 679, 770]
+======================= Iteracao 522 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 56, 362, 744]
+======================= Iteracao 523 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 621, 304]
+======================= Iteracao 524 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 125, 607, 975]
+======================= Iteracao 525 ==========================
+Burning Number: 6
+Burning Sequence: [1, 17, 76, 260, 679, 770]
+======================= Iteracao 526 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 57, 248, 770, 802]
+======================= Iteracao 527 ==========================
+Burning Number: 5
+Burning Sequence: [27, 11, 44, 128, 525]
+======================= Iteracao 528 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 57, 461, 953, 770]
+======================= Iteracao 529 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 38, 362, 833, 936]
+======================= Iteracao 530 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 117, 584, 764]
+======================= Iteracao 531 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 371, 953, 896]
+======================= Iteracao 532 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 28, 128, 770, 783]
+======================= Iteracao 533 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 584, 984, 770]
+======================= Iteracao 534 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 257, 927, 764]
+======================= Iteracao 535 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 76, 362, 909]
+======================= Iteracao 536 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 28, 352, 770, 984]
+======================= Iteracao 537 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 16, 257, 927, 764]
+======================= Iteracao 538 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 17, 362, 833, 909]
+======================= Iteracao 539 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 128, 260, 833, 936]
+======================= Iteracao 540 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 371, 896, 770]
+======================= Iteracao 541 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 35, 362, 909]
+======================= Iteracao 542 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 38, 260, 833, 936]
+======================= Iteracao 543 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 33, 255, 770, 953]
+======================= Iteracao 544 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 76, 280, 184]
+======================= Iteracao 545 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 76, 260, 679, 770]
+======================= Iteracao 546 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 260, 184, 679]
+======================= Iteracao 547 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 28, 84, 770, 783]
+======================= Iteracao 548 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 257, 896, 927]
+======================= Iteracao 549 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 33, 352, 744]
+======================= Iteracao 550 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 79, 396, 945]
+======================= Iteracao 551 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 57, 257, 770, 927]
+======================= Iteracao 552 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 125, 260, 679, 770]
+======================= Iteracao 553 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 35, 614, 400]
+======================= Iteracao 554 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 44, 525, 953, 984]
+======================= Iteracao 555 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 263, 362, 744]
+======================= Iteracao 556 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 47, 201, 685, 953]
+======================= Iteracao 557 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 76, 260, 833]
+======================= Iteracao 558 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 56, 257, 679, 969]
+======================= Iteracao 559 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 35, 260, 848]
+======================= Iteracao 560 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 76, 362, 833]
+======================= Iteracao 561 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 33, 84, 685, 953]
+======================= Iteracao 562 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 33, 184, 744]
+======================= Iteracao 563 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 43, 352, 525]
+======================= Iteracao 564 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 260, 352, 184]
+======================= Iteracao 565 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 15, 396, 601]
+======================= Iteracao 566 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 29, 84, 685, 738]
+======================= Iteracao 567 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 87, 770, 984]
+======================= Iteracao 568 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 76, 628, 744]
+======================= Iteracao 569 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 57, 248, 764, 953]
+======================= Iteracao 570 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 35, 362, 936, 909]
+======================= Iteracao 571 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 125, 257, 770, 679]
+======================= Iteracao 572 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 8, 248, 770, 953]
+======================= Iteracao 573 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 56, 597, 744]
+======================= Iteracao 574 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 76, 260, 679, 770]
+======================= Iteracao 575 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 76, 525, 744]
+======================= Iteracao 576 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 263, 184, 744]
+======================= Iteracao 577 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 79, 304, 744]
+======================= Iteracao 578 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 125, 257, 770, 679]
+======================= Iteracao 579 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 29, 84, 685, 738]
+======================= Iteracao 580 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 33, 628, 984, 770]
+======================= Iteracao 581 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 76, 260, 969, 679]
+======================= Iteracao 582 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 22, 352, 744]
+======================= Iteracao 583 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 35, 584, 945]
+======================= Iteracao 584 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 17, 352, 975]
+======================= Iteracao 585 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 76, 362, 833, 909]
+======================= Iteracao 586 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 44, 201, 685, 927]
+======================= Iteracao 587 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 35, 143, 983]
+======================= Iteracao 588 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 43, 597, 525]
+======================= Iteracao 589 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 628, 984, 953]
+======================= Iteracao 590 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 257, 953, 896]
+======================= Iteracao 591 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 33, 250, 770, 953]
+======================= Iteracao 592 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 15, 143, 975]
+======================= Iteracao 593 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 42, 257, 953, 770]
+======================= Iteracao 594 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 352, 927, 896]
+======================= Iteracao 595 ==========================
+Burning Number: 5
+Burning Sequence: [1, 17, 44, 257, 260]
+======================= Iteracao 596 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 16, 257, 927, 953]
+======================= Iteracao 597 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 65, 128, 783, 770]
+======================= Iteracao 598 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 263, 525, 744]
+======================= Iteracao 599 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 618, 953, 984]
+======================= Iteracao 600 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 117, 352, 456]
+======================= Iteracao 601 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 618, 770, 984]
+======================= Iteracao 602 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 15, 232, 607]
+======================= Iteracao 603 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 62, 352, 770, 764]
+======================= Iteracao 604 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 15, 268, 975]
+======================= Iteracao 605 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 33, 352, 744]
+======================= Iteracao 606 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 22, 260, 909, 936]
+======================= Iteracao 607 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 57, 371, 953, 764]
+======================= Iteracao 608 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 38, 362, 621]
+======================= Iteracao 609 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 43, 424, 942]
+======================= Iteracao 610 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 44, 87, 984, 953]
+======================= Iteracao 611 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 371, 953, 770]
+======================= Iteracao 612 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 57, 371, 953, 764]
+======================= Iteracao 613 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 28, 618, 984, 770]
+======================= Iteracao 614 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 42, 257, 953, 770]
+======================= Iteracao 615 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 257, 953, 927]
+======================= Iteracao 616 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 161, 525, 489]
+======================= Iteracao 617 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 17, 362, 909]
+======================= Iteracao 618 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 57, 352, 927, 764]
+======================= Iteracao 619 ==========================
+Burning Number: 5
+Burning Sequence: [1, 6, 44, 456, 596]
+======================= Iteracao 620 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 44, 128, 685, 984]
+======================= Iteracao 621 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 17, 362, 833, 936]
+======================= Iteracao 622 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 84, 953, 927]
+======================= Iteracao 623 ==========================
+Burning Number: 5
+Burning Sequence: [27, 11, 44, 128, 354]
+======================= Iteracao 624 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 28, 360, 770, 984]
+======================= Iteracao 625 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 44, 618, 953, 984]
+======================= Iteracao 626 ==========================
+Burning Number: 6
+Burning Sequence: [1, 27, 125, 257, 969, 770]
+======================= Iteracao 627 ==========================
+Burning Number: 5
+Burning Sequence: [1, 6, 44, 257, 969]
+======================= Iteracao 628 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 362, 486]
+======================= Iteracao 629 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 22, 362, 744]
+======================= Iteracao 630 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 29, 84, 685, 770]
+======================= Iteracao 631 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 76, 260, 909, 833]
+======================= Iteracao 632 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 76, 362, 833]
+======================= Iteracao 633 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 242, 975]
+======================= Iteracao 634 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 44, 128, 685, 953]
+======================= Iteracao 635 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 29, 84, 770, 783]
+======================= Iteracao 636 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 352, 896, 953]
+======================= Iteracao 637 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 161, 525, 744]
+======================= Iteracao 638 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 56, 260, 679, 770]
+======================= Iteracao 639 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 15, 268, 975]
+======================= Iteracao 640 ==========================
+Burning Number: 5
+Burning Sequence: [1, 17, 44, 257, 789]
+======================= Iteracao 641 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 400, 660]
+======================= Iteracao 642 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 304, 89]
+======================= Iteracao 643 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 76, 260, 909, 833]
+======================= Iteracao 644 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 65, 189, 802, 770]
+======================= Iteracao 645 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 618, 770, 984]
+======================= Iteracao 646 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 8, 380, 953, 770]
+======================= Iteracao 647 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 255, 975]
+======================= Iteracao 648 ==========================
+Burning Number: 6
+Burning Sequence: [1, 17, 125, 257, 770, 679]
+======================= Iteracao 649 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 33, 184, 744]
+======================= Iteracao 650 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 33, 184, 744]
+======================= Iteracao 651 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 67, 352, 896, 764]
+======================= Iteracao 652 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 263, 597, 744]
+======================= Iteracao 653 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 189, 927, 896]
+======================= Iteracao 654 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 33, 128, 685, 984]
+======================= Iteracao 655 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 128, 362, 833, 936]
+======================= Iteracao 656 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 263, 424, 770]
+======================= Iteracao 657 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 17, 362, 833]
+======================= Iteracao 658 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 17, 362, 833, 909]
+======================= Iteracao 659 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 39, 362, 742]
+======================= Iteracao 660 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 38, 362, 260]
+======================= Iteracao 661 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 76, 525, 744]
+======================= Iteracao 662 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 360, 984, 953]
+======================= Iteracao 663 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 125, 260, 770, 679]
+======================= Iteracao 664 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 306, 953, 984]
+======================= Iteracao 665 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 260, 497, 936, 909]
+======================= Iteracao 666 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 26, 84, 770, 783]
+======================= Iteracao 667 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 263, 280, 953]
+======================= Iteracao 668 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 161, 352, 489]
+======================= Iteracao 669 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 57, 145, 953, 927]
+======================= Iteracao 670 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 67, 204, 770, 896]
+======================= Iteracao 671 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 35, 400, 232]
+======================= Iteracao 672 ==========================
+Burning Number: 5
+Burning Sequence: [1, 17, 44, 260, 896]
+======================= Iteracao 673 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 28, 84, 783, 770]
+======================= Iteracao 674 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 157, 984, 953]
+======================= Iteracao 675 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 33, 628, 525]
+======================= Iteracao 676 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 263, 628, 744]
+======================= Iteracao 677 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 76, 260, 833, 936]
+======================= Iteracao 678 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 161, 424, 525]
+======================= Iteracao 679 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 257, 927, 896]
+======================= Iteracao 680 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 42, 461, 896, 770]
+======================= Iteracao 681 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 56, 260, 770, 679]
+======================= Iteracao 682 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 28, 242, 770, 984]
+======================= Iteracao 683 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 79, 280, 744]
+======================= Iteracao 684 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 43, 424, 942]
+======================= Iteracao 685 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 56, 184, 744]
+======================= Iteracao 686 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 56, 257, 679, 770]
+======================= Iteracao 687 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 35, 255, 396]
+======================= Iteracao 688 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 614, 975]
+======================= Iteracao 689 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 125, 362, 975]
+======================= Iteracao 690 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 22, 362, 744]
+======================= Iteracao 691 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 53, 184, 424]
+======================= Iteracao 692 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 33, 280, 744]
+======================= Iteracao 693 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 15, 255, 975]
+======================= Iteracao 694 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 17, 260, 909]
+======================= Iteracao 695 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 33, 352, 770, 984]
+======================= Iteracao 696 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 20, 232, 607]
+======================= Iteracao 697 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 26, 461, 770, 783]
+======================= Iteracao 698 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 161, 597, 744]
+======================= Iteracao 699 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 56, 260, 679, 770]
+======================= Iteracao 700 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 43, 232, 916]
+======================= Iteracao 701 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 17, 362, 909]
+======================= Iteracao 702 ==========================
+Burning Number: 5
+Burning Sequence: [27, 3, 44, 242, 984]
+======================= Iteracao 703 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 16, 518, 764, 770]
+======================= Iteracao 704 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 62, 84, 783, 770]
+======================= Iteracao 705 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 57, 257, 953, 802]
+======================= Iteracao 706 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 76, 362, 936, 909]
+======================= Iteracao 707 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 128, 352, 941]
+======================= Iteracao 708 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 44, 87, 953, 984]
+======================= Iteracao 709 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 79, 352, 942]
+======================= Iteracao 710 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 47, 84, 770, 783]
+======================= Iteracao 711 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 250, 984, 953]
+======================= Iteracao 712 ==========================
+Burning Number: 5
+Burning Sequence: [11, 17, 38, 260, 936]
+======================= Iteracao 713 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 44, 456, 896]
+======================= Iteracao 714 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 76, 260, 936, 909]
+======================= Iteracao 715 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 263, 525, 362]
+======================= Iteracao 716 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 268, 975]
+======================= Iteracao 717 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 29, 201, 685, 783]
+======================= Iteracao 718 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 79, 184, 744]
+======================= Iteracao 719 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 584, 418]
+======================= Iteracao 720 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 486, 89]
+======================= Iteracao 721 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 33, 84, 685, 953]
+======================= Iteracao 722 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 76, 260, 679, 770]
+======================= Iteracao 723 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 268, 975]
+======================= Iteracao 724 ==========================
+Burning Number: 5
+Burning Sequence: [1, 6, 44, 260, 969]
+======================= Iteracao 725 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 248, 953, 927]
+======================= Iteracao 726 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 43, 352, 908]
+======================= Iteracao 727 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 33, 628, 744]
+======================= Iteracao 728 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 79, 184, 953]
+======================= Iteracao 729 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 257, 953, 764]
+======================= Iteracao 730 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 242, 975]
+======================= Iteracao 731 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 47, 128, 770, 783]
+======================= Iteracao 732 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 628, 89]
+======================= Iteracao 733 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 117, 607, 541]
+======================= Iteracao 734 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 22, 280, 770]
+======================= Iteracao 735 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 97, 260, 936, 833]
+======================= Iteracao 736 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 117, 232, 945]
+======================= Iteracao 737 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 22, 607, 242]
+======================= Iteracao 738 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 263, 362, 744]
+======================= Iteracao 739 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 125, 257, 596]
+======================= Iteracao 740 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 76, 280, 184]
+======================= Iteracao 741 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 62, 189, 764, 770]
+======================= Iteracao 742 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 260, 848, 216]
+======================= Iteracao 743 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 79, 362, 975]
+======================= Iteracao 744 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 117, 362, 936, 833]
+======================= Iteracao 745 ==========================
+Burning Number: 5
+Burning Sequence: [1, 11, 44, 260, 257]
+======================= Iteracao 746 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 17, 242, 975]
+======================= Iteracao 747 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 117, 456, 916]
+======================= Iteracao 748 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 56, 257, 679, 770]
+======================= Iteracao 749 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 76, 790, 744]
+======================= Iteracao 750 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 35, 396, 352]
+======================= Iteracao 751 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 17, 260, 909]
+======================= Iteracao 752 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 8, 257, 770, 802]
+======================= Iteracao 753 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 29, 84, 770, 783]
+======================= Iteracao 754 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 128, 352, 975]
+======================= Iteracao 755 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 42, 352, 953, 770]
+======================= Iteracao 756 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 125, 260, 679, 770]
+======================= Iteracao 757 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 257, 927, 953]
+======================= Iteracao 758 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 57, 257, 770, 802]
+======================= Iteracao 759 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 44, 461, 802, 896]
+======================= Iteracao 760 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 621, 89]
+======================= Iteracao 761 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 33, 362, 744]
+======================= Iteracao 762 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 79, 432, 975]
+======================= Iteracao 763 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 42, 257, 770, 896]
+======================= Iteracao 764 ==========================
+Burning Number: 6
+Burning Sequence: [1, 17, 76, 260, 679, 770]
+======================= Iteracao 765 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 38, 362, 478]
+======================= Iteracao 766 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 303, 770, 953]
+======================= Iteracao 767 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 117, 614, 840]
+======================= Iteracao 768 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 260, 493, 936, 909]
+======================= Iteracao 769 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 128, 927, 953]
+======================= Iteracao 770 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 57, 248, 802, 770]
+======================= Iteracao 771 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 502, 304]
+======================= Iteracao 772 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 260, 528, 998]
+======================= Iteracao 773 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 44, 84, 685, 927]
+======================= Iteracao 774 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 161, 260, 257]
+======================= Iteracao 775 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 20, 396, 352]
+======================= Iteracao 776 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 43, 790, 184]
+======================= Iteracao 777 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 38, 260, 833, 936]
+======================= Iteracao 778 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 263, 260, 525]
+======================= Iteracao 779 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 20, 255, 975]
+======================= Iteracao 780 ==========================
+Burning Number: 5
+Burning Sequence: [1, 11, 44, 257, 596]
+======================= Iteracao 781 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 204, 927, 770]
+======================= Iteracao 782 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 128, 232, 975]
+======================= Iteracao 783 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 125, 260, 770, 679]
+======================= Iteracao 784 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 17, 260, 833]
+======================= Iteracao 785 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 352, 984, 770]
+======================= Iteracao 786 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 352, 953, 927]
+======================= Iteracao 787 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 47, 352, 984, 953]
+======================= Iteracao 788 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 57, 257, 927, 770]
+======================= Iteracao 789 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 20, 396, 975]
+======================= Iteracao 790 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 456, 975]
+======================= Iteracao 791 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 29, 128, 685, 783]
+======================= Iteracao 792 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 44, 248, 802, 953]
+======================= Iteracao 793 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 161, 260, 621]
+======================= Iteracao 794 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 362, 418]
+======================= Iteracao 795 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 35, 607, 413]
+======================= Iteracao 796 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 35, 242, 456]
+======================= Iteracao 797 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 35, 260, 909, 936]
+======================= Iteracao 798 ==========================
+Burning Number: 5
+Burning Sequence: [1, 11, 44, 257, 596]
+======================= Iteracao 799 ==========================
+Burning Number: 6
+Burning Sequence: [1, 17, 56, 260, 770, 679]
+======================= Iteracao 800 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 145, 953, 927]
+======================= Iteracao 801 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 35, 260, 909, 936]
+======================= Iteracao 802 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 76, 456, 679, 770]
+======================= Iteracao 803 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 20, 400, 486]
+======================= Iteracao 804 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 161, 352, 744]
+======================= Iteracao 805 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 42, 204, 953, 770]
+======================= Iteracao 806 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 125, 257, 679, 969]
+======================= Iteracao 807 ==========================
+Burning Number: 5
+Burning Sequence: [11, 6, 56, 260, 833]
+======================= Iteracao 808 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 128, 738, 984]
+======================= Iteracao 809 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 84, 770, 953]
+======================= Iteracao 810 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 125, 257, 679, 770]
+======================= Iteracao 811 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 53, 362, 525]
+======================= Iteracao 812 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 16, 257, 770, 764]
+======================= Iteracao 813 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 248, 896, 953]
+======================= Iteracao 814 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 263, 304, 744]
+======================= Iteracao 815 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 478, 89]
+======================= Iteracao 816 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 57, 380, 953, 770]
+======================= Iteracao 817 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 56, 260, 679, 770]
+======================= Iteracao 818 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 76, 362, 833, 936]
+======================= Iteracao 819 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 56, 456, 679, 770]
+======================= Iteracao 820 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 57, 352, 927, 764]
+======================= Iteracao 821 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 76, 260, 833, 936]
+======================= Iteracao 822 ==========================
+Burning Number: 5
+Burning Sequence: [1, 11, 44, 257, 596]
+======================= Iteracao 823 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 76, 257, 679, 969]
+======================= Iteracao 824 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 257, 896, 927]
+======================= Iteracao 825 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 47, 128, 783, 770]
+======================= Iteracao 826 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 309, 621]
+======================= Iteracao 827 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 76, 260, 909, 936]
+======================= Iteracao 828 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 28, 208, 984, 770]
+======================= Iteracao 829 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 56, 362, 744]
+======================= Iteracao 830 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 128, 984, 783]
+======================= Iteracao 831 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 145, 927, 896]
+======================= Iteracao 832 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 42, 257, 953, 770]
+======================= Iteracao 833 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 145, 927, 953]
+======================= Iteracao 834 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 38, 362, 936, 833]
+======================= Iteracao 835 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 56, 790, 744]
+======================= Iteracao 836 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 20, 400, 975]
+======================= Iteracao 837 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 26, 84, 770, 783]
+======================= Iteracao 838 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 33, 525, 744]
+======================= Iteracao 839 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 56, 362, 744]
+======================= Iteracao 840 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 17, 260, 833]
+======================= Iteracao 841 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 57, 257, 770, 953]
+======================= Iteracao 842 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 79, 525, 744]
+======================= Iteracao 843 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 76, 597, 744]
+======================= Iteracao 844 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 17, 260, 909]
+======================= Iteracao 845 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 42, 352, 770, 953]
+======================= Iteracao 846 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 33, 184, 352]
+======================= Iteracao 847 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 33, 128, 783, 770]
+======================= Iteracao 848 ==========================
+Burning Number: 6
+Burning Sequence: [1, 17, 125, 257, 770, 679]
+======================= Iteracao 849 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 128, 362, 936, 833]
+======================= Iteracao 850 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 248, 927, 953]
+======================= Iteracao 851 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 38, 260, 833, 936]
+======================= Iteracao 852 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 257, 896, 927]
+======================= Iteracao 853 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 128, 260, 909, 936]
+======================= Iteracao 854 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 35, 400, 945]
+======================= Iteracao 855 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 20, 396, 975]
+======================= Iteracao 856 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 71, 257, 216]
+======================= Iteracao 857 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 44, 360, 953, 984]
+======================= Iteracao 858 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 20, 584, 524]
+======================= Iteracao 859 ==========================
+Burning Number: 6
+Burning Sequence: [1, 17, 125, 257, 770, 679]
+======================= Iteracao 860 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 161, 525, 679]
+======================= Iteracao 861 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 493, 304]
+======================= Iteracao 862 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 79, 525, 744]
+======================= Iteracao 863 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 76, 260, 770, 969]
+======================= Iteracao 864 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 56, 257, 679, 770]
+======================= Iteracao 865 ==========================
+Burning Number: 5
+Burning Sequence: [11, 2, 35, 260, 362]
+======================= Iteracao 866 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 79, 352, 524]
+======================= Iteracao 867 ==========================
+Burning Number: 5
+Burning Sequence: [27, 11, 44, 84, 128]
+======================= Iteracao 868 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 56, 456, 770, 679]
+======================= Iteracao 869 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 29, 201, 685, 927]
+======================= Iteracao 870 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 79, 352, 744]
+======================= Iteracao 871 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 263, 362, 909, 936]
+======================= Iteracao 872 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 15, 143, 975]
+======================= Iteracao 873 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 263, 597, 744]
+======================= Iteracao 874 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 33, 628, 184]
+======================= Iteracao 875 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 56, 184, 744]
+======================= Iteracao 876 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 26, 352, 802, 764]
+======================= Iteracao 877 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 43, 597, 184]
+======================= Iteracao 878 ==========================
+Burning Number: 5
+Burning Sequence: [11, 6, 35, 362, 936]
+======================= Iteracao 879 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 35, 396, 983]
+======================= Iteracao 880 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 145, 896, 927]
+======================= Iteracao 881 ==========================
+Burning Number: 5
+Burning Sequence: [1, 16, 128, 260, 621]
+======================= Iteracao 882 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 607, 975]
+======================= Iteracao 883 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 44, 84, 685, 953]
+======================= Iteracao 884 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 33, 208, 984, 953]
+======================= Iteracao 885 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 117, 260, 936, 833]
+======================= Iteracao 886 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 76, 628, 744]
+======================= Iteracao 887 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 20, 432, 486]
+======================= Iteracao 888 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 33, 84, 770, 783]
+======================= Iteracao 889 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 38, 362, 936, 833]
+======================= Iteracao 890 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 53, 424, 744]
+======================= Iteracao 891 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 117, 260, 833, 936]
+======================= Iteracao 892 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 304, 621]
+======================= Iteracao 893 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 33, 525, 744]
+======================= Iteracao 894 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 56, 260, 969, 770]
+======================= Iteracao 895 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 17, 362, 936, 833]
+======================= Iteracao 896 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 15, 396, 975]
+======================= Iteracao 897 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 57, 257, 927, 764]
+======================= Iteracao 898 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 53, 362, 744]
+======================= Iteracao 899 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 56, 257, 969, 679]
+======================= Iteracao 900 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 461, 896, 927]
+======================= Iteracao 901 ==========================
+Burning Number: 5
+Burning Sequence: [27, 11, 44, 84, 601]
+======================= Iteracao 902 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 29, 84, 783, 770]
+======================= Iteracao 903 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 38, 362, 481]
+======================= Iteracao 904 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 35, 260, 909]
+======================= Iteracao 905 ==========================
+Burning Number: 6
+Burning Sequence: [1, 17, 125, 257, 679, 770]
+======================= Iteracao 906 ==========================
+Burning Number: 5
+Burning Sequence: [2, 6, 125, 584, 975]
+======================= Iteracao 907 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 20, 396, 975]
+======================= Iteracao 908 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 33, 128, 783, 770]
+======================= Iteracao 909 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 33, 352, 744]
+======================= Iteracao 910 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 56, 456, 679, 770]
+======================= Iteracao 911 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 76, 260, 909, 936]
+======================= Iteracao 912 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 56, 184, 744]
+======================= Iteracao 913 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 42, 204, 896, 764]
+======================= Iteracao 914 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 486, 811]
+======================= Iteracao 915 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 263, 525, 744]
+======================= Iteracao 916 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 17, 260, 909]
+======================= Iteracao 917 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 35, 242, 396]
+======================= Iteracao 918 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 260, 424, 744]
+======================= Iteracao 919 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 79, 525, 744]
+======================= Iteracao 920 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 16, 371, 764, 927]
+======================= Iteracao 921 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 44, 84, 685, 984]
+======================= Iteracao 922 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 400, 764]
+======================= Iteracao 923 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 79, 525, 744]
+======================= Iteracao 924 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 38, 362, 936, 833]
+======================= Iteracao 925 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 628, 362]
+======================= Iteracao 926 ==========================
+Burning Number: 6
+Burning Sequence: [11, 17, 117, 260, 909, 936]
+======================= Iteracao 927 ==========================
+Burning Number: 5
+Burning Sequence: [11, 1, 17, 362, 909]
+======================= Iteracao 928 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 22, 280, 596]
+======================= Iteracao 929 ==========================
+Burning Number: 5
+Burning Sequence: [1, 27, 44, 257, 969]
+======================= Iteracao 930 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 28, 157, 770, 984]
+======================= Iteracao 931 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 62, 518, 770, 764]
+======================= Iteracao 932 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 486, 89]
+======================= Iteracao 933 ==========================
+Burning Number: 6
+Burning Sequence: [1, 11, 125, 260, 679, 770]
+======================= Iteracao 934 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 497, 304]
+======================= Iteracao 935 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 432, 742]
+======================= Iteracao 936 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 62, 352, 770, 896]
+======================= Iteracao 937 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 15, 607, 352]
+======================= Iteracao 938 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 29, 128, 685, 738]
+======================= Iteracao 939 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 62, 518, 802, 770]
+======================= Iteracao 940 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 128, 260, 833, 936]
+======================= Iteracao 941 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 43, 424, 184]
+======================= Iteracao 942 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 43, 184, 428]
+======================= Iteracao 943 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 8, 352, 953, 802]
+======================= Iteracao 944 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 47, 84, 685, 770]
+======================= Iteracao 945 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 17, 432, 975]
+======================= Iteracao 946 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 20, 268, 919]
+======================= Iteracao 947 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 42, 352, 770, 953]
+======================= Iteracao 948 ==========================
+Burning Number: 6
+Burning Sequence: [1, 5, 76, 257, 969, 770]
+======================= Iteracao 949 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 35, 478, 304]
+======================= Iteracao 950 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 461, 953, 927]
+======================= Iteracao 951 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 161, 352, 489]
+======================= Iteracao 952 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 57, 189, 953, 927]
+======================= Iteracao 953 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 20, 607, 975]
+======================= Iteracao 954 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 33, 242, 984, 770]
+======================= Iteracao 955 ==========================
+Burning Number: 5
+Burning Sequence: [2, 16, 35, 432, 620]
+======================= Iteracao 956 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 38, 260, 833, 936]
+======================= Iteracao 957 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 15, 486, 396]
+======================= Iteracao 958 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 497, 304]
+======================= Iteracao 959 ==========================
+Burning Number: 5
+Burning Sequence: [2, 11, 35, 584, 607]
+======================= Iteracao 960 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 76, 280, 744]
+======================= Iteracao 961 ==========================
+Burning Number: 6
+Burning Sequence: [11, 4, 38, 260, 936, 833]
+======================= Iteracao 962 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 84, 783, 984]
+======================= Iteracao 963 ==========================
+Burning Number: 6
+Burning Sequence: [11, 5, 17, 362, 909, 833]
+======================= Iteracao 964 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 79, 790, 744]
+======================= Iteracao 965 ==========================
+Burning Number: 5
+Burning Sequence: [3, 5, 161, 362, 424]
+======================= Iteracao 966 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 33, 87, 953, 984]
+======================= Iteracao 967 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 57, 248, 770, 802]
+======================= Iteracao 968 ==========================
+Burning Number: 6
+Burning Sequence: [1, 27, 125, 848, 969, 770]
+======================= Iteracao 969 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 33, 84, 770, 783]
+======================= Iteracao 970 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 57, 248, 927, 953]
+======================= Iteracao 971 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 28, 250, 953, 984]
+======================= Iteracao 972 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 57, 461, 764, 770]
+======================= Iteracao 973 ==========================
+Burning Number: 6
+Burning Sequence: [11, 6, 125, 260, 936, 833]
+======================= Iteracao 974 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 79, 184, 744]
+======================= Iteracao 975 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 35, 362, 396]
+======================= Iteracao 976 ==========================
+Burning Number: 6
+Burning Sequence: [27, 3, 33, 87, 770, 953]
+======================= Iteracao 977 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 255, 975]
+======================= Iteracao 978 ==========================
+Burning Number: 6
+Burning Sequence: [1, 6, 56, 260, 770, 969]
+======================= Iteracao 979 ==========================
+Burning Number: 6
+Burning Sequence: [1, 17, 56, 260, 679, 770]
+======================= Iteracao 980 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 26, 461, 764, 802]
+======================= Iteracao 981 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 44, 145, 927, 896]
+======================= Iteracao 982 ==========================
+Burning Number: 6
+Burning Sequence: [6, 1, 44, 204, 896, 953]
+======================= Iteracao 983 ==========================
+Burning Number: 5
+Burning Sequence: [3, 17, 22, 362, 744]
+======================= Iteracao 984 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 16, 371, 764, 927]
+======================= Iteracao 985 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 65, 612, 764, 802]
+======================= Iteracao 986 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 17, 486, 352]
+======================= Iteracao 987 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 62, 128, 770, 783]
+======================= Iteracao 988 ==========================
+Burning Number: 5
+Burning Sequence: [3, 27, 22, 790, 838]
+======================= Iteracao 989 ==========================
+Burning Number: 5
+Burning Sequence: [3, 44, 22, 628, 744]
+======================= Iteracao 990 ==========================
+Burning Number: 5
+Burning Sequence: [11, 27, 17, 89, 377]
+======================= Iteracao 991 ==========================
+Burning Number: 6
+Burning Sequence: [6, 11, 42, 518, 770, 764]
+======================= Iteracao 992 ==========================
+Burning Number: 5
+Burning Sequence: [3, 6, 161, 424, 744]
+======================= Iteracao 993 ==========================
+Burning Number: 6
+Burning Sequence: [6, 3, 57, 257, 802, 770]
+======================= Iteracao 994 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 128, 738, 953]
+======================= Iteracao 995 ==========================
+Burning Number: 5
+Burning Sequence: [2, 4, 15, 456, 975]
+======================= Iteracao 996 ==========================
+Burning Number: 6
+Burning Sequence: [27, 1, 16, 84, 738, 984]
+======================= Iteracao 997 ==========================
+Burning Number: 5
+Burning Sequence: [3, 57, 43, 424, 942]
+======================= Iteracao 998 ==========================
+Burning Number: 6
+Burning Sequence: [27, 11, 62, 84, 783, 770]
+======================= Iteracao 999 ==========================
+Burning Number: 5
+Burning Sequence: [2, 17, 22, 607, 601]
+======================= Iteracao 1000 ==========================
+Burning Number: 6
+Burning Sequence: [6, 2, 16, 257, 927, 770]
+=====================================================================
+Informacoes da instancia ../../Datasets/input/ba_1k_2k_edges.txt
+Densidade: 0.00
+Numero de vertices: 1000
+Numero de arestas: 1996
+Grau maximo: 69
+Grau medio: 3.99
+Numero de iteracoes realizadas: 1000
+Tempo gasto considerando todas as iteracoes: 2.41s
+Iteracao em que a melhor solucao foi obtida: 1
+Tempo gasto ate a melhor solucao: 0.00s
+Burning Number: 5
+Burning Sequence: [1, 27, 44, 456, 789]
+=====================================================================
+PARAMETROS UTILIZADOS
+Seed: 42
+ALPHA: 0.50
+Max Iteracoes 1000
+Condicao de Parada: 0
+Funcao Gulosa 0

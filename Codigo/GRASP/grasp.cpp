@@ -9,10 +9,6 @@ vector<pair<int, vector<int>>> solutions; // {valor, lista}
 const int MAXN = 2e5 + 5;
 clock_t timer;
 
-// OUTPUT
-int densidade, numero_de_vertices, numero_de_arestas, grau_maximo, numero_de_iteracoes, iteracoes_solucao;
-double grau_medio, tempo_total, tempo_solucao;
-
 struct Node {
 	vector<Node*> vizinhos;
 	int id;
@@ -38,9 +34,33 @@ Node *vertice[MAXN];
 vector<int> adj[MAXN];
 int grau[MAXN];
 
+namespace EigenvectorCentrality {
+
+	vector<double> get_scores(vector<double> centrality_scores, vector<vector<int>> &adj_matrix) {
+		int n = (int) centrality_scores.size();
+		for (int k = 0; k < 100; k++) {
+			vector<double> temp(n);
+			for (int i = 0; i < n; i++) {
+				temp[i] = 0;
+				for (int j = 0; j < n; j++) {
+					temp[i] += (double) adj_matrix[i][j] * centrality_scores[j];
+				}
+			}
+			double norm = 0;
+			for (int i = 0; i < n; i++)
+				norm += temp[i] * temp[i];
+			norm = sqrt(norm);
+			for (int i = 0; i < n; i++)
+				centrality_scores[i] = temp[i] / norm;
+		}
+		return centrality_scores;
+	}
+
+}
+
 inline int g(int v) { return vertice[v]->grau; }
 
-int escolhe(set<int> &st, double ALPHA, mt19937 rng) {
+int escolhe(set<int> &st, double ALPHA, mt19937 &rng) {
 	if (st.empty())
 		return -1;
 	int mx = 0;
@@ -61,7 +81,7 @@ int escolhe(set<int> &st, double ALPHA, mt19937 rng) {
 	return cara;
 }
 
-pair<vector<int>, bool> greedy(double ALPHA, mt19937 rng) {
+pair<vector<int>, bool> greedy(double ALPHA, mt19937 &rng) {
 	set<int> safe; // vertices que estao safe
 	set<int> quase; // vertices que estao quase queimados
 	set<int> burned; // vertices que estao queimados
@@ -96,8 +116,7 @@ pair<vector<int>, bool> greedy(double ALPHA, mt19937 rng) {
 	return make_pair(sol, true);
 }
 
-void printa_bs(int f_sol, vector<int> &sol, int it) {
-	printf("======================= Iteracao %d ==========================\n", it + 1);
+void printa_bs(int f_sol, vector<int> &sol) {
 	printf("Burning Number: %d\n", f_sol);
 	printf("Burning Sequence: [");
 	for (int i = 0; i < f_sol; i++) {
@@ -107,12 +126,13 @@ void printa_bs(int f_sol, vector<int> &sol, int it) {
 	printf("]\n");
 }
 
-tuple<int, double, vector<int>> GRASP(int maximo_iteracoes, double ALPHA, mt19937 rng) {
+tuple<int, int, double, vector<int>> GRASP(int maximo_iteracoes, double ALPHA, mt19937 &rng) {
 	int best_f = (int) 1e9;
 	int iteracao = -1;
+	int qtd_iteracoes = 0;
 	double tempo = 0;
 	vector<int> best_sol;
-	for (int i = 0; i < maximo_iteracoes; i++, numero_de_iteracoes++) {
+	for (int i = 0; i < maximo_iteracoes; i++, qtd_iteracoes++) {
 		auto ret = greedy(ALPHA, rng);
 		if (!ret.second) continue;
 		vector<int> sol = ret.first;
@@ -127,18 +147,16 @@ tuple<int, double, vector<int>> GRASP(int maximo_iteracoes, double ALPHA, mt1993
 			best_f = f_sol;
 			best_sol = sol;
 		}
-		printa_bs(f_sol, sol, i);
+		printf("======================= Iteracao %d ==========================\n", i + 1);
+		printa_bs(f_sol, sol);
 	}
-	return make_tuple(iteracao, tempo, best_sol);
+	return make_tuple(qtd_iteracoes, iteracao, tempo, best_sol);
 	// Talvez retornar a sequência obtida
 }
 
 void readInput() {
 	set<int> st;
 	cin >> n >> m;
-	densidade = 2.0 * m / (n * (n - 1));
-	numero_de_vertices = n;
-	numero_de_arestas = m;
 	for (int i = 0; i < m; i++) {
 		int a, b;
 		cin >> a >> b;
@@ -154,7 +172,6 @@ void readInput() {
 		vertice[b]->addEdge(vertice[a]);
 		grau[a]++;
 		grau[b]++;
-		grau_maximo = max({grau_maximo, grau[a], grau[b]});
 	}
 	assert(*st.begin() >= 0 && *st.rbegin() <= n - 1);
 }
@@ -166,24 +183,29 @@ int main(int argc, char **argv) {
 	int maximo_iteracoes = atoi(argv[4]);	// argv[4] = Numero maximo de iteracoes permitida
 	int condicao_parada = atoi(argv[5]);	// argv[5] = Condicao de parada utilizada (nao usado no momento)
 	int criterio_guloso = atoi(argv[6]);	// argv[6] = Funcao gulosa utilizada
-	printf("ALPHA => %.2lf\n", ALPHA);
 	readInput();
-
+	double densidade = 2.0 * m / (n * (n - 1));
+	int numero_de_vertices = n;
+	int numero_de_arestas = m;
+	int grau_maximo = 0;
+	double grau_medio = 0;
 	for (int i = 0; i < n; i++) {
-		grau_medio += vertice[i]->grau;
+		grau_maximo = max(grau_maximo, vertice[i]->grau);
+		grau_medio += (double) vertice[i]->grau;
 	}
 	grau_medio /= n;
-
 	timer = clock();
 	mt19937 rng(seed);
 	auto v = GRASP(maximo_iteracoes, ALPHA, rng);
-	tempo_total = 1.0 * (clock() - timer) / CLOCKS_PER_SEC;
-	int iteracoes_solucao = get<0>(v);
-	double tempo_solucao = get<1>(v);
-	int burning_number = (int) get<2>(v).size();
-	// printf("%s,%s,%s,%d,%d,%.5lf,%.5lf", argv[1], argv[2], argv[3], bn, iteracao, tempoParaSolucao, 1.0 * (clock() - timer) / CLOCKS_PER_SEC);
-	printf("\nInformacoes da instancia %s\n", argv[1]);
-	printf("Densidade: %d\n", densidade);
+	double tempo_total = 1.0 * (clock() - timer) / CLOCKS_PER_SEC;
+	int numero_de_iteracoes = get<0>(v);
+	int iteracoes_solucao = get<1>(v);
+	double tempo_solucao = get<2>(v);
+	vector<int> burning_sequence = get<3>(v);
+	int burning_number = (int) burning_sequence.size();
+	printf("=====================================================================\n");
+	printf("Informacoes da instancia %s\n", argv[1]);
+	printf("Densidade: %.2lf\n", densidade);
 	printf("Numero de vertices: %d\n", numero_de_vertices);
 	printf("Numero de arestas: %d\n", numero_de_arestas);
 	printf("Grau maximo: %d\n", grau_maximo);
@@ -192,6 +214,10 @@ int main(int argc, char **argv) {
 	printf("Tempo gasto considerando todas as iteracoes: %.2lfs\n", tempo_total);
 	printf("Iteracao em que a melhor solucao foi obtida: %d\n", iteracoes_solucao);
 	printf("Tempo gasto ate a melhor solucao: %.2lfs\n", tempo_solucao);
+	printa_bs(burning_number, burning_sequence);
+	printf("=====================================================================\n");
+	printf("PARAMETROS UTILIZADOS\n");
+	printf("Seed: %d\nALPHA: %.2lf\nMax Iteracoes %d\nCondicao de Parada: %d\nFuncao Gulosa %d\n", seed, ALPHA, maximo_iteracoes, condicao_parada, criterio_guloso);
 	/*
 	Printar: (Seja G o grafo utilizado)
 		Densidade de G
