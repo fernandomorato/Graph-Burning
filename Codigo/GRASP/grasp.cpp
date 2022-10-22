@@ -203,6 +203,7 @@ int main(int argc, char **argv) {
 	double tempo_solucao = get<2>(v);
 	vector<int> burning_sequence = get<3>(v);
 	int burning_number = (int) burning_sequence.size();
+	printf("=====================================================================\n");
 	printf("Informacoes da instancia %s\n", argv[1]);
 	printf("Densidade: %.2lf\n", densidade);
 	printf("Numero de vertices: %d\n", numero_de_vertices);
@@ -214,6 +215,9 @@ int main(int argc, char **argv) {
 	printf("Iteracao em que a melhor solucao foi obtida: %d\n", iteracoes_solucao);
 	printf("Tempo gasto ate a melhor solucao: %.2lfs\n", tempo_solucao);
 	printa_bs(burning_number, burning_sequence);
+	printf("=====================================================================\n");
+	printf("PARAMETROS UTILIZADOS\n");
+	printf("Seed: %d\nALPHA: %.2lf\nMax Iteracoes %d\nCondicao de Parada: %d\nFuncao Gulosa %d\n", seed, ALPHA, maximo_iteracoes, condicao_parada, criterio_guloso);
 	/*
 	Printar: (Seja G o grafo utilizado)
 		Densidade de G
