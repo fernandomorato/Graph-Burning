@@ -14,6 +14,7 @@ struct Node {
 	int id;
 	int grau;
 	bool queimado;
+	long double eigenvector_centrality;
 
 	Node() {}
 
@@ -21,6 +22,7 @@ struct Node {
 		id = _id;
 		grau = 0;
 		queimado = false;
+		eigenvector_centrality = 0;
 	}
 
 	void addEdge(Node *u) {
@@ -33,47 +35,74 @@ int n, m;
 Node *vertice[MAXN];
 vector<int> adj[MAXN];
 int grau[MAXN];
+long double eigenvalue;
+vector<vector<int>> adj_matrix;
 
 namespace EigenvectorCentrality {
 
-	vector<double> get_scores(vector<double> centrality_scores, vector<vector<int>> &adj_matrix) {
-		int n = (int) centrality_scores.size();
-		for (int k = 0; k < 100; k++) {
-			vector<double> temp(n);
+	tuple<vector<long double>, long double, int> get_scores(vector<vector<int>> &adj_matrix, long double EPS, mt19937 &rng) {
+		int n = (int) adj_matrix.size();
+		vector<long double> x0(n), x1(n);
+		uniform_real_distribution<long double> unif(0, 1);
+		long double norm = 0;
+		for (int i = 0; i < n; i++) {
+			x1[i] = unif(rng);
+			norm += x1[i] * x1[i];
+		}
+		norm = sqrt(norm);
+		cout << '\n';
+		for (int i = 0; i < n; i++) {
+			x1[i] /= norm;
+		}
+		int iter = 0;
+		long double lambda = 0, lambdaOld = 0, m = 0;
+		while (iter <= 100) {
+			swap(x0, x1);
 			for (int i = 0; i < n; i++) {
-				temp[i] = 0;
+				x1[i] = 0;
 				for (int j = 0; j < n; j++) {
-					temp[i] += (double) adj_matrix[i][j] * centrality_scores[j];
+					x1[i] += (long double) adj_matrix[i][j] * x0[j];
 				}
 			}
-			double norm = 0;
-			for (int i = 0; i < n; i++)
-				norm += temp[i] * temp[i];
+			norm = 0;
+			for (int i = 0; i < n; i++) {
+				norm += x1[i] * x1[i];
+			}
 			norm = sqrt(norm);
-			for (int i = 0; i < n; i++)
-				centrality_scores[i] = temp[i] / norm;
+			lambda = 0;
+			for (int i = 0; i < n; i++) {
+				x1[i] /= norm;
+				lambda += x1[i] * x0[i];
+			}
+			lambda = sqrt(lambda);
+			iter++;
+			if (fabs((lambda - lambdaOld) / lambda) < EPS)
+				break;
+			lambdaOld = lambda;
 		}
-		return centrality_scores;
+		return make_tuple(x1, lambda, iter);
 	}
-
 }
 
-inline int g(int v) { return vertice[v]->grau; }
+inline int g(int v, int criterio_guloso) { 
+	if (criterio_guloso == 0) return vertice[v]->grau; 
+	return vertice[v]->eigenvector_centrality;
+}
 
-int escolhe(set<int> &st, double ALPHA, mt19937 &rng) {
+int escolhe(set<int> &st, double ALPHA, mt19937 &rng, int criterio_guloso) {
 	if (st.empty())
 		return -1;
 	int mx = 0;
 	int mn = (int) 1e9;
 	for (auto &x : st) {
 		assert(!vertice[x]->queimado);
-		mx = max(mx, g(x));
-		mn = min(mn, g(x));
+		mx = max(mx, g(x, criterio_guloso));
+		mn = min(mn, g(x, criterio_guloso));
 	}
 	int lowerBound = mx - (int) floor(ALPHA * (mx - mn));
 	vector<int> v;
 	for (auto &x : st) {
-		if (g(x) >= lowerBound)
+		if (g(x, criterio_guloso) >= lowerBound)
 			v.push_back(x);
 	}
 	int cara = v[rng() % ((int) v.size())];
@@ -81,7 +110,16 @@ int escolhe(set<int> &st, double ALPHA, mt19937 &rng) {
 	return cara;
 }
 
-pair<vector<int>, bool> greedy(double ALPHA, mt19937 &rng) {
+void update_greedy_function(Node *node, int criterio_guloso) {
+	for (auto &viz : node->vizinhos) {
+		if (criterio_guloso == 0)
+			viz->grau--;
+		else if (criterio_guloso == 1)
+			viz->eigenvector_centrality -= node->eigenvector_centrality;
+	}
+}
+
+pair<vector<int>, bool> greedy(double ALPHA, mt19937 &rng, int criterio_guloso) {
 	set<int> safe; // vertices que estao safe
 	set<int> quase; // vertices que estao quase queimados
 	set<int> burned; // vertices que estao queimados
@@ -97,7 +135,7 @@ pair<vector<int>, bool> greedy(double ALPHA, mt19937 &rng) {
 				if (!viz->queimado)
 					quase.insert(viz->id);
 		}
-		int cara = escolhe(safe.empty() ? quase : safe, ALPHA, rng);
+		int cara = escolhe(safe.empty() ? quase : safe, ALPHA, rng, criterio_guloso);
 		if (cara == -1)
 			return make_pair(sol, false);
 		sol.push_back(cara);
@@ -105,8 +143,8 @@ pair<vector<int>, bool> greedy(double ALPHA, mt19937 &rng) {
 		for (auto &x : quase) {
 			for (auto &viz : vertice[x]->vizinhos) {
 				safe.erase(viz->id);
-				viz->grau--;
 			}
+			update_greedy_function(vertice[x], criterio_guloso);
 			vertice[x]->queimado = true;
 			burned.insert(x);
 			safe.erase(x);
@@ -126,14 +164,15 @@ void printa_bs(int f_sol, vector<int> &sol) {
 	printf("]\n");
 }
 
-tuple<int, int, double, vector<int>> GRASP(int maximo_iteracoes, double ALPHA, mt19937 &rng) {
+tuple<int, int, double, vector<int>> GRASP(int maximo_iteracoes, double ALPHA, mt19937 &rng, int parada, int criterio_guloso) {
 	int best_f = (int) 1e9;
 	int iteracao = -1;
 	int qtd_iteracoes = 0;
 	double tempo = 0;
 	vector<int> best_sol;
+	// fazer algo com o criterio de parada
 	for (int i = 0; i < maximo_iteracoes; i++, qtd_iteracoes++) {
-		auto ret = greedy(ALPHA, rng);
+		auto ret = greedy(ALPHA, rng, criterio_guloso);
 		if (!ret.second) continue;
 		vector<int> sol = ret.first;
 		// assert(valid(sol));
@@ -154,9 +193,10 @@ tuple<int, int, double, vector<int>> GRASP(int maximo_iteracoes, double ALPHA, m
 	// Talvez retornar a sequência obtida
 }
 
-void readInput() {
+void readInput(mt19937 &rng) {
 	set<int> st;
 	cin >> n >> m;
+	adj_matrix.resize(n, vector<int>(n));
 	for (int i = 0; i < m; i++) {
 		int a, b;
 		cin >> a >> b;
@@ -170,10 +210,19 @@ void readInput() {
 		}
 		vertice[a]->addEdge(vertice[b]);
 		vertice[b]->addEdge(vertice[a]);
+		adj_matrix[a][b] = adj_matrix[b][a] = 1;
 		grau[a]++;
 		grau[b]++;
 	}
+	for (int i = 0; i < n; i++)
+		adj_matrix[i][i] = 1;
 	assert(*st.begin() >= 0 && *st.rbegin() <= n - 1);
+	auto ec_ans = EigenvectorCentrality::get_scores(adj_matrix, 1e-9, rng);
+	auto centrality_scores = get<0>(ec_ans);
+	eigenvalue = get<1>(ec_ans);
+	for (int i = 0; i < n; i++) {
+		vertice[i]->eigenvector_centrality = centrality_scores[i];
+	}
 }
 
 int main(int argc, char **argv) {
@@ -183,7 +232,8 @@ int main(int argc, char **argv) {
 	int maximo_iteracoes = atoi(argv[4]);	// argv[4] = Numero maximo de iteracoes permitida
 	int condicao_parada = atoi(argv[5]);	// argv[5] = Condicao de parada utilizada (nao usado no momento)
 	int criterio_guloso = atoi(argv[6]);	// argv[6] = Funcao gulosa utilizada
-	readInput();
+	mt19937 rng(seed);
+	readInput(rng);
 	double densidade = 2.0 * m / (n * (n - 1));
 	int numero_de_vertices = n;
 	int numero_de_arestas = m;
@@ -195,8 +245,7 @@ int main(int argc, char **argv) {
 	}
 	grau_medio /= n;
 	timer = clock();
-	mt19937 rng(seed);
-	auto v = GRASP(maximo_iteracoes, ALPHA, rng);
+	auto v = GRASP(maximo_iteracoes, ALPHA, rng, condicao_parada, criterio_guloso);
 	double tempo_total = 1.0 * (clock() - timer) / CLOCKS_PER_SEC;
 	int numero_de_iteracoes = get<0>(v);
 	int iteracoes_solucao = get<1>(v);
