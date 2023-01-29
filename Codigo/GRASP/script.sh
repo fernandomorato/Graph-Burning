@@ -1,3 +1,30 @@
+make teste
+for filename in ../../Datasets/input/*.txt ; do
+	echo Rodando $(basename $filename .txt)
+	./teste < $filename
+done
+rm teste
+exit
+make get_answers
+for filename in ../../Datasets/logs/eigenvector_centrality/logs_03/* ; do
+	a=$(basename $filename .log)
+	echo Rodando $a
+	./get_answers $a < $filename
+done
+for filename in ../../Datasets/logs/eigenvector_centrality/logs_05/* ; do
+	a=$(basename $filename .log)
+	echo Rodando $a
+	./get_answers $a < $filename
+done
+for filename in ../../Datasets/logs/eigenvector_centrality/logs_07/* ; do
+	a=$(basename $filename .out)
+	echo Rodando $a
+	./get_answers $a < $filename
+done
+rm get_answers
+gjhghjghjgj
+
+exit
 # filename="../../Datasets/input/c-fat500-10_edges.txt"
 seed=42
 alpha=0.7

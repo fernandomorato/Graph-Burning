@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include "eingenvector.h"
 
 using namespace std;
 
@@ -9,7 +10,7 @@ vector<pair<int, vector<int>>> solutions; // {valor, lista}
 const int MAXN = 2e5 + 5;
 clock_t timer;
 
-struct Node {
+struct Node { 
 	vector<Node*> vizinhos;
 	int id;
 	int grau;
@@ -35,6 +36,7 @@ int n, m;
 Node *vertice[MAXN];
 vector<int> adj[MAXN];
 int grau[MAXN];
+int frequencia[MAXN];
 long double eigenvalue;
 vector<vector<int>> adj_matrix;
 
@@ -84,6 +86,43 @@ namespace EigenvectorCentrality {
 	}
 }
 
+namespace BIAS {
+	// codar a bias function aqui
+
+
+	int escolhe_bias(set<int> &st, double ALPHA, mt19937 &rng, int criterio_guloso) {
+		if (st.empty())
+			return -1;
+		// int mx = 0;
+		// int mn = (int) 1e9;
+		// for (auto &x : st) {
+		// 	assert(!vertice[x]->queimado);
+		// 	mx = max(mx, g(x, criterio_guloso));
+		// 	mn = min(mn, g(x, criterio_guloso));
+		// }
+		// int lowerBound = mx - (int) floor(ALPHA * (mx - mn));
+		// vector<int> v;
+		// for (auto &x : st) {
+		// 	if (g(x, criterio_guloso) >= lowerBound)
+		// 		v.push_back(x);
+		// }
+		// int cara = v[rng() % ((int) v.size())];
+		// st.erase(cara);
+		// return cara;
+	}
+
+}
+
+namespace reactive_GRASP {
+	// codar o grasp reativo aqui
+	// - Lista = [0.1, 0.2, ..., 0.9, 1.0]
+	// - Inicialmente p[i] = 1 / 10
+	// - Z* -> melhor solucao encontrada ate agora
+	// - A[i] = valor medio da solucao para o i-esimo alpha
+	// - Recalculamos p[i] = q[i] / sum(q[j], para todo j).
+	// - q[i] = Z* / A[i]
+}
+
 inline int g(int v, int criterio_guloso) { 
 	if (criterio_guloso == 0) return vertice[v]->grau; 
 	return vertice[v]->eigenvector_centrality;
@@ -124,6 +163,7 @@ pair<vector<int>, bool> greedy(double ALPHA, mt19937 &rng, int criterio_guloso) 
 	set<int> quase; // vertices que estao quase queimados
 	set<int> burned; // vertices que estao queimados
 	for (int i = 0; i < n; i++) {
+		frequencia[i] = 0;
 		safe.insert(i);
 		vertice[i]->queimado = false;
 		vertice[i]->grau = grau[i];
