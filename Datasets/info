@@ -1,0 +1,23 @@
+No arquivo .out as informacoes estao distribuidas da seguinte forma:
+
+Burning Number encontrado
+
+Valor de alpha utilizado
+
+Densidade do grafo
+
+Numero de vertices
+
+Numero de arestas
+
+Grau maximo
+
+Grau minimo
+
+Numero de iteracoes efetivamente realizadas
+
+Tempo total de execucao considerando todas as iteracoes ocorridas
+
+Iteracao em que a melhor solucao foi encontrada
+
+Tempo de execucao até a iteracao em que a melhor solucao foi encontrada
