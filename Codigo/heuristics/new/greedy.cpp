@@ -13,6 +13,7 @@ double GRAPH_DENSITY, ALPHA;
 int BURNING_NUMBER;
 vector<double> centrality_scores;
 int m_adj[MAXN][MAXN], label[MAXN];
+bool blocked[MAXN];
 
 void readInput() {
 	cin >> N >> M;
@@ -25,7 +26,7 @@ void readInput() {
 	}
 	GRAPH_DENSITY = 2.0 * (double) M / (1.0 * (double) N * (double)(N - 1)); // D = 2|E| / (|V| * (|V| - 1))
 	BURNING_NUMBER = (int) floor(2 * sqrt((double) N) - 1.0); // bound for bn(G)
-	centrality_scores.resize(n);
+	centrality_scores.resize(N);
 	for (int i = 0; i < N; i++) {
 		m_adj[i][i] = 1;
 		label[i] = INF;
@@ -50,10 +51,10 @@ void bfs(int source) {
 }
 
 int choose_vertex(set<int> &possible_vertices, mt19937 &rng) {
-
+ return 0;
 }
 
-vector<int> construction(vector<int> &centrality, mt19937 &rng) {
+vector<int> construction(vector<double> centrality, mt19937 &rng) { // vetor por referencia?
 	vector<int> vertices(N), burning_sequence;
 	iota(vertices.begin(), vertices.end(), 0);
 	double best_centrality_score = *max_element(centrality.begin(), centrality.end());
@@ -71,33 +72,37 @@ vector<int> construction(vector<int> &centrality, mt19937 &rng) {
 		}
 		sort(aux.rbegin(), aux.rend());
 		for (int i = 0; i < 5; i++) {
-			selected_vertices.push_back(aux[i]);
+			selected_vertices.push_back(aux[i].second);
 		}
 	}
 	assert(!selected_vertices.empty());
 	int initial_vertex = selected_vertices[rng() % ((int) selected_vertices.size())];
+
+	return {initial_vertex};
+
 	bfs(initial_vertex);
 	set<int> safe, targeted, burned;
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < N; i++) {
 		safe.insert(i);
 	}
-	int current_round = 1;
+	int current_round = 1; // para saber quem será queimado
 	burning_sequence.push_back(initial_vertex);
 	burned.insert(initial_vertex);
 	safe.erase(initial_vertex);
-	for (int i = 0; i < n; i++) {
-		if (label[i] < BURNING_NUMBER) {
+	for (int i = 0; i < N; i++) {
+		if (i != initial_vertex && label[i] < BURNING_NUMBER) {
+			blocked[i] = true;
 			targeted.insert(i);
 			safe.erase(i);
 		}
 	}
-	vector<pair<double, set<int>>> connected_components;
+	vector<pair<double, set<int>>> connected_components; // densidade, vertices da componente
 	while (!safe.empty() || !targeted.empty()) {
 		int vertices_count = 0;
 		int edges_count = 0;
 		set<int> st;
-		for (int i = 0; i < n; i++) {
-			dfs();
+		for (int i = 0; i < N; i++) {
+			// dfs();
 		}
 		set<int> candidate_list;
 		for (auto &cc : connected_components) {
@@ -118,7 +123,7 @@ int main() {
 	clock_t inicio = clock(), final = clock();
 	do {
 		auto burning_sequence = construction(centrality_scores, rng);
-		BURNING_NUMBER = min(BURNING_NUMBER, (int) burning_sequence);
+		BURNING_NUMBER = min(BURNING_NUMBER, (int) burning_sequence.size());
 		// armazenar coisas referentes aa sequencia encontrada
 		iteracoes_realizadas++;
 		final = clock();
