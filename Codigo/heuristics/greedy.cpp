@@ -22,30 +22,34 @@ bool visited[MAXN];
 
 bool status_checker[MAXN];
 
-bool check_solution(vector<int> &burning_sequence) {
-	for (int i = 0; i < N; i++) {
-		status_checker[i] = 0;
-	}
-	vector<int> almost_burned;
-	for (auto x : burning_sequence) {
-		if (status_checker[x] == 1)
-			return false;
-		almost_burned.push_back(x);
-		for (auto y : almost_burned) {
-			status_checker[y] = 1;
-		}
-		vector<int> new_almost_burned;
-		for (auto y : almost_burned) {
-			for (auto viz : adj[y]) {
-				if (status_checker[viz] == 0) {
-					new_almost_burned.push_back(viz);
-				}
-			}
-		}
-		swap(almost_burned, new_almost_burned);
-	}
-	return true;
-}
+// bool check_solution(vector<int> burning_sequence) {
+// 	for (int i = 0; i < N; i++) {
+// 		status_checker[i] = 0;
+// 	}
+// 	vector<int> v, nv;
+// 	for (int x : burning_sequence) {
+// 		v.push_back(x);
+// 		for (int xx : v) {
+// 			status_checker[xx] = 1;
+// 			if (label[xx] != label[x])
+// 				cerr << label[xx] << " => " << label[x] << '\n';
+// 			assert(label[xx] == label[x]);
+// 			for (int viz : adj[xx]) {
+// 				// cerr << label[xx] << " -> " << label[viz] << '\n';
+// 				// assert(label[viz] == label[x] || label[viz] == label[x] + 1);
+// 				if (label[viz] == label[x] + 1)
+// 					nv.push_back(viz);
+// 			}
+// 		}
+// 		swap(v, nv);
+// 		nv.clear();
+// 	}
+// 	for (int i = 0; i < N; i++) {
+// 		if (status_checker[i] == 0)
+// 			return false;
+// 	}
+// 	return true;
+// }
 
 void readInput() {
 	cin >> N >> M;
@@ -67,11 +71,13 @@ void readInput() {
 	}
 }
  
-void bfs(int source, int round) {
+int bfs(int source, int round) {
+	int cnt = 0;
 	label[source] = round;
 	queue<int> q;
 	q.push(source);
 	while (!q.empty()) {
+		cnt++;
 		int cur = q.front();
 		q.pop();
 		for (auto x : adj[cur]) {
@@ -81,6 +87,7 @@ void bfs(int source, int round) {
 			}
 		}
 	}
+	return cnt;
 }
  
 void calc_centrality_scores(vector<double> &centrality_scores, vector<int> &vertices, mt19937 &rng) {
@@ -152,7 +159,7 @@ int qtd_arestas_componente;
 vector<int> vertices_componente;
  
 void dfs(int current_vertex) {
-	// cerr << current_vertex << "(" << status[current_vertex] << ")\n";
+	cerr << "DFS --- " << current_vertex << "(" << status[current_vertex] << ")\n";
 	assert(status[current_vertex] == 0);
 	vertices_componente.push_back(current_vertex);
 	visited[current_vertex] = true;
@@ -163,10 +170,13 @@ void dfs(int current_vertex) {
 			continue;
 		dfs(neighbour);
 	}
-	// cerr << current_vertex << " " << edges << ' ' << (int) vertices.size() << '\n';
+	// cerr << current_vertex << " " << qtd_arestas_componente << ' ' << (int) vertices_componente.size() << '\n';
 }
  
 vector<int> construction(vector<double> centrality, mt19937 &rng) {
+	for (int i = 0; i < N; i++) {
+		label[i] = INF;
+	}
 	// cerr << "Densidade = " << GRAPH_DENSITY << '\n';
 	int current_round = 1;
 	vector<int> vertices(N);
@@ -176,7 +186,8 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
 	assert(!selected_vertices.empty());
 	int initial_vertex = selected_vertices[rng() % ((int) selected_vertices.size())];
 	// cerr << "Vertice Inicial = " << initial_vertex << '\n';
-	bfs(initial_vertex, current_round++);
+	int xd = bfs(initial_vertex, current_round++);
+	// cerr << "Visited on BFS(" << initial_vertex << ") = " << xd << '\n';	
 	burning_sequence.push_back(initial_vertex);
  
 	// A PARTIR DAQUI O FAREMOS AS RODADAS ONDE t >= 2
@@ -198,6 +209,11 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
 	}
  
 	do {
+		for (int i = 0; i < N; i++) {
+			for (int viz : adj[i]) {
+				assert(abs(label[i] - label[viz]) <= 1);
+			}
+		}
 		vector<int> cl; // Candidate List
 		if (safe.empty()) {
 			cl = vector<int>(targeted.begin(), targeted.end());
@@ -268,12 +284,14 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
 		int next_activator = rcl[rng() % (int) rcl.size()];
 		// cerr << "CHOOSEN = " << next_activator << '\n';
 		label[next_activator] = current_round;
-		bfs(next_activator, current_round++);
+		int nvis = bfs(next_activator, current_round++);
+		// cerr << "[LABEL = " << label[next_activator] << "] Visited on BFS(" << next_activator << ") = " << nvis << '\n';
 		burning_sequence.push_back(next_activator);
 		set<int> to_burn;
 		to_burn.insert(next_activator);
 		for (int current_vertex : burned) {
 			for (int neighbour : adj[current_vertex]) {
+				assert(status[neighbour] != 0);
 				if (status[neighbour] != 1)
 					continue;
 				status[neighbour] = 2; // queimei
@@ -292,6 +310,7 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
 			}
 		}
 	} while ((int) burned.size() != N);
+	// cerr << '\n';
 	return burning_sequence;
 }
  
@@ -309,10 +328,10 @@ int main() {
 	int cnt_valid = 0;
 	do {
 		auto burning_sequence = construction(centrality_scores, rng);
-		if (check_solution(burning_sequence)) {
+		// if (check_solution(burning_sequence)) {
 			incumbent_solution = min(incumbent_solution, (int) burning_sequence.size());
 			cnt_valid++;
-		}
+		// }
 		// armazenar coisas referentes aa sequencia encontrada
 		iteracoes_realizadas++;
 		// cerr << "Burning Sequence at iteration " << iteracoes_realizadas << ": [";
@@ -322,11 +341,11 @@ int main() {
 		// }
 		// cerr << "] -> " << (int) burning_sequence.size() << '\n';
 		final = clock();
-	} while (iteracoes_realizadas < 100 && 1.0 * (clock() - inicio) / CLOCKS_PER_SEC < 300); // limite de 5 minutos
-	cerr << "Iterations: " << iteracoes_realizadas << '\n';
+	} while (/*iteracoes_realizadas < 1000 &&*/ 1.0 * (clock() - inicio) / CLOCKS_PER_SEC < 60); // limite de 5 minutos
+	cerr << "\nIterations: " << iteracoes_realizadas << '\n';
 	cerr << "Valid Solutions: " << cnt_valid << '\n';
 	cerr << "Solution: " << incumbent_solution << '\n';
-	cerr << "Time elapsed: " << 1.0 * (final - inicio) / CLOCKS_PER_SEC << "s\n";
+	cerr << "Time elapsed: " << 1.0 * (final - inicio) / CLOCKS_PER_SEC << "s\n\n";
 	cout << "Solution: " << incumbent_solution << '\n';
 	return 0;
 }
