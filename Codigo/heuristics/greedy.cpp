@@ -306,9 +306,13 @@ int main() {
 	K_BOUND = K_i = (int) floor(2.0 * sqrt((double) N) - 1.0); // bound for bn(G)
 	GRAPH_DENSITY = 2.0 * (double) M / (1.0 * (double) N * (double)(N - 1)); // D = 2|E| / (|V| * (|V| - 1))
 	int incumbent_solution = K_BOUND;
+	int cnt_valid = 0;
 	do {
 		auto burning_sequence = construction(centrality_scores, rng);
-		incumbent_solution = min(incumbent_solution, (int) burning_sequence.size());
+		if (check_solution(burning_sequence)) {
+			incumbent_solution = min(incumbent_solution, (int) burning_sequence.size());
+			cnt_valid++;
+		}
 		// armazenar coisas referentes aa sequencia encontrada
 		iteracoes_realizadas++;
 		// cerr << "Burning Sequence at iteration " << iteracoes_realizadas << ": [";
@@ -319,7 +323,10 @@ int main() {
 		// cerr << "] -> " << (int) burning_sequence.size() << '\n';
 		final = clock();
 	} while (iteracoes_realizadas < 100 && 1.0 * (clock() - inicio) / CLOCKS_PER_SEC < 300); // limite de 5 minutos
+	cerr << "Iterations: " << iteracoes_realizadas << '\n';
+	cerr << "Valid Solutions: " << cnt_valid << '\n';
 	cerr << "Solution: " << incumbent_solution << '\n';
+	cerr << "Time elapsed: " << 1.0 * (final - inicio) / CLOCKS_PER_SEC << "s\n";
 	cout << "Solution: " << incumbent_solution << '\n';
 	return 0;
 }
