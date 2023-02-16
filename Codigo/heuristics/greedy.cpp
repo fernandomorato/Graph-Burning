@@ -4,7 +4,7 @@ using namespace std;
  
 mt19937 rng((int) chrono::steady_clock::now().time_since_epoch().count());
  
-const int MAXN = 2e4 + 5;
+const int MAXN = 54574;
 const int INF = 1e9;
  
  
@@ -111,11 +111,11 @@ vector<int> select_vertices(vector<int> &candidates, vector<double> &centrality,
 		if (current_vertex_centrality >= (1 - density) * aux[0].first || (int) selected_vertices.size() < 5)
 			selected_vertices.push_back(current_vertex);
 	}
-	cerr << '\n';
-	for (int x : selected_vertices) {
-		cerr << x << "(" << centrality[x] << ") ";
-	}
-	cerr << '\n';
+	// cerr << '\n';
+	// for (int x : selected_vertices) {
+	// 	cerr << x << "(" << centrality[x] << ") ";
+	// }
+	// cerr << '\n';
 	return selected_vertices;
 }
  
@@ -123,7 +123,7 @@ int qtd_arestas_componente;
 vector<int> vertices_componente;
  
 void dfs(int current_vertex) {
-	cerr << current_vertex << "(" << status[current_vertex] << ")\n";
+	// cerr << current_vertex << "(" << status[current_vertex] << ")\n";
 	assert(status[current_vertex] == 0);
 	vertices_componente.push_back(current_vertex);
 	visited[current_vertex] = true;
@@ -138,7 +138,7 @@ void dfs(int current_vertex) {
 }
  
 vector<int> construction(vector<double> centrality, mt19937 &rng) {
-	cerr << "Densidade = " << GRAPH_DENSITY << '\n';
+	// cerr << "Densidade = " << GRAPH_DENSITY << '\n';
 	int current_round = 1;
 	vector<int> vertices(N);
 	iota(vertices.begin(), vertices.end(), 0);
@@ -146,7 +146,7 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
 	vector<int> selected_vertices = select_vertices(vertices, centrality, GRAPH_DENSITY);
 	assert(!selected_vertices.empty());
 	int initial_vertex = selected_vertices[rng() % ((int) selected_vertices.size())];
-	cerr << "Vertice Inicial = " << initial_vertex << '\n';
+	// cerr << "Vertice Inicial = " << initial_vertex << '\n';
 	bfs(initial_vertex, current_round++);
 	burning_sequence.push_back(initial_vertex);
  
@@ -182,16 +182,16 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
 					int qtd_vertices_componente = (int) vertices_componente.size();
 					double density = 2.0 * double(qtd_arestas_componente * 0.5) / (double(qtd_vertices_componente) * double(qtd_vertices_componente - 1));
 					calc_centrality_scores(centrality, vertices_componente, rng);
-					cerr << "info -> " << density << " [";
-					for (int i = 0; i < (int) vertices_componente.size(); i++) {
-						if (i) cerr << ", ";
-						cerr << vertices_componente[i];
-					}
-					cerr << "]\n";
+					// cerr << "info -> " << density << " [";
+					// for (int i = 0; i < (int) vertices_componente.size(); i++) {
+					// 	if (i) cerr << ", ";
+					// 	cerr << vertices_componente[i];
+					// }
+					// cerr << "]\n";
 					connected_components.emplace_back(density, vertices_componente);
 				}
 			}
-			cerr << "COMPONENTES -> " << (int) connected_components.size() << '\n';
+			// cerr << "COMPONENTES -> " << (int) connected_components.size() << '\n';
 			for (auto &cc : connected_components) {
 				double density = cc.first;
 				vector<int> vertices = cc.second;
@@ -203,13 +203,15 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
 			}
 		}
 		assert(!cl.empty());
-		cerr << "Iteracao " << current_round << "\n";
-		cerr << "Lista de candidatos: [";
-		for (int i = 0; i < (int) cl.size(); i++) {
-			if (i) cerr << ", ";
-			cerr << cl[i];
-		}
-		cerr << "]\n";
+
+		// cerr << "Iteracao " << current_round << "\n";
+		// cerr << "Lista de candidatos: [";
+		// for (int i = 0; i < (int) cl.size(); i++) {
+		// 	if (i) cerr << ", ";
+		// 	cerr << cl[i];
+		// }
+		// cerr << "]\n";
+
 		// Agora que temos a nossa cl, precisamos definir a funcao de beneficio para compor uma RCL
 		// definimos b(v) = b* - | b* - l(v) |, onde b* = L_M - K_i + i e L_M = maior label
  
@@ -235,7 +237,7 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
 		}
 		assert(!rcl.empty());
 		int next_activator = rcl[rng() % (int) rcl.size()];
-		cerr << "CHOOSEN = " << next_activator << '\n';
+		// cerr << "CHOOSEN = " << next_activator << '\n';
 		label[next_activator] = current_round;
 		bfs(next_activator, current_round++);
 		burning_sequence.push_back(next_activator);
@@ -280,12 +282,12 @@ int main() {
 		incumbent_solution = min(incumbent_solution, (int) burning_sequence.size());
 		// armazenar coisas referentes aa sequencia encontrada
 		iteracoes_realizadas++;
-		cerr << "Burning Sequence at iteration " << iteracoes_realizadas << ": [";
-		for (int i = 0; i < (int) burning_sequence.size(); i++) {
-			if (i) cerr << ", ";
-			cerr << burning_sequence[i];
-		}
-		cerr << "] -> " << (int) burning_sequence.size() << '\n';
+		// cerr << "Burning Sequence at iteration " << iteracoes_realizadas << ": [";
+		// for (int i = 0; i < (int) burning_sequence.size(); i++) {
+		// 	if (i) cerr << ", ";
+		// 	cerr << burning_sequence[i];
+		// }
+		// cerr << "] -> " << (int) burning_sequence.size() << '\n';
 		final = clock();
 	} while (iteracoes_realizadas < 100 && 1.0 * (clock() - inicio) / CLOCKS_PER_SEC < 300); // limite de 5 minutos
 	cerr << "Solution: " << incumbent_solution << '\n';
