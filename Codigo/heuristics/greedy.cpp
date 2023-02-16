@@ -7,7 +7,6 @@ mt19937 rng((int) chrono::steady_clock::now().time_since_epoch().count());
 const int MAXN = 54574;
 const int INF = 1e9;
  
- 
 double ALPHA;
 double GRAPH_DENSITY;
 vector<double> centrality_scores;
@@ -16,13 +15,43 @@ int N, M;
 int K_BOUND, K_i;
 int label[MAXN];
 int status[MAXN]; // 0 -> safe | 1 -> targeted | 2 -> burned
-int adj_matrix[MAXN][MAXN];
+vector<vector<int>> adj_matrix;
 vector<int> adj[MAXN];
  
 bool visited[MAXN];
- 
+
+bool status_checker[MAXN];
+
+bool check_solution(vector<int> &burning_sequence) {
+	for (int i = 0; i < N; i++) {
+		status_checker[i] = 0;
+	}
+	vector<int> almost_burned;
+	for (auto x : burning_sequence) {
+		if (status_checker[x] == 1)
+			return false;
+		almost_burned.push_back(x);
+		for (auto y : almost_burned) {
+			status_checker[y] = 1;
+		}
+		vector<int> new_almost_burned;
+		for (auto y : almost_burned) {
+			for (auto viz : adj[y]) {
+				if (status_checker[viz] == 0) {
+					new_almost_burned.push_back(viz);
+				}
+			}
+		}
+		swap(almost_burned, new_almost_burned);
+	}
+	return true;
+}
+
 void readInput() {
 	cin >> N >> M;
+	adj_matrix.resize(N);
+	for (int i = 0; i < N; i++)
+		adj_matrix[i].resize(N);
 	for (int i = 0; i < M; i++) {
 		int a, b;
 		cin >> a >> b;
