@@ -3,11 +3,10 @@
 using namespace std;
  
 mt19937 rng((int) chrono::steady_clock::now().time_since_epoch().count());
- 
-const int MAXN = 54574;
+
 const int INF = 1e9;
  
-vector<int> adj[MAXN];
+vector<vector<int>> adj;
 vector<vector<int>> adj_matrix;
 vector<double> centrality_scores;
 
@@ -16,6 +15,7 @@ bool check_solution(vector<int> &burning_sequence) { return true; }
 void readInput(FILE* input_file, int *n_vertices, int *n_edges, double &density) {
 	fscanf(input_file, "%d %d", n_vertices, n_edges);
 	density = 2.0 * (double) (*n_edges) / (1.0 * (double) (*n_vertices) * (double) ((*n_vertices) - 1));
+	adj.resize(*n_vertices);
 	adj_matrix.resize(*n_vertices);
 	for (int i = 0; i < *n_vertices; i++)
 		adj_matrix[i].resize(*n_vertices);
@@ -283,14 +283,14 @@ int main(int argc, char **argv) {
 	double density;
 
 	readInput(input_file, &n_vertices, &n_edges, density);
-
+	
 	// Iteration Variables
 	mt19937 rng(seed);
 	int n_iterations = 0;
 	double sol_value_mean = 0;
 	int cnt_valid_solutions = 0;
-	int freq_incubent_solution = 0;
-	int iteration_incubent_solution = 0;
+	int freq_incumbent_solution = 0;
+	int iteration_incumbent_solution = 0;
 	clock_t inicio = clock();
 	int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices)); // Intial value = floor(2*sqrt(n)-1)
 	do {
@@ -303,10 +303,10 @@ int main(int argc, char **argv) {
 			sol_value_mean /= (double) cnt_valid_solutions;
 			if ((int) burning_sequence.size() < incumbent_solution) {
 				incumbent_solution = (int) burning_sequence.size();
-				freq_incubent_solution = 1;
-				iteration_incubent_solution = n_iterations;
+				freq_incumbent_solution = 1;
+				iteration_incumbent_solution = n_iterations;
 			} else if ((int) burning_sequence.size() == incumbent_solution) {
-				freq_incubent_solution++;
+				freq_incumbent_solution++;
 			}
 		}
 	} while (1.0 * (clock() - inicio) / CLOCKS_PER_SEC < time_limit); // limite de 5 minutos
@@ -316,8 +316,8 @@ int main(int argc, char **argv) {
 												 		 n_iterations,
 												 		 sol_value_mean,
 												 		 incumbent_solution,
-												 		 freq_incubent_solution,
-												 		 iteration_incubent_solution);
+												 		 freq_incumbent_solution,
+												 		 iteration_incumbent_solution);
 	cout << "Solution: " << incumbent_solution << '\n';
 	return 0;
 }

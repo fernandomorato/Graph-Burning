@@ -3,91 +3,34 @@
 using namespace std;
  
 mt19937 rng((int) chrono::steady_clock::now().time_since_epoch().count());
- 
-const int MAXN = 54574;
+
 const int INF = 1e9;
  
-double ALPHA;
-double GRAPH_DENSITY;
-vector<double> centrality_scores;
- 
-int N, M;
-int K_BOUND, K_i;
-int label[MAXN];
-int status[MAXN]; // 0 -> safe | 1 -> targeted | 2 -> burned
+vector<vector<int>> adj;
 vector<vector<int>> adj_matrix;
-vector<int> adj[MAXN];
- 
-bool visited[MAXN];
+vector<double> centrality_scores;
 
-bool status_checker[MAXN];
+bool check_solution(vector<int> &burning_sequence) { return true; }
 
-// bool check_solution(vector<int> burning_sequence) {
-// 	for (int i = 0; i < N; i++) {
-// 		status_checker[i] = 0;
-// 	}
-// 	vector<int> v, nv;
-// 	for (int x : burning_sequence) {
-// 		v.push_back(x);
-// 		for (int xx : v) {
-// 			status_checker[xx] = 1;
-// 			if (label[xx] != label[x])
-// 				cerr << label[xx] << " => " << label[x] << '\n';
-// 			assert(label[xx] == label[x]);
-// 			for (int viz : adj[xx]) {
-// 				// cerr << label[xx] << " -> " << label[viz] << '\n';
-// 				// assert(label[viz] == label[x] || label[viz] == label[x] + 1);
-// 				if (label[viz] == label[x] + 1)
-// 					nv.push_back(viz);
-// 			}
-// 		}
-// 		swap(v, nv);
-// 		nv.clear();
-// 	}
-// 	for (int i = 0; i < N; i++) {
-// 		if (status_checker[i] == 0)
-// 			return false;
-// 	}
-// 	return true;
-// }
-
-void readInput() {
-	cin >> N >> M;
-	adj_matrix.resize(N);
-	for (int i = 0; i < N; i++)
-		adj_matrix[i].resize(N);
-	for (int i = 0; i < M; i++) {
+void readInput(FILE* input_file, int *n_vertices, int *n_edges, double &density) {
+	fscanf(input_file, "%d %d", n_vertices, n_edges);
+	density = 2.0 * (double) (*n_edges) / (1.0 * (double) (*n_vertices) * (double) ((*n_vertices) - 1));
+	adj.resize(*n_vertices);
+	adj_matrix.resize(*n_vertices);
+	for (int i = 0; i < *n_vertices; i++)
+		adj_matrix[i].resize(*n_vertices);
+	for (int i = 0; i < *n_edges; i++) {
 		int a, b;
-		cin >> a >> b;
+		fscanf(input_file, "%d %d", &a, &b);
 		adj[a].push_back(b);
 		adj[b].push_back(a);
 		adj_matrix[a][b] = adj_matrix[b][a] = 1;
 	}
-	centrality_scores.resize(N);
-	for (int i = 0; i < N; i++) {
+	centrality_scores.resize(*n_vertices);
+	for (int i = 0; i < *n_vertices; i++) {
 		adj_matrix[i][i] = 1;
-		label[i] = INF;
-		cin >> centrality_scores[i];
+		fscanf(input_file, "%lf", &centrality_scores[i]);
 	}
-}
- 
-int bfs(int source, int round) {
-	int cnt = 0;
-	label[source] = round;
-	queue<int> q;
-	q.push(source);
-	while (!q.empty()) {
-		cnt++;
-		int cur = q.front();
-		q.pop();
-		for (auto x : adj[cur]) {
-			if (label[cur] + 1 < label[x]) {
-				label[x] = label[cur] + 1;
-				q.push(x);
-			}
-		}
-	}
-	return cnt;
 }
  
 void calc_centrality_scores(vector<double> &centrality_scores, vector<int> &vertices, mt19937 &rng) {
@@ -110,11 +53,12 @@ void calc_centrality_scores(vector<double> &centrality_scores, vector<int> &vert
 		swap(x0, x1);
 		int ptr1 = 0;
 		for (int i : vertices) {
-			x1[ptr1++] = 0;
+			x1[ptr1] = 0;
 			int ptr2 = 0;
 			for (int j : vertices) {
-				x1[i] += (double) adj_matrix[i][j] * x0[ptr2++];
+				x1[ptr1] += (double) adj_matrix[i][j] * x0[ptr2++];
 			}
+			ptr1++;
 		}
 		norm = 0;
 		for (int i = 0; i < tamanho; i++) {
@@ -147,129 +91,112 @@ vector<int> select_vertices(vector<int> &candidates, vector<double> &centrality,
 		if (current_vertex_centrality >= (1 - density) * aux[0].first || (int) selected_vertices.size() < 5)
 			selected_vertices.push_back(current_vertex);
 	}
-	// cerr << '\n';
-	// for (int x : selected_vertices) {
-	// 	cerr << x << "(" << centrality[x] << ") ";
-	// }
-	// cerr << '\n';
 	return selected_vertices;
 }
- 
-int qtd_arestas_componente;
-vector<int> vertices_componente;
- 
-void dfs(int current_vertex) {
-	cerr << "DFS --- " << current_vertex << "(" << status[current_vertex] << ")\n";
-	assert(status[current_vertex] == 0);
-	vertices_componente.push_back(current_vertex);
+
+void dfs(vector<bool> &visited, int current_vertex, int &component_edges, vector<int> &component_vertices, vector<int> &vertex_status) {
+	assert(vertex_status[current_vertex] == 0); // Verifies if the vertice is safe
+	component_vertices.push_back(current_vertex);
 	visited[current_vertex] = true;
 	for (int neighbour : adj[current_vertex]) {
-		if (status[neighbour] == status[current_vertex])
-			qtd_arestas_componente++;
-		if (visited[neighbour] || status[neighbour] != status[current_vertex]) 
+		if (vertex_status[neighbour] == vertex_status[current_vertex])
+			component_edges++;
+		if (visited[neighbour] || vertex_status[neighbour] != vertex_status[current_vertex]) 
 			continue;
-		dfs(neighbour);
+		dfs(visited, neighbour, component_edges, component_vertices, vertex_status);
 	}
-	// cerr << current_vertex << " " << qtd_arestas_componente << ' ' << (int) vertices_componente.size() << '\n';
+}
+
+void bfs(int source, int round, vector<int> &vertex_label) {
+	vertex_label[source] = round;
+	queue<int> q;
+	q.push(source);
+	while (!q.empty()) {
+		int cur = q.front();
+		q.pop();
+		for (auto x : adj[cur]) {
+			if (vertex_label[cur] + 1 < vertex_label[x]) {
+				vertex_label[x] = vertex_label[cur] + 1;
+				q.push(x);
+			}
+		}
+	}
 }
  
-vector<int> construction(vector<double> centrality, mt19937 &rng) {
-	for (int i = 0; i < N; i++) {
-		label[i] = INF;
-	}
-	// cerr << "Densidade = " << GRAPH_DENSITY << '\n';
+vector<int> construction(vector<double> centrality, int n_vertices, int n_edges, double graph_density, mt19937 &rng, double alpha, int K_i) {
+	// Round Variables
 	int current_round = 1;
-	vector<int> vertices(N);
-	iota(vertices.begin(), vertices.end(), 0);
 	vector<int> burning_sequence;
-	vector<int> selected_vertices = select_vertices(vertices, centrality, GRAPH_DENSITY);
+	set<int> safe, targeted, burned;
+	vector<int> vertex_status(n_vertices); // 0 -> safe | 1 -> targeted | 2 -> burned
+	vector<int> vertex_label(n_vertices, INF);
+
+	// Round 1
+	vector<int> vertices(n_vertices);
+	iota(vertices.begin(), vertices.end(), 0);
+	vector<int> selected_vertices = select_vertices(vertices, centrality, graph_density);
 	assert(!selected_vertices.empty());
+
 	int initial_vertex = selected_vertices[rng() % ((int) selected_vertices.size())];
-	// cerr << "Vertice Inicial = " << initial_vertex << '\n';
-	int xd = bfs(initial_vertex, current_round++);
-	// cerr << "Visited on BFS(" << initial_vertex << ") = " << xd << '\n';	
+	bfs(initial_vertex, current_round, vertex_label);
 	burning_sequence.push_back(initial_vertex);
  
-	// A PARTIR DAQUI O FAREMOS AS RODADAS ONDE t >= 2
- 
-	set<int> safe, targeted, burned;
-	for (int i = 0; i < N; i++) {
-		visited[i] = false;
-		if (label[i] > K_i) {
-			status[i] = 0;
-			safe.insert(i);
-		} else if (label[i] != 1) {
-			status[i] = 1;
-			targeted.insert(i);
-		} else {
-			assert(label[i] == 1);
-			status[i] = 2;
+	for (int i = 0; i < n_vertices; i++) {
+		if (vertex_label[i] == 1) {
 			burned.insert(i);
+			vertex_status[i] = 2;
+		} else if (vertex_label[i] < K_i) {
+			targeted.insert(i);
+			vertex_status[i] = 1;
+		} else {
+			safe.insert(i);
+			vertex_status[i] = 0;
 		}
 	}
  
+	// Rounds t >= 2
 	do {
-		for (int i = 0; i < N; i++) {
-			visited[i] = false;
+		current_round++;
+		vector<bool> visited(n_vertices, false);
+		for (int i = 0; i < n_vertices; i++) {
 			for (int viz : adj[i]) {
-				assert(abs(label[i] - label[viz]) <= 1);
+				assert(abs(vertex_label[i] - vertex_label[viz]) <= 1);
 			}
 		}
 		vector<int> cl; // Candidate List
 		if (safe.empty()) {
+			assert(!targeted.empty());
 			cl = vector<int>(targeted.begin(), targeted.end());
 		} else {
-			vector<pair<double, vector<int>>> connected_components; // [i] = {densidade, vertices da componente}
 			for (int i : safe) {
-				vertices_componente.clear();
 				if (!visited[i]) {
-					qtd_arestas_componente = 0;
-					dfs(i);
-					int qtd_vertices_componente = (int) vertices_componente.size();
-					double density = 2.0 * double(qtd_arestas_componente * 0.5) / (double(qtd_vertices_componente) * double(qtd_vertices_componente - 1));
-					calc_centrality_scores(centrality, vertices_componente, rng);
-					// cerr << "info -> " << density << " [";
-					// for (int i = 0; i < (int) vertices_componente.size(); i++) {
-					// 	if (i) cerr << ", ";
-					// 	cerr << vertices_componente[i];
-					// }
-					// cerr << "]\n";
-					connected_components.emplace_back(density, vertices_componente);
-				}
-			}
-			// cerr << "COMPONENTES -> " << (int) connected_components.size() << '\n';
-			for (auto &cc : connected_components) {
-				double density = cc.first;
-				vector<int> vertices = cc.second;
-				vector<int> cl_local = select_vertices(vertices, centrality, density);
-				// [ TALVEZ SEJA MELHOR USAR UMA FUNCAO DE MERGE PRA NAO DAR TANTO PUSH_BACK ]
-				for (int current_vertex : cl_local) {
-					cl.push_back(current_vertex);
+					int component_edges = 0;
+					vector<int> component_vertices;
+					dfs(visited, i, component_edges, component_vertices, vertex_status);
+					double component_density = double(component_edges)
+												/ ((double) component_vertices.size() 
+												* ((double) component_vertices.size() - 1));
+					calc_centrality_scores(centrality, component_vertices, rng);
+					vector<int> cl_local = select_vertices(component_vertices, centrality, component_density);
+					for (int component_vertex : cl_local) {
+						cl.push_back(component_vertex);
+					}
 				}
 			}
 		}
 		assert(!cl.empty());
 
-		// cerr << "Iteracao " << current_round << "\n";
-		// cerr << "Lista de candidatos: [";
-		// for (int i = 0; i < (int) cl.size(); i++) {
-		// 	if (i) cerr << ", ";
-		// 	cerr << cl[i];
-		// }
-		// cerr << "]\n";
-
 		// Agora que temos a nossa cl, precisamos definir a funcao de beneficio para compor uma RCL
 		// definimos b(v) = b* - | b* - l(v) |, onde b* = L_M - K_i + i e L_M = maior label
- 
 		int L_M = 0;
-		for (int i = 0; i < N; i++) { // Estou pegando o rotulo maximo considerando TODOS (talvez usar soh a cl)
-			L_M = max(L_M, label[i]);
+		for (int i = 0; i < n_vertices; i++) { // Estou pegando o rotulo maximo considerando TODOS (talvez usar soh a cl)
+			L_M = max(L_M, vertex_label[i]);
 		}
 		int b_star = L_M - K_i + current_round;
 		int min_benefit = INF;
 		int max_benefit = -INF;
 		auto b = [&](int v) {
-			return b_star - abs(b_star - label[v]);
+			return b_star - abs(b_star - vertex_label[v]);
 		};
 		for (int x : cl) {
 			min_benefit = min(min_benefit, b(x));
@@ -277,25 +204,23 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
 		}
 		vector<int> rcl;
 		for (int x : cl) {
-			if (b(x) >= max_benefit - ALPHA * (max_benefit - min_benefit)) {
+			if (b(x) >= max_benefit - alpha * (max_benefit - min_benefit)) {
 				rcl.push_back(x);
 			}
 		}
 		assert(!rcl.empty());
 		int next_activator = rcl[rng() % (int) rcl.size()];
-		// cerr << "CHOOSEN = " << next_activator << '\n';
-		label[next_activator] = current_round;
-		int nvis = bfs(next_activator, current_round++);
-		// cerr << "[LABEL = " << label[next_activator] << "] Visited on BFS(" << next_activator << ") = " << nvis << '\n';
+		vertex_label[next_activator] = current_round;
+		bfs(next_activator, current_round, vertex_label);
 		burning_sequence.push_back(next_activator);
 		set<int> to_burn;
 		to_burn.insert(next_activator);
 		for (int current_vertex : burned) {
 			for (int neighbour : adj[current_vertex]) {
-				assert(status[neighbour] != 0);
-				if (status[neighbour] != 1)
+				assert(vertex_status[neighbour] != 0);
+				if (vertex_status[neighbour] != 1)
 					continue;
-				status[neighbour] = 2; // queimei
+				vertex_status[neighbour] = 2; // queimei
 				targeted.erase(neighbour);
 				to_burn.insert(neighbour);
 			}
@@ -303,96 +228,128 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
 		for (int current_vertex : to_burn) {
 			burned.insert(current_vertex);
 			for (int neighbour : adj[current_vertex]) {
-				if (status[neighbour] != 0)
+				if (vertex_status[neighbour] != 0)
 					continue;
-				status[neighbour] = 1;
+				vertex_status[neighbour] = 1;
 				safe.erase(neighbour);
 				targeted.insert(neighbour);
 			}
 		}
-	} while ((int) burned.size() != N);
+	} while ((int) burned.size() != n_vertices);
 	// cerr << '\n';
 	return burning_sequence;
 }
- 
-double phi[] = {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0};
-double media_solucoes[10];
-int qtd_solucoes[10];
 
-int pega_alpha(int iteracao, mt19937 &rng, int melhor_solucao) {
-	for (int i = 0; i < 10; i++) {
-		if (iteracao < (i + 1) * 10)
-			return i;
-	}
-	vector<double> q(10);
-	double soma = 0;
-	for (int i = 0; i < 10; i++) {
-		q[i] = melhor_solucao / media_solucoes[i];
-		soma += q[i];
-	}
-	vector<double> p(10);
-	for (int i = 0; i < 10; i++) {
-		p[i] = q[i] / soma;
-	}
-	discrete_distribution<size_t> d{p.begin(), p.end()};
-	return d(rng);
-}
-
-int main() {
-	ios::sync_with_stdio(false);
-	cin.tie(0);
-	readInput();
-	ALPHA = 0.5;
-	mt19937 rng(42);
-	int iteracoes_realizadas = 0;
-	clock_t inicio = clock(), final = clock();
-	K_BOUND = K_i = (int) floor(2.0 * sqrt((double) N) - 1.0); // bound for bn(G)
-	GRAPH_DENSITY = 2.0 * (double) M / (1.0 * (double) N * (double)(N - 1)); // D = 2|E| / (|V| * (|V| - 1))
-	int incumbent_solution = K_BOUND;
-	int cnt_valid = 0;
-	do {
-		int id_alpha = pega_alpha(iteracoes_realizadas, rng, incumbent_solution);
-		ALPHA = phi[id_alpha];
-		auto burning_sequence = construction(centrality_scores, rng);
-		{
-			media_solucoes[id_alpha] *= qtd_solucoes[id_alpha];
-			media_solucoes[id_alpha] += (int) burning_sequence.size();
-			qtd_solucoes[id_alpha]++;
-			media_solucoes[id_alpha] /= qtd_solucoes[id_alpha];
+void parse_args(int argc, char **argv, int &seed, double &alpha, int &time_limit, string &input_path, string &output_path, string &log_path) {
+	for (int i = 0; i < argc; i++) {
+		string str = argv[i];
+		if (str[0] == '-') {
+			string identifier = str.substr(1);
+			if (identifier == "seed")
+				seed = atoi(argv[i + 1]);
+			else if (identifier == "alpha")
+				alpha = atof(argv[i + 1]);
+			else if (identifier == "tl")
+				time_limit = atoi(argv[i + 1]);
+			else if (identifier == "ip")
+				input_path = argv[i + 1];
+			else if (identifier == "op")
+				output_path = argv[i + 1];
+			else if (identifier == "lp")
+				log_path = argv[i + 1];
+			else
+				cout << "Invalid option: -" << identifier << "\n";
 		}
-		// if (check_solution(burning_sequence)) {
-			incumbent_solution = min(incumbent_solution, (int) burning_sequence.size());
-			cnt_valid++;
-		// }
-		// armazenar coisas referentes aa sequencia encontrada
-		iteracoes_realizadas++;
-		// cerr << "Burning Sequence at iteration " << iteracoes_realizadas << ": [";
-		// for (int i = 0; i < (int) burning_sequence.size(); i++) {
-		// 	if (i) cerr << ", ";
-		// 	cerr << burning_sequence[i];
-		// }
-		// cerr << "] -> " << (int) burning_sequence.size() << '\n';
-		final = clock();
-	} while (/*iteracoes_realizadas < 1000 &&*/ 1.0 * (clock() - inicio) / CLOCKS_PER_SEC < 120); // limite de 5 minutos
-	cerr << "\nIterations: " << iteracoes_realizadas << '\n';
-	cerr << "Valid Solutions: " << cnt_valid << '\n';
-	cerr << "Solution: " << incumbent_solution << '\n';
-	cerr << "Time elapsed: " << 1.0 * (final - inicio) / CLOCKS_PER_SEC << " seconds\n\n";
+	}
+}
+ 
+int main(int argc, char **argv) {
+	// Command Line Parameters
+	int seed;
+	double alpha;
+	int time_limit;
+	string input_path;
+	string output_path;
+	string log_path;
+	parse_args(argc, argv, seed, alpha, time_limit, input_path, output_path, log_path);
+
+	// File Variables
+	FILE *input_file = fopen(input_path.c_str(), "r");
+	FILE *output_file = fopen(output_path.c_str(), "a");
+	FILE *log_file = fopen(log_path.c_str(), "a");
+
+	// Graph Info Variables
+	int n_vertices, n_edges;
+	double density;
+
+	readInput(input_file, &n_vertices, &n_edges, density);
+
+	// Iteration Variables
+	mt19937 rng(seed);
+	int n_iterations = 0;
+	double sol_value_mean = 0;
+	int cnt_valid_solutions = 0;
+	int freq_incubent_solution = 0;
+	int iteration_incubent_solution = 0;
+	double alpha_incumbent_solution = 0;
+	clock_t inicio = clock();
+	int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices)); // Intial value = floor(2*sqrt(n)-1)	
+	// Reactive GRASP stuff
+	double phi[] = {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0};
+	vector<double> alpha_means(10, 0);
+	vector<int> alpha_frequencies(10, 0);
+	function<double(int)> get_alpha = [&](int iteration) -> double {
+		if (iteration <= 100)
+			return phi[(iteration + 9) / 10 - 1];
+		vector<double> q(10);
+		double sum = 0;
+		for (int i = 0; i < 10; i++) {
+			q[i] = incumbent_solution / alpha_means[i];
+			sum += q[i];
+		}
+		vector<double> p(10);
+		for (int i = 0; i < 10; i++) {
+			p[i] = q[i] / sum;
+		}
+		discrete_distribution<size_t> d{p.begin(), p.end()};
+		return d(rng);
+	};
+	function<void(int, int)> update_alpha = [&](int idx, int value) {
+		alpha_means[idx] *= (double) alpha_frequencies[idx];
+		alpha_means[idx] += (double) value;
+		alpha_frequencies[idx]++;
+		alpha_means[idx] /= (double) alpha_frequencies[idx];
+	};
+	// Iterations
+	do {
+		n_iterations++;
+		int alpha_idx = get_alpha(n_iterations);
+		vector<int> burning_sequence = construction(centrality_scores, n_vertices, n_edges, density, rng, phi[alpha_idx], incumbent_solution - 1);
+		update_alpha(alpha_idx, (int) burning_sequence.size());
+		if (check_solution(burning_sequence)) {
+			sol_value_mean *= (double) cnt_valid_solutions;
+			cnt_valid_solutions++;
+			sol_value_mean += (double) burning_sequence.size();
+			sol_value_mean /= (double) cnt_valid_solutions;
+			if ((int) burning_sequence.size() < incumbent_solution) {
+				incumbent_solution = (int) burning_sequence.size();
+				freq_incubent_solution = 1;
+				alpha_incumbent_solution = phi[alpha_idx];
+				iteration_incubent_solution = n_iterations;
+			} else if ((int) burning_sequence.size() == incumbent_solution) {
+				freq_incubent_solution++;
+			}
+		}
+	} while (1.0 * (clock() - inicio) / CLOCKS_PER_SEC < time_limit); // limite de 5 minutos
+	double time_consumed = 1.0 * (clock() - inicio) / CLOCKS_PER_SEC;
+	fprintf(output_file, "%s,%.2lf,%d,%.2lf,%d,%d,%d,%.1lf\n", input_path.c_str(),
+												 		 time_consumed,
+												 		 n_iterations,
+												 		 sol_value_mean,
+												 		 incumbent_solution,
+												 		 freq_incubent_solution,
+												 		 iteration_incubent_solution,
+												 		 alpha_incumbent_solution);
 	cout << "Solution: " << incumbent_solution << '\n';
-	for (int i = 0; i < 10; i++) {
-		if (i) cout << '\t';
-		cout << phi[i];
-	}
-	cout << '\n';
-	for (int i = 0; i < 10; i++) {
-		if (i) cout << '\t';
-		cout << media_solucoes[i];
-	}
-	cout << '\n';
-	for (int i = 0; i < 10; i++) {
-		if (i) cout << '\t';
-		cout << qtd_solucoes[i];
-	}
-	cout << '\n';
 	return 0;
 }
