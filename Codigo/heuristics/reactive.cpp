@@ -210,6 +210,7 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
  
 	do {
 		for (int i = 0; i < N; i++) {
+			visited[i] = false;
 			for (int viz : adj[i]) {
 				assert(abs(label[i] - label[viz]) <= 1);
 			}

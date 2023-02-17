@@ -22,34 +22,34 @@ bool visited[MAXN];
 
 bool status_checker[MAXN];
 
-// bool check_solution(vector<int> burning_sequence) {
-// 	for (int i = 0; i < N; i++) {
-// 		status_checker[i] = 0;
-// 	}
-// 	vector<int> v, nv;
-// 	for (int x : burning_sequence) {
-// 		v.push_back(x);
-// 		for (int xx : v) {
-// 			status_checker[xx] = 1;
-// 			if (label[xx] != label[x])
-// 				cerr << label[xx] << " => " << label[x] << '\n';
-// 			assert(label[xx] == label[x]);
-// 			for (int viz : adj[xx]) {
-// 				// cerr << label[xx] << " -> " << label[viz] << '\n';
-// 				// assert(label[viz] == label[x] || label[viz] == label[x] + 1);
-// 				if (label[viz] == label[x] + 1)
-// 					nv.push_back(viz);
-// 			}
-// 		}
-// 		swap(v, nv);
-// 		nv.clear();
-// 	}
-// 	for (int i = 0; i < N; i++) {
-// 		if (status_checker[i] == 0)
-// 			return false;
-// 	}
-// 	return true;
-// }
+bool check_solution(vector<int> burning_sequence) {
+	for (int i = 0; i < N; i++) {
+		status_checker[i] = 0;
+	}
+	vector<int> v, nv;
+	for (int x : burning_sequence) {
+		v.push_back(x);
+		for (int xx : v) {
+			status_checker[xx] = 1;
+			if (label[xx] != label[x])
+				cerr << label[xx] << " => " << label[x] << '\n';
+			assert(label[xx] == label[x]);
+			for (int viz : adj[xx]) {
+				// cerr << label[xx] << " -> " << label[viz] << '\n';
+				// assert(label[viz] == label[x] || label[viz] == label[x] + 1);
+				if (label[viz] == label[x] + 1)
+					nv.push_back(viz);
+			}
+		}
+		swap(v, nv);
+		nv.clear();
+	}
+	for (int i = 0; i < N; i++) {
+		if (status_checker[i] == 0)
+			return false;
+	}
+	return true;
+}
 
 void readInput() {
 	cin >> N >> M;
@@ -110,11 +110,12 @@ void calc_centrality_scores(vector<double> &centrality_scores, vector<int> &vert
 		swap(x0, x1);
 		int ptr1 = 0;
 		for (int i : vertices) {
-			x1[ptr1++] = 0;
+			x1[ptr1] = 0;
 			int ptr2 = 0;
 			for (int j : vertices) {
-				x1[i] += (double) adj_matrix[i][j] * x0[ptr2++];
+				x1[ptr1] += (double) adj_matrix[i][j] * x0[ptr2++];
 			}
+			ptr1++;
 		}
 		norm = 0;
 		for (int i = 0; i < tamanho; i++) {
@@ -147,11 +148,6 @@ vector<int> select_vertices(vector<int> &candidates, vector<double> &centrality,
 		if (current_vertex_centrality >= (1 - density) * aux[0].first || (int) selected_vertices.size() < 5)
 			selected_vertices.push_back(current_vertex);
 	}
-	// cerr << '\n';
-	// for (int x : selected_vertices) {
-	// 	cerr << x << "(" << centrality[x] << ") ";
-	// }
-	// cerr << '\n';
 	return selected_vertices;
 }
  
@@ -159,11 +155,12 @@ int qtd_arestas_componente;
 vector<int> vertices_componente;
  
 void dfs(int current_vertex) {
-	cerr << "DFS --- " << current_vertex << "(" << status[current_vertex] << ")\n";
 	assert(status[current_vertex] == 0);
 	vertices_componente.push_back(current_vertex);
 	visited[current_vertex] = true;
+	// cerr << "DFS --- " << current_vertex << "(" << status[current_vertex] << ") -> " << (int) vertices_componente.size() << "\n";
 	for (int neighbour : adj[current_vertex]) {
+		// cerr << "from " << current_vertex << " to " << neighbour << "\n";
 		if (status[neighbour] == status[current_vertex])
 			qtd_arestas_componente++;
 		if (visited[neighbour] || status[neighbour] != status[current_vertex]) 
@@ -210,12 +207,14 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
  
 	do {
 		for (int i = 0; i < N; i++) {
+			visited[i] = false;
 			for (int viz : adj[i]) {
 				assert(abs(label[i] - label[viz]) <= 1);
 			}
 		}
 		vector<int> cl; // Candidate List
 		if (safe.empty()) {
+			assert(!targeted.empty());
 			cl = vector<int>(targeted.begin(), targeted.end());
 		} else {
 			vector<pair<double, vector<int>>> connected_components; // [i] = {densidade, vertices da componente}
@@ -225,18 +224,11 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
 					vertices_componente.clear();
 					dfs(i);
 					int qtd_vertices_componente = (int) vertices_componente.size();
-					double density = 2.0 * double(qtd_arestas_componente * 0.5) / (double(qtd_vertices_componente) * double(qtd_vertices_componente - 1));
+					double density = double(qtd_arestas_componente) / (double(qtd_vertices_componente) * double(qtd_vertices_componente - 1));
 					calc_centrality_scores(centrality, vertices_componente, rng);
-					// cerr << "info -> " << density << " [";
-					// for (int i = 0; i < (int) vertices_componente.size(); i++) {
-					// 	if (i) cerr << ", ";
-					// 	cerr << vertices_componente[i];
-					// }
-					// cerr << "]\n";
 					connected_components.emplace_back(density, vertices_componente);
 				}
 			}
-			// cerr << "COMPONENTES -> " << (int) connected_components.size() << '\n';
 			for (auto &cc : connected_components) {
 				double density = cc.first;
 				vector<int> vertices = cc.second;
@@ -248,14 +240,6 @@ vector<int> construction(vector<double> centrality, mt19937 &rng) {
 			}
 		}
 		assert(!cl.empty());
-
-		// cerr << "Iteracao " << current_round << "\n";
-		// cerr << "Lista de candidatos: [";
-		// for (int i = 0; i < (int) cl.size(); i++) {
-		// 	if (i) cerr << ", ";
-		// 	cerr << cl[i];
-		// }
-		// cerr << "]\n";
 
 		// Agora que temos a nossa cl, precisamos definir a funcao de beneficio para compor uma RCL
 		// definimos b(v) = b* - | b* - l(v) |, onde b* = L_M - K_i + i e L_M = maior label
