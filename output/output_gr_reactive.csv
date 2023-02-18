@@ -1,18 +1,1 @@
-Instancia,Tempo consumido,Qtd iteracoes,Media solucoes,Melhor solucao,Frequencia melhor sol,Iteracao melhor sol,Alpha melhor sol
-Cite-DBLP,60.06,590,41.25,41,521,1,0.1
-ba_1k_2k,60.02,1252,5.60,5,504,2,0.1
-c-fat200-1,60.00,18224,10.51,9,1,3,0.1
-c-fat200-2,60.00,22513,5.89,5,3063,24,0.3
-c-fat500-1,60.02,2228,17.84,17,585,3,0.1
-c-fat500-2,60.00,3424,10.81,10,720,3,0.1
-c-fat500-5,60.01,4980,5.13,5,4319,3,0.1
-chameleon,60.00,3202,8.61,7,38,20,0.2
-crocodile,60.32,262,7.38,6,1,115,0.7
-facebook_government,60.01,1206,6.98,6,29,3,0.1
-facebook_politician,60.02,2857,8.59,8,1185,2,0.1
-facebook_tvshow,60.02,3285,11.07,10,6,180,0.8
-mahindas,60.05,477,5.24,5,364,3,0.1
-netscience,60.00,11087,10.40,7,8,4,0.1
-polblogs,60.02,3428,6.54,6,1585,2,0.1
-reed98,60.02,1743,4.74,4,456,40,0.4
-squirrel,60.03,1128,6.58,6,469,4,0.1
+Instancia,Tempo consumido,Qtd iteracoes,Qtd solucoes viaveis,Media solucoes,Melhor solucao,Frequencia melhor sol,Iteracao melhor sol,Alpha melhor sol
