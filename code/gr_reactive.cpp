@@ -11,6 +11,7 @@ vector<vector<int>> adj_matrix;
 vector<double> centrality_scores;
 
 bool check_solution(int n_vertices, vector<int> &burning_sequence) {
+	return true;
 	set<int> burned;
 	for (auto x : burning_sequence) {
 		if (burned.count(x)) {
@@ -313,12 +314,13 @@ int main(int argc, char **argv) {
 
 	readInput(input_file, &n_vertices, &n_edges, density);
 	// Iteration Variables
+	vector<int> bs;
 	mt19937 rng(seed);
 	int n_iterations = 0;
 	double sol_value_mean = 0;
 	int cnt_valid_solutions = 0;
-	int freq_incubent_solution = 0;
-	int iteration_incubent_solution = 0;
+	int freq_incumbent_solution = 0;
+	int iteration_incumbent_solution = 0;
 	double alpha_incumbent_solution = 0;
 	clock_t inicio = clock();
 	int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices)); // Intial value = floor(2*sqrt(n)-1)	
@@ -352,6 +354,8 @@ int main(int argc, char **argv) {
 		alpha_means[idx] /= (double) alpha_frequencies[idx];
 	};
 	// Iterations
+	fprintf(log_file, "\nInstance = %s\nN vertices = %d\nN edges = %d\n\n", input_name.c_str(), n_vertices, n_edges);
+	cout << "\nInstance = " << input_name << "\nN vertices = " << n_vertices << "\nN edges = " << n_edges << "\n\n";
 	do {
 		n_iterations++;
 		int alpha_idx = get_alpha(n_iterations);
@@ -363,31 +367,52 @@ int main(int argc, char **argv) {
 			sol_value_mean += (double) burning_sequence.size();
 			sol_value_mean /= (double) cnt_valid_solutions;
 			if ((int) burning_sequence.size() < incumbent_solution) {
+				bs = burning_sequence;
 				for (int i = 0; i < 10; i++) {
 					alpha_best_freq[i] = 0;
 				}
 				incumbent_solution = (int) burning_sequence.size();
-				freq_incubent_solution = 1;
+				freq_incumbent_solution = 1;
 				alpha_incumbent_solution = phi[alpha_idx];
 				alpha_best_freq[alpha_idx] = 1;
-				iteration_incubent_solution = n_iterations;
+				iteration_incumbent_solution = n_iterations;
+				fprintf(log_file, "[Iteration %d] New incumbent solution found! Solution value = %d\n", n_iterations, incumbent_solution);
+				cout << "[Iteration " << n_iterations << "] New incumbent solution found! Solution value = " << incumbent_solution << "\n";
 			} else if ((int) burning_sequence.size() == incumbent_solution) {
 				alpha_best_freq[alpha_idx]++;
-				freq_incubent_solution++;
+				freq_incumbent_solution++;
 			}
 			// cerr << n_iterations << " -> " << (int) burning_sequence.size() << '\n';
 		}
 		// cout << "[ Iteration " << n_iterations << " ] got " << (int) burning_sequence.size() << " with [ ALPHA = " << phi[alpha_idx] << " ]\n";
 	} while (1.0 * (clock() - inicio) / CLOCKS_PER_SEC < time_limit); // limite de 5 minutos
 	double time_consumed = 1.0 * (clock() - inicio) / CLOCKS_PER_SEC;
-	fprintf(output_file, "%s,%.2lf,%d,%d,%.2lf,%d,%d,%d,%.1lf\n", input_name.c_str(), time_consumed, n_iterations, cnt_valid_solutions, 
-		sol_value_mean, incumbent_solution, freq_incubent_solution, iteration_incubent_solution, alpha_incumbent_solution);
+	fprintf(log_file, "\nNumber of iterations = %d\nMean of solution values = %.6lf\n", n_iterations, sol_value_mean);
+	cout << "\nNumber of iterations = " << n_iterations << "\nMean of solution values = " << sol_value_mean << "\n";
+	fprintf(output_file, "%s,%.2lf,%d,%d,%.6lf,%d,%d,%d,%.1lf\n", input_name.c_str(), time_consumed, n_iterations, cnt_valid_solutions, 
+		sol_value_mean, incumbent_solution, freq_incumbent_solution, iteration_incumbent_solution, alpha_incumbent_solution);
+
+	fprintf(log_file, "\nBest solution found:\nSolution value = %d\nNumber of rounds = %d\nIteration = %d\n",
+		incumbent_solution, freq_incumbent_solution, iteration_incumbent_solution);
+	cout << "\nBest solution found:\nSolution value = " << incumbent_solution << "\n";
+	cout << "Number of rounds = " << freq_incumbent_solution << "\n";
+	cout << "Iteration = " << iteration_incumbent_solution << "\n";
+
+	fprintf(log_file, "\nBurning sequence = ");
+	cout << "\nBurning sequence = ";
+	for (auto x : bs) {
+		fprintf(log_file, "%d ", x);
+		cout << x << " ";
+	}
+	fprintf(log_file, "\n\n---------------------------------------------------------------------------------------------------------------------------------\n");
+	cout << "\n\n---------------------------------------------------------------------------------------------------------------------------------\n";
+
 	fprintf(alpha_file, "%s", input_name.c_str());
 	for (int i = 0; i < 10; i++) {
-		fprintf(alpha_file, ",%d,%d,%d,%.1lf", alpha_frequencies[i], alpha_best_freq[i], alpha_best_solution[i],
+		fprintf(alpha_file, ",%d,%d,%d,%.6lf", alpha_frequencies[i], alpha_best_freq[i], alpha_best_solution[i],
 			alpha_means[i]);
 	}
 	fprintf(alpha_file, "\n");
-	cout << "Solution: " << incumbent_solution << '\n';
+	// cout << "Solution: " << incumbent_solution << '\n';
 	return 0;
 }
