@@ -213,34 +213,36 @@ vector<int> construction(vector<double> centrality, int n_vertices, int n_edges,
 		vertex_label[next_activator] = current_round;
 		bfs(next_activator, current_round, vertex_label);
 		burning_sequence.push_back(next_activator);
-		set<int> to_burn;
-		to_burn.insert(next_activator);
+
+		vector<int> to_burn_now;
+		to_burn_now.push_back(next_activator);
+
 		for (int current_vertex : burned) {
 			for (int neighbour : adj[current_vertex]) {
-				assert(vertex_status[neighbour] != 0);
-				if (vertex_status[neighbour] != 1)
+				if (vertex_status[neighbour] == 2)
 					continue;
+				assert(vertex_status[neighbour] == 1);
 				vertex_status[neighbour] = 2; // queimei
 				targeted.erase(neighbour);
-				to_burn.insert(neighbour);
+				to_burn_now.push_back(neighbour);
 			}
 		}
-		for (int current_vertex : to_burn) {
+		for (int current_vertex : to_burn_now) {
 			burned.insert(current_vertex);
 			for (int neighbour : adj[current_vertex]) {
 				if (vertex_status[neighbour] != 0)
 					continue;
+				assert(vertex_status[neighbour] == 0);
 				vertex_status[neighbour] = 1;
 				safe.erase(neighbour);
 				targeted.insert(neighbour);
 			}
 		}
 	} while ((int) burned.size() != n_vertices);
-	// cerr << '\n';
 	return burning_sequence;
 }
 
-void parse_args(int argc, char **argv, int &seed, double &alpha, int &time_limit, string &input_path, string &output_path, string &log_path) {
+void parse_args(int argc, char **argv, int &seed, double &alpha, int &time_limit, string &input_path, string &output_path, string &log_path, string &alpha_path) {
 	for (int i = 0; i < argc; i++) {
 		string str = argv[i];
 		if (str[0] == '-') {
@@ -257,6 +259,8 @@ void parse_args(int argc, char **argv, int &seed, double &alpha, int &time_limit
 				output_path = argv[i + 1];
 			else if (identifier == "lp")
 				log_path = argv[i + 1];
+			else if (identifier == "ap")
+				alpha_path = argv[i + 1];
 			else
 				cout << "Invalid option: -" << identifier << "\n";
 		}
@@ -271,13 +275,16 @@ int main(int argc, char **argv) {
 	string input_path;
 	string output_path;
 	string log_path;
-	parse_args(argc, argv, seed, alpha, time_limit, input_path, output_path, log_path);
+	string alpha_path;
+	parse_args(argc, argv, seed, alpha, time_limit, input_path, output_path, log_path, alpha_path);
 
 	// File Variables
 	FILE *input_file = fopen(input_path.c_str(), "r");
 	FILE *output_file = fopen(output_path.c_str(), "a");
 	FILE *log_file = fopen(log_path.c_str(), "a");
-
+	FILE *alpha_file = fopen(alpha_path.c_str(), "a");
+	string input_name = input_path.substr(10);
+	input_name = input_name.substr(0, (int) input_name.size() - 3);
 	// Graph Info Variables
 	int n_vertices, n_edges;
 	double density;
@@ -297,10 +304,12 @@ int main(int argc, char **argv) {
 	// Reactive GRASP stuff
 	double phi[] = {0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0};
 	vector<double> alpha_means(10, 0);
+	vector<int> alpha_best_freq(10, 0);
 	vector<int> alpha_frequencies(10, 0);
-	function<double(int)> get_alpha = [&](int iteration) -> double {
+	vector<int> alpha_best_solution(10, INF);
+	function<int(int)> get_alpha = [&](int iteration) -> int {
 		if (iteration <= 100)
-			return phi[(iteration + 9) / 10 - 1];
+			return (iteration + 9) / 10 - 1;
 		vector<double> q(10);
 		double sum = 0;
 		for (int i = 0; i < 10; i++) {
@@ -315,6 +324,7 @@ int main(int argc, char **argv) {
 		return d(rng);
 	};
 	function<void(int, int)> update_alpha = [&](int idx, int value) {
+		alpha_best_solution[idx] = min(alpha_best_solution[idx], value);
 		alpha_means[idx] *= (double) alpha_frequencies[idx];
 		alpha_means[idx] += (double) value;
 		alpha_frequencies[idx]++;
@@ -332,24 +342,30 @@ int main(int argc, char **argv) {
 			sol_value_mean += (double) burning_sequence.size();
 			sol_value_mean /= (double) cnt_valid_solutions;
 			if ((int) burning_sequence.size() < incumbent_solution) {
+				for (int i = 0; i < 10; i++) {
+					alpha_best_freq[i] = 0;
+				}
 				incumbent_solution = (int) burning_sequence.size();
 				freq_incubent_solution = 1;
 				alpha_incumbent_solution = phi[alpha_idx];
+				alpha_best_freq[alpha_idx] = 1;
 				iteration_incubent_solution = n_iterations;
 			} else if ((int) burning_sequence.size() == incumbent_solution) {
+				alpha_best_freq[alpha_idx]++;
 				freq_incubent_solution++;
 			}
 		}
+		cout << "[ Iteration " << n_iterations << " ] got " << (int) burning_sequence.size() << " with [ ALPHA = " << phi[alpha_idx] << " ]\n";
 	} while (1.0 * (clock() - inicio) / CLOCKS_PER_SEC < time_limit); // limite de 5 minutos
 	double time_consumed = 1.0 * (clock() - inicio) / CLOCKS_PER_SEC;
-	fprintf(output_file, "%s,%.2lf,%d,%.2lf,%d,%d,%d,%.1lf\n", input_path.c_str(),
-												 		 time_consumed,
-												 		 n_iterations,
-												 		 sol_value_mean,
-												 		 incumbent_solution,
-												 		 freq_incubent_solution,
-												 		 iteration_incubent_solution,
-												 		 alpha_incumbent_solution);
-	cout << "Solution: " << incumbent_solution << '\n';
+	fprintf(output_file, "%s,%.2lf,%d,%.2lf,%d,%d,%d,%.1lf\n", input_name.c_str(), time_consumed, n_iterations, sol_value_mean, 
+		incumbent_solution, freq_incubent_solution, iteration_incubent_solution, alpha_incumbent_solution);
+	fprintf(alpha_file, "%s", input_name.c_str());
+	for (int i = 0; i < 10; i++) {
+		fprintf(alpha_file, ",%d,%d,%d,%.1lf", alpha_frequencies[i], alpha_best_freq[i], alpha_best_solution[i],
+			alpha_means[i]);
+	}
+	fprintf(alpha_file, "\n");
+	cout << "\nSolution: " << incumbent_solution << '\n';
 	return 0;
 }

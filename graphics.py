@@ -4,6 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 
+# plt.rcParams.update(plt.rcParamsDefault)
+
 plt.rcParams.update({'figure.max_open_warning': 0})
 
 #Set fonts
