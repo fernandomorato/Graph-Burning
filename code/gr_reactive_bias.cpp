@@ -161,7 +161,7 @@ int biased_selection(vector<int> &vertices, mt19937 &rng) {
 	return rank[d(rng)].second;
 }
 
-vector<int> construction(vector<double> centrality, int n_vertices, int n_edges, double graph_density, mt19937 &rng, double alpha, int K_i) {
+vector<int> construction(int iteration, vector<double> centrality, int n_vertices, int n_edges, double graph_density, mt19937 &rng, double alpha, int K_i) {
 	// Round Variables
 	int current_round = 1;
 	vector<int> burning_sequence;
@@ -247,8 +247,7 @@ vector<int> construction(vector<double> centrality, int n_vertices, int n_edges,
 			}
 		}
 		assert(!rcl.empty());
-		// int next_activator = rcl[rng() % (int) rcl.size()];
-		int next_activator = biased_selection(rcl, rng);
+		int next_activator = (iteration <= 100 ? rcl[rng() % (int) rcl.size()] : biased_selection(rcl, rng));
 		vertex_label[next_activator] = current_round;
 		bfs(next_activator, current_round, vertex_label);
 		burning_sequence.push_back(next_activator);
@@ -380,7 +379,7 @@ int main(int argc, char **argv) {
 	do {
 		n_iterations++;
 		int alpha_idx = get_alpha(n_iterations);
-		vector<int> burning_sequence = construction(centrality_scores, n_vertices, n_edges, graph_density, rng, phi[alpha_idx], incumbent_solution - 1);
+		vector<int> burning_sequence = construction(n_iterations, centrality_scores, n_vertices, n_edges, graph_density, rng, phi[alpha_idx], incumbent_solution - 1);
 		update_alpha(alpha_idx, (int) burning_sequence.size());
 		if (check_solution(n_vertices, burning_sequence)) {
 			for (auto x : burning_sequence) {
