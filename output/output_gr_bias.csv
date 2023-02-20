@@ -1,4 +1,4 @@
-Instancia,Tempo consumido,Qtd iteracoes,Media solucoes,Melhor solucao,Frequencia melhor sol,Iteracao melhor sol
+Instancia,Tempo consumido,Qtd iteracoes,Qtd solucoes viaveis,Media solucoes,Melhor solucao,Frequencia melhor sol,Iteracao melhor sol
 c-fat500-2,600.00,13724,13724,10.665039,9,1,2
 c-fat200-1,600.00,87264,87264,9.999989,9,1,3
 netscience,600.01,45590,45590,10.098991,6,1,354
