@@ -266,13 +266,15 @@ vector<int> construction(int iteration, vector<double> centrality, int n_vertice
 }
 
 void parse_args(int argc, char **argv, int &seed, double &alpha, int &time_limit, string &input_path, string &output_path, string &log_path, string &alpha_path) {
+	bool f_seed  = false;
 	for (int i = 0; i < argc; i++) {
 		string str = argv[i];
 		if (str[0] == '-') {
 			string identifier = str.substr(1);
-			if (identifier == "seed")
+			if (identifier == "seed") {
+				f_seed = true;
 				seed = atoi(argv[i + 1]);
-			else if (identifier == "alpha")
+			} else if (identifier == "alpha")
 				alpha = atof(argv[i + 1]);
 			else if (identifier == "tl")
 				time_limit = atoi(argv[i + 1]);
@@ -287,6 +289,9 @@ void parse_args(int argc, char **argv, int &seed, double &alpha, int &time_limit
 			else
 				cout << "Invalid option: -" << identifier << "\n";
 		}
+	}
+	if (!f_seed) {
+		seed = (int) chrono::steady_clock::now().time_since_epoch().count();
 	}
 }
  
@@ -323,8 +328,8 @@ int main(int argc, char **argv) {
 	clock_t inicio = clock();
 	int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices)); // Intial value = floor(2*sqrt(n)-1)	
 	// Iterations
-	fprintf(log_file, "\nALPHA = %.2lf\nInstance = %s\nN vertices = %d\nN edges = %d\nDensity = %.6lf\n\n", alpha, input_name.c_str(), n_vertices, n_edges, graph_density);
-	cout << "\nALPHA = " << alpha << "\nInstance = " << input_name << "\nN vertices = " << n_vertices << "\nN edges = " << n_edges << "\nDensity = " << graph_density << "\n\n";
+	fprintf(log_file, "\nALPHA = %.2lf\nSeed = %d\nInstance = %s\nN vertices = %d\nN edges = %d\nDensity = %.6lf\n\n", alpha, seed, input_name.c_str(), n_vertices, n_edges, graph_density);
+	cout << "\nALPHA = " << alpha << "\nSeed  = " << seed << "\nInstance = " << input_name << "\nN vertices = " << n_vertices << "\nN edges = " << n_edges << "\nDensity = " << graph_density << "\n\n";
 	do {
 		n_iterations++;
 		vector<int> burning_sequence = construction(n_iterations, centrality_scores, n_vertices, n_edges, graph_density, rng, alpha, incumbent_solution - 1);
@@ -348,9 +353,10 @@ int main(int argc, char **argv) {
 	double time_consumed = 1.0 * (clock() - inicio) / CLOCKS_PER_SEC;
 	fprintf(log_file, "\nNumber of iterations = %d\nMean of solution values = %.6lf\n", n_iterations, sol_value_mean);
 	cout << "\nNumber of iterations = " << n_iterations << "\nMean of solution values = " << sol_value_mean << "\n";
-	fprintf(output_file, "%s,%.2lf,%d,%d,%.6lf,%d,%d,%d\n", input_name.c_str(), time_consumed, n_iterations, cnt_valid_solutions, 
-		sol_value_mean, incumbent_solution, freq_incumbent_solution, iteration_incumbent_solution);
-
+	// fprintf(output_file, "%s,%.2lf,%d,%d,%.6lf,%d,%d,%d\n", input_name.c_str(), time_consumed, n_iterations, cnt_valid_solutions, 
+		// sol_value_mean, incumbent_solution, freq_incumbent_solution, iteration_incumbent_solution);
+	fprintf(output_file, "%s,%d,%d,%.4lf,%d,%d,%.4lf,%d,%d", input_name.c_str(), n_vertices, n_edges, graph_density, n_iterations, incumbent_solution,
+		sol_value_mean, freq_incumbent_solution, iteration_incumbent_solution);
 	fprintf(log_file, "\nBest solution found:\nSolution value = %d\nNumber of rounds = %d\nIteration = %d\n",
 		incumbent_solution, freq_incumbent_solution, iteration_incumbent_solution);
 	cout << "\nBest solution found:\nSolution value = " << incumbent_solution << "\n";

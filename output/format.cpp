@@ -27,6 +27,7 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
 	vector<int> options = {0, 5};
+	fopen
 	string line;
 	while (getline(cin, line)) {
 		vector<string> xd = split(line, ',');
