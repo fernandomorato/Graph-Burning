@@ -108,6 +108,8 @@ vector<int> select_vertices(vector<int> &candidates, vector<double> &centrality,
 		if (current_vertex_centrality >= (1 - density) * aux[0].first || (int) selected_vertices.size() < 5)
 			selected_vertices.push_back(current_vertex);
 	}
+	if (selected_vertices.empty())
+		selected_vertices.push_back(aux[0].second);
 	return selected_vertices;
 }
 
