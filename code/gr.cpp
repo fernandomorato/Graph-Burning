@@ -357,8 +357,8 @@ int main(int argc, char **argv) {
 	cout << "\nNumber of iterations = " << n_iterations << "\nMean of solution values = " << sol_value_mean << "\n";
 	// fprintf(output_file, "%s,%.2lf,%d,%d,%.6lf,%d,%d,%d\n", input_name.c_str(), time_consumed, n_iterations, cnt_valid_solutions, 
 		// sol_value_mean, incumbent_solution, freq_incumbent_solution, iteration_incumbent_solution);
-	fprintf(output_file, "%s,%d,%d,%.4lf,%d,%d,%.4lf,%d,%d", input_name.c_str(), n_vertices, n_edges, graph_density, n_iterations, incumbent_solution,
-		sol_value_mean, freq_incumbent_solution, iteration_incumbent_solution);
+	// fprintf(output_file, "%s,%d,%d,%.4lf,%d,%d,%.4lf,%d,%d", input_name.c_str(), n_vertices, n_edges, graph_density, n_iterations, incumbent_solution,
+	// 	sol_value_mean, freq_incumbent_solution, iteration_incumbent_solution);
 	fprintf(output_file, "%s,%.4lf,%.4lf,%d,%d,%d", input_name.c_str(), time_consumed, time_to_incumbent,
 		iteration_incumbent_solution, freq_incumbent_solution, incumbent_solution);
 	fprintf(log_file, "\nBest solution found:\nSolution value = %d\nNumber of rounds = %d\nIteration = %d\n",
