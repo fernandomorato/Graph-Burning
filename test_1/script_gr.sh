@@ -12,3 +12,4 @@ for filename in *.in ; do
 	# > logs/logs_gr/log_"${filename#*/}" &
    	./gr -alpha 0.51 -tl 600 -ip "$filename" -op output/output_gr/$a.csv -lp logs/logs_gr/$a.log &
 done
+echo "Finished"
