@@ -1,0 +1,51 @@
+
+ALPHA = 0.51
+Seed = 2034995756
+Instance = 
+N vertices = 903
+N edges = 1226
+Density = 0.003010
+
+[Iteration 1] New incumbent solution found! Solution value = 35
+[Iteration 19] New incumbent solution found! Solution value = 34
+
+Number of iterations = 878
+Mean of solution values = 41.955581
+
+Best solution found:
+Solution value = 34
+Number of rounds = 7
+Iteration = 19
+
+Burning sequence = 856 321 305 71 399 728 413 390 404 391 657 716 883 769 844 852 512 729 843 765 196 774 862 845 884 897 441 899 125 853 599 394 493 223 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -598921391
+Instance = DD497
+N vertices = 903
+N edges = 1226
+Density = 0.003010
+
+[Iteration 1] New incumbent solution found! Solution value = 50
+[Iteration 2] New incumbent solution found! Solution value = 48
+[Iteration 3] New incumbent solution found! Solution value = 44
+[Iteration 4] New incumbent solution found! Solution value = 41
+[Iteration 6] New incumbent solution found! Solution value = 39
+[Iteration 10] New incumbent solution found! Solution value = 36
+[Iteration 44] New incumbent solution found! Solution value = 35
+[Iteration 58] New incumbent solution found! Solution value = 34
+[Iteration 542] New incumbent solution found! Solution value = 33
+
+Number of iterations = 911
+Mean of solution values = 41.996707
+
+Best solution found:
+Solution value = 33
+Number of rounds = 1
+Iteration = 542
+
+Burning sequence = 791 47 881 304 900 852 845 393 73 512 897 441 321 404 604 729 599 884 769 389 843 853 493 413 774 125 862 716 899 657 196 765 394 
+
+---------------------------------------------------------------------------------------------------------------------------------

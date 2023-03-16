@@ -1,0 +1,44 @@
+
+ALPHA = 0.51
+Seed = -1363879851
+Instance = 
+N vertices = 962
+N edges = 18812
+Density = 0.040697
+
+[Iteration 1] New incumbent solution found! Solution value = 5
+[Iteration 2] New incumbent solution found! Solution value = 4
+
+Number of iterations = 40702
+Mean of solution values = 4.593386
+
+Best solution found:
+Solution value = 4
+Number of rounds = 16550
+Iteration = 2
+
+Burning sequence = 678 299 572 57 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 204844961
+Instance = reed98
+N vertices = 962
+N edges = 18812
+Density = 0.040697
+
+[Iteration 1] New incumbent solution found! Solution value = 5
+[Iteration 2] New incumbent solution found! Solution value = 4
+
+Number of iterations = 41011
+Mean of solution values = 4.593816
+
+Best solution found:
+Solution value = 4
+Number of rounds = 16658
+Iteration = 2
+
+Burning sequence = 678 572 299 763 
+
+---------------------------------------------------------------------------------------------------------------------------------

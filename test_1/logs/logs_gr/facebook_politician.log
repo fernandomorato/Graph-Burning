@@ -1,0 +1,69 @@
+
+ALPHA = 0.51
+Seed = 1249765034
+Instance = olitician
+N vertices = 5908
+N edges = 41729
+Density = 0.002391
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+
+Number of iterations = 7296
+Mean of solution values = 8.242325
+
+Best solution found:
+Solution value = 8
+Number of rounds = 5529
+Iteration = 3
+
+Burning sequence = 4602 2208 5129 483 2499 500 959 5304 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1707563280
+Instance = 
+N vertices = 5908
+N edges = 41729
+Density = 0.002391
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+
+Number of iterations = 7607
+Mean of solution values = 8.244512
+
+Best solution found:
+Solution value = 8
+Number of rounds = 5748
+Iteration = 3
+
+Burning sequence = 1595 483 2208 2756 1515 5818 4662 3146 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -62852088
+Instance = facebook_politician
+N vertices = 5908
+N edges = 41729
+Density = 0.002391
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+
+Number of iterations = 7970
+Mean of solution values = 8.239398
+
+Best solution found:
+Solution value = 8
+Number of rounds = 6063
+Iteration = 3
+
+Burning sequence = 4972 2208 483 2756 2 4931 1167 3045 
+
+---------------------------------------------------------------------------------------------------------------------------------

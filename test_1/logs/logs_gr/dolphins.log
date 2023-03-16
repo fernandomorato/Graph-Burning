@@ -1,0 +1,69 @@
+
+ALPHA = 0.51
+Seed = 1242394278
+Instance = n
+N vertices = 62
+N edges = 159
+Density = 0.084082
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 5
+[Iteration 9] New incumbent solution found! Solution value = 4
+
+Number of iterations = 499249
+Mean of solution values = 5.118804
+
+Best solution found:
+Solution value = 4
+Number of rounds = 33281
+Iteration = 9
+
+Burning sequence = 14 17 41 60 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1819496228
+Instance = 
+N vertices = 62
+N edges = 159
+Density = 0.084082
+
+[Iteration 1] New incumbent solution found! Solution value = 6
+[Iteration 3] New incumbent solution found! Solution value = 5
+[Iteration 12] New incumbent solution found! Solution value = 4
+
+Number of iterations = 502715
+Mean of solution values = 5.117985
+
+Best solution found:
+Solution value = 4
+Number of rounds = 33306
+Iteration = 12
+
+Burning sequence = 29 13 39 26 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -166856246
+Instance = dolphins
+N vertices = 62
+N edges = 159
+Density = 0.084082
+
+[Iteration 1] New incumbent solution found! Solution value = 6
+[Iteration 3] New incumbent solution found! Solution value = 5
+[Iteration 23] New incumbent solution found! Solution value = 4
+
+Number of iterations = 502254
+Mean of solution values = 5.117636
+
+Best solution found:
+Solution value = 4
+Number of rounds = 33562
+Iteration = 23
+
+Burning sequence = 50 9 54 26 
+
+---------------------------------------------------------------------------------------------------------------------------------

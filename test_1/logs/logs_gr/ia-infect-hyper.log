@@ -1,0 +1,63 @@
+
+ALPHA = 0.51
+Seed = 1273228138
+Instance = hyper
+N vertices = 113
+N edges = 2196
+Density = 0.347029
+
+[Iteration 1] New incumbent solution found! Solution value = 3
+
+Number of iterations = 230982
+Mean of solution values = 3.026725
+
+Best solution found:
+Solution value = 3
+Number of rounds = 224809
+Iteration = 1
+
+Burning sequence = 8 9 47 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1531578852
+Instance = 
+N vertices = 113
+N edges = 2196
+Density = 0.347029
+
+[Iteration 1] New incumbent solution found! Solution value = 3
+
+Number of iterations = 235119
+Mean of solution values = 3.026204
+
+Best solution found:
+Solution value = 3
+Number of rounds = 228958
+Iteration = 1
+
+Burning sequence = 29 54 104 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 89158296
+Instance = ia-infect-hyper
+N vertices = 113
+N edges = 2196
+Density = 0.347029
+
+[Iteration 1] New incumbent solution found! Solution value = 3
+
+Number of iterations = 235001
+Mean of solution values = 3.026225
+
+Best solution found:
+Solution value = 3
+Number of rounds = 228838
+Iteration = 1
+
+Burning sequence = 74 99 16 
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,68 @@
+
+ALPHA = 0.51
+Seed = 1234884865
+Instance = in
+N vertices = 2277
+N edges = 31421
+Density = 0.012126
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 16] New incumbent solution found! Solution value = 7
+
+Number of iterations = 13507
+Mean of solution values = 8.240394
+
+Best solution found:
+Solution value = 7
+Number of rounds = 336
+Iteration = 16
+
+Burning sequence = 1714 154 1744 1840 838 898 471 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -250893903
+Instance = chameleon
+N vertices = 2277
+N edges = 31421
+Density = 0.012126
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 4] New incumbent solution found! Solution value = 7
+
+Number of iterations = 13620
+Mean of solution values = 8.234141
+
+Best solution found:
+Solution value = 7
+Number of rounds = 357
+Iteration = 4
+
+Burning sequence = 1714 1744 665 601 1512 1840 898 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1903953092
+Instance = 
+N vertices = 2277
+N edges = 31421
+Density = 0.012126
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 3] New incumbent solution found! Solution value = 7
+
+Number of iterations = 13021
+Mean of solution values = 8.230320
+
+Best solution found:
+Solution value = 7
+Number of rounds = 333
+Iteration = 3
+
+Burning sequence = 1714 2187 154 838 896 1840 898 
+
+---------------------------------------------------------------------------------------------------------------------------------

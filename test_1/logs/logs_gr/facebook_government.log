@@ -1,0 +1,67 @@
+
+ALPHA = 0.51
+Seed = 1248215353
+Instance = overnment
+N vertices = 7057
+N edges = 89455
+Density = 0.003593
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 7
+[Iteration 3] New incumbent solution found! Solution value = 6
+
+Number of iterations = 5339
+Mean of solution values = 6.964038
+
+Best solution found:
+Solution value = 6
+Number of rounds = 193
+Iteration = 3
+
+Burning sequence = 5320 3657 3654 467 2215 1971 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1643530892
+Instance = 
+N vertices = 7057
+N edges = 89455
+Density = 0.003593
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 5] New incumbent solution found! Solution value = 6
+
+Number of iterations = 5238
+Mean of solution values = 6.964681
+
+Best solution found:
+Solution value = 6
+Number of rounds = 185
+Iteration = 5
+
+Burning sequence = 5320 3657 2215 467 3654 6754 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -82767283
+Instance = facebook_government
+N vertices = 7057
+N edges = 89455
+Density = 0.003593
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 3] New incumbent solution found! Solution value = 6
+
+Number of iterations = 5178
+Mean of solution values = 6.958864
+
+Best solution found:
+Solution value = 6
+Number of rounds = 213
+Iteration = 3
+
+Burning sequence = 6615 3654 467 2215 3657 4621 
+
+---------------------------------------------------------------------------------------------------------------------------------

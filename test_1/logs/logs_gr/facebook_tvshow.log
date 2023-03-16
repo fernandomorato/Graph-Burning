@@ -1,0 +1,69 @@
+
+ALPHA = 0.51
+Seed = 1251764106
+Instance = vshow
+N vertices = 3892
+N edges = 17262
+Density = 0.002280
+
+[Iteration 1] New incumbent solution found! Solution value = 12
+[Iteration 2] New incumbent solution found! Solution value = 11
+[Iteration 91] New incumbent solution found! Solution value = 10
+
+Number of iterations = 11724
+Mean of solution values = 11.028147
+
+Best solution found:
+Solution value = 10
+Number of rounds = 114
+Iteration = 91
+
+Burning sequence = 1673 1914 2826 2560 3649 2574 2175 1263 3055 2943 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1699617940
+Instance = 
+N vertices = 3892
+N edges = 17262
+Density = 0.002280
+
+[Iteration 1] New incumbent solution found! Solution value = 12
+[Iteration 2] New incumbent solution found! Solution value = 11
+[Iteration 28] New incumbent solution found! Solution value = 10
+
+Number of iterations = 12617
+Mean of solution values = 11.029008
+
+Best solution found:
+Solution value = 10
+Number of rounds = 112
+Iteration = 28
+
+Burning sequence = 1673 1938 2574 2560 3649 2175 1914 3055 2826 2943 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -42738840
+Instance = facebook_tvshow
+N vertices = 3892
+N edges = 17262
+Density = 0.002280
+
+[Iteration 1] New incumbent solution found! Solution value = 12
+[Iteration 2] New incumbent solution found! Solution value = 11
+[Iteration 62] New incumbent solution found! Solution value = 10
+
+Number of iterations = 12316
+Mean of solution values = 11.028743
+
+Best solution found:
+Solution value = 10
+Number of rounds = 136
+Iteration = 62
+
+Burning sequence = 3525 1168 3196 2135 3687 813 2574 2943 3055 1263 
+
+---------------------------------------------------------------------------------------------------------------------------------

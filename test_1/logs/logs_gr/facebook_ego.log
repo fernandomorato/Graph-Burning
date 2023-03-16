@@ -1,0 +1,68 @@
+
+ALPHA = 0.51
+Seed = 1245554986
+Instance = go
+N vertices = 4039
+N edges = 88234
+Density = 0.010820
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 8] New incumbent solution found! Solution value = 5
+
+Number of iterations = 145
+Mean of solution values = 7.551724
+
+Best solution found:
+Solution value = 5
+Number of rounds = 1
+Iteration = 8
+
+Burning sequence = 1912 747 861 1131 3951 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1759794093
+Instance = 
+N vertices = 4039
+N edges = 88234
+Density = 0.010820
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 9] New incumbent solution found! Solution value = 5
+
+Number of iterations = 143
+Mean of solution values = 7.566434
+
+Best solution found:
+Solution value = 5
+Number of rounds = 1
+Iteration = 9
+
+Burning sequence = 1912 895 865 705 3594 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -126829543
+Instance = facebook_ego
+N vertices = 4039
+N edges = 88234
+Density = 0.010820
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 5
+
+Number of iterations = 132
+Mean of solution values = 7.659091
+
+Best solution found:
+Solution value = 5
+Number of rounds = 1
+Iteration = 2
+
+Burning sequence = 1912 855 694 956 4030 
+
+---------------------------------------------------------------------------------------------------------------------------------

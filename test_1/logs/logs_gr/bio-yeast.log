@@ -1,0 +1,75 @@
+
+ALPHA = 0.51
+Seed = 1217978251
+Instance = in
+N vertices = 1458
+N edges = 1948
+Density = 0.001834
+
+[Iteration 1] New incumbent solution found! Solution value = 13
+[Iteration 4] New incumbent solution found! Solution value = 12
+[Iteration 5] New incumbent solution found! Solution value = 11
+[Iteration 7] New incumbent solution found! Solution value = 10
+[Iteration 1310] New incumbent solution found! Solution value = 9
+
+Number of iterations = 3057
+Mean of solution values = 12.187112
+
+Best solution found:
+Solution value = 9
+Number of rounds = 1
+Iteration = 1310
+
+Burning sequence = 818 239 501 641 701 1071 987 411 931 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -430580947
+Instance = bio-yeast
+N vertices = 1458
+N edges = 1948
+Density = 0.001834
+
+[Iteration 1] New incumbent solution found! Solution value = 14
+[Iteration 2] New incumbent solution found! Solution value = 12
+[Iteration 7] New incumbent solution found! Solution value = 11
+[Iteration 14] New incumbent solution found! Solution value = 10
+[Iteration 1987] New incumbent solution found! Solution value = 9
+
+Number of iterations = 3288
+Mean of solution values = 12.216241
+
+Best solution found:
+Solution value = 9
+Number of rounds = 1
+Iteration = 1987
+
+Burning sequence = 818 1413 964 554 987 1071 931 411 641 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -2078180200
+Instance = 
+N vertices = 1458
+N edges = 1948
+Density = 0.001834
+
+[Iteration 1] New incumbent solution found! Solution value = 13
+[Iteration 2] New incumbent solution found! Solution value = 12
+[Iteration 3] New incumbent solution found! Solution value = 11
+[Iteration 80] New incumbent solution found! Solution value = 10
+[Iteration 1320] New incumbent solution found! Solution value = 9
+
+Number of iterations = 2594
+Mean of solution values = 12.198921
+
+Best solution found:
+Solution value = 9
+Number of rounds = 1
+Iteration = 1320
+
+Burning sequence = 97 402 306 1396 610 987 411 437 452 
+
+---------------------------------------------------------------------------------------------------------------------------------

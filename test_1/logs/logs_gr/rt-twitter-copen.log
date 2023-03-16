@@ -1,0 +1,72 @@
+
+ALPHA = 0.51
+Seed = 1437706957
+Instance = -copen
+N vertices = 761
+N edges = 1029
+Density = 0.003558
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 19] New incumbent solution found! Solution value = 8
+[Iteration 410] New incumbent solution found! Solution value = 7
+
+Number of iterations = 11556
+Mean of solution values = 9.501211
+
+Best solution found:
+Solution value = 7
+Number of rounds = 22
+Iteration = 410
+
+Burning sequence = 228 22 693 630 103 529 43 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1302085271
+Instance = 
+N vertices = 761
+N edges = 1029
+Density = 0.003558
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 7] New incumbent solution found! Solution value = 8
+[Iteration 271] New incumbent solution found! Solution value = 7
+
+Number of iterations = 11877
+Mean of solution values = 9.491454
+
+Best solution found:
+Solution value = 7
+Number of rounds = 20
+Iteration = 271
+
+Burning sequence = 228 103 630 22 693 467 78 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 269577879
+Instance = rt-twitter-copen
+N vertices = 761
+N edges = 1029
+Density = 0.003558
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 9] New incumbent solution found! Solution value = 8
+[Iteration 605] New incumbent solution found! Solution value = 7
+
+Number of iterations = 11934
+Mean of solution values = 9.487934
+
+Best solution found:
+Solution value = 7
+Number of rounds = 16
+Iteration = 605
+
+Burning sequence = 622 616 693 726 591 395 455 
+
+---------------------------------------------------------------------------------------------------------------------------------

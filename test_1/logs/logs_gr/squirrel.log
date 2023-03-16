@@ -1,0 +1,66 @@
+
+ALPHA = 0.51
+Seed = 1508323679
+Instance = n
+N vertices = 5201
+N edges = 198493
+Density = 0.014679
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+
+Number of iterations = 3435
+Mean of solution values = 6.544105
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1566
+Iteration = 2
+
+Burning sequence = 4365 4563 1374 2509 680 5088 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1183571889
+Instance = 
+N vertices = 5201
+N edges = 198493
+Density = 0.014679
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+
+Number of iterations = 3365
+Mean of solution values = 6.571768
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1441
+Iteration = 2
+
+Burning sequence = 1638 4563 2293 2509 1012 680 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 413421309
+Instance = squirrel
+N vertices = 5201
+N edges = 198493
+Density = 0.014679
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+
+Number of iterations = 3497
+Mean of solution values = 6.553331
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1562
+Iteration = 2
+
+Burning sequence = 1638 4563 1374 2509 680 1012 
+
+---------------------------------------------------------------------------------------------------------------------------------

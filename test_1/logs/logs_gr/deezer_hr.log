@@ -1,0 +1,68 @@
+
+ALPHA = 0.51
+Seed = 1239978132
+Instance = in
+N vertices = 54573
+N edges = 498202
+Density = 0.000335
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 7
+
+Number of iterations = 620
+Mean of solution values = 7.998387
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 2
+
+Burning sequence = 32083 38022 41560 32336 7664 29353 18872 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1847614739
+Instance = 
+N vertices = 54573
+N edges = 498202
+Density = 0.000335
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 5] New incumbent solution found! Solution value = 7
+
+Number of iterations = 580
+Mean of solution values = 8.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 5
+
+Burning sequence = 32083 29353 38022 32336 41560 18872 7664 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -178327616
+Instance = deezer_hr
+N vertices = 54573
+N edges = 498202
+Density = 0.000335
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 15] New incumbent solution found! Solution value = 7
+
+Number of iterations = 609
+Mean of solution values = 8.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 15
+
+Burning sequence = 32083 41560 4429 32336 29353 7664 18872 
+
+---------------------------------------------------------------------------------------------------------------------------------

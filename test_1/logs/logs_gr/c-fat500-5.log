@@ -1,0 +1,66 @@
+
+ALPHA = 0.51
+Seed = 1232093991
+Instance = 
+N vertices = 500
+N edges = 23191
+Density = 0.185900
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 5
+
+Number of iterations = 16432
+Mean of solution values = 5.000122
+
+Best solution found:
+Solution value = 5
+Number of rounds = 16431
+Iteration = 2
+
+Burning sequence = 163 425 476 6 382 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1919728356
+Instance = 
+N vertices = 500
+N edges = 23191
+Density = 0.185900
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 5
+
+Number of iterations = 16690
+Mean of solution values = 5.000120
+
+Best solution found:
+Solution value = 5
+Number of rounds = 16689
+Iteration = 2
+
+Burning sequence = 244 286 396 298 24 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -269775958
+Instance = c-fat500-5
+N vertices = 500
+N edges = 23191
+Density = 0.185900
+
+[Iteration 1] New incumbent solution found! Solution value = 6
+[Iteration 3] New incumbent solution found! Solution value = 5
+
+Number of iterations = 16748
+Mean of solution values = 5.000119
+
+Best solution found:
+Solution value = 5
+Number of rounds = 16746
+Iteration = 3
+
+Burning sequence = 384 262 152 442 299 
+
+---------------------------------------------------------------------------------------------------------------------------------

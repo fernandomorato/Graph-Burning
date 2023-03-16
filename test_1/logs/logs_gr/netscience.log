@@ -1,0 +1,74 @@
+
+ALPHA = 0.51
+Seed = 1360137016
+Instance = 
+N vertices = 379
+N edges = 914
+Density = 0.012760
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 5] New incumbent solution found! Solution value = 7
+[Iteration 1198] New incumbent solution found! Solution value = 6
+
+Number of iterations = 28775
+Mean of solution values = 10.028775
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 1198
+
+Burning sequence = 4 66 11 376 304 36 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1419527230
+Instance = 
+N vertices = 379
+N edges = 914
+Density = 0.012760
+
+[Iteration 1] New incumbent solution found! Solution value = 12
+[Iteration 2] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 4] New incumbent solution found! Solution value = 8
+[Iteration 5] New incumbent solution found! Solution value = 7
+[Iteration 548] New incumbent solution found! Solution value = 6
+
+Number of iterations = 29157
+Mean of solution values = 10.058168
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 548
+
+Burning sequence = 4 66 167 374 304 36 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 165291946
+Instance = netscience
+N vertices = 379
+N edges = 914
+Density = 0.012760
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 4] New incumbent solution found! Solution value = 7
+[Iteration 423] New incumbent solution found! Solution value = 6
+
+Number of iterations = 29383
+Mean of solution values = 10.060852
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 423
+
+Burning sequence = 4 66 149 374 37 241 
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,71 @@
+
+ALPHA = 0.51
+Seed = 1217145416
+Instance = ome
+N vertices = 516
+N edges = 1188
+Density = 0.008941
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 3] New incumbent solution found! Solution value = 10
+[Iteration 17] New incumbent solution found! Solution value = 9
+[Iteration 689] New incumbent solution found! Solution value = 8
+
+Number of iterations = 18032
+Mean of solution values = 10.122227
+
+Best solution found:
+Solution value = 8
+Number of rounds = 193
+Iteration = 689
+
+Burning sequence = 134 89 403 268 69 24 143 506 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -2127772253
+Instance = 
+N vertices = 516
+N edges = 1188
+Density = 0.008941
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 2] New incumbent solution found! Solution value = 10
+[Iteration 19] New incumbent solution found! Solution value = 9
+[Iteration 785] New incumbent solution found! Solution value = 8
+
+Number of iterations = 18604
+Mean of solution values = 10.119275
+
+Best solution found:
+Solution value = 8
+Number of rounds = 242
+Iteration = 785
+
+Burning sequence = 134 403 334 405 417 329 43 362 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -446758259
+Instance = bio-diseasome
+N vertices = 516
+N edges = 1188
+Density = 0.008941
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 6] New incumbent solution found! Solution value = 9
+[Iteration 186] New incumbent solution found! Solution value = 8
+
+Number of iterations = 18150
+Mean of solution values = 10.106997
+
+Best solution found:
+Solution value = 8
+Number of rounds = 238
+Iteration = 186
+
+Burning sequence = 256 89 6 146 298 326 340 9 
+
+---------------------------------------------------------------------------------------------------------------------------------

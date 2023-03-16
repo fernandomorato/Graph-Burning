@@ -1,0 +1,69 @@
+
+ALPHA = 0.51
+Seed = 1238159442
+Instance = in
+N vertices = 11631
+N edges = 170918
+Density = 0.002527
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 7
+[Iteration 3] New incumbent solution found! Solution value = 6
+
+Number of iterations = 2797
+Mean of solution values = 7.141938
+
+Best solution found:
+Solution value = 6
+Number of rounds = 110
+Iteration = 3
+
+Burning sequence = 11535 4113 97 10982 8127 7113 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1863531728
+Instance = 
+N vertices = 11631
+N edges = 170918
+Density = 0.002527
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 7
+[Iteration 5] New incumbent solution found! Solution value = 6
+
+Number of iterations = 2659
+Mean of solution values = 7.149680
+
+Best solution found:
+Solution value = 6
+Number of rounds = 81
+Iteration = 5
+
+Burning sequence = 11535 8127 97 4113 10982 8057 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -190918111
+Instance = crocodile
+N vertices = 11631
+N edges = 170918
+Density = 0.002527
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 7
+[Iteration 11] New incumbent solution found! Solution value = 6
+
+Number of iterations = 2713
+Mean of solution values = 7.154442
+
+Best solution found:
+Solution value = 6
+Number of rounds = 93
+Iteration = 11
+
+Burning sequence = 11535 4113 97 10982 8127 10426 
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,66 @@
+
+ALPHA = 0.51
+Seed = 1370894415
+Instance = n
+N vertices = 643
+N edges = 2280
+Density = 0.011046
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+
+Number of iterations = 96890
+Mean of solution values = 6.557519
+
+Best solution found:
+Solution value = 6
+Number of rounds = 42872
+Iteration = 2
+
+Burning sequence = 21 322 517 476 520 424 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1399478659
+Instance = 
+N vertices = 643
+N edges = 2280
+Density = 0.011046
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+
+Number of iterations = 97368
+Mean of solution values = 6.556856
+
+Best solution found:
+Solution value = 6
+Number of rounds = 43148
+Iteration = 2
+
+Burning sequence = 223 322 517 476 453 285 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 181134338
+Instance = polblogs
+N vertices = 643
+N edges = 2280
+Density = 0.011046
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 3] New incumbent solution found! Solution value = 6
+
+Number of iterations = 99559
+Mean of solution values = 6.557057
+
+Best solution found:
+Solution value = 6
+Number of rounds = 44099
+Iteration = 3
+
+Burning sequence = 223 322 517 476 510 544 
+
+---------------------------------------------------------------------------------------------------------------------------------
