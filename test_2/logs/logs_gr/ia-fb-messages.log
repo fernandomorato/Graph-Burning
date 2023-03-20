@@ -45,3 +45,26 @@ Iteration = 39
 Burning sequence = 748 159 217 308 391 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -441549609
+Instance = ia-fb-messages
+N vertices = 1266
+N edges = 6451
+Density = 0.008056
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 40] New incumbent solution found! Solution value = 5
+
+Number of iterations = 285
+Mean of solution values = 6.438596
+
+Best solution found:
+Solution value = 5
+Number of rounds = 3
+Iteration = 40
+
+Burning sequence = 149 739 1253 1076 1014 
+
+---------------------------------------------------------------------------------------------------------------------------------

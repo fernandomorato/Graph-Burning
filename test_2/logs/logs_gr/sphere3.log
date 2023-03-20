@@ -44,3 +44,27 @@ Iteration = 7
 Burning sequence = 239 60 23 3 22 162 147 102 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -217543296
+Instance = sphere3
+N vertices = 258
+N edges = 1026
+Density = 0.030947
+
+[Iteration 1] New incumbent solution found! Solution value = 12
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 88364] New incumbent solution found! Solution value = 7
+
+Number of iterations = 92792
+Mean of solution values = 8.577183
+
+Best solution found:
+Solution value = 7
+Number of rounds = 2
+Iteration = 88364
+
+Burning sequence = 225 36 65 154 119 204 96 
+
+---------------------------------------------------------------------------------------------------------------------------------

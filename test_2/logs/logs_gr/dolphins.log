@@ -44,3 +44,25 @@ Iteration = 9
 Burning sequence = 37 9 60 30 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -577376828
+Instance = dolphins
+N vertices = 62
+N edges = 159
+Density = 0.084082
+
+[Iteration 1] New incumbent solution found! Solution value = 5
+[Iteration 43] New incumbent solution found! Solution value = 4
+
+Number of iterations = 211858
+Mean of solution values = 5.119585
+
+Best solution found:
+Solution value = 4
+Number of rounds = 13927
+Iteration = 43
+
+Burning sequence = 36 35 32 56 
+
+---------------------------------------------------------------------------------------------------------------------------------

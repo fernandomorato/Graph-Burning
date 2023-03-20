@@ -42,3 +42,25 @@ Iteration = 19
 Burning sequence = 107 582 717 818 768 467 677 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -537313442
+Instance = ia-crime-moreno
+N vertices = 829
+N edges = 1476
+Density = 0.004301
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 7
+
+Number of iterations = 486
+Mean of solution values = 8.267490
+
+Best solution found:
+Solution value = 7
+Number of rounds = 14
+Iteration = 2
+
+Burning sequence = 45 818 543 22 55 809 723 
+
+---------------------------------------------------------------------------------------------------------------------------------

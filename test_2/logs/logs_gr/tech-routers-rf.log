@@ -43,3 +43,27 @@ Iteration = 37
 Burning sequence = 1650 1413 1151 1299 1356 1684 2051 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -145610868
+Instance = tech-routers-rf
+N vertices = 2113
+N edges = 6632
+Density = 0.002972
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 2] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 29] New incumbent solution found! Solution value = 7
+
+Number of iterations = 86
+Mean of solution values = 8.744186
+
+Best solution found:
+Solution value = 7
+Number of rounds = 3
+Iteration = 29
+
+Burning sequence = 196 1875 1299 1413 1151 807 1641 
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -45,3 +45,26 @@ Iteration = 95
 Burning sequence = 88 95 23 90 76 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -365274595
+Instance = rt-retweet
+N vertices = 96
+N edges = 117
+Density = 0.025658
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 3] New incumbent solution found! Solution value = 6
+[Iteration 44] New incumbent solution found! Solution value = 5
+
+Number of iterations = 31761
+Mean of solution values = 6.785114
+
+Best solution found:
+Solution value = 5
+Number of rounds = 265
+Iteration = 44
+
+Burning sequence = 53 90 48 23 87 
+
+---------------------------------------------------------------------------------------------------------------------------------

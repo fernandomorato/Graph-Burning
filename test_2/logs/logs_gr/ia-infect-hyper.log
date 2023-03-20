@@ -41,3 +41,25 @@ Iteration = 2
 Burning sequence = 111 50 90 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -358133873
+Instance = ia-infect-hyper
+N vertices = 113
+N edges = 2196
+Density = 0.347029
+
+[Iteration 1] New incumbent solution found! Solution value = 4
+[Iteration 2] New incumbent solution found! Solution value = 3
+
+Number of iterations = 391051
+Mean of solution values = 3.026651
+
+Best solution found:
+Solution value = 3
+Number of rounds = 380629
+Iteration = 2
+
+Burning sequence = 107 11 109 
+
+---------------------------------------------------------------------------------------------------------------------------------

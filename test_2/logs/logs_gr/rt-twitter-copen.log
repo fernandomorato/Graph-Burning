@@ -46,3 +46,27 @@ Iteration = 84
 Burning sequence = 228 103 630 693 22 359 443 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -329555647
+Instance = rt-twitter-copen
+N vertices = 761
+N edges = 1029
+Density = 0.003558
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 4] New incumbent solution found! Solution value = 8
+[Iteration 497] New incumbent solution found! Solution value = 7
+
+Number of iterations = 662
+Mean of solution values = 9.572508
+
+Best solution found:
+Solution value = 7
+Number of rounds = 2
+Iteration = 497
+
+Burning sequence = 622 395 616 591 726 693 406 
+
+---------------------------------------------------------------------------------------------------------------------------------

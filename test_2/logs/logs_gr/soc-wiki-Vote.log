@@ -47,3 +47,27 @@ Iteration = 153
 Burning sequence = 272 888 80 122 141 807 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -321578190
+Instance = soc-wiki-Vote
+N vertices = 889
+N edges = 2914
+Density = 0.007383
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 5] New incumbent solution found! Solution value = 7
+[Iteration 19] New incumbent solution found! Solution value = 6
+
+Number of iterations = 707
+Mean of solution values = 7.527581
+
+Best solution found:
+Solution value = 6
+Number of rounds = 7
+Iteration = 19
+
+Burning sequence = 203 888 85 80 219 843 
+
+---------------------------------------------------------------------------------------------------------------------------------

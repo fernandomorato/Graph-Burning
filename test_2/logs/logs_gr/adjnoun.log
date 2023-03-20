@@ -44,3 +44,25 @@ Iteration = 4
 Burning sequence = 18 95 100 11 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -733450275
+Instance = adjnoun
+N vertices = 112
+N edges = 425
+Density = 0.068372
+
+[Iteration 1] New incumbent solution found! Solution value = 5
+[Iteration 2] New incumbent solution found! Solution value = 4
+
+Number of iterations = 61929
+Mean of solution values = 4.736295
+
+Best solution found:
+Solution value = 4
+Number of rounds = 17287
+Iteration = 2
+
+Burning sequence = 51 64 75 62 
+
+---------------------------------------------------------------------------------------------------------------------------------
