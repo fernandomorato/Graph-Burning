@@ -1,0 +1,51 @@
+
+ALPHA = 0.51
+Seed = -2035587408
+Instance = stufe
+N vertices = 1036
+N edges = 1868
+Density = 0.003484
+
+[Iteration 1] New incumbent solution found! Solution value = 24
+[Iteration 2] New incumbent solution found! Solution value = 21
+[Iteration 3] New incumbent solution found! Solution value = 17
+[Iteration 20] New incumbent solution found! Solution value = 16
+[Iteration 33] New incumbent solution found! Solution value = 15
+
+Number of iterations = 2286
+Mean of solution values = 16.810586
+
+Best solution found:
+Solution value = 15
+Number of rounds = 39
+Iteration = 33
+
+Burning sequence = 438 451 60 135 360 564 760 261 917 499 772 728 970 1001 946 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1544969432
+Instance = stufe
+N vertices = 1036
+N edges = 1868
+Density = 0.003484
+
+[Iteration 1] New incumbent solution found! Solution value = 20
+[Iteration 2] New incumbent solution found! Solution value = 19
+[Iteration 8] New incumbent solution found! Solution value = 18
+[Iteration 16] New incumbent solution found! Solution value = 17
+[Iteration 24] New incumbent solution found! Solution value = 16
+[Iteration 139] New incumbent solution found! Solution value = 15
+
+Number of iterations = 2158
+Mean of solution values = 16.803058
+
+Best solution found:
+Solution value = 15
+Number of rounds = 39
+Iteration = 139
+
+Burning sequence = 10 457 634 684 917 878 577 535 12 783 961 798 978 972 147 
+
+---------------------------------------------------------------------------------------------------------------------------------

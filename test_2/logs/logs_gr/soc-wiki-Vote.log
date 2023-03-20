@@ -1,0 +1,49 @@
+
+ALPHA = 0.51
+Seed = -2038906554
+Instance = soc-wiki-Vote
+N vertices = 889
+N edges = 2914
+Density = 0.007383
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 4] New incumbent solution found! Solution value = 7
+[Iteration 146] New incumbent solution found! Solution value = 6
+
+Number of iterations = 553
+Mean of solution values = 7.580470
+
+Best solution found:
+Solution value = 6
+Number of rounds = 2
+Iteration = 146
+
+Burning sequence = 549 251 86 80 888 207 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1572933590
+Instance = soc-wiki-Vote
+N vertices = 889
+N edges = 2914
+Density = 0.007383
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 3] New incumbent solution found! Solution value = 7
+[Iteration 153] New incumbent solution found! Solution value = 6
+
+Number of iterations = 528
+Mean of solution values = 7.581439
+
+Best solution found:
+Solution value = 6
+Number of rounds = 6
+Iteration = 153
+
+Burning sequence = 272 888 80 122 141 807 
+
+---------------------------------------------------------------------------------------------------------------------------------

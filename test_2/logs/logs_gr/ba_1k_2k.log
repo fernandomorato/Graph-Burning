@@ -1,0 +1,45 @@
+
+ALPHA = 0.51
+Seed = -2066700246
+Instance = ba_1k_2k
+N vertices = 1000
+N edges = 1996
+Density = 0.003996
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 4] New incumbent solution found! Solution value = 6
+[Iteration 122] New incumbent solution found! Solution value = 5
+
+Number of iterations = 478
+Mean of solution values = 6.692469
+
+Best solution found:
+Solution value = 5
+Number of rounds = 2
+Iteration = 122
+
+Burning sequence = 11 833 909 362 936 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1650274503
+Instance = ba_1k_2k
+N vertices = 1000
+N edges = 1996
+Density = 0.003996
+
+[Iteration 1] New incumbent solution found! Solution value = 6
+[Iteration 129] New incumbent solution found! Solution value = 5
+
+Number of iterations = 444
+Mean of solution values = 6.693694
+
+Best solution found:
+Solution value = 5
+Number of rounds = 3
+Iteration = 129
+
+Burning sequence = 1 969 679 770 416 
+
+---------------------------------------------------------------------------------------------------------------------------------

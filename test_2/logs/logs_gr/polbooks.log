@@ -1,0 +1,47 @@
+
+ALPHA = 0.51
+Seed = -2044964116
+Instance = polbooks
+N vertices = 105
+N edges = 441
+Density = 0.080769
+
+[Iteration 1] New incumbent solution found! Solution value = 6
+[Iteration 2] New incumbent solution found! Solution value = 5
+[Iteration 15] New incumbent solution found! Solution value = 4
+
+Number of iterations = 177517
+Mean of solution values = 4.846195
+
+Best solution found:
+Solution value = 4
+Number of rounds = 30954
+Iteration = 15
+
+Burning sequence = 9 101 62 103 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1631461247
+Instance = polbooks
+N vertices = 105
+N edges = 441
+Density = 0.080769
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 3] New incumbent solution found! Solution value = 5
+[Iteration 8] New incumbent solution found! Solution value = 4
+
+Number of iterations = 170062
+Mean of solution values = 4.846562
+
+Best solution found:
+Solution value = 4
+Number of rounds = 29472
+Iteration = 8
+
+Burning sequence = 83 8 38 36 
+
+---------------------------------------------------------------------------------------------------------------------------------

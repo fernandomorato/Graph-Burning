@@ -1,0 +1,42 @@
+
+ALPHA = 0.51
+Seed = -2077514562
+Instance = C125-9
+N vertices = 125
+N edges = 6963
+Density = 0.898452
+
+[Iteration 1] New incumbent solution found! Solution value = 3
+
+Number of iterations = 226549
+Mean of solution values = 3.000000
+
+Best solution found:
+Solution value = 3
+Number of rounds = 226549
+Iteration = 1
+
+Burning sequence = 72 10 28 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1659232752
+Instance = C125-9
+N vertices = 125
+N edges = 6963
+Density = 0.898452
+
+[Iteration 1] New incumbent solution found! Solution value = 3
+
+Number of iterations = 215368
+Mean of solution values = 3.000000
+
+Best solution found:
+Solution value = 3
+Number of rounds = 215368
+Iteration = 1
+
+Burning sequence = 61 43 17 
+
+---------------------------------------------------------------------------------------------------------------------------------

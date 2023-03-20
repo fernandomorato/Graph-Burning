@@ -1,0 +1,44 @@
+
+ALPHA = 0.51
+Seed = -2046541887
+Instance = karate
+N vertices = 34
+N edges = 78
+Density = 0.139037
+
+[Iteration 1] New incumbent solution found! Solution value = 4
+[Iteration 22] New incumbent solution found! Solution value = 3
+
+Number of iterations = 473393
+Mean of solution values = 3.977488
+
+Best solution found:
+Solution value = 3
+Number of rounds = 41770
+Iteration = 22
+
+Burning sequence = 8 25 16 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1634087387
+Instance = karate
+N vertices = 34
+N edges = 78
+Density = 0.139037
+
+[Iteration 1] New incumbent solution found! Solution value = 4
+[Iteration 8] New incumbent solution found! Solution value = 3
+
+Number of iterations = 451959
+Mean of solution values = 3.977288
+
+Best solution found:
+Solution value = 3
+Number of rounds = 39945
+Iteration = 8
+
+Burning sequence = 13 24 16 
+
+---------------------------------------------------------------------------------------------------------------------------------

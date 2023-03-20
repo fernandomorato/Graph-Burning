@@ -1,0 +1,45 @@
+
+ALPHA = 0.51
+Seed = -2033512390
+Instance = tech-routers-rf
+N vertices = 2113
+N edges = 6632
+Density = 0.002972
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 20] New incumbent solution found! Solution value = 7
+
+Number of iterations = 90
+Mean of solution values = 8.733333
+
+Best solution found:
+Solution value = 7
+Number of rounds = 3
+Iteration = 20
+
+Burning sequence = 1289 1151 1299 1356 1684 930 1111 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1532984791
+Instance = tech-routers-rf
+N vertices = 2113
+N edges = 6632
+Density = 0.002972
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 37] New incumbent solution found! Solution value = 7
+
+Number of iterations = 92
+Mean of solution values = 8.728261
+
+Best solution found:
+Solution value = 7
+Number of rounds = 4
+Iteration = 37
+
+Burning sequence = 1650 1413 1151 1299 1356 1684 2051 
+
+---------------------------------------------------------------------------------------------------------------------------------

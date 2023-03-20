@@ -1,0 +1,47 @@
+
+ALPHA = 0.51
+Seed = -2050436750
+Instance = ia-fb-messages
+N vertices = 1266
+N edges = 6451
+Density = 0.008056
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 34] New incumbent solution found! Solution value = 5
+
+Number of iterations = 207
+Mean of solution values = 6.454106
+
+Best solution found:
+Solution value = 5
+Number of rounds = 3
+Iteration = 34
+
+Burning sequence = 357 307 159 217 1036 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1638547655
+Instance = ia-fb-messages
+N vertices = 1266
+N edges = 6451
+Density = 0.008056
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 7
+[Iteration 3] New incumbent solution found! Solution value = 6
+[Iteration 39] New incumbent solution found! Solution value = 5
+
+Number of iterations = 210
+Mean of solution values = 6.400000
+
+Best solution found:
+Solution value = 5
+Number of rounds = 3
+Iteration = 39
+
+Burning sequence = 748 159 217 308 391 
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,48 @@
+
+ALPHA = 0.51
+Seed = -2053167897
+Instance = ia-enron-only
+N vertices = 143
+N edges = 623
+Density = 0.061361
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 7
+[Iteration 3] New incumbent solution found! Solution value = 5
+[Iteration 708] New incumbent solution found! Solution value = 4
+
+Number of iterations = 52913
+Mean of solution values = 5.291214
+
+Best solution found:
+Solution value = 4
+Number of rounds = 455
+Iteration = 708
+
+Burning sequence = 141 85 80 53 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1639959250
+Instance = ia-enron-only
+N vertices = 143
+N edges = 623
+Density = 0.061361
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 3] New incumbent solution found! Solution value = 5
+[Iteration 131] New incumbent solution found! Solution value = 4
+
+Number of iterations = 49989
+Mean of solution values = 5.289444
+
+Best solution found:
+Solution value = 4
+Number of rounds = 405
+Iteration = 131
+
+Burning sequence = 100 129 33 41 
+
+---------------------------------------------------------------------------------------------------------------------------------

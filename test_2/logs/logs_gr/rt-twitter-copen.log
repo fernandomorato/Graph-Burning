@@ -1,0 +1,48 @@
+
+ALPHA = 0.51
+Seed = -2040922870
+Instance = rt-twitter-copen
+N vertices = 761
+N edges = 1029
+Density = 0.003558
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 2] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 5] New incumbent solution found! Solution value = 8
+[Iteration 171] New incumbent solution found! Solution value = 7
+
+Number of iterations = 397
+Mean of solution values = 9.541562
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 171
+
+Burning sequence = 396 194 433 406 395 693 16 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1584850706
+Instance = rt-twitter-copen
+N vertices = 761
+N edges = 1029
+Density = 0.003558
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 84] New incumbent solution found! Solution value = 7
+
+Number of iterations = 361
+Mean of solution values = 9.465374
+
+Best solution found:
+Solution value = 7
+Number of rounds = 3
+Iteration = 84
+
+Burning sequence = 228 103 630 693 22 359 443 
+
+---------------------------------------------------------------------------------------------------------------------------------

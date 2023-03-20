@@ -1,0 +1,40 @@
+
+ALPHA = 0.51
+Seed = -2076750893
+Instance = DD199
+N vertices = 841
+N edges = 951
+Density = 0.002692
+
+
+Number of iterations = 87
+Mean of solution values = 79.011494
+
+Best solution found:
+Solution value = 58
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1657853919
+Instance = DD199
+N vertices = 841
+N edges = 951
+Density = 0.002692
+
+
+Number of iterations = 86
+Mean of solution values = 79.011628
+
+Best solution found:
+Solution value = 58
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------

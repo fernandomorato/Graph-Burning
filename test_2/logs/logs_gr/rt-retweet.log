@@ -1,0 +1,47 @@
+
+ALPHA = 0.51
+Seed = -2043407902
+Instance = rt-retweet
+N vertices = 96
+N edges = 117
+Density = 0.025658
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 7
+[Iteration 3] New incumbent solution found! Solution value = 6
+[Iteration 5] New incumbent solution found! Solution value = 5
+
+Number of iterations = 22818
+Mean of solution values = 6.788588
+
+Best solution found:
+Solution value = 5
+Number of rounds = 152
+Iteration = 5
+
+Burning sequence = 88 23 90 76 95 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1596995268
+Instance = rt-retweet
+N vertices = 96
+N edges = 117
+Density = 0.025658
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 5] New incumbent solution found! Solution value = 6
+[Iteration 95] New incumbent solution found! Solution value = 5
+
+Number of iterations = 21347
+Mean of solution values = 6.780719
+
+Best solution found:
+Solution value = 5
+Number of rounds = 141
+Iteration = 95
+
+Burning sequence = 88 95 23 90 76 
+
+---------------------------------------------------------------------------------------------------------------------------------
