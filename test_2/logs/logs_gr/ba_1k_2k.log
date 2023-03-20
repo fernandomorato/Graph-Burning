@@ -65,3 +65,26 @@ Iteration = 360
 Burning sequence = 2 975 155 127 973 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 2016340637
+Instance = ba_1k_2k
+N vertices = 1000
+N edges = 1996
+Density = 0.003996
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 482] New incumbent solution found! Solution value = 5
+
+Number of iterations = 638
+Mean of solution values = 6.703762
+
+Best solution found:
+Solution value = 5
+Number of rounds = 1
+Iteration = 482
+
+Burning sequence = 2 975 137 556 413 
+
+---------------------------------------------------------------------------------------------------------------------------------

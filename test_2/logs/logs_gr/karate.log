@@ -65,3 +65,25 @@ Iteration = 4
 Burning sequence = 8 24 16 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 2038432950
+Instance = karate
+N vertices = 34
+N edges = 78
+Density = 0.139037
+
+[Iteration 1] New incumbent solution found! Solution value = 4
+[Iteration 3] New incumbent solution found! Solution value = 3
+
+Number of iterations = 738833
+Mean of solution values = 3.977483
+
+Best solution found:
+Solution value = 3
+Number of rounds = 65104
+Iteration = 3
+
+Burning sequence = 19 24 16 
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -74,3 +74,30 @@ Iteration = 328
 Burning sequence = 1028 41 932 856 765 483 665 735 360 263 569 506 495 513 501 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 2049683237
+Instance = stufe
+N vertices = 1036
+N edges = 1868
+Density = 0.003484
+
+[Iteration 1] New incumbent solution found! Solution value = 26
+[Iteration 2] New incumbent solution found! Solution value = 20
+[Iteration 3] New incumbent solution found! Solution value = 19
+[Iteration 4] New incumbent solution found! Solution value = 18
+[Iteration 6] New incumbent solution found! Solution value = 17
+[Iteration 13] New incumbent solution found! Solution value = 16
+[Iteration 15] New incumbent solution found! Solution value = 15
+
+Number of iterations = 3536
+Mean of solution values = 16.773473
+
+Best solution found:
+Solution value = 15
+Number of rounds = 66
+Iteration = 15
+
+Burning sequence = 361 116 733 189 632 812 915 845 494 619 495 575 465 473 457 
+
+---------------------------------------------------------------------------------------------------------------------------------

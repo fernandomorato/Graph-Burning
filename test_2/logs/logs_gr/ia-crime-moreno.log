@@ -64,3 +64,25 @@ Iteration = 2
 Burning sequence = 45 818 543 22 55 809 723 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 2029988291
+Instance = ia-crime-moreno
+N vertices = 829
+N edges = 1476
+Density = 0.004301
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 15] New incumbent solution found! Solution value = 7
+
+Number of iterations = 555
+Mean of solution values = 8.308108
+
+Best solution found:
+Solution value = 7
+Number of rounds = 16
+Iteration = 15
+
+Burning sequence = 16 822 748 634 626 623 788 
+
+---------------------------------------------------------------------------------------------------------------------------------

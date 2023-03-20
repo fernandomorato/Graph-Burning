@@ -70,3 +70,27 @@ Iteration = 46
 Burning sequence = 26 1393 1413 829 452 1382 701 987 931 225 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 2018808483
+Instance = bio-yeast
+N vertices = 1458
+N edges = 1948
+Density = 0.001834
+
+[Iteration 1] New incumbent solution found! Solution value = 13
+[Iteration 2] New incumbent solution found! Solution value = 12
+[Iteration 6] New incumbent solution found! Solution value = 11
+[Iteration 27] New incumbent solution found! Solution value = 10
+
+Number of iterations = 263
+Mean of solution values = 12.277567
+
+Best solution found:
+Solution value = 10
+Number of rounds = 9
+Iteration = 27
+
+Burning sequence = 1131 131 701 91 1396 987 411 931 306 83 
+
+---------------------------------------------------------------------------------------------------------------------------------

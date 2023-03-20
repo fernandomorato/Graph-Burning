@@ -71,3 +71,28 @@ Iteration = 56
 Burning sequence = 134 334 403 119 498 364 282 210 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 2017669475
+Instance = bio-diseasome
+N vertices = 516
+N edges = 1188
+Density = 0.008941
+
+[Iteration 1] New incumbent solution found! Solution value = 13
+[Iteration 2] New incumbent solution found! Solution value = 12
+[Iteration 5] New incumbent solution found! Solution value = 10
+[Iteration 12] New incumbent solution found! Solution value = 9
+[Iteration 203] New incumbent solution found! Solution value = 8
+
+Number of iterations = 3596
+Mean of solution values = 10.122358
+
+Best solution found:
+Solution value = 8
+Number of rounds = 44
+Iteration = 203
+
+Burning sequence = 256 334 455 198 464 59 472 436 
+
+---------------------------------------------------------------------------------------------------------------------------------

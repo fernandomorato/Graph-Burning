@@ -63,3 +63,24 @@ Iteration = 2
 Burning sequence = 26 33 11 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 2021644050
+Instance = chesapeake
+N vertices = 39
+N edges = 170
+Density = 0.229420
+
+[Iteration 1] New incumbent solution found! Solution value = 3
+
+Number of iterations = 1846514
+Mean of solution values = 3.084356
+
+Best solution found:
+Solution value = 3
+Number of rounds = 1690749
+Iteration = 1
+
+Burning sequence = 24 0 15 
+
+---------------------------------------------------------------------------------------------------------------------------------
