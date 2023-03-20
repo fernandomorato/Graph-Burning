@@ -309,7 +309,7 @@ int main(int argc, char **argv) {
 	FILE *output_file = fopen(output_path.c_str(), "a");
 	FILE *log_file = fopen(log_path.c_str(), "a");
 	FILE *alpha_file = fopen(alpha_path.c_str(), "a");
-	string input_name = input_path.substr(10);
+	string input_name = input_path;
 	input_name = input_name.substr(0, (int) input_name.size() - 3);
 	// Graph Info Variables
 	int n_vertices, n_edges;
