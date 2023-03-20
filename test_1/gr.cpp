@@ -7,8 +7,8 @@ mt19937 rng((int) chrono::steady_clock::now().time_since_epoch().count());
 const int INF = 1e9;
 
 vector<vector<int>> adj;
-vector<vector<int>> adj_matrix;
 vector<double> centrality_scores;
+vector<pair<int, int>> edges;
 
 bool check_solution(int n_vertices, vector<int> &burning_sequence) {
 	return true;
@@ -33,26 +33,27 @@ void readInput(FILE* input_file, int *n_vertices, int *n_edges, double &density)
 	fscanf(input_file, "%d %d", n_vertices, n_edges);
 	density = 2.0 * (double) (*n_edges) / (1.0 * (double) (*n_vertices) * (double) ((*n_vertices) - 1));
 	adj.resize(*n_vertices);
-	adj_matrix.resize(*n_vertices);
-	for (int i = 0; i < *n_vertices; i++)
-		adj_matrix[i].resize(*n_vertices);
+	// adj_matrix.resize(*n_vertices);
+	// for (int i = 0; i < *n_vertices; i++)
+	// 	adj_matrix[i].resize(*n_vertices);
 	for (int i = 0; i < *n_edges; i++) {
 		int a, b;
 		fscanf(input_file, "%d %d", &a, &b);
 		adj[a].push_back(b);
 		adj[b].push_back(a);
-		adj_matrix[a][b] = adj_matrix[b][a] = 1;
+		edges.emplace_back(a, b);
+		// adj_matrix[a][b] = adj_matrix[b][a] = 1;
 	}
 	centrality_scores.resize(*n_vertices);
-	for (int i = 0; i < *n_vertices; i++) {
-		adj_matrix[i][i] = 1;
-		fscanf(input_file, "%lf", &centrality_scores[i]);
-	}
+	// for (int i = 0; i < *n_vertices; i++) {
+	// 	adj_matrix[i][i] = 1;
+	// 	fscanf(input_file, "%lf", &centrality_scores[i]);
+	// }
 }
  
-void calc_centrality_scores(vector<double> &centrality_scores, vector<int> &vertices, mt19937 &rng) {
+void calc_centrality_scores(vector<double> &centrality_scores, vector<pair<int, int>> &edges, mt19937 &rng) {
 	double EPS = 1e-3;
-	int tamanho = (int) vertices.size();
+	int tamanho = (int) centrality_scores.size();
 	vector<double> x0(tamanho), x1(tamanho);
 	uniform_real_distribution<double> unif(0, 1);
 	double norm = 0;
@@ -68,14 +69,11 @@ void calc_centrality_scores(vector<double> &centrality_scores, vector<int> &vert
 	double lambda = 0, lambdaOld = 0, m = 0;
 	while (iter <= 100) {
 		swap(x0, x1);
-		int ptr1 = 0;
-		for (int i : vertices) {
-			x1[ptr1] = 0;
-			int ptr2 = 0;
-			for (int j : vertices) {
-				x1[ptr1] += (double) adj_matrix[i][j] * x0[ptr2++];
-			}
-			ptr1++;
+		for (int i = 0; i < tamanho; i++) 
+			x1[i] = 0;
+		for (auto p : edges) {
+			x1[p.first] += x0[p.second];
+			x1[p.second] += x0[p.first];
 		}
 		norm = 0;
 		for (int i = 0; i < tamanho; i++) {
@@ -113,15 +111,14 @@ vector<int> select_vertices(vector<int> &candidates, vector<double> &centrality,
 	return selected_vertices;
 }
 
-void dfs(vector<bool> &visited, int current_vertex, int &component_edges, vector<int> &component_vertices, vector<int> &vertex_status) {
+void dfs(vector<bool> &visited, int current_vertex, vector<pair<int, int>> &component_edges, vector<int> &component_vertices, vector<int> &vertex_status) {
 	assert(vertex_status[current_vertex] == 0); // Checks if the vertice is safe
 	component_vertices.push_back(current_vertex);
 	visited[current_vertex] = true;
 	for (int neighbour : adj[current_vertex]) {
-		if (vertex_status[neighbour] == vertex_status[current_vertex])
-			component_edges++;
 		if (visited[neighbour] || vertex_status[neighbour] != vertex_status[current_vertex]) 
 			continue;
+		component_edges.emplace_back(current_vertex, neighbour);
 		dfs(visited, neighbour, component_edges, component_vertices, vertex_status);
 	}
 }
@@ -189,13 +186,13 @@ vector<int> construction(int iteration, vector<double> centrality, int n_vertice
 		} else {
 			for (int i : safe) {
 				if (!visited[i]) {
-					int component_edges = 0;
+					vector<pair<int, int>> component_edges;
 					vector<int> component_vertices;
 					dfs(visited, i, component_edges, component_vertices, vertex_status);
-					double component_density = double(component_edges)
+					double component_density = double(2 * (int) component_edges.size())
 												/ ((double) component_vertices.size() 
 												* ((double) component_vertices.size() - 1));
-					calc_centrality_scores(centrality, component_vertices, rng);
+					calc_centrality_scores(centrality, component_edges, rng);
 					vector<int> cl_local = select_vertices(component_vertices, centrality, component_density);
 					for (int component_vertex : cl_local) {
 						cl.push_back(component_vertex);
@@ -312,11 +309,13 @@ int main(int argc, char **argv) {
 	FILE *output_file = fopen(output_path.c_str(), "a");
 	FILE *log_file = fopen(log_path.c_str(), "a");
 	FILE *alpha_file = fopen(alpha_path.c_str(), "a");
-	string input_name = input_path.substr(0, (int) input_path.size() - 3);
+	string input_name = input_path.substr(10);
+	input_name = input_name.substr(0, (int) input_name.size() - 3);
 	// Graph Info Variables
 	int n_vertices, n_edges;
 	double graph_density;
 	readInput(input_file, &n_vertices, &n_edges, graph_density);
+	calc_centrality_scores(centrality_scores, edges, rng);
 	// Iteration Variables
 	vector<int> bs;
 	vector<int> vertex_frequency(n_vertices, 1); // Initialy freq(v) = 1 for all v

@@ -655,3 +655,1084 @@ Iteration = 3
 Burning sequence = 32083 7664 29353 6748 41560 18872 32336 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -430682727
+Instance = mahindas
+N vertices = 1258
+N edges = 7513
+Density = 0.009502
+
+[Iteration 1] New incumbent solution found! Solution value = 6
+[Iteration 2] New incumbent solution found! Solution value = 5
+
+Number of iterations = 67724
+Mean of solution values = 5.197508
+
+Best solution found:
+Solution value = 5
+Number of rounds = 54348
+Iteration = 2
+
+Burning sequence = 1023 555 982 554 1147 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -410880262
+Instance = netscience
+N vertices = 379
+N edges = 914
+Density = 0.012760
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 18] New incumbent solution found! Solution value = 7
+[Iteration 3030] New incumbent solution found! Solution value = 6
+
+Number of iterations = 46654
+Mean of solution values = 10.016933
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 3030
+
+Burning sequence = 4 66 348 376 304 36 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -392928768
+Instance = polblogs
+N vertices = 643
+N edges = 2280
+Density = 0.011046
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 5] New incumbent solution found! Solution value = 6
+
+Number of iterations = 147269
+Mean of solution values = 6.556478
+
+Best solution found:
+Solution value = 6
+Number of rounds = 65317
+Iteration = 5
+
+Burning sequence = 21 476 517 322 501 353 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -374802664
+Instance = polbooks
+N vertices = 105
+N edges = 441
+Density = 0.080769
+
+[Iteration 1] New incumbent solution found! Solution value = 5
+[Iteration 6] New incumbent solution found! Solution value = 4
+
+Number of iterations = 228116
+Mean of solution values = 4.844075
+
+Best solution found:
+Solution value = 4
+Number of rounds = 40174
+Iteration = 6
+
+Burning sequence = 45 30 87 104 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -357631111
+Instance = reed98
+N vertices = 962
+N edges = 18812
+Density = 0.040697
+
+[Iteration 1] New incumbent solution found! Solution value = 5
+[Iteration 2] New incumbent solution found! Solution value = 4
+
+Number of iterations = 62652
+Mean of solution values = 4.595145
+
+Best solution found:
+Solution value = 4
+Number of rounds = 25365
+Iteration = 2
+
+Burning sequence = 678 299 572 657 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -338785942
+Instance = rt-retweet
+N vertices = 96
+N edges = 117
+Density = 0.025658
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 11] New incumbent solution found! Solution value = 5
+
+Number of iterations = 369421
+Mean of solution values = 6.784103
+
+Best solution found:
+Solution value = 5
+Number of rounds = 2724
+Iteration = 11
+
+Burning sequence = 53 23 48 90 87 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -321059911
+Instance = rt-twitter-copen
+N vertices = 761
+N edges = 1029
+Density = 0.003558
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 4] New incumbent solution found! Solution value = 8
+[Iteration 398] New incumbent solution found! Solution value = 7
+
+Number of iterations = 12828
+Mean of solution values = 9.489866
+
+Best solution found:
+Solution value = 7
+Number of rounds = 10
+Iteration = 398
+
+Burning sequence = 396 433 406 395 693 743 10 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -268119567
+Instance = sphere3
+N vertices = 258
+N edges = 1026
+Density = 0.030947
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 2] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 8] New incumbent solution found! Solution value = 8
+
+Number of iterations = 57086
+Mean of solution values = 8.592475
+
+Best solution found:
+Solution value = 8
+Number of rounds = 23494
+Iteration = 8
+
+Burning sequence = 201 33 64 54 111 148 200 228 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -218600448
+Instance = stufe
+N vertices = 1036
+N edges = 1868
+Density = 0.003484
+
+[Iteration 1] New incumbent solution found! Solution value = 24
+[Iteration 2] New incumbent solution found! Solution value = 20
+[Iteration 6] New incumbent solution found! Solution value = 19
+[Iteration 11] New incumbent solution found! Solution value = 18
+[Iteration 14] New incumbent solution found! Solution value = 17
+[Iteration 44] New incumbent solution found! Solution value = 16
+[Iteration 213] New incumbent solution found! Solution value = 15
+
+Number of iterations = 1530
+Mean of solution values = 16.889542
+
+Best solution found:
+Solution value = 15
+Number of rounds = 22
+Iteration = 213
+
+Burning sequence = 197 552 746 339 495 436 820 521 668 972 833 712 806 663 1006 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -294964327
+Instance = soc-wiki-Vote
+N vertices = 889
+N edges = 2914
+Density = 0.007383
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 7
+[Iteration 57] New incumbent solution found! Solution value = 6
+
+Number of iterations = 13421
+Mean of solution values = 7.531331
+
+Best solution found:
+Solution value = 6
+Number of rounds = 134
+Iteration = 57
+
+Burning sequence = 272 80 888 237 156 286 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -241954571
+Instance = squirrel
+N vertices = 5201
+N edges = 198493
+Density = 0.014679
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+
+Number of iterations = 5370
+Mean of solution values = 6.555307
+
+Best solution found:
+Solution value = 6
+Number of rounds = 2388
+Iteration = 2
+
+Burning sequence = 4365 2509 4563 1374 680 1314 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -192715827
+Instance = tech-routers-rf
+N vertices = 2113
+N edges = 6632
+Density = 0.002972
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 31] New incumbent solution found! Solution value = 7
+
+Number of iterations = 5123
+Mean of solution values = 8.830568
+
+Best solution found:
+Solution value = 7
+Number of rounds = 231
+Iteration = 31
+
+Burning sequence = 385 775 2068 1641 1254 266 2111 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1507780706
+Instance = 
+N vertices = 112
+N edges = 425
+Density = 0.068372
+
+[Iteration 1] New incumbent solution found! Solution value = 5
+[Iteration 7] New incumbent solution found! Solution value = 4
+
+Number of iterations = 43348
+Mean of solution values = 4.736851
+
+Best solution found:
+Solution value = 4
+Number of rounds = 12097
+Iteration = 7
+
+Burning sequence = 103 90 74 95 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1440324989
+Instance = 
+N vertices = 200
+N edges = 1534
+Density = 0.077085
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 10] New incumbent solution found! Solution value = 7
+
+Number of iterations = 108362
+Mean of solution values = 7.218739
+
+Best solution found:
+Solution value = 7
+Number of rounds = 84663
+Iteration = 10
+
+Burning sequence = 76 14 138 142 167 23 97 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1424455899
+Instance = 
+N vertices = 200
+N edges = 3235
+Density = 0.162563
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 5
+
+Number of iterations = 126034
+Mean of solution values = 5.037823
+
+Best solution found:
+Solution value = 5
+Number of rounds = 121268
+Iteration = 2
+
+Burning sequence = 1 48 27 115 150 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1400726372
+Instance = 
+N vertices = 200
+N edges = 8473
+Density = 0.425779
+
+[Iteration 1] New incumbent solution found! Solution value = 4
+[Iteration 2] New incumbent solution found! Solution value = 3
+
+Number of iterations = 127701
+Mean of solution values = 3.000008
+
+Best solution found:
+Solution value = 3
+Number of rounds = 127700
+Iteration = 2
+
+Burning sequence = 188 10 134 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1380088100
+Instance = 
+N vertices = 500
+N edges = 4459
+Density = 0.035743
+
+[Iteration 1] New incumbent solution found! Solution value = 19
+[Iteration 2] New incumbent solution found! Solution value = 14
+[Iteration 3] New incumbent solution found! Solution value = 12
+[Iteration 4] New incumbent solution found! Solution value = 11
+[Iteration 35] New incumbent solution found! Solution value = 10
+
+Number of iterations = 23615
+Mean of solution values = 10.684184
+
+Best solution found:
+Solution value = 10
+Number of rounds = 7562
+Iteration = 35
+
+Burning sequence = 29 140 162 359 154 370 252 16 338 68 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1340643282
+Instance = 
+N vertices = 500
+N edges = 9139
+Density = 0.073259
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 11] New incumbent solution found! Solution value = 7
+
+Number of iterations = 27987
+Mean of solution values = 7.559117
+
+Best solution found:
+Solution value = 7
+Number of rounds = 12343
+Iteration = 11
+
+Burning sequence = 183 115 214 7 124 280 200 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1355877277
+Instance = 0
+N vertices = 500
+N edges = 46627
+Density = 0.373764
+
+[Iteration 1] New incumbent solution found! Solution value = 4
+
+Number of iterations = 23687
+Mean of solution values = 4.000000
+
+Best solution found:
+Solution value = 4
+Number of rounds = 23687
+Iteration = 1
+
+Burning sequence = 342 344 41 91 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1316576147
+Instance = 
+N vertices = 500
+N edges = 23191
+Density = 0.185900
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 5
+
+Number of iterations = 27461
+Mean of solution values = 5.000073
+
+Best solution found:
+Solution value = 5
+Number of rounds = 27460
+Iteration = 2
+
+Burning sequence = 495 57 471 21 483 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1473794168
+Instance = ome
+N vertices = 516
+N edges = 1188
+Density = 0.008941
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 4] New incumbent solution found! Solution value = 9
+[Iteration 86] New incumbent solution found! Solution value = 8
+
+Number of iterations = 2187
+Mean of solution values = 10.132602
+
+Best solution found:
+Solution value = 8
+Number of rounds = 28
+Iteration = 86
+
+Burning sequence = 256 89 241 166 365 458 471 280 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1266245460
+Instance = 
+N vertices = 39
+N edges = 170
+Density = 0.229420
+
+[Iteration 1] New incumbent solution found! Solution value = 4
+[Iteration 2] New incumbent solution found! Solution value = 3
+
+Number of iterations = 1275822
+Mean of solution values = 3.084152
+
+Best solution found:
+Solution value = 3
+Number of rounds = 1168459
+Iteration = 2
+
+Burning sequence = 30 36 23 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1193391735
+Instance = n
+N vertices = 62
+N edges = 159
+Density = 0.084082
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 3] New incumbent solution found! Solution value = 5
+[Iteration 9] New incumbent solution found! Solution value = 4
+
+Number of iterations = 156043
+Mean of solution values = 5.116231
+
+Best solution found:
+Solution value = 4
+Number of rounds = 10425
+Iteration = 9
+
+Burning sequence = 14 9 31 26 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1597707630
+Instance = in
+N vertices = 12591
+N edges = 49620
+Density = 0.000626
+
+[Iteration 1] New incumbent solution found! Solution value = 41
+
+Number of iterations = 82
+Mean of solution values = 41.000000
+
+Best solution found:
+Solution value = 41
+Number of rounds = 82
+Iteration = 1
+
+Burning sequence = 7113 9696 12586 9683 8417 5687 5299 9064 12570 12566 9916 8497 12121 12057 12574 6189 5808 12576 5963 12588 3088 12582 12568 12579 4025 9305 12083 11416 12577 1644 11442 9632 12584 11971 9193 12564 12571 12119 8725 12589 12590 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1010902373
+Instance = nly
+N vertices = 143
+N edges = 623
+Density = 0.061361
+
+[Iteration 1] New incumbent solution found! Solution value = 6
+[Iteration 2] New incumbent solution found! Solution value = 5
+[Iteration 25] New incumbent solution found! Solution value = 4
+
+Number of iterations = 49574
+Mean of solution values = 5.290132
+
+Best solution found:
+Solution value = 4
+Number of rounds = 424
+Iteration = 25
+
+Burning sequence = 104 83 80 14 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -957392012
+Instance = hyper
+N vertices = 113
+N edges = 2196
+Density = 0.347029
+
+[Iteration 1] New incumbent solution found! Solution value = 3
+
+Number of iterations = 277564
+Mean of solution values = 3.027060
+
+Best solution found:
+Solution value = 3
+Number of rounds = 270053
+Iteration = 1
+
+Burning sequence = 29 86 31 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1457252621
+Instance = in
+N vertices = 1458
+N edges = 1948
+Density = 0.001834
+
+[Iteration 1] New incumbent solution found! Solution value = 12
+[Iteration 5] New incumbent solution found! Solution value = 11
+[Iteration 13] New incumbent solution found! Solution value = 10
+
+Number of iterations = 161
+Mean of solution values = 12.279503
+
+Best solution found:
+Solution value = 10
+Number of rounds = 3
+Iteration = 13
+
+Burning sequence = 120 411 620 842 914 91 452 1071 223 131 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -846345570
+Instance = 
+N vertices = 379
+N edges = 914
+Density = 0.012760
+
+[Iteration 1] New incumbent solution found! Solution value = 13
+[Iteration 2] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 4] New incumbent solution found! Solution value = 8
+[Iteration 37] New incumbent solution found! Solution value = 7
+
+Number of iterations = 6418
+Mean of solution values = 8.547678
+
+Best solution found:
+Solution value = 7
+Number of rounds = 240
+Iteration = 37
+
+Burning sequence = 99 59 324 170 224 271 208 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1490056169
+Instance = n
+N vertices = 1000
+N edges = 1996
+Density = 0.003996
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 12] New incumbent solution found! Solution value = 6
+[Iteration 98] New incumbent solution found! Solution value = 5
+
+Number of iterations = 506
+Mean of solution values = 6.667984
+
+Best solution found:
+Solution value = 5
+Number of rounds = 1
+Iteration = 98
+
+Burning sequence = 2 975 664 534 390 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1036034268
+Instance = oreno
+N vertices = 829
+N edges = 1476
+Density = 0.004301
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 6] New incumbent solution found! Solution value = 7
+
+Number of iterations = 338
+Mean of solution values = 8.227811
+
+Best solution found:
+Solution value = 7
+Number of rounds = 13
+Iteration = 6
+
+Burning sequence = 87 706 597 389 502 551 683 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1291213112
+Instance = in
+N vertices = 2277
+N edges = 31421
+Density = 0.012126
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 5] New incumbent solution found! Solution value = 7
+[Iteration 130] New incumbent solution found! Solution value = 6
+
+Number of iterations = 343
+Mean of solution values = 7.781341
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 130
+
+Burning sequence = 1939 318 1744 606 728 1950 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1139113061
+Instance = go
+N vertices = 4039
+N edges = 88234
+Density = 0.010820
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 4] New incumbent solution found! Solution value = 5
+
+Number of iterations = 300
+Mean of solution values = 6.400000
+
+Best solution found:
+Solution value = 5
+Number of rounds = 4
+Iteration = 4
+
+Burning sequence = 1454 4032 774 770 3687 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -875168015
+Instance = n
+N vertices = 1258
+N edges = 7513
+Density = 0.009502
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 3] New incumbent solution found! Solution value = 6
+[Iteration 9] New incumbent solution found! Solution value = 5
+
+Number of iterations = 824
+Mean of solution values = 6.516990
+
+Best solution found:
+Solution value = 5
+Number of rounds = 6
+Iteration = 9
+
+Burning sequence = 994 555 505 982 554 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -984997226
+Instance = ages
+N vertices = 1266
+N edges = 6451
+Density = 0.008056
+
+[Iteration 1] New incumbent solution found! Solution value = 6
+[Iteration 85] New incumbent solution found! Solution value = 5
+
+Number of iterations = 234
+Mean of solution values = 6.491453
+
+Best solution found:
+Solution value = 5
+Number of rounds = 3
+Iteration = 85
+
+Burning sequence = 991 307 217 1253 324 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1086083144
+Instance = olitician
+N vertices = 5908
+N edges = 41729
+Density = 0.002391
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 2] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 9] New incumbent solution found! Solution value = 8
+
+Number of iterations = 45
+Mean of solution values = 9.355556
+
+Best solution found:
+Solution value = 8
+Number of rounds = 3
+Iteration = 9
+
+Burning sequence = 3278 2411 5129 483 1296 5654 3616 756 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1112356685
+Instance = overnment
+N vertices = 7057
+N edges = 89455
+Density = 0.003593
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 5] New incumbent solution found! Solution value = 7
+
+Number of iterations = 42
+Mean of solution values = 7.928571
+
+Best solution found:
+Solution value = 7
+Number of rounds = 10
+Iteration = 5
+
+Burning sequence = 2247 3152 2215 2539 1107 6165 3654 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1060703989
+Instance = vshow
+N vertices = 3892
+N edges = 17262
+Density = 0.002280
+
+[Iteration 1] New incumbent solution found! Solution value = 14
+[Iteration 4] New incumbent solution found! Solution value = 13
+[Iteration 5] New incumbent solution found! Solution value = 12
+[Iteration 8] New incumbent solution found! Solution value = 11
+
+Number of iterations = 72
+Mean of solution values = 12.902778
+
+Best solution found:
+Solution value = 11
+Number of rounds = 13
+Iteration = 8
+
+Burning sequence = 3072 3360 1707 1387 1352 1938 2574 3055 1263 653 3196 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 660384259
+Instance = n
+N vertices = 105
+N edges = 441
+Density = 0.080769
+
+[Iteration 1] New incumbent solution found! Solution value = 5
+[Iteration 3] New incumbent solution found! Solution value = 4
+
+Number of iterations = 169316
+Mean of solution values = 4.846098
+
+Best solution found:
+Solution value = 4
+Number of rounds = 29621
+Iteration = 3
+
+Burning sequence = 58 34 84 24 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 632342869
+Instance = n
+N vertices = 643
+N edges = 2280
+Density = 0.011046
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 11] New incumbent solution found! Solution value = 6
+
+Number of iterations = 1054
+Mean of solution values = 7.041746
+
+Best solution found:
+Solution value = 6
+Number of rounds = 120
+Iteration = 11
+
+Burning sequence = 236 322 517 476 487 370 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1217259071
+Instance = in
+N vertices = 54573
+N edges = 498202
+Density = 0.000335
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 6] New incumbent solution found! Solution value = 8
+
+Number of iterations = 9
+Mean of solution values = 8.888889
+
+Best solution found:
+Solution value = 8
+Number of rounds = 2
+Iteration = 6
+
+Burning sequence = 20899 32336 18872 49314 14387 13025 25704 42225 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1242158817
+Instance = in
+N vertices = 11631
+N edges = 170918
+Density = 0.002527
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 3] New incumbent solution found! Solution value = 7
+[Iteration 25] New incumbent solution found! Solution value = 6
+
+Number of iterations = 26
+Mean of solution values = 7.576923
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 25
+
+Burning sequence = 2447 8127 2869 10982 2996 228 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -418747387
+Instance = 
+N vertices = 96
+N edges = 117
+Density = 0.025658
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 11] New incumbent solution found! Solution value = 6
+[Iteration 35] New incumbent solution found! Solution value = 5
+
+Number of iterations = 35989
+Mean of solution values = 6.786046
+
+Best solution found:
+Solution value = 5
+Number of rounds = 248
+Iteration = 35
+
+Burning sequence = 5 87 95 64 48 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -370411323
+Instance = 
+N vertices = 258
+N edges = 1026
+Density = 0.030947
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+
+Number of iterations = 142894
+Mean of solution values = 8.592852
+
+Best solution found:
+Solution value = 8
+Number of rounds = 58773
+Iteration = 3
+
+Burning sequence = 177 190 84 34 3 10 134 105 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -392816697
+Instance = ote
+N vertices = 889
+N edges = 2914
+Density = 0.007383
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 4] New incumbent solution found! Solution value = 7
+[Iteration 17] New incumbent solution found! Solution value = 6
+
+Number of iterations = 768
+Mean of solution values = 7.515625
+
+Best solution found:
+Solution value = 6
+Number of rounds = 8
+Iteration = 17
+
+Burning sequence = 395 85 80 286 640 727 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -405746655
+Instance = -copen
+N vertices = 761
+N edges = 1029
+Density = 0.003558
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 11] New incumbent solution found! Solution value = 8
+[Iteration 182] New incumbent solution found! Solution value = 7
+
+Number of iterations = 623
+Mean of solution values = 9.515249
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 182
+
+Burning sequence = 228 630 103 693 22 390 414 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -301233009
+Instance = rs-rf
+N vertices = 2113
+N edges = 6632
+Density = 0.002972
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 5] New incumbent solution found! Solution value = 8
+[Iteration 38] New incumbent solution found! Solution value = 7
+
+Number of iterations = 147
+Mean of solution values = 8.755102
+
+Best solution found:
+Solution value = 7
+Number of rounds = 7
+Iteration = 38
+
+Burning sequence = 1495 675 2068 1641 338 1344 897 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -348930373
+Instance = n
+N vertices = 5201
+N edges = 198493
+Density = 0.014679
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 7
+[Iteration 11] New incumbent solution found! Solution value = 6
+
+Number of iterations = 100
+Mean of solution values = 7.310000
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 11
+
+Burning sequence = 3698 1374 2293 2509 2679 4702 
+
+---------------------------------------------------------------------------------------------------------------------------------
