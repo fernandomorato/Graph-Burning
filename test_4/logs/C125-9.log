@@ -1,0 +1,21 @@
+
+ALPHA = 0.51
+Seed = 2043570818
+Instance = instances/C125-9
+N vertices = 125
+N edges = 6963
+Density = 0.898452
+
+[Iteration 1] New incumbent solution found! Solution value = 3
+
+Number of iterations = 432953
+Mean of solution values = 3.000000
+
+Best solution found:
+Solution value = 3
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 19 26 18 
+
+---------------------------------------------------------------------------------------------------------------------------------

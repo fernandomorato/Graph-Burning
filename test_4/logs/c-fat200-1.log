@@ -1,0 +1,23 @@
+
+ALPHA = 0.51
+Seed = 2061176225
+Instance = instances/c-fat200-1
+N vertices = 200
+N edges = 1534
+Density = 0.077085
+
+[Iteration 1] New incumbent solution found! Solution value = 13
+[Iteration 2] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 8
+
+Number of iterations = 127314
+Mean of solution values = 10.333333
+
+Best solution found:
+Solution value = 8
+Number of rounds = 1
+Iteration = 3
+
+Burning sequence = 134 146 5 84 13 30 52 53 
+
+---------------------------------------------------------------------------------------------------------------------------------

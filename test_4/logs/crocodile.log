@@ -1,0 +1,21 @@
+
+ALPHA = 0.51
+Seed = 2075950963
+Instance = instances/crocodile
+N vertices = 11631
+N edges = 170918
+Density = 0.002527
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+
+Number of iterations = 295
+Mean of solution values = 8.000000
+
+Best solution found:
+Solution value = 8
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 739 5232 6547 9377 7290 8376 10982 425 
+
+---------------------------------------------------------------------------------------------------------------------------------

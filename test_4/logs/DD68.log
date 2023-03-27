@@ -1,0 +1,24 @@
+
+ALPHA = 0.51
+Seed = 2052619233
+Instance = instances/DD68
+N vertices = 775
+N edges = 2093
+Density = 0.006978
+
+[Iteration 1] New incumbent solution found! Solution value = 23
+[Iteration 2] New incumbent solution found! Solution value = 16
+[Iteration 8] New incumbent solution found! Solution value = 14
+[Iteration 1357] New incumbent solution found! Solution value = 12
+
+Number of iterations = 6687
+Mean of solution values = 16.250000
+
+Best solution found:
+Solution value = 12
+Number of rounds = 1
+Iteration = 1357
+
+Burning sequence = 361 2 154 237 325 161 613 403 772 268 672 97 
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,22 @@
+
+ALPHA = 0.51
+Seed = 2084046014
+Instance = instances/facebook_ego
+N vertices = 4039
+N edges = 88234
+Density = 0.010820
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 21] New incumbent solution found! Solution value = 5
+
+Number of iterations = 410
+Mean of solution values = 6.000000
+
+Best solution found:
+Solution value = 5
+Number of rounds = 1
+Iteration = 21
+
+Burning sequence = 514 743 790 2058 2788 
+
+---------------------------------------------------------------------------------------------------------------------------------

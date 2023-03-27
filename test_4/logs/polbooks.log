@@ -1,14 +1,14 @@
 
 ALPHA = 0.51
-Seed = 2055229423
-Instance = instances/adjnoun
-N vertices = 112
-N edges = 425
-Density = 0.068372
+Seed = 2107307468
+Instance = instances/polbooks
+N vertices = 105
+N edges = 441
+Density = 0.080769
 
 [Iteration 1] New incumbent solution found! Solution value = 5
 
-Number of iterations = 72328
+Number of iterations = 201138
 Mean of solution values = 5.000000
 
 Best solution found:
@@ -16,6 +16,6 @@ Solution value = 5
 Number of rounds = 1
 Iteration = 1
 
-Burning sequence = 65 59 99 97 95 
+Burning sequence = 48 88 93 73 61 
 
 ---------------------------------------------------------------------------------------------------------------------------------

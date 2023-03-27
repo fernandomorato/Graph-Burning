@@ -1,0 +1,21 @@
+
+ALPHA = 0.51
+Seed = 2102073412
+Instance = instances/mahindas
+N vertices = 1258
+N edges = 7513
+Density = 0.009502
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+
+Number of iterations = 2196
+Mean of solution values = 7.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 703 61 254 474 1092 562 607 
+
+---------------------------------------------------------------------------------------------------------------------------------

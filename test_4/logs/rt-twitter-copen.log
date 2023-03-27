@@ -1,14 +1,14 @@
 
 ALPHA = 0.51
-Seed = 2078619478
-Instance = instances/deezer_hr
-N vertices = 54573
-N edges = 498202
-Density = 0.000335
+Seed = 2113466141
+Instance = instances/rt-twitter-copen
+N vertices = 761
+N edges = 1029
+Density = 0.003558
 
 [Iteration 1] New incumbent solution found! Solution value = 9
 
-Number of iterations = 35
+Number of iterations = 1047
 Mean of solution values = 9.000000
 
 Best solution found:
@@ -16,6 +16,6 @@ Solution value = 9
 Number of rounds = 1
 Iteration = 1
 
-Burning sequence = 5364 16384 692 52110 37225 11950 39638 9409 6748 
+Burning sequence = 685 532 627 456 37 647 689 194 145 
 
 ---------------------------------------------------------------------------------------------------------------------------------

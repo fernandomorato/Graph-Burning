@@ -1,14 +1,14 @@
 
 ALPHA = 0.51
-Seed = 2056397503
-Instance = instances/ba_1k_2k
-N vertices = 1000
-N edges = 1996
-Density = 0.003996
+Seed = -2129666746
+Instance = instances/squirrel
+N vertices = 5201
+N edges = 198493
+Density = 0.014679
 
 [Iteration 1] New incumbent solution found! Solution value = 7
 
-Number of iterations = 1376
+Number of iterations = 210
 Mean of solution values = 7.000000
 
 Best solution found:
@@ -16,6 +16,6 @@ Solution value = 7
 Number of rounds = 1
 Iteration = 1
 
-Burning sequence = 711 407 303 99 360 765 979 
+Burning sequence = 4342 3391 2856 3656 1024 1275 4254 
 
 ---------------------------------------------------------------------------------------------------------------------------------

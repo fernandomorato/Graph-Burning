@@ -1,0 +1,21 @@
+
+ALPHA = 0.51
+Seed = 2044693573
+Instance = instances/Cite-DBLP
+N vertices = 12591
+N edges = 49620
+Density = 0.000626
+
+[Iteration 1] New incumbent solution found! Solution value = 41
+
+Number of iterations = 83
+Mean of solution values = 41.000000
+
+Best solution found:
+Solution value = 41
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 12283 12564 12566 5962 5298 8416 12578 12082 12569 9917 9697 9061 9306 12118 12057 6189 8497 5808 11442 12576 3091 9191 11415 12588 9682 12583 11972 12572 12585 5688 9633 12580 4024 12567 8726 12590 12574 12582 12121 1644 1643 
+
+---------------------------------------------------------------------------------------------------------------------------------

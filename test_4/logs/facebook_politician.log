@@ -1,0 +1,22 @@
+
+ALPHA = 0.51
+Seed = 2087923644
+Instance = instances/facebook_politician
+N vertices = 5908
+N edges = 41729
+Density = 0.002391
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 26] New incumbent solution found! Solution value = 9
+
+Number of iterations = 148
+Mean of solution values = 10.000000
+
+Best solution found:
+Solution value = 9
+Number of rounds = 1
+Iteration = 26
+
+Burning sequence = 1095 3616 3186 4305 376 3277 1593 5902 2411 
+
+---------------------------------------------------------------------------------------------------------------------------------

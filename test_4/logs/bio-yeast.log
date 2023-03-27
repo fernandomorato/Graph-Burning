@@ -1,0 +1,21 @@
+
+ALPHA = 0.51
+Seed = 2060153631
+Instance = instances/bio-yeast
+N vertices = 1458
+N edges = 1948
+Density = 0.001834
+
+[Iteration 1] New incumbent solution found! Solution value = 12
+
+Number of iterations = 690
+Mean of solution values = 12.000000
+
+Best solution found:
+Solution value = 12
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 1033 864 270 327 317 1430 384 108 769 437 842 641 
+
+---------------------------------------------------------------------------------------------------------------------------------

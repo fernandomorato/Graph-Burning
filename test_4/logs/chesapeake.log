@@ -1,0 +1,21 @@
+
+ALPHA = 0.51
+Seed = 2075467203
+Instance = instances/chesapeake
+N vertices = 39
+N edges = 170
+Density = 0.229420
+
+[Iteration 1] New incumbent solution found! Solution value = 4
+
+Number of iterations = 2475170
+Mean of solution values = 4.000000
+
+Best solution found:
+Solution value = 4
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 37 38 6 36 
+
+---------------------------------------------------------------------------------------------------------------------------------

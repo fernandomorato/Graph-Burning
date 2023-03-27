@@ -1,0 +1,21 @@
+
+ALPHA = 0.51
+Seed = 2085920828
+Instance = instances/facebook_government
+N vertices = 7057
+N edges = 89455
+Density = 0.003593
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+
+Number of iterations = 280
+Mean of solution values = 8.000000
+
+Best solution found:
+Solution value = 8
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 4652 5004 1597 6060 7043 1484 4886 2215 
+
+---------------------------------------------------------------------------------------------------------------------------------

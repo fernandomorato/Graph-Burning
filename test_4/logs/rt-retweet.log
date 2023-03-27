@@ -1,0 +1,22 @@
+
+ALPHA = 0.51
+Seed = 2110734048
+Instance = instances/rt-retweet
+N vertices = 96
+N edges = 117
+Density = 0.025658
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 48] New incumbent solution found! Solution value = 6
+
+Number of iterations = 27921
+Mean of solution values = 7.000000
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 48
+
+Burning sequence = 88 91 33 1 48 95 
+
+---------------------------------------------------------------------------------------------------------------------------------

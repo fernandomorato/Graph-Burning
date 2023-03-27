@@ -1,22 +1,22 @@
 
 ALPHA = 0.51
-Seed = 2072844096
-Instance = instances/chameleon
-N vertices = 2277
-N edges = 31421
-Density = 0.012126
+Seed = 2115450521
+Instance = instances/soc-wiki-Vote
+N vertices = 889
+N edges = 2914
+Density = 0.007383
 
 [Iteration 1] New incumbent solution found! Solution value = 9
-[Iteration 146] New incumbent solution found! Solution value = 7
+[Iteration 13] New incumbent solution found! Solution value = 7
 
-Number of iterations = 664
+Number of iterations = 929
 Mean of solution values = 8.000000
 
 Best solution found:
 Solution value = 7
 Number of rounds = 1
-Iteration = 146
+Iteration = 13
 
-Burning sequence = 1911 1191 1732 256 226 238 838 
+Burning sequence = 573 888 80 179 733 175 167 
 
 ---------------------------------------------------------------------------------------------------------------------------------

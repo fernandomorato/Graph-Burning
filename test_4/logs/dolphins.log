@@ -1,0 +1,22 @@
+
+ALPHA = 0.51
+Seed = 2080406545
+Instance = instances/dolphins
+N vertices = 62
+N edges = 159
+Density = 0.084082
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 3] New incumbent solution found! Solution value = 5
+
+Number of iterations = 174678
+Mean of solution values = 6.000000
+
+Best solution found:
+Solution value = 5
+Number of rounds = 1
+Iteration = 3
+
+Burning sequence = 39 34 24 32 35 
+
+---------------------------------------------------------------------------------------------------------------------------------

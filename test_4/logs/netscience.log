@@ -1,0 +1,23 @@
+
+ALPHA = 0.51
+Seed = 2103937913
+Instance = instances/netscience
+N vertices = 379
+N edges = 914
+Density = 0.012760
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 603] New incumbent solution found! Solution value = 7
+
+Number of iterations = 8059
+Mean of solution values = 9.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 603
+
+Burning sequence = 25 271 222 208 304 36 89 
+
+---------------------------------------------------------------------------------------------------------------------------------

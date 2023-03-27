@@ -1,0 +1,21 @@
+
+ALPHA = 0.51
+Seed = 2095040651
+Instance = instances/ia-fb-messages
+N vertices = 1266
+N edges = 6451
+Density = 0.008056
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+
+Number of iterations = 4464
+Mean of solution values = 7.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 656 908 257 152 1198 700 307 
+
+---------------------------------------------------------------------------------------------------------------------------------
