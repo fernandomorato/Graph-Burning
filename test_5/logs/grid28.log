@@ -1,0 +1,24 @@
+
+ALPHA = 0.51
+Seed = -592319487
+Instance = grid28
+N vertices = 784
+N edges = 1512
+Density = 0.004926
+
+[Iteration 1] New incumbent solution found! Solution value = 20
+[Iteration 2] New incumbent solution found! Solution value = 18
+[Iteration 23] New incumbent solution found! Solution value = 16
+[Iteration 929] New incumbent solution found! Solution value = 14
+
+Number of iterations = 5741
+Mean of solution values = 17.000000
+
+Best solution found:
+Solution value = 14
+Number of rounds = 1
+Iteration = 929
+
+Burning sequence = 448 612 11 656 327 164 737 206 380 232 59 116 29 114 
+
+---------------------------------------------------------------------------------------------------------------------------------
