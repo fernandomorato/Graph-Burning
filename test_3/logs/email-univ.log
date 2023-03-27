@@ -1,0 +1,22 @@
+
+ALPHA = 0.51
+Seed = 1827157764
+Instance = email-univ
+N vertices = 1133
+N edges = 5451
+Density = 0.008500
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+
+Number of iterations = 11
+Mean of solution values = 6.727273
+
+Best solution found:
+Solution value = 6
+Number of rounds = 3
+Iteration = 2
+
+Burning sequence = 430 1130 406 268 176 172 
+
+---------------------------------------------------------------------------------------------------------------------------------

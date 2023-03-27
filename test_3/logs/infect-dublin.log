@@ -1,0 +1,23 @@
+
+ALPHA = 0.51
+Seed = 1889018458
+Instance = infect-dublin
+N vertices = 410
+N edges = 2765
+Density = 0.032978
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 37] New incumbent solution found! Solution value = 5
+
+Number of iterations = 230
+Mean of solution values = 6.091304
+
+Best solution found:
+Solution value = 5
+Number of rounds = 12
+Iteration = 37
+
+Burning sequence = 180 247 253 31 393 
+
+---------------------------------------------------------------------------------------------------------------------------------
