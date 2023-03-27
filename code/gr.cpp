@@ -139,7 +139,7 @@ void bfs(int source, int round, vector<int> &vertex_label) {
 	}
 }
 
-vector<int> construction(int iteration, vector<double> centrality, int n_vertices, int n_edges, double graph_density, mt19937 &rng, double alpha, int K_i) {
+pair<vector<int>, bool> construction(int iteration, vector<double> centrality, int n_vertices, int n_edges, double graph_density, mt19937 &rng, double alpha, int K_i) {
 	// Round Variables
 	int current_round = 1;
 	vector<int> burning_sequence;
@@ -229,7 +229,9 @@ vector<int> construction(int iteration, vector<double> centrality, int n_vertice
 		vertex_label[next_activator] = current_round;
 		bfs(next_activator, current_round, vertex_label);
 		burning_sequence.push_back(next_activator);
-
+		if ((int) burning_sequence.size() >= K_i) {
+			return make_pair(burning_sequence, false);
+		}
 		vector<int> to_burn_now;
 		to_burn_now.push_back(next_activator);
 		targeted.erase(next_activator);
@@ -261,7 +263,7 @@ vector<int> construction(int iteration, vector<double> centrality, int n_vertice
 			}
 		}
 	} while ((int) burned.size() != n_vertices);
-	return burning_sequence;
+	return make_pair(burning_sequence, true);
 }
 
 void parse_args(int argc, char **argv, int &seed, double &alpha, int &time_limit, string &input_path, string &output_path, string &log_path, string &alpha_path) {
@@ -333,7 +335,11 @@ int main(int argc, char **argv) {
 	double time_to_incumbent = 1e9;
 	do {
 		n_iterations++;
-		vector<int> burning_sequence = construction(n_iterations, centrality_scores, n_vertices, n_edges, graph_density, rng, alpha, incumbent_solution - 1);
+		pair<vector<int>, bool> ans = construction(n_iterations, centrality_scores, n_vertices, n_edges, graph_density, rng, alpha, incumbent_solution - 1);
+		if (!ans.second) {
+			continue;
+		}
+		vector<int> burning_sequence = ans.first;
 		if (check_solution(n_vertices, burning_sequence)) {
 			sol_value_mean *= (double) cnt_valid_solutions;
 			cnt_valid_solutions++;
