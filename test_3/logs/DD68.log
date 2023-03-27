@@ -25,3 +25,30 @@ Iteration = 92
 Burning sequence = 368 635 619 465 47 725 582 413 60 643 721 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1100694288
+Instance = DD68
+N vertices = 775
+N edges = 2093
+Density = 0.006978
+
+[Iteration 1] New incumbent solution found! Solution value = 21
+[Iteration 2] New incumbent solution found! Solution value = 19
+[Iteration 3] New incumbent solution found! Solution value = 16
+[Iteration 5] New incumbent solution found! Solution value = 14
+[Iteration 11] New incumbent solution found! Solution value = 13
+[Iteration 31] New incumbent solution found! Solution value = 12
+[Iteration 365] New incumbent solution found! Solution value = 11
+
+Number of iterations = 11037
+Mean of solution values = 12.645737
+
+Best solution found:
+Solution value = 11
+Number of rounds = 317
+Iteration = 365
+
+Burning sequence = 512 86 534 640 597 129 91 403 331 611 465 
+
+---------------------------------------------------------------------------------------------------------------------------------

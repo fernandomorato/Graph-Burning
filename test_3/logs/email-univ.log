@@ -20,3 +20,26 @@ Iteration = 2
 Burning sequence = 430 1130 406 268 176 172 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1098238849
+Instance = email-univ
+N vertices = 1133
+N edges = 5451
+Density = 0.008500
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 280] New incumbent solution found! Solution value = 5
+
+Number of iterations = 682
+Mean of solution values = 6.554252
+
+Best solution found:
+Solution value = 5
+Number of rounds = 1
+Iteration = 280
+
+Burning sequence = 40 1128 1132 1051 615 
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -21,3 +21,26 @@ Iteration = 37
 Burning sequence = 180 247 253 31 393 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1095763133
+Instance = infect-dublin
+N vertices = 410
+N edges = 2765
+Density = 0.032978
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 27] New incumbent solution found! Solution value = 5
+
+Number of iterations = 19061
+Mean of solution values = 6.150727
+
+Best solution found:
+Solution value = 5
+Number of rounds = 638
+Iteration = 27
+
+Burning sequence = 283 24 223 31 229 
+
+---------------------------------------------------------------------------------------------------------------------------------
