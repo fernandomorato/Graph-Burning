@@ -1,0 +1,21 @@
+
+ALPHA = 0.51
+Seed = 10440410476938868
+Instance = ia-crime-moreno
+N vertices = 829
+N edges = 1476
+Density = 0.004301
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+
+Number of iterations = 138
+Mean of solution values = 7.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 94 4 445 124 358 235 731 
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,21 @@
+
+ALPHA = 0.51
+Seed = 10440410461816487
+Instance = chesapeake
+N vertices = 39
+N edges = 170
+Density = 0.229420
+
+[Iteration 1] New incumbent solution found! Solution value = 3
+
+Number of iterations = 269346
+Mean of solution values = 3.000000
+
+Best solution found:
+Solution value = 3
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 34 0 14 
+
+---------------------------------------------------------------------------------------------------------------------------------

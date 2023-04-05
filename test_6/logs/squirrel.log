@@ -1,0 +1,22 @@
+
+ALPHA = 0.51
+Seed = 10440410573852860
+Instance = squirrel
+N vertices = 5201
+N edges = 198493
+Density = 0.014679
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+
+Number of iterations = 30
+Mean of solution values = 6.500000
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 2
+
+Burning sequence = 4365 2509 4563 680 229 3917 
+
+---------------------------------------------------------------------------------------------------------------------------------

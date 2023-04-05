@@ -1,0 +1,24 @@
+
+ALPHA = 0.51
+Seed = 10440410463053943
+Instance = crocodile
+N vertices = 11631
+N edges = 170918
+Density = 0.002527
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 3] New incumbent solution found! Solution value = 7
+[Iteration 8] New incumbent solution found! Solution value = 6
+
+Number of iterations = 11
+Mean of solution values = 7.500000
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 8
+
+Burning sequence = 11535 97 4113 10982 8127 1535 
+
+---------------------------------------------------------------------------------------------------------------------------------

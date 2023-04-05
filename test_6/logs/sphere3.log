@@ -1,0 +1,24 @@
+
+ALPHA = 0.51
+Seed = 10440410561891150
+Instance = sphere3
+N vertices = 258
+N edges = 1026
+Density = 0.030947
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 62] New incumbent solution found! Solution value = 7
+
+Number of iterations = 9701
+Mean of solution values = 8.500000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 62
+
+Burning sequence = 43 180 183 60 246 54 221 
+
+---------------------------------------------------------------------------------------------------------------------------------

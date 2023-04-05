@@ -1,0 +1,22 @@
+
+ALPHA = 0.51
+Seed = 10440410613960776
+Instance = tech-routers-rf
+N vertices = 2113
+N edges = 6632
+Density = 0.002972
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 7
+
+Number of iterations = 141
+Mean of solution values = 7.500000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 2
+
+Burning sequence = 276 266 831 1342 1263 1561 334 
+
+---------------------------------------------------------------------------------------------------------------------------------

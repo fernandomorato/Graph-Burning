@@ -1,0 +1,23 @@
+
+ALPHA = 0.51
+Seed = 10440410523626743
+Instance = rt-twitter-copen
+N vertices = 761
+N edges = 1029
+Density = 0.003558
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 4] New incumbent solution found! Solution value = 7
+
+Number of iterations = 201
+Mean of solution values = 8.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 4
+
+Burning sequence = 157 145 194 5 78 645 223 
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,23 @@
+
+ALPHA = 0.51
+Seed = 10440410475505716
+Instance = facebook_tvshow
+N vertices = 3892
+N edges = 17262
+Density = 0.002280
+
+[Iteration 1] New incumbent solution found! Solution value = 12
+[Iteration 2] New incumbent solution found! Solution value = 11
+[Iteration 3] New incumbent solution found! Solution value = 10
+
+Number of iterations = 34
+Mean of solution values = 11.000000
+
+Best solution found:
+Solution value = 10
+Number of rounds = 1
+Iteration = 3
+
+Burning sequence = 3525 2135 3055 2943 2574 2175 3687 3196 1777 1914 
+
+---------------------------------------------------------------------------------------------------------------------------------
