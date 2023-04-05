@@ -123,16 +123,16 @@ void dfs(vector<bool> &visited, int current_vertex, vector<pair<int, int>> &comp
 	}
 }
 
-void bfs(int source, int round, vector<int> &vertex_label) {
-	vertex_label[source] = round;
+void bfs(int source, int round, vector<int> &vertex_labels) {
+	vertex_labels[source] = round;
 	queue<int> q;
 	q.push(source);
 	while (!q.empty()) {
 		int cur = q.front();
 		q.pop();
 		for (auto x : adj[cur]) {
-			if (vertex_label[cur] + 1 < vertex_label[x]) {
-				vertex_label[x] = vertex_label[cur] + 1;
+			if (vertex_labels[cur] + 1 < vertex_labels[x]) {
+				vertex_labels[x] = vertex_labels[cur] + 1;
 				q.push(x);
 			}
 		}
@@ -145,7 +145,7 @@ vector<int> construction(int iteration, vector<double> centrality, int n_vertice
 	vector<int> burning_sequence;
 	set<int> safe, targeted, burned;
 	vector<int> vertex_status(n_vertices); // 0 -> safe | 1 -> targeted | 2 -> burned
-	vector<int> vertex_label(n_vertices, INF);
+	vector<int> vertex_labels(n_vertices, INF);
 
 	// Round 1
 	vector<int> vertices(n_vertices);
@@ -154,14 +154,14 @@ vector<int> construction(int iteration, vector<double> centrality, int n_vertice
 	assert(!selected_vertices.empty());
 
 	int initial_vertex = selected_vertices[rng() % ((int) selected_vertices.size())];
-	bfs(initial_vertex, current_round, vertex_label);
+	bfs(initial_vertex, current_round, vertex_labels);
 	burning_sequence.push_back(initial_vertex);
  
 	for (int i = 0; i < n_vertices; i++) {
-		if (vertex_label[i] == 1) {
+		if (vertex_labels[i] == 1) {
 			burned.insert(i);
 			vertex_status[i] = 2;
-		} else if (vertex_label[i] <= K_i) {
+		} else if (vertex_labels[i] <= K_i) {
 			targeted.insert(i);
 			vertex_status[i] = 1;
 		} else {
@@ -176,7 +176,7 @@ vector<int> construction(int iteration, vector<double> centrality, int n_vertice
 		vector<bool> visited(n_vertices, false);
 		for (int i = 0; i < n_vertices; i++) {
 			for (int viz : adj[i]) {
-				assert(abs(vertex_label[i] - vertex_label[viz]) <= 1);
+				assert(abs(vertex_labels[i] - vertex_labels[viz]) <= 1);
 			}
 		}
 		vector<int> cl; // Candidate List
@@ -206,13 +206,13 @@ vector<int> construction(int iteration, vector<double> centrality, int n_vertice
 		// definimos b(v) = b* - | b* - l(v) |, onde b* = L_M - K_i + i e L_M = maior label
 		int L_M = 0;
 		for (int i = 0; i < n_vertices; i++) { // Estou pegando o rotulo maximo considerando TODOS (talvez usar soh a cl)
-			L_M = max(L_M, vertex_label[i]);
+			L_M = max(L_M, vertex_labels[i]);
 		}
 		int b_star = L_M - K_i + current_round;
 		int min_benefit = INF;
 		int max_benefit = -INF;
 		auto b = [&](int v) {
-			return b_star - abs(b_star - vertex_label[v]);
+			return b_star - abs(b_star - vertex_labels[v]);
 		};
 		for (int x : cl) {
 			min_benefit = min(min_benefit, b(x));
@@ -226,8 +226,8 @@ vector<int> construction(int iteration, vector<double> centrality, int n_vertice
 		}
 		assert(!rcl.empty());
 		int next_activator = rcl[rng() % (int) rcl.size()];
-		vertex_label[next_activator] = current_round;
-		bfs(next_activator, current_round, vertex_label);
+		vertex_labels[next_activator] = current_round;
+		bfs(next_activator, current_round, vertex_labels);
 		burning_sequence.push_back(next_activator);
 
 		vector<int> to_burn_now;

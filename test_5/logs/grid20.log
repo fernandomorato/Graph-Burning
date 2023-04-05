@@ -21,3 +21,90 @@ Iteration = 14
 Burning sequence = 261 316 110 132 71 371 43 79 55 97 16 18 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 23990987884952
+Instance = grid20
+N vertices = 400
+N edges = 760
+Density = 0.009524
+
+
+Number of iterations = 777
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 40
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24041152717993
+Instance = grid20
+N vertices = 400
+N edges = 760
+Density = 0.009524
+
+
+Number of iterations = 869
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 40
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24866527926783
+Instance = grid20
+N vertices = 400
+N edges = 760
+Density = 0.009524
+
+[Iteration 1] New incumbent solution found! Solution value = 16
+[Iteration 2] New incumbent solution found! Solution value = 14
+[Iteration 3] New incumbent solution found! Solution value = 12
+[Iteration 4] New incumbent solution found! Solution value = 11
+
+Number of iterations = 13
+Mean of solution values = 13.250000
+
+Best solution found:
+Solution value = 11
+Number of rounds = 1
+Iteration = 4
+
+Burning sequence = 189 44 367 118 376 279 14 282 220 320 73 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 25130359860152
+Instance = grid20
+N vertices = 400
+N edges = 760
+Density = 0.009524
+
+[Iteration 1] New incumbent solution found! Solution value = 18
+[Iteration 2] New incumbent solution found! Solution value = 12
+[Iteration 3] New incumbent solution found! Solution value = 11
+
+Number of iterations = 14
+Mean of solution values = 13.666667
+
+Best solution found:
+Solution value = 11
+Number of rounds = 1
+Iteration = 3
+
+Burning sequence = 190 83 77 367 395 282 298 380 221 333 9 
+
+---------------------------------------------------------------------------------------------------------------------------------

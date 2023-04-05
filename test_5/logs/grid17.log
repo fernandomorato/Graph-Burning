@@ -21,3 +21,89 @@ Iteration = 903
 Burning sequence = 171 40 282 148 184 30 65 49 237 101 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 23987522142821
+Instance = grid17
+N vertices = 289
+N edges = 544
+Density = 0.013072
+
+
+Number of iterations = 1320
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 34
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24037741529325
+Instance = grid17
+N vertices = 289
+N edges = 544
+Density = 0.013072
+
+
+Number of iterations = 1279
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 34
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24862882430026
+Instance = grid17
+N vertices = 289
+N edges = 544
+Density = 0.013072
+
+[Iteration 1] New incumbent solution found! Solution value = 14
+[Iteration 2] New incumbent solution found! Solution value = 12
+[Iteration 3] New incumbent solution found! Solution value = 10
+
+Number of iterations = 20
+Mean of solution values = 12.000000
+
+Best solution found:
+Solution value = 10
+Number of rounds = 1
+Iteration = 3
+
+Burning sequence = 126 30 223 19 219 265 67 263 277 288 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 25126879119390
+Instance = grid17
+N vertices = 289
+N edges = 544
+Density = 0.013072
+
+[Iteration 1] New incumbent solution found! Solution value = 14
+[Iteration 2] New incumbent solution found! Solution value = 11
+[Iteration 3] New incumbent solution found! Solution value = 10
+
+Number of iterations = 24
+Mean of solution values = 11.666667
+
+Best solution found:
+Solution value = 10
+Number of rounds = 1
+Iteration = 3
+
+Burning sequence = 145 87 267 7 66 242 203 204 273 255 
+
+---------------------------------------------------------------------------------------------------------------------------------

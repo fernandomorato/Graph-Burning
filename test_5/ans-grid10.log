@@ -1,0 +1,243 @@
+
+ALPHA = 0.51
+Seed = -58391763
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 7] New incumbent solution found! Solution value = 7
+
+Number of iterations = 5875
+Mean of solution values = 8.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 7
+
+Burning sequence = 67 6 22 93 90 70 50 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -239748473
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 4] New incumbent solution found! Solution value = 8
+[Iteration 5] New incumbent solution found! Solution value = 7
+
+Number of iterations = 16944
+Mean of solution values = 8.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 5
+
+Burning sequence = 38 10 72 50 95 90 99 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.10
+Seed = 1713259054
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 14
+[Iteration 2] New incumbent solution found! Solution value = 11
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 4] New incumbent solution found! Solution value = 8
+[Iteration 8] New incumbent solution found! Solution value = 7
+
+Number of iterations = 14590
+Mean of solution values = 9.800000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 8
+
+Burning sequence = 51 26 94 67 39 79 99 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.00
+Seed = -1056099132
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 14
+[Iteration 2] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 4] New incumbent solution found! Solution value = 8
+[Iteration 12] New incumbent solution found! Solution value = 7
+
+Number of iterations = 14638
+Mean of solution values = 9.600000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 12
+
+Burning sequence = 47 95 40 21 61 13 4 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.00
+Seed = 158515425
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 12
+[Iteration 2] New incumbent solution found! Solution value = 11
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 4] New incumbent solution found! Solution value = 8
+[Iteration 16] New incumbent solution found! Solution value = 7
+
+Number of iterations = 11695
+Mean of solution values = 9.400000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 16
+
+Burning sequence = 55 29 12 30 81 98 89 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.00
+Seed = -1497919041
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 12
+[Iteration 2] New incumbent solution found! Solution value = 11
+[Iteration 3] New incumbent solution found! Solution value = 10
+[Iteration 4] New incumbent solution found! Solution value = 9
+[Iteration 5] New incumbent solution found! Solution value = 8
+[Iteration 8] New incumbent solution found! Solution value = 7
+
+Number of iterations = 1356
+Mean of solution values = 9.500000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 8
+
+Burning sequence = 63 88 38 16 11 2 0 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.00
+Seed = 1626553534
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 2] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 4] New incumbent solution found! Solution value = 8
+[Iteration 10] New incumbent solution found! Solution value = 7
+
+Number of iterations = 2026
+Mean of solution values = 9.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 10
+
+Burning sequence = 55 92 98 12 18 20 40 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1770272185
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 9] New incumbent solution found! Solution value = 7
+
+Number of iterations = 1227
+Mean of solution values = 8.500000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 9
+
+Burning sequence = 72 28 20 4 79 88 97 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -1779381620
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 5] New incumbent solution found! Solution value = 7
+
+Number of iterations = 14955
+Mean of solution values = 8.500000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 5
+
+Burning sequence = 12 48 77 83 9 80 60 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = -654286353
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 6] New incumbent solution found! Solution value = 7
+
+Number of iterations = 13330
+Mean of solution values = 8.333333
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 6
+
+Burning sequence = 42 69 9 77 85 27 90 
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -19,3 +19,25 @@ Iteration = 1
 Burning sequence = 6 13 3 21 20 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 25153801203735
+Instance = grid5
+N vertices = 25
+N edges = 40
+Density = 0.133333
+
+[Iteration 1] New incumbent solution found! Solution value = 5
+[Iteration 2] New incumbent solution found! Solution value = 4
+
+Number of iterations = 876
+Mean of solution values = 4.500000
+
+Best solution found:
+Solution value = 4
+Number of rounds = 1
+Iteration = 2
+
+Burning sequence = 17 3 0 1 
+
+---------------------------------------------------------------------------------------------------------------------------------

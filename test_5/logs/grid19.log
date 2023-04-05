@@ -21,3 +21,88 @@ Iteration = 6
 Burning sequence = 296 6 33 130 89 115 211 137 157 343 323 325 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 23989828360430
+Instance = grid19
+N vertices = 361
+N edges = 684
+Density = 0.010526
+
+
+Number of iterations = 946
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 38
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24040013209958
+Instance = grid19
+N vertices = 361
+N edges = 684
+Density = 0.010526
+
+
+Number of iterations = 1020
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 38
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24865244181633
+Instance = grid19
+N vertices = 361
+N edges = 684
+Density = 0.010526
+
+[Iteration 1] New incumbent solution found! Solution value = 16
+[Iteration 2] New incumbent solution found! Solution value = 12
+[Iteration 3] New incumbent solution found! Solution value = 11
+
+Number of iterations = 19
+Mean of solution values = 13.000000
+
+Best solution found:
+Solution value = 11
+Number of rounds = 1
+Iteration = 3
+
+Burning sequence = 160 92 59 302 352 309 248 343 259 9 11 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 25129216140361
+Instance = grid19
+N vertices = 361
+N edges = 684
+Density = 0.010526
+
+[Iteration 1] New incumbent solution found! Solution value = 14
+[Iteration 2] New incumbent solution found! Solution value = 11
+
+Number of iterations = 14
+Mean of solution values = 12.500000
+
+Best solution found:
+Solution value = 11
+Number of rounds = 1
+Iteration = 2
+
+Burning sequence = 160 305 20 34 284 335 111 88 98 313 242 
+
+---------------------------------------------------------------------------------------------------------------------------------

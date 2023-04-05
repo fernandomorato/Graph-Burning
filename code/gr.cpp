@@ -1,59 +1,65 @@
 #include <bits/stdc++.h>
  
 using namespace std;
- 
-mt19937 rng((int) chrono::steady_clock::now().time_since_epoch().count());
 
 const int INF = 1e9;
-
+	
 vector<vector<int>> adj;
 vector<double> centrality_scores;
+vector<int> vertices;
 vector<pair<int, int>> edges;
 
+enum Status { 
+	BURNED, 
+	TARGETED, 
+	SAFE 
+};
+
 bool check_solution(int n_vertices, vector<int> &burning_sequence) {
-	return true;
-	set<int> burned;
+	vector<int> burned(n_vertices); // maybe use a bitset for efficiency
+	vector<int> last_burned;
+	int cnt = 0;
 	for (auto x : burning_sequence) {
-		if (burned.count(x)) {
+		cnt++;
+		if (burned[x])
 			return false;
+		vector<int> to_burn_now;
+		to_burn_now.push_back(x);
+		for (int cur_vertex : last_burned) {
+			for (int neighbour : adj[cur_vertex]) {
+				if (!burned[neighbour]) {
+					to_burn_now.push_back(neighbour);
+				}
+			}
 		}
-		auto cp_burned = burned;
-		for (int eita : cp_burned)
-			for (int viz : adj[eita])
-				burned.insert(viz);
-		burned.insert(x);
+		for (auto v : to_burn_now) {
+			burned[v] = 1;
+		}
+		swap(to_burn_now, last_burned);
 	}
-	if ((int) burned.size() != n_vertices) {
-		return false;
-	}
-	return true;
+	return *min_element(burned.begin(), burned.end()) == 1; // if min is 0, than it didn't burn the whole graph
 }
 
 void readInput(FILE* input_file, int *n_vertices, int *n_edges, double &density) {
 	fscanf(input_file, "%d %d", n_vertices, n_edges);
-	density = 2.0 * (double) (*n_edges) / (1.0 * (double) (*n_vertices) * (double) ((*n_vertices) - 1));
+	density = 2.0 * (double) (*n_edges) / ((double) (*n_vertices) * (double) ((*n_vertices) - 1));
 	adj.resize(*n_vertices);
-	// adj_matrix.resize(*n_vertices);
-	// for (int i = 0; i < *n_vertices; i++)
-	// 	adj_matrix[i].resize(*n_vertices);
+	edges.resize(*n_edges);
+	vertices.resize(*n_vertices);
+	iota(vertices.begin(), vertices.end(), 0);
 	for (int i = 0; i < *n_edges; i++) {
 		int a, b;
 		fscanf(input_file, "%d %d", &a, &b);
 		adj[a].push_back(b);
 		adj[b].push_back(a);
-		edges.emplace_back(a, b);
-		// adj_matrix[a][b] = adj_matrix[b][a] = 1;
+		edges[i] = make_pair(a, b);
 	}
 	centrality_scores.resize(*n_vertices);
-	// for (int i = 0; i < *n_vertices; i++) {
-	// 	adj_matrix[i][i] = 1;
-	// 	fscanf(input_file, "%lf", &centrality_scores[i]);
-	// }
 }
  
-void calc_centrality_scores(vector<double> &centrality_scores, vector<pair<int, int>> &edges, mt19937 &rng) {
-	double EPS = 1e-3;
-	int tamanho = (int) centrality_scores.size();
+void calc_centrality_scores(vector<double> &centrality, vector<int> &v, vector<pair<int, int>> &e, mt19937 &rng) {
+	double EPS = 1e-9;
+	int tamanho = (int) centrality.size();
 	vector<double> x0(tamanho), x1(tamanho);
 	uniform_real_distribution<double> unif(0, 1);
 	double norm = 0;
@@ -67,13 +73,12 @@ void calc_centrality_scores(vector<double> &centrality_scores, vector<pair<int, 
 	}
 	int iter = 0;
 	double lambda = 0, lambdaOld = 0, m = 0;
-	while (iter <= 100) {
+	while (iter <= 1000) {
 		swap(x0, x1);
-		for (int i = 0; i < tamanho; i++) 
-			x1[i] = 0;
-		for (auto p : edges) {
-			x1[p.first] += x0[p.second];
-			x1[p.second] += x0[p.first];
+		x1.clear();
+		for (auto &[a, b] : e) {
+			x1[a] += x0[b];
+			x1[b] += x0[a];
 		}
 		norm = 0;
 		for (int i = 0; i < tamanho; i++) {
@@ -91,108 +96,101 @@ void calc_centrality_scores(vector<double> &centrality_scores, vector<pair<int, 
 			break;
 		lambdaOld = lambda;
 	}
+	for (int i = 0; i < (int) v.size(); i++) {
+		centrality[v[i]] = x1[v[i]];
+	}
 }
  
-vector<int> select_vertices(vector<int> &candidates, vector<double> &centrality, double density) {
-	vector<pair<double, int>> aux;
-	for (int i = 0; i < (int) candidates.size(); i++) {
-		aux.emplace_back(centrality[candidates[i]], candidates[i]);
-	}
-	sort(aux.rbegin(), aux.rend());
+vector<int> select_vertices(vector<int> candidates, vector<double> &centrality, double density) {
+	sort(candidates.begin(), candidates.end(), [&](int a, int b) {
+		return centrality[a] > centrality[b]; 
+	});
 	vector<int> selected_vertices;
-	for (int i = 0; i < (int) aux.size(); i++) {
-		double current_vertex_centrality = aux[i].first;
-		int current_vertex = aux[i].second;
-		if (current_vertex_centrality >= (1 - density) * aux[0].first || (int) selected_vertices.size() < 5)
-			selected_vertices.push_back(current_vertex);
+	for (int cur : candidates) {
+		if (centrality[cur] >= (1 - density) * centrality[candidates[0]] || (int) selected_vertices.size() < 5)
+			selected_vertices.push_back(cur);
+		else
+			break;
 	}
-	if (selected_vertices.empty())
-		selected_vertices.push_back(aux[0].second);
+	assert(!selected_vertices.empty());
 	return selected_vertices;
 }
 
-void dfs(vector<bool> &visited, int current_vertex, vector<pair<int, int>> &component_edges, vector<int> &component_vertices, vector<int> &vertex_status) {
-	assert(vertex_status[current_vertex] == 0); // Checks if the vertice is safe
-	component_vertices.push_back(current_vertex);
-	visited[current_vertex] = true;
-	for (int neighbour : adj[current_vertex]) {
-		if (visited[neighbour] || vertex_status[neighbour] != vertex_status[current_vertex]) 
-			continue;
-		component_edges.emplace_back(current_vertex, neighbour);
-		dfs(visited, neighbour, component_edges, component_vertices, vertex_status);
+void dfs(int cur, vector<bool> &vis, vector<int> &v, vector<pair<int, int>> &e, vector<int> &status) {
+	assert(status[cur] == 0); // Checks if the vertice is safe
+	v.push_back(cur);
+	vis[cur] = true;
+	for (int nxt : adj[cur]) if (!vis[nxt] && status[nxt] == status[cur]) {
+		e.emplace_back(cur, nxt);
+		dfs(nxt, vis, v, e, status);
 	}
 }
 
-void bfs(int source, int round, vector<int> &vertex_label) {
-	vertex_label[source] = round;
+vector<int> bfs(int source, int round, vector<int> &vertex_labels) {
+	vector<int> visited_vertices;
+	vertex_labels[source] = round;
 	queue<int> q;
 	q.push(source);
 	while (!q.empty()) {
 		int cur = q.front();
+		visited_vertices.push_back(cur);
 		q.pop();
-		for (auto x : adj[cur]) {
-			if (vertex_label[cur] + 1 < vertex_label[x]) {
-				vertex_label[x] = vertex_label[cur] + 1;
-				q.push(x);
+		for (auto nxt : adj[cur]) {
+			if (vertex_labels[cur] + 1 < vertex_labels[nxt]) {
+				vertex_labels[nxt] = vertex_labels[cur] + 1;
+				q.push(nxt);
 			}
 		}
 	}
+	return visited_vertices;
 }
 
 pair<vector<int>, bool> construction(int iteration, vector<double> centrality, int n_vertices, int n_edges, double graph_density, mt19937 &rng, double alpha, int K_i) {
 	// Round Variables
 	int current_round = 1;
 	vector<int> burning_sequence;
-	set<int> safe, targeted, burned;
-	vector<int> vertex_status(n_vertices); // 0 -> safe | 1 -> targeted | 2 -> burned
-	vector<int> vertex_label(n_vertices, INF);
+	set<int> safe(vertices.begin(), vertices.end()), targeted, burned;
+	vector<int> vertex_status(n_vertices, 0); // 0 -> safe | 1 -> targeted | 2 -> burned (change this to ENUM)
+	vector<int> vertex_labels(n_vertices, INF);
 
 	// Round 1
-	vector<int> vertices(n_vertices);
-	iota(vertices.begin(), vertices.end(), 0);
 	vector<int> selected_vertices = select_vertices(vertices, centrality, graph_density);
-	assert(!selected_vertices.empty());
+	int current_activator = selected_vertices[rng() % ((int) selected_vertices.size())];
+	burning_sequence.push_back(current_activator);
+	vertex_status[current_activator] = 2; // BURNED
 
-	int initial_vertex = selected_vertices[rng() % ((int) selected_vertices.size())];
-	bfs(initial_vertex, current_round, vertex_label);
-	burning_sequence.push_back(initial_vertex);
- 
-	for (int i = 0; i < n_vertices; i++) {
-		if (vertex_label[i] == 1) {
-			burned.insert(i);
-			vertex_status[i] = 2;
-		} else if (vertex_label[i] <= K_i) {
-			targeted.insert(i);
-			vertex_status[i] = 1;
-		} else {
-			safe.insert(i);
-			vertex_status[i] = 0;
+ 	auto bfs_vertices = bfs(current_activator, current_round, vertex_labels);
+	for (auto cur : bfs_vertices) if (vertex_labels[cur] > current_round) {
+		// Iterate over all unburned vertices
+		if (vertex_labels[cur] <= K_i) {
+			safe.erase(cur);
+			targeted.insert(cur);
+			vertex_status[cur] = 1;
 		}
 	}
- 
+	safe.erase(current_activator);
+	burned.insert(current_activator);
+
 	// Rounds t >= 2
 	do {
 		current_round++;
 		vector<bool> visited(n_vertices, false);
-		for (int i = 0; i < n_vertices; i++) {
-			for (int viz : adj[i]) {
-				assert(abs(vertex_label[i] - vertex_label[viz]) <= 1);
-			}
-		}
 		vector<int> cl; // Candidate List
 		if (safe.empty()) {
 			assert(!targeted.empty());
 			cl = vector<int>(targeted.begin(), targeted.end());
 		} else {
-			for (int i : safe) {
-				if (!visited[i]) {
-					vector<pair<int, int>> component_edges;
+			for (int cur : safe) {
+				assert(vertex_status[cur] == 0);
+				if (!visited[cur]) {
+					// dfs through cur connected component
 					vector<int> component_vertices;
-					dfs(visited, i, component_edges, component_vertices, vertex_status);
-					double component_density = double(2 * (int) component_edges.size())
-												/ ((double) component_vertices.size() 
-												* ((double) component_vertices.size() - 1));
-					calc_centrality_scores(centrality, component_edges, rng);
+					vector<pair<int, int>> component_edges;
+					dfs(cur, visited, component_vertices, component_edges, vertex_status);
+					int N = (int) component_vertices.size();
+					int M = (int) component_edges.size(); // Here, (a, b) != (b, a), so the real number of edges is M / 2
+					double component_density = double(M) / double(1.0 * N * (N - 1));
+					calc_centrality_scores(centrality, component_vertices, component_edges, rng);
 					vector<int> cl_local = select_vertices(component_vertices, centrality, component_density);
 					for (int component_vertex : cl_local) {
 						cl.push_back(component_vertex);
@@ -201,18 +199,17 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 			}
 		}
 		assert(!cl.empty());
-
 		// Agora que temos a nossa cl, precisamos definir a funcao de beneficio para compor uma RCL
 		// definimos b(v) = b* - | b* - l(v) |, onde b* = L_M - K_i + i e L_M = maior label
 		int L_M = 0;
 		for (int i = 0; i < n_vertices; i++) { // Estou pegando o rotulo maximo considerando TODOS (talvez usar soh a cl)
-			L_M = max(L_M, vertex_label[i]);
+			L_M = max(L_M, vertex_labels[i]);
 		}
 		int b_star = L_M - K_i + current_round;
 		int min_benefit = INF;
 		int max_benefit = -INF;
 		auto b = [&](int v) {
-			return b_star - abs(b_star - vertex_label[v]);
+			return b_star - abs(b_star - vertex_labels[v]);
 		};
 		for (int x : cl) {
 			min_benefit = min(min_benefit, b(x));
@@ -225,48 +222,51 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 			}
 		}
 		assert(!rcl.empty());
-		int next_activator = rcl[rng() % (int) rcl.size()];
-		vertex_label[next_activator] = current_round;
-		bfs(next_activator, current_round, vertex_label);
-		burning_sequence.push_back(next_activator);
-		if ((int) burning_sequence.size() >= K_i) {
+		current_activator = rcl[rng() % (int) rcl.size()];
+		safe.erase(current_activator);
+		targeted.erase(current_activator);
+		vertex_status[current_activator] = 2; // BURNED
+		bfs_vertices = bfs(current_activator, current_round, vertex_labels);
+		burning_sequence.push_back(current_activator);
+		if ((int) burning_sequence.size() > K_i) {
 			return make_pair(burning_sequence, false);
 		}
-		vector<int> to_burn_now;
-		to_burn_now.push_back(next_activator);
-		targeted.erase(next_activator);
-		safe.erase(next_activator);
-		vertex_status[next_activator] = 2;
-
-		for (int current_vertex : burned) {
-			for (int neighbour : adj[current_vertex]) {
-				if (vertex_status[neighbour] == 2)
-					continue;
-				if (vertex_status[neighbour] != 1) {
-					cerr << vertex_status[current_vertex] << " viz " << vertex_status[neighbour] << '\n';
-				}
-				assert(vertex_status[neighbour] == 1);
-				vertex_status[neighbour] = 2; // queimei
-				targeted.erase(neighbour);
-				to_burn_now.push_back(neighbour);
+		for (auto cur : bfs_vertices) if (vertex_labels[cur] > current_round) {
+			if (vertex_labels[cur] <= K_i) {
+				safe.erase(cur);
+				targeted.insert(cur);
+				vertex_status[cur] = 1;
 			}
 		}
-		for (int current_vertex : to_burn_now) {
-			burned.insert(current_vertex);
-			for (int neighbour : adj[current_vertex]) {
-				if (vertex_status[neighbour] != 0)
-					continue;
-				assert(vertex_status[neighbour] == 0);
-				vertex_status[neighbour] = 1;
-				safe.erase(neighbour);
-				targeted.insert(neighbour);
+		vector<int> to_burn_now;
+		to_burn_now.push_back(current_activator);
+		for (auto cur : burned) {
+			for (auto neighbour : adj[cur]) {
+				if (vertex_status[neighbour] == 1) {
+					vertex_status[neighbour] = 2; // BURNED
+					targeted.erase(neighbour);
+					to_burn_now.push_back(neighbour);
+					assert(vertex_labels[neighbour] == current_round);
+				}
+				assert(vertex_status[neighbour] != 0);
 			}
+		}
+		for (auto cur : to_burn_now) {
+			for (auto neighbour : adj[cur]) {
+				if (vertex_status[neighbour] == 0) {
+					safe.erase(neighbour);
+					vertex_status[neighbour] = 1;
+					targeted.insert(neighbour);
+					assert(vertex_labels[neighbour] == current_round + 1);
+				}
+			}
+			burned.insert(cur);
 		}
 	} while ((int) burned.size() != n_vertices);
 	return make_pair(burning_sequence, true);
 }
 
-void parse_args(int argc, char **argv, int &seed, double &alpha, int &time_limit, string &input_path, string &output_path, string &log_path, string &alpha_path) {
+void parse_args(int argc, char **argv, long long &seed, double &alpha, int &time_limit, string &input_path, string &output_path, string &log_path, string &alpha_path) {
 	bool f_seed  = false;
 	for (int i = 0; i < argc; i++) {
 		string str = argv[i];
@@ -274,7 +274,7 @@ void parse_args(int argc, char **argv, int &seed, double &alpha, int &time_limit
 			string identifier = str.substr(1);
 			if (identifier == "seed") {
 				f_seed = true;
-				seed = atoi(argv[i + 1]);
+				seed = atoll(argv[i + 1]);
 			} else if (identifier == "alpha")
 				alpha = atof(argv[i + 1]);
 			else if (identifier == "tl")
@@ -292,13 +292,13 @@ void parse_args(int argc, char **argv, int &seed, double &alpha, int &time_limit
 		}
 	}
 	if (!f_seed) {
-		seed = (int) chrono::steady_clock::now().time_since_epoch().count();
+		seed = (long long) chrono::steady_clock::now().time_since_epoch().count();
 	}
 }
  
 int main(int argc, char **argv) {
 	// Command Line Parameters
-	int seed;
+	long long seed;
 	double alpha;
 	int time_limit;
 	string input_path;
@@ -306,6 +306,7 @@ int main(int argc, char **argv) {
 	string log_path;
 	string alpha_path;
 	parse_args(argc, argv, seed, alpha, time_limit, input_path, output_path, log_path, alpha_path);
+	mt19937 rng(seed);
 	// File Variables
 	FILE *input_file = fopen(input_path.c_str(), "r");
 	FILE *output_file = fopen(output_path.c_str(), "a");
@@ -317,26 +318,30 @@ int main(int argc, char **argv) {
 	int n_vertices, n_edges;
 	double graph_density;
 	readInput(input_file, &n_vertices, &n_edges, graph_density);
-	calc_centrality_scores(centrality_scores, edges, rng);
+	calc_centrality_scores(centrality_scores, vertices, edges, rng);
 	// Iteration Variables
 	vector<int> bs;
 	vector<int> vertex_frequency(n_vertices, 1); // Initialy freq(v) = 1 for all v
-	mt19937 rng(seed);
 	int n_iterations = 0;
 	double sol_value_mean = 0;
 	int cnt_valid_solutions = 0;
 	int freq_incumbent_solution = 0;
 	int iteration_incumbent_solution = 0;
 	clock_t inicio = clock();
-	int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices)); // Intial value = floor(2*sqrt(n)-1)	
+	int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices)) + 1; // Intial value = floor(2*sqrt(n)-1)	
 	// Iterations
-	fprintf(log_file, "\nALPHA = %.2lf\nSeed = %d\nInstance = %s\nN vertices = %d\nN edges = %d\nDensity = %.6lf\n\n", alpha, seed, input_name.c_str(), n_vertices, n_edges, graph_density);
+	fprintf(log_file, "\nALPHA = %.2lf\nSeed = %lld\nInstance = %s\nN vertices = %d\nN edges = %d\nDensity = %.6lf\n\n", alpha, seed, input_name.c_str(), n_vertices, n_edges, graph_density);
 	cout << "\nALPHA = " << alpha << "\nSeed  = " << seed << "\nInstance = " << input_name << "\nN vertices = " << n_vertices << "\nN edges = " << n_edges << "\nDensity = " << graph_density << "\n\n";
 	double time_to_incumbent = 1e9;
 	do {
 		n_iterations++;
 		pair<vector<int>, bool> ans = construction(n_iterations, centrality_scores, n_vertices, n_edges, graph_density, rng, alpha, incumbent_solution - 1);
 		if (!ans.second) {
+			// cout << "Parou a execucao:\nSolucao parcial = ";
+			// for (auto x : ans.first) {
+			// 	cout << x << " ";
+			// }
+			// cout << "(" << (int) ans.first.size() << ")\n";
 			continue;
 		}
 		vector<int> burning_sequence = ans.first;
@@ -357,7 +362,7 @@ int main(int argc, char **argv) {
 				freq_incumbent_solution++;
 			}
 		}
-	} while (1.0 * (clock() - inicio) / CLOCKS_PER_SEC < time_limit); // limite de 5 minutos
+	} while (1.0 * (clock() - inicio) / CLOCKS_PER_SEC < time_limit);
 	double time_consumed = 1.0 * (clock() - inicio) / CLOCKS_PER_SEC;
 	fprintf(log_file, "\nNumber of iterations = %d\nMean of solution values = %.6lf\n", n_iterations, sol_value_mean);
 	cout << "\nNumber of iterations = " << n_iterations << "\nMean of solution values = " << sol_value_mean << "\n";

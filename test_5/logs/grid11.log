@@ -20,3 +20,174 @@ Iteration = 2
 Burning sequence = 59 98 32 119 9 0 110 99 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 23980656907677
+Instance = grid11
+N vertices = 121
+N edges = 220
+Density = 0.030303
+
+
+Number of iterations = 3525
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 22
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24030957772596
+Instance = grid11
+N vertices = 121
+N edges = 220
+Density = 0.030303
+
+
+Number of iterations = 3511
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 22
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24072438026303
+Instance = grid11
+N vertices = 121
+N edges = 220
+Density = 0.030303
+
+
+Number of iterations = 3701
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 23
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24111741932741
+Instance = grid11
+N vertices = 121
+N edges = 220
+Density = 0.030303
+
+
+Number of iterations = 3687
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 23
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24133986026233
+Instance = grid11
+N vertices = 121
+N edges = 220
+Density = 0.030303
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 5] New incumbent solution found! Solution value = 7
+
+Number of iterations = 90
+Mean of solution values = 8.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 5
+
+Burning sequence = 49 113 96 12 21 66 8 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24807599982218
+Instance = grid11
+N vertices = 121
+N edges = 220
+Density = 0.030303
+
+
+Number of iterations = 3663
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 23
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24855927857538
+Instance = grid11
+N vertices = 121
+N edges = 220
+Density = 0.030303
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 5] New incumbent solution found! Solution value = 7
+
+Number of iterations = 98
+Mean of solution values = 8.750000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 5
+
+Burning sequence = 60 112 118 12 21 8 87 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 25119969672765
+Instance = grid11
+N vertices = 121
+N edges = 220
+Density = 0.030303
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 14] New incumbent solution found! Solution value = 7
+
+Number of iterations = 99
+Mean of solution values = 8.750000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 14
+
+Burning sequence = 60 112 13 108 31 8 10 
+
+---------------------------------------------------------------------------------------------------------------------------------

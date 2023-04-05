@@ -21,3 +21,153 @@ Iteration = 28
 Burning sequence = 100 45 36 14 18 131 142 132 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 23981801188916
+Instance = grid12
+N vertices = 144
+N edges = 264
+Density = 0.025641
+
+
+Number of iterations = 3003
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 24
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24032088384102
+Instance = grid12
+N vertices = 144
+N edges = 264
+Density = 0.025641
+
+
+Number of iterations = 2891
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 24
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24073574502257
+Instance = grid12
+N vertices = 144
+N edges = 264
+Density = 0.025641
+
+
+Number of iterations = 3005
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 25
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24135122479635
+Instance = grid12
+N vertices = 144
+N edges = 264
+Density = 0.025641
+
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+
+Number of iterations = 89
+Mean of solution values = 9.333333
+
+Best solution found:
+Solution value = 8
+Number of rounds = 1
+Iteration = 3
+
+Burning sequence = 77 141 21 14 133 7 136 71 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24808725224419
+Instance = grid12
+N vertices = 144
+N edges = 264
+Density = 0.025641
+
+
+Number of iterations = 3077
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 25
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 24857076083155
+Instance = grid12
+N vertices = 144
+N edges = 264
+Density = 0.025641
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+
+Number of iterations = 84
+Mean of solution values = 9.000000
+
+Best solution found:
+Solution value = 8
+Number of rounds = 1
+Iteration = 3
+
+Burning sequence = 54 140 111 2 23 72 95 132 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 25121124841821
+Instance = grid12
+N vertices = 144
+N edges = 264
+Density = 0.025641
+
+[Iteration 1] New incumbent solution found! Solution value = 12
+[Iteration 2] New incumbent solution found! Solution value = 11
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 4] New incumbent solution found! Solution value = 8
+
+Number of iterations = 85
+Mean of solution values = 10.000000
+
+Best solution found:
+Solution value = 8
+Number of rounds = 1
+Iteration = 4
+
+Burning sequence = 53 0 139 94 133 22 96 123 
+
+---------------------------------------------------------------------------------------------------------------------------------
