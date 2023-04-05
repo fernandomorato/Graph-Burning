@@ -313,7 +313,7 @@ int main(int argc, char **argv) {
 	// File Variables
 	FILE *input_file = fopen(input_path.c_str(), "r");
 	FILE *output_file = fopen(output_path.c_str(), "a");
-	FILE *log_file = fopen(log_path.c_str(), "w");
+	FILE *log_file = fopen(log_path.c_str(), "a");
 	FILE *alpha_file = fopen(alpha_path.c_str(), "a");
 	string input_name = input_path;
 	input_name = input_name.substr(0, (int) input_name.size() - 3);
