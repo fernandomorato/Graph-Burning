@@ -20,3 +20,25 @@ Iteration = 2
 Burning sequence = 6615 2215 467 3657 5128 2288 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10442777113873435
+Instance = facebook_government
+N vertices = 7057
+N edges = 89455
+Density = 0.003593
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 4] New incumbent solution found! Solution value = 6
+
+Number of iterations = 15
+Mean of solution values = 6.500000
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 4
+
+Burning sequence = 5320 2215 3657 467 3041 98 
+
+---------------------------------------------------------------------------------------------------------------------------------

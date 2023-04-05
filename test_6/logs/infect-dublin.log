@@ -20,3 +20,26 @@ Iteration = 68
 Burning sequence = 409 109 189 23 31 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10442777122784105
+Instance = infect-dublin
+N vertices = 410
+N edges = 2765
+Density = 0.032978
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 26] New incumbent solution found! Solution value = 5
+
+Number of iterations = 1570
+Mean of solution values = 6.000000
+
+Best solution found:
+Solution value = 5
+Number of rounds = 1
+Iteration = 26
+
+Burning sequence = 409 306 9 31 275 
+
+---------------------------------------------------------------------------------------------------------------------------------

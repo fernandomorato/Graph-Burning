@@ -21,3 +21,26 @@ Iteration = 4
 Burning sequence = 157 145 194 5 78 645 223 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10442777132550767
+Instance = rt-twitter-copen
+N vertices = 761
+N edges = 1029
+Density = 0.003558
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 3] New incumbent solution found! Solution value = 7
+
+Number of iterations = 189
+Mean of solution values = 8.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 3
+
+Burning sequence = 157 145 406 78 94 600 689 
+
+---------------------------------------------------------------------------------------------------------------------------------

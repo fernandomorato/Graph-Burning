@@ -27,3 +27,30 @@ Iteration = 26
 Burning sequence = 523 24 392 458 831 803 207 758 772 254 241 511 742 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10442777073505443
+Instance = DD199
+N vertices = 841
+N edges = 1902
+Density = 0.005385
+
+[Iteration 1] New incumbent solution found! Solution value = 21
+[Iteration 2] New incumbent solution found! Solution value = 19
+[Iteration 3] New incumbent solution found! Solution value = 18
+[Iteration 4] New incumbent solution found! Solution value = 16
+[Iteration 5] New incumbent solution found! Solution value = 15
+[Iteration 6] New incumbent solution found! Solution value = 14
+[Iteration 7] New incumbent solution found! Solution value = 13
+
+Number of iterations = 484
+Mean of solution values = 16.571429
+
+Best solution found:
+Solution value = 13
+Number of rounds = 1
+Iteration = 7
+
+Burning sequence = 523 326 267 801 602 460 288 241 169 255 758 742 838 
+
+---------------------------------------------------------------------------------------------------------------------------------

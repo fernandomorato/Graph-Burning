@@ -21,3 +21,26 @@ Iteration = 3
 Burning sequence = 66 11 34 46 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10442777128753687
+Instance = polbooks
+N vertices = 105
+N edges = 441
+Density = 0.080769
+
+[Iteration 1] New incumbent solution found! Solution value = 6
+[Iteration 2] New incumbent solution found! Solution value = 5
+[Iteration 4] New incumbent solution found! Solution value = 4
+
+Number of iterations = 42379
+Mean of solution values = 5.000000
+
+Best solution found:
+Solution value = 4
+Number of rounds = 1
+Iteration = 4
+
+Burning sequence = 73 23 34 56 
+
+---------------------------------------------------------------------------------------------------------------------------------

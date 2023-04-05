@@ -22,3 +22,28 @@ Iteration = 147
 Burning sequence = 4 66 37 374 356 243 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10442777125998694
+Instance = netscience
+N vertices = 379
+N edges = 914
+Density = 0.012760
+
+[Iteration 1] New incumbent solution found! Solution value = 12
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 5] New incumbent solution found! Solution value = 7
+[Iteration 191] New incumbent solution found! Solution value = 6
+
+Number of iterations = 1017
+Mean of solution values = 8.400000
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 191
+
+Burning sequence = 4 66 374 37 31 34 
+
+---------------------------------------------------------------------------------------------------------------------------------

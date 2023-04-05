@@ -20,3 +20,24 @@ Iteration = 2
 Burning sequence = 476 240 159 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10442777096050464
+Instance = c-fat500-10
+N vertices = 500
+N edges = 46627
+Density = 0.373764
+
+[Iteration 1] New incumbent solution found! Solution value = 4
+
+Number of iterations = 9983
+Mean of solution values = 4.000000
+
+Best solution found:
+Solution value = 4
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 70 37 249 394 
+
+---------------------------------------------------------------------------------------------------------------------------------

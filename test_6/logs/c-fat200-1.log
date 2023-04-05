@@ -22,3 +22,26 @@ Iteration = 4
 Burning sequence = 9 184 102 97 56 164 128 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10442777089443476
+Instance = c-fat200-1
+N vertices = 200
+N edges = 1534
+Density = 0.077085
+
+[Iteration 1] New incumbent solution found! Solution value = 13
+[Iteration 2] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 7
+
+Number of iterations = 17849
+Mean of solution values = 10.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 3
+
+Burning sequence = 80 106 97 90 95 55 0 
+
+---------------------------------------------------------------------------------------------------------------------------------

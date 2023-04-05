@@ -19,3 +19,24 @@ Iteration = 1
 Burning sequence = 15 132 1006 738 930 1123 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10442777110455070
+Instance = email-univ
+N vertices = 1133
+N edges = 5451
+Density = 0.008500
+
+[Iteration 1] New incumbent solution found! Solution value = 6
+
+Number of iterations = 459
+Mean of solution values = 6.000000
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 104 945 437 757 634 1051 
+
+---------------------------------------------------------------------------------------------------------------------------------

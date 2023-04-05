@@ -20,3 +20,26 @@ Iteration = 2
 Burning sequence = 53 90 23 48 87 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10442777130930200
+Instance = rt-retweet
+N vertices = 96
+N edges = 117
+Density = 0.025658
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 6] New incumbent solution found! Solution value = 5
+
+Number of iterations = 4350
+Mean of solution values = 6.000000
+
+Best solution found:
+Solution value = 5
+Number of rounds = 1
+Iteration = 6
+
+Burning sequence = 53 90 23 48 87 
+
+---------------------------------------------------------------------------------------------------------------------------------

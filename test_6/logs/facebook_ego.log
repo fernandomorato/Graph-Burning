@@ -21,3 +21,26 @@ Iteration = 4
 Burning sequence = 1912 875 234 1047 3930 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10442777111861194
+Instance = facebook_ego
+N vertices = 4039
+N edges = 88234
+Density = 0.010820
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 6
+[Iteration 6] New incumbent solution found! Solution value = 5
+
+Number of iterations = 34
+Mean of solution values = 6.333333
+
+Best solution found:
+Solution value = 5
+Number of rounds = 1
+Iteration = 6
+
+Burning sequence = 2464 4022 698 800 3587 
+
+---------------------------------------------------------------------------------------------------------------------------------

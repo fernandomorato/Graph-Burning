@@ -20,3 +20,25 @@ Iteration = 2
 Burning sequence = 223 476 517 376 275 294 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10442777127156075
+Instance = polblogs
+N vertices = 643
+N edges = 2280
+Density = 0.011046
+
+[Iteration 1] New incumbent solution found! Solution value = 7
+[Iteration 2] New incumbent solution found! Solution value = 6
+
+Number of iterations = 216
+Mean of solution values = 6.500000
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 2
+
+Burning sequence = 21 517 476 452 214 446 
+
+---------------------------------------------------------------------------------------------------------------------------------

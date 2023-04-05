@@ -1,0 +1,23 @@
+
+ALPHA = 0.51
+Seed = 10442777108233657
+Instance = deezer_hr
+N vertices = 54573
+N edges = 498202
+Density = 0.000335
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 7] New incumbent solution found! Solution value = 7
+
+Number of iterations = 8
+Mean of solution values = 8.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 7
+
+Burning sequence = 32083 7664 32336 6748 18872 41560 29353 
+
+---------------------------------------------------------------------------------------------------------------------------------

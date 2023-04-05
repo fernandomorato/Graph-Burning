@@ -20,3 +20,25 @@ Iteration = 2
 Burning sequence = 1023 1147 554 555 508 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10442777124816044
+Instance = mahindas
+N vertices = 1258
+N edges = 7513
+Density = 0.009502
+
+[Iteration 1] New incumbent solution found! Solution value = 6
+[Iteration 2] New incumbent solution found! Solution value = 5
+
+Number of iterations = 101
+Mean of solution values = 5.500000
+
+Best solution found:
+Solution value = 5
+Number of rounds = 1
+Iteration = 2
+
+Burning sequence = 1016 555 554 1221 583 
+
+---------------------------------------------------------------------------------------------------------------------------------
