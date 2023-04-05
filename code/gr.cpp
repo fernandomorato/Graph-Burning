@@ -117,6 +117,9 @@ vector<int> select_vertices(vector<int> candidates, vector<double> &centrality, 
 }
 
 void dfs(int cur, vector<bool> &vis, vector<int> &v, vector<pair<int, int>> &e, vector<int> &status) {
+	if (status[cur] != 0) {
+		cerr << cur << " NAO EH ZERO\n";
+	}
 	assert(status[cur] == 0); // Checks if the vertice is safe
 	v.push_back(cur);
 	vis[cur] = true;
@@ -192,7 +195,7 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 					double component_density = double(M) / double(1.0 * N * (N - 1));
 					calc_centrality_scores(centrality, component_vertices, component_edges, rng);
 					vector<int> cl_local = select_vertices(component_vertices, centrality, component_density);
-					for (int component_vertex : cl_local) {
+					for (int component_vertex : cl_local) { // maybe use STL merge()
 						cl.push_back(component_vertex);
 					}
 				}
@@ -310,7 +313,7 @@ int main(int argc, char **argv) {
 	// File Variables
 	FILE *input_file = fopen(input_path.c_str(), "r");
 	FILE *output_file = fopen(output_path.c_str(), "a");
-	FILE *log_file = fopen(log_path.c_str(), "a");
+	FILE *log_file = fopen(log_path.c_str(), "w");
 	FILE *alpha_file = fopen(alpha_path.c_str(), "a");
 	string input_name = input_path;
 	input_name = input_name.substr(0, (int) input_name.size() - 3);
