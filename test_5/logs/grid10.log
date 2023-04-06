@@ -228,3 +228,27 @@ Iteration = 2
 Burning sequence = 54 98 18 11 80 60 92 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10468333022116572
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+[Iteration 5] New incumbent solution found! Solution value = 7
+
+Number of iterations = 30912
+Mean of solution values = 8.500000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 5
+
+Burning sequence = 65 18 22 80 99 79 40 
+
+---------------------------------------------------------------------------------------------------------------------------------

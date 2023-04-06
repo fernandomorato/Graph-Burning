@@ -191,3 +191,26 @@ Iteration = 14
 Burning sequence = 60 112 13 108 31 8 10 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10468333024412398
+Instance = grid11
+N vertices = 121
+N edges = 220
+Density = 0.030303
+
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 34] New incumbent solution found! Solution value = 7
+
+Number of iterations = 16969
+Mean of solution values = 8.333333
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 34
+
+Burning sequence = 60 31 97 13 111 77 33 
+
+---------------------------------------------------------------------------------------------------------------------------------

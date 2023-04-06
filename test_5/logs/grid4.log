@@ -41,3 +41,24 @@ Iteration = 2
 Burning sequence = 5 15 8 3 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10468333069876775
+Instance = grid4
+N vertices = 16
+N edges = 24
+Density = 0.200000
+
+[Iteration 1] New incumbent solution found! Solution value = 4
+
+Number of iterations = 302090
+Mean of solution values = 4.000000
+
+Best solution found:
+Solution value = 4
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 9 11 14 2 
+
+---------------------------------------------------------------------------------------------------------------------------------

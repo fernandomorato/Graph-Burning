@@ -108,3 +108,27 @@ Iteration = 3
 Burning sequence = 190 83 77 367 395 282 298 380 221 333 9 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10468333041262175
+Instance = grid20
+N vertices = 400
+N edges = 760
+Density = 0.009524
+
+[Iteration 1] New incumbent solution found! Solution value = 16
+[Iteration 2] New incumbent solution found! Solution value = 13
+[Iteration 3] New incumbent solution found! Solution value = 12
+[Iteration 4] New incumbent solution found! Solution value = 11
+
+Number of iterations = 1895
+Mean of solution values = 13.000000
+
+Best solution found:
+Solution value = 11
+Number of rounds = 1
+Iteration = 4
+
+Burning sequence = 229 26 140 343 159 56 319 376 393 394 398 
+
+---------------------------------------------------------------------------------------------------------------------------------

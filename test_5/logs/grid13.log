@@ -129,3 +129,26 @@ Iteration = 2
 Burning sequence = 97 1 24 156 168 21 79 90 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10468333028750360
+Instance = grid13
+N vertices = 169
+N edges = 312
+Density = 0.021978
+
+[Iteration 1] New incumbent solution found! Solution value = 12
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+
+Number of iterations = 9794
+Mean of solution values = 9.666667
+
+Best solution found:
+Solution value = 8
+Number of rounds = 1
+Iteration = 3
+
+Burning sequence = 70 22 144 128 150 2 26 77 
+
+---------------------------------------------------------------------------------------------------------------------------------

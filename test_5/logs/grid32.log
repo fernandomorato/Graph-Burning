@@ -47,3 +47,28 @@ Iteration = 5
 Burning sequence = 496 383 118 1007 823 775 386 198 10 991 33 640 993 896 928 930 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10468333062860340
+Instance = grid32
+N vertices = 1024
+N edges = 1984
+Density = 0.003788
+
+[Iteration 1] New incumbent solution found! Solution value = 23
+[Iteration 2] New incumbent solution found! Solution value = 20
+[Iteration 3] New incumbent solution found! Solution value = 17
+[Iteration 4] New incumbent solution found! Solution value = 16
+[Iteration 31] New incumbent solution found! Solution value = 15
+
+Number of iterations = 508
+Mean of solution values = 18.200000
+
+Best solution found:
+Solution value = 15
+Number of rounds = 1
+Iteration = 31
+
+Burning sequence = 495 1004 709 45 445 123 797 953 261 416 98 820 0 192 1023 
+
+---------------------------------------------------------------------------------------------------------------------------------

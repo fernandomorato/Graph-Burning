@@ -45,3 +45,26 @@ Iteration = 77
 Burning sequence = 31 69 55 7 9 1 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10468333077213019
+Instance = grid9
+N vertices = 81
+N edges = 144
+Density = 0.044444
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 7
+[Iteration 10] New incumbent solution found! Solution value = 6
+
+Number of iterations = 35795
+Mean of solution values = 7.000000
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1
+Iteration = 10
+
+Burning sequence = 57 10 34 79 6 8 
+
+---------------------------------------------------------------------------------------------------------------------------------

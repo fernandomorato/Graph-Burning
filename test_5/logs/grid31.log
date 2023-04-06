@@ -48,3 +48,29 @@ Iteration = 6
 Burning sequence = 510 685 253 941 46 432 795 742 954 207 123 118 28 182 0 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10468333061933241
+Instance = grid31
+N vertices = 961
+N edges = 1860
+Density = 0.004032
+
+[Iteration 1] New incumbent solution found! Solution value = 22
+[Iteration 2] New incumbent solution found! Solution value = 19
+[Iteration 3] New incumbent solution found! Solution value = 18
+[Iteration 4] New incumbent solution found! Solution value = 17
+[Iteration 5] New incumbent solution found! Solution value = 16
+[Iteration 6] New incumbent solution found! Solution value = 15
+
+Number of iterations = 596
+Mean of solution values = 17.833333
+
+Best solution found:
+Solution value = 15
+Number of rounds = 1
+Iteration = 6
+
+Burning sequence = 512 48 400 925 286 63 559 881 752 30 936 871 837 931 777 
+
+---------------------------------------------------------------------------------------------------------------------------------

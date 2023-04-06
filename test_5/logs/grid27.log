@@ -47,3 +47,28 @@ Iteration = 6
 Burning sequence = 365 378 141 658 669 240 457 703 53 74 17 13 99 42 
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 10468333054451382
+Instance = grid27
+N vertices = 729
+N edges = 1404
+Density = 0.005291
+
+[Iteration 1] New incumbent solution found! Solution value = 19
+[Iteration 2] New incumbent solution found! Solution value = 17
+[Iteration 3] New incumbent solution found! Solution value = 16
+[Iteration 4] New incumbent solution found! Solution value = 15
+[Iteration 5] New incumbent solution found! Solution value = 14
+
+Number of iterations = 891
+Mean of solution values = 16.200000
+
+Best solution found:
+Solution value = 14
+Number of rounds = 1
+Iteration = 5
+
+Burning sequence = 392 14 241 712 352 111 623 696 566 427 616 664 645 197 
+
+---------------------------------------------------------------------------------------------------------------------------------
