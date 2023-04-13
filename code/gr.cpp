@@ -118,7 +118,7 @@ vector<int> select_vertices(vector<int> candidates, vector<double> &centrality, 
 
 void dfs(int cur, vector<bool> &vis, vector<int> &v, vector<pair<int, int>> &e, vector<int> &status) {
 	if (status[cur] != 0) {
-		cerr << cur << " NAO EH ZERO\n";
+		assert(false);
 	}
 	assert(status[cur] == 0); // Checks if the vertice is safe
 	v.push_back(cur);
@@ -334,7 +334,6 @@ int main(int argc, char **argv) {
 	int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices)) + 1; // Intial value = floor(2*sqrt(n)-1)	
 	// Iterations
 	fprintf(log_file, "\nALPHA = %.2lf\nSeed = %lld\nInstance = %s\nN vertices = %d\nN edges = %d\nDensity = %.6lf\n\n", alpha, seed, input_name.c_str(), n_vertices, n_edges, graph_density);
-	cout << "\nALPHA = " << alpha << "\nSeed  = " << seed << "\nInstance = " << input_name << "\nN vertices = " << n_vertices << "\nN edges = " << n_edges << "\nDensity = " << graph_density << "\n\n";
 	double time_to_incumbent = 1e9;
 	do {
 		n_iterations++;
@@ -360,7 +359,6 @@ int main(int argc, char **argv) {
 				freq_incumbent_solution = 1;
 				iteration_incumbent_solution = n_iterations;
 				fprintf(log_file, "[Iteration %d] New incumbent solution found! Solution value = %d\n", n_iterations, incumbent_solution);
-				cout << "[Iteration " << n_iterations << "] New incumbent solution found! Solution value = " << incumbent_solution << "\n";
 			} else if ((int) burning_sequence.size() == incumbent_solution) {
 				freq_incumbent_solution++;
 			}
@@ -368,27 +366,17 @@ int main(int argc, char **argv) {
 	} while (1.0 * (clock() - inicio) / CLOCKS_PER_SEC < time_limit);
 	double time_consumed = 1.0 * (clock() - inicio) / CLOCKS_PER_SEC;
 	fprintf(log_file, "\nNumber of iterations = %d\nMean of solution values = %.6lf\n", n_iterations, sol_value_mean);
-	cout << "\nNumber of iterations = " << n_iterations << "\nMean of solution values = " << sol_value_mean << "\n";
-	// fprintf(output_file, "%s,%.2lf,%d,%d,%.6lf,%d,%d,%d\n", input_name.c_str(), time_consumed, n_iterations, cnt_valid_solutions, 
-		// sol_value_mean, incumbent_solution, freq_incumbent_solution, iteration_incumbent_solution);
-	// fprintf(output_file, "%s,%d,%d,%.4lf,%d,%d,%.4lf,%d,%d", input_name.c_str(), n_vertices, n_edges, graph_density, n_iterations, incumbent_solution,
-	// 	sol_value_mean, freq_incumbent_solution, iteration_incumbent_solution);
 	fprintf(output_file, "%s,%.4lf,%.4lf,%d,%d,%d\n", input_name.c_str(), time_consumed, time_to_incumbent,
 		iteration_incumbent_solution, freq_incumbent_solution, incumbent_solution);
 	fprintf(log_file, "\nBest solution found:\nSolution value = %d\nNumber of rounds = %d\nIteration = %d\n",
 		incumbent_solution, freq_incumbent_solution, iteration_incumbent_solution);
-	cout << "\nBest solution found:\nSolution value = " << incumbent_solution << "\n";
-	cout << "Number of rounds = " << freq_incumbent_solution << "\n";
-	cout << "Iteration = " << iteration_incumbent_solution << "\n";
 
 	fprintf(log_file, "\nBurning sequence = ");
-	cout << "\nBurning sequence = ";
 	for (auto x : bs) {
 		fprintf(log_file, "%d ", x);
 		cout << x << " ";
 	}
 	fprintf(log_file, "\n\n---------------------------------------------------------------------------------------------------------------------------------\n");
-	cout << "\n\n---------------------------------------------------------------------------------------------------------------------------------\n";
 	printf("%d %.2lf\n", incumbent_solution, 1.0 * (clock() - inicio) / CLOCKS_PER_SEC);
 	return 0;
 }
