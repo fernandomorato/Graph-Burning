@@ -15,6 +15,34 @@ enum Status {
 	SAFE 
 };
 
+void parse_args(int argc, char **argv, long long &seed, double &alpha, int &time_limit, string &input_path, string &output_path, string &log_path) {
+	bool f_seed  = false;
+	for (int i = 0; i < argc; i++) {
+		string str = argv[i];
+		if (str[0] == '-') {
+			string identifier = str.substr(1);
+			if (identifier == "seed") {
+				f_seed = true;
+				seed = atoll(argv[i + 1]);
+			} else if (identifier == "alpha")
+				alpha = atof(argv[i + 1]);
+			else if (identifier == "tl")
+				time_limit = atoi(argv[i + 1]);
+			else if (identifier == "ip")
+				input_path = argv[i + 1];
+			else if (identifier == "op")
+				output_path = argv[i + 1];
+			else if (identifier == "lp")
+				log_path = argv[i + 1];
+			else
+				cout << "Invalid option: -" << identifier << "\n";
+		}
+	}
+	if (!f_seed) {
+		seed = (long long) chrono::steady_clock::now().time_since_epoch().count();
+	}
+}
+
 bool check_solution(int n_vertices, vector<int> &burning_sequence) {
 	vector<int> burned(n_vertices); // maybe use a bitset for efficiency
 	vector<int> last_burned;
@@ -148,6 +176,9 @@ vector<int> bfs(int source, int round, vector<int> &vertex_labels) {
 	return visited_vertices;
 }
 
+int fixa = 3;
+vector<int> xd = {42, 86, 39, 6, 90, 0};
+
 pair<vector<int>, bool> construction(int iteration, vector<double> centrality, int n_vertices, int n_edges, double graph_density, mt19937 &rng, double alpha, int K_i) {
 	// Round Variables
 	int current_round = 1;
@@ -159,6 +190,8 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 	// Round 1
 	vector<int> selected_vertices = select_vertices(vertices, centrality, graph_density);
 	int current_activator = selected_vertices[rng() % ((int) selected_vertices.size())];
+	if (current_round <= fixa)
+		current_activator = xd[current_round - 1];
 	burning_sequence.push_back(current_activator);
 	vertex_status[current_activator] = 2; // BURNED
 
@@ -226,6 +259,9 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 		}
 		assert(!rcl.empty());
 		current_activator = rcl[rng() % (int) rcl.size()];
+		if (current_round <= fixa) {
+			current_activator = xd[current_round - 1];
+		}
 		safe.erase(current_activator);
 		targeted.erase(current_activator);
 		vertex_status[current_activator] = 2; // BURNED
@@ -268,38 +304,15 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 	} while ((int) burned.size() != n_vertices);
 	return make_pair(burning_sequence, true);
 }
-
-void parse_args(int argc, char **argv, long long &seed, double &alpha, int &time_limit, string &input_path, string &output_path, string &log_path, string &alpha_path) {
-	bool f_seed  = false;
-	for (int i = 0; i < argc; i++) {
-		string str = argv[i];
-		if (str[0] == '-') {
-			string identifier = str.substr(1);
-			if (identifier == "seed") {
-				f_seed = true;
-				seed = atoll(argv[i + 1]);
-			} else if (identifier == "alpha")
-				alpha = atof(argv[i + 1]);
-			else if (identifier == "tl")
-				time_limit = atoi(argv[i + 1]);
-			else if (identifier == "ip")
-				input_path = argv[i + 1];
-			else if (identifier == "op")
-				output_path = argv[i + 1];
-			else if (identifier == "lp")
-				log_path = argv[i + 1];
-			else if (identifier == "ap")
-				alpha_path = argv[i + 1];
-			else
-				cout << "Invalid option: -" << identifier << "\n";
-		}
-	}
-	if (!f_seed) {
-		seed = (long long) chrono::steady_clock::now().time_since_epoch().count();
-	}
-}
  
+/****************
+* MAIN FUNCTION *
+****************/
 int main(int argc, char **argv) {
+	for (int i = 0; i < argc; i++) {
+		printf("%s ", argv[i]);
+	}
+	printf("\n\n");
 	// Command Line Parameters
 	long long seed;
 	double alpha;
@@ -315,8 +328,8 @@ int main(int argc, char **argv) {
 	FILE *output_file = fopen(output_path.c_str(), "a");
 	FILE *log_file = fopen(log_path.c_str(), "a");
 	FILE *alpha_file = fopen(alpha_path.c_str(), "a");
-	string input_name = input_path;
-	input_name = input_name.substr(0, (int) input_name.size() - 3);
+	string instance_name = input_path;
+	instance_name = instance_name.substr(0, (int) instance_name.size() - 3);
 	// Graph Info Variables
 	int n_vertices, n_edges;
 	double graph_density;
@@ -333,7 +346,7 @@ int main(int argc, char **argv) {
 	clock_t inicio = clock();
 	int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices)) + 1; // Intial value = floor(2*sqrt(n)-1)	
 	// Iterations
-	fprintf(log_file, "\nALPHA = %.2lf\nSeed = %lld\nInstance = %s\nN vertices = %d\nN edges = %d\nDensity = %.6lf\n\n", alpha, seed, input_name.c_str(), n_vertices, n_edges, graph_density);
+	fprintf(log_file, "\nALPHA = %.2lf\nSeed = %lld\nInstance = %s\nN vertices = %d\nN edges = %d\nDensity = %.6lf\n\n", alpha, seed, instance_name.c_str(), n_vertices, n_edges, graph_density);
 	double time_to_incumbent = 1e9;
 	do {
 		n_iterations++;
@@ -366,7 +379,7 @@ int main(int argc, char **argv) {
 	} while (1.0 * (clock() - inicio) / CLOCKS_PER_SEC < time_limit);
 	double time_consumed = 1.0 * (clock() - inicio) / CLOCKS_PER_SEC;
 	fprintf(log_file, "\nNumber of iterations = %d\nMean of solution values = %.6lf\n", n_iterations, sol_value_mean);
-	fprintf(output_file, "%s,%.4lf,%.4lf,%d,%d,%d\n", input_name.c_str(), time_consumed, time_to_incumbent,
+	fprintf(output_file, "%s,%.4lf,%.4lf,%d,%d,%d\n", instance_name.c_str(), time_consumed, time_to_incumbent,
 		iteration_incumbent_solution, freq_incumbent_solution, incumbent_solution);
 	fprintf(log_file, "\nBest solution found:\nSolution value = %d\nNumber of rounds = %d\nIteration = %d\n",
 		incumbent_solution, freq_incumbent_solution, iteration_incumbent_solution);

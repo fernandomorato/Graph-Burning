@@ -1,0 +1,286 @@
+
+ALPHA = 0.51
+Seed = 210056900945631
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 7
+
+Number of iterations = 1230
+Mean of solution values = 7.500000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 2
+
+Burning sequence = 42 86 39 5 90 14 26 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 210104500560734
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+[Iteration 3] New incumbent solution found! Solution value = 7
+
+Number of iterations = 32005
+Mean of solution values = 8.000000
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 3
+
+Burning sequence = 42 86 39 7 90 70 15 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 356350928486056
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+
+Number of iterations = 4268
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 21
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 379748178000244
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+
+Number of iterations = 3987
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 21
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 379760655171135
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+
+Number of iterations = 183
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 21
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 379784743397257
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+
+Number of iterations = 172
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 21
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 379803345517970
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+
+Number of iterations = 187
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 21
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 379836603697154
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+
+Number of iterations = 127
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 21
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 379859075776315
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+
+Number of iterations = 101
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 21
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 379880624695682
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+
+Number of iterations = 127
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 21
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 379892278257847
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+
+Number of iterations = 146
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 21
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 379930896000536
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+
+Number of iterations = 1242
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 21
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 379959448593944
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+
+Number of iterations = 1413
+Mean of solution values = 0.000000
+
+Best solution found:
+Solution value = 21
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 379978025961783
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.036364
+
+[Iteration 1] New incumbent solution found! Solution value = 6
+
+Number of iterations = 1505
+Mean of solution values = 6.000000
+
+Best solution found:
+Solution value = 6
+Number of rounds = 1505
+Iteration = 1
+
+Burning sequence = 42 86 39 6 90 0 
+
+---------------------------------------------------------------------------------------------------------------------------------

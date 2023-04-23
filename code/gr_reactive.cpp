@@ -306,8 +306,8 @@ int main(int argc, char **argv) {
 	FILE *output_file = fopen(output_path.c_str(), "a");
 	FILE *log_file = fopen(log_path.c_str(), "a");
 	FILE *alpha_file = fopen(alpha_path.c_str(), "a");
-	string input_name = input_path.substr(10);
-	input_name = input_name.substr(0, (int) input_name.size() - 3);
+	string instance_name = input_path.substr(10);
+	instance_name = instance_name.substr(0, (int) instance_name.size() - 3);
 	// Graph Info Variables
 	int n_vertices, n_edges;
 	double density;
@@ -354,8 +354,8 @@ int main(int argc, char **argv) {
 		alpha_means[idx] /= (double) alpha_frequencies[idx];
 	};
 	// Iterations
-	fprintf(log_file, "\nInstance = %s\nN vertices = %d\nN edges = %d\n\n", input_name.c_str(), n_vertices, n_edges);
-	cout << "\nInstance = " << input_name << "\nN vertices = " << n_vertices << "\nN edges = " << n_edges << "\n\n";
+	fprintf(log_file, "\nInstance = %s\nN vertices = %d\nN edges = %d\n\n", instance_name.c_str(), n_vertices, n_edges);
+	cout << "\nInstance = " << instance_name << "\nN vertices = " << n_vertices << "\nN edges = " << n_edges << "\n\n";
 	do {
 		n_iterations++;
 		int alpha_idx = get_alpha(n_iterations);
@@ -389,7 +389,7 @@ int main(int argc, char **argv) {
 	double time_consumed = 1.0 * (clock() - inicio) / CLOCKS_PER_SEC;
 	fprintf(log_file, "\nNumber of iterations = %d\nMean of solution values = %.6lf\n", n_iterations, sol_value_mean);
 	cout << "\nNumber of iterations = " << n_iterations << "\nMean of solution values = " << sol_value_mean << "\n";
-	fprintf(output_file, "%s,%.2lf,%d,%d,%.6lf,%d,%d,%d,%.1lf\n", input_name.c_str(), time_consumed, n_iterations, cnt_valid_solutions, 
+	fprintf(output_file, "%s,%.2lf,%d,%d,%.6lf,%d,%d,%d,%.1lf\n", instance_name.c_str(), time_consumed, n_iterations, cnt_valid_solutions, 
 		sol_value_mean, incumbent_solution, freq_incumbent_solution, iteration_incumbent_solution, alpha_incumbent_solution);
 
 	fprintf(log_file, "\nBest solution found:\nSolution value = %d\nNumber of rounds = %d\nIteration = %d\n",
@@ -407,7 +407,7 @@ int main(int argc, char **argv) {
 	fprintf(log_file, "\n\n---------------------------------------------------------------------------------------------------------------------------------\n");
 	cout << "\n\n---------------------------------------------------------------------------------------------------------------------------------\n";
 
-	fprintf(alpha_file, "%s", input_name.c_str());
+	fprintf(alpha_file, "%s", instance_name.c_str());
 	for (int i = 0; i < 10; i++) {
 		fprintf(alpha_file, ",%d,%d,%d,%.6lf", alpha_frequencies[i], alpha_best_freq[i], alpha_best_solution[i],
 			alpha_means[i]);

@@ -331,8 +331,8 @@ int main(int argc, char **argv) {
 	FILE *output_file = fopen(output_path.c_str(), "a");
 	FILE *log_file = fopen(log_path.c_str(), "a");
 	FILE *alpha_file = fopen(alpha_path.c_str(), "a");
-	string input_name = input_path.substr(10);
-	input_name = input_name.substr(0, (int) input_name.size() - 3);
+	string instance_name = input_path.substr(10);
+	instance_name = instance_name.substr(0, (int) instance_name.size() - 3);
 	// Graph Info Variables
 	int n_vertices, n_edges;
 	double graph_density;
@@ -349,8 +349,8 @@ int main(int argc, char **argv) {
 	clock_t inicio = clock();
 	int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices)); // Intial value = floor(2*sqrt(n)-1)	
 	// Iterations
-	fprintf(log_file, "\nALPHA = %.2lf\nSeed = %d\nInstance = %s\nN vertices = %d\nN edges = %d\nDensity = %.6lf\n\n", alpha, seed, input_name.c_str(), n_vertices, n_edges, graph_density);
-	cout << "\nALPHA = " << alpha << "\nSeed  = " << seed << "\nInstance = " << input_name << "\nN vertices = " << n_vertices << "\nN edges = " << n_edges << "\nDensity = " << graph_density << "\n\n";
+	fprintf(log_file, "\nALPHA = %.2lf\nSeed = %d\nInstance = %s\nN vertices = %d\nN edges = %d\nDensity = %.6lf\n\n", alpha, seed, instance_name.c_str(), n_vertices, n_edges, graph_density);
+	cout << "\nALPHA = " << alpha << "\nSeed  = " << seed << "\nInstance = " << instance_name << "\nN vertices = " << n_vertices << "\nN edges = " << n_edges << "\nDensity = " << graph_density << "\n\n";
 	do {
 		n_iterations++;
 		vector<int> burning_sequence = construction(n_iterations, centrality_scores, n_vertices, n_edges, graph_density, rng, alpha, incumbent_solution - 1);
@@ -378,7 +378,7 @@ int main(int argc, char **argv) {
 	fprintf(log_file, "\nNumber of iterations = %d\nMean of solution values = %.6lf\n", n_iterations, sol_value_mean);
 	cout << "\nNumber of iterations = " << n_iterations << "\nMean of solution values = " << sol_value_mean << "\n";
 	
-	fprintf(output_file, "%s,%d,%d,%.4lf,%d,%d,%.4lf,%d,%d", input_name.c_str(), n_vertices, n_edges, graph_density, n_iterations, incumbent_solution,
+	fprintf(output_file, "%s,%d,%d,%.4lf,%d,%d,%.4lf,%d,%d", instance_name.c_str(), n_vertices, n_edges, graph_density, n_iterations, incumbent_solution,
 		sol_value_mean, freq_incumbent_solution, iteration_incumbent_solution);
 
 	fprintf(log_file, "\nBest solution found:\nSolution value = %d\nNumber of rounds = %d\nIteration = %d\n",

@@ -1,5 +1,4 @@
-for filename in instances_synthetic/* ; do
-	
+for filename in instances/* ; do
 	n_processes=$(ps -U fcpereira | grep -c gr)
 	while [ $n_processes -ge 30 ]
 	do
@@ -7,6 +6,5 @@ for filename in instances_synthetic/* ; do
 		n_processes=$(ps -U fcpereira | grep -c gr)
 	done
 	echo "$filename"
-   	./gr -ip "$filename" > logs/log_"${filename#*/}" &
-
+   	./gr -alpha 0.51 -tl 600 -ip "$filename" -op output/results.csv -criterio 2 > logs/log_"${filename#*/}" &
 done
