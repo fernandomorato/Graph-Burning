@@ -1,0 +1,21 @@
+
+ALPHA = 0.51
+Seed = 12034076748513274
+Instance = grid4
+N vertices = 16
+N edges = 24
+Density = 0.2
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 4
+
+Number of iterations = 719103
+Mean of solution values = 4
+
+Best solution found:
+Solution value = 4
+Number of rounds = 719103
+Iteration = 1
+
+Burning sequence = 13 7 1 4 
+
+---------------------------------------------------------------------------------------------------------------------------------

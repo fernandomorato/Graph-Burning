@@ -1,0 +1,21 @@
+
+ALPHA = 0.51
+Seed = 12034076606744063
+Instance = grid3
+N vertices = 9
+N edges = 12
+Density = 0.333333
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 3
+
+Number of iterations = 662837
+Mean of solution values = 3
+
+Best solution found:
+Solution value = 3
+Number of rounds = 662837
+Iteration = 1
+
+Burning sequence = 8 1 3 
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,23 @@
+
+ALPHA = 0.51
+Seed = 12034076668360566
+Instance = grid32
+N vertices = 1024
+N edges = 1984
+Density = 0.00378788
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 16
+[Iteration 2] New incumbent solution found! Solution value = 15
+[Iteration 31] New incumbent solution found! Solution value = 14
+
+Number of iterations = 632
+Mean of solution values = 14.6875
+
+Best solution found:
+Solution value = 14
+Number of rounds = 11
+Iteration = 31
+
+Burning sequence = 744 476 325 179 883 27 987 41 32 431 993 561 831 544 
+
+---------------------------------------------------------------------------------------------------------------------------------
