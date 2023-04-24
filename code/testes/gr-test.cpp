@@ -116,11 +116,8 @@ vector<int> bfs(int source, int round, vector<int> &vertex_labels) {
 
 int fixa = 0;
 vector<int> xd = {42, 86, 39, 6, 90, 0};
-bool estava_cl;
-bool estava_rcl;
 
 pair<vector<int>, bool> construction(int iteration, vector<double> centrality, int n_vertices, int n_edges, double graph_density, mt19937 &rng, double alpha, int criterio, int K_i) {
-	estava_cl = estava_rcl = false;
 	// Round Variables
 	int current_round = 1;
 	vector<int> burning_sequence;
@@ -129,13 +126,6 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 	vector<int> vertex_labels(n_vertices, INF);
 	// Round 1
 	vector<int> selected_vertices = select_vertices(vertices, centrality, graph_density, criterio);
-	if (fixa == 0) {
-		estava_cl = true;
-		for (auto x : selected_vertices) {
-			if (x == xd[fixa])
-				estava_rcl = true;
-		}
-	}
 	int current_activator = selected_vertices[rng() % ((int) selected_vertices.size())];
 	if (current_round <= fixa)
 		current_activator = xd[current_round - 1];
@@ -182,12 +172,6 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 			}
 		}
 		assert(!cl.empty());
-		if (current_round == fixa + 1) {
-			for (int x : cl) {
-				if (x == xd[fixa])
-					estava_cl = true;
-			}
-		}
 		// Agora que temos a nossa cl, precisamos definir a funcao de beneficio para compor uma RCL
 		// definimos b(v) = b* - | b* - l(v) |, onde b* = L_M - K_i + i e L_M = maior label
 		int L_M = 0;
@@ -199,6 +183,8 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 		int max_benefit = -INF;
 		int max_label = -INF;
 		auto b = [&](int v) {
+			if (safe.empty())
+				return vertex_labels[v];
 			return b_star - abs(b_star - vertex_labels[v]);
 		};
 		for (int x : cl) {
@@ -214,18 +200,12 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 		// 	}
 		// } else {
 			for (int x : cl) {
-				if (b(x) >= max_benefit - alpha * (max_benefit - min_benefit)) {
+				if (1.0 * b(x) >= max_benefit - alpha * (max_benefit - min_benefit)) {
 					rcl.push_back(x);
 				}
 			}
 		// }
 		assert(!rcl.empty());
-		if (current_round == fixa + 1) {
-			for (int x : rcl) {
-				if (x == xd[fixa])
-					estava_rcl = true;
-			}
-		}
 		current_activator = rcl[rng() % (int) rcl.size()];
 		if (current_round <= fixa)
 			current_activator = xd[current_round - 1];
@@ -354,7 +334,6 @@ int main(int argc, char **argv) {
 	// cout << "\nALPHA = " << alpha << "\nSeed  = " << seed << "\nInstance = " << instance_name << "\nN vertices = " << n_vertices << "\nN edges = " << n_edges << "\nDensity = " << graph_density << "\n\n";
 	double time_to_incumbent = 1e9;
 	vector<vector<int>> solutions;
-	vector<pair<int, int>> estava;
 	do {
 		n_iterations++;
 		pair<vector<int>, bool> ans = construction(n_iterations, centrality_scores, n_vertices, n_edges, graph_density, rng, alpha, criterio, incumbent_solution);
@@ -374,7 +353,6 @@ int main(int argc, char **argv) {
 			sol_value_mean /= (double) cnt_valid_solutions;
 			if ((int) burning_sequence.size() < incumbent_solution) {
 				solutions.clear();
-				estava.clear();
 				time_to_incumbent = 1.0 * (clock() - inicio) / CLOCKS_PER_SEC;
 				bs = burning_sequence;
 				incumbent_solution = (int) burning_sequence.size();
@@ -385,7 +363,6 @@ int main(int argc, char **argv) {
 				freq_incumbent_solution++;
 			}
 			solutions.push_back(burning_sequence);
-			estava.push_back(make_pair(estava_cl, estava_rcl));
 		}
 	} while (1.0 * (clock() - inicio) / CLOCKS_PER_SEC < time_limit);
 	double time_consumed = 1.0 * (clock() - inicio) / CLOCKS_PER_SEC;
@@ -409,15 +386,11 @@ int main(int argc, char **argv) {
 	cout << "\n\n---------------------------------------------------------------------------------------------------------------------------------\n";
 	// printf("%d %.2lf\n", incumbent_solution, 1.0 * (clock() - inicio) / CLOCKS_PER_SEC);
 	fprintf(solution_file, "%d\n", (int) solutions.size());
-	int it = 0;
 	for (auto cur_solution : solutions) {
 		for (int activator : cur_solution) {
 			fprintf(solution_file, "%d ", activator);
 		}
 		fprintf(solution_file, "\n");
-		fprintf(solution_file, "%d Estava na CL? %s\n", xd[fixa], (estava[it].first ? "Sim" : "Nao"));
-		fprintf(solution_file, "%d Estava na RCL? %s\n", xd[fixa], (estava[it].second ? "Sim" : "Nao"));
-		it++;
 	}
 	return 0;
 }
