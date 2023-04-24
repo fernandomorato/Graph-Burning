@@ -200,7 +200,7 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 		int max_label = -INF;
 		auto b = [&](int v) {
 			// return b_star - abs(b_star - vertex_labels[v]);
-			return vertex_labels[x];
+			return vertex_labels[v];
 		};
 		for (int x : cl) {
 			min_benefit = min(min_benefit, b(x));
@@ -215,7 +215,7 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 		// 	}
 		// } else {
 			for (int x : cl) {
-				if (b(x) >= max_benefit - alpha * (max_benefit - min_benefit)) {
+				if (1.0 * b(x) >= max_benefit - alpha * (max_benefit - min_benefit)) {
 					rcl.push_back(x);
 				}
 			}
