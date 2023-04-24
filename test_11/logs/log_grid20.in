@@ -1,0 +1,22 @@
+
+ALPHA = 0.51
+Seed = 12032086451307203
+Instance = grid20
+N vertices = 400
+N edges = 760
+Density = 0.00952381
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 11
+[Iteration 91] New incumbent solution found! Solution value = 10
+
+Number of iterations = 2440
+Mean of solution values = 10.6279
+
+Best solution found:
+Solution value = 10
+Number of rounds = 48
+Iteration = 91
+
+Burning sequence = 306 96 100 339 27 191 394 254 128 380 
+
+---------------------------------------------------------------------------------------------------------------------------------

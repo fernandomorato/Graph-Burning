@@ -1,0 +1,23 @@
+
+ALPHA = 0.51
+Seed = 12032086550788904
+Instance = grid25
+N vertices = 625
+N edges = 1200
+Density = 0.00615385
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 14
+[Iteration 2] New incumbent solution found! Solution value = 13
+[Iteration 20] New incumbent solution found! Solution value = 12
+
+Number of iterations = 833
+Mean of solution values = 12.1399
+
+Best solution found:
+Solution value = 12
+Number of rounds = 124
+Iteration = 20
+
+Burning sequence = 261 593 2 71 451 348 605 508 16 225 300 275 
+
+---------------------------------------------------------------------------------------------------------------------------------

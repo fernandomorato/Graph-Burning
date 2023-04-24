@@ -1,0 +1,69 @@
+
+ALPHA = 0.51
+Seed = 12023983456164610
+Instance = grid21
+N vertices = 441
+N edges = 840
+Density = 0.00865801
+Criterio para a primeira escolha = 1
+[Iteration 1] New incumbent solution found! Solution value = 13
+[Iteration 2] New incumbent solution found! Solution value = 12
+[Iteration 7] New incumbent solution found! Solution value = 11
+
+Number of iterations = 1992
+Mean of solution values = 11.0136
+
+Best solution found:
+Solution value = 11
+Number of rounds = 510
+Iteration = 7
+
+Burning sequence = 342 417 49 148 100 179 188 266 20 227 0 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 12023983456171763
+Instance = grid21
+N vertices = 441
+N edges = 840
+Density = 0.00865801
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 12
+[Iteration 3] New incumbent solution found! Solution value = 11
+
+Number of iterations = 1947
+Mean of solution values = 11.0039
+
+Best solution found:
+Solution value = 11
+Number of rounds = 513
+Iteration = 3
+
+Burning sequence = 3 401 79 261 250 391 419 189 309 353 137 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 12023983455496364
+Instance = grid21
+N vertices = 441
+N edges = 840
+Density = 0.00865801
+Criterio para a primeira escolha = 3
+[Iteration 1] New incumbent solution found! Solution value = 13
+[Iteration 2] New incumbent solution found! Solution value = 12
+[Iteration 6] New incumbent solution found! Solution value = 11
+[Iteration 1032] New incumbent solution found! Solution value = 10
+
+Number of iterations = 1829
+Mean of solution values = 11.0202
+
+Best solution found:
+Solution value = 10
+Number of rounds = 1
+Iteration = 1032
+
+Burning sequence = 265 68 385 36 252 146 397 420 436 335 
+
+---------------------------------------------------------------------------------------------------------------------------------

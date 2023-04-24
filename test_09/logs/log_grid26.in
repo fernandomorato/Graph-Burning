@@ -1,0 +1,67 @@
+
+ALPHA = 0.51
+Seed = 12023983546378716
+Instance = grid26
+N vertices = 676
+N edges = 1300
+Density = 0.00569801
+Criterio para a primeira escolha = 3
+[Iteration 1] New incumbent solution found! Solution value = 14
+[Iteration 2] New incumbent solution found! Solution value = 13
+[Iteration 136] New incumbent solution found! Solution value = 12
+
+Number of iterations = 837
+Mean of solution values = 12.9785
+
+Best solution found:
+Solution value = 12
+Number of rounds = 3
+Iteration = 136
+
+Burning sequence = 214 125 559 522 382 441 621 26 11 515 657 669 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 12023983546509064
+Instance = grid26
+N vertices = 676
+N edges = 1300
+Density = 0.00569801
+Criterio para a primeira escolha = 1
+[Iteration 1] New incumbent solution found! Solution value = 13
+[Iteration 19] New incumbent solution found! Solution value = 12
+
+Number of iterations = 1210
+Mean of solution values = 12.8462
+
+Best solution found:
+Solution value = 12
+Number of rounds = 2
+Iteration = 19
+
+Burning sequence = 605 303 109 567 127 367 16 415 234 468 346 143 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 12023983546506425
+Instance = grid26
+N vertices = 676
+N edges = 1300
+Density = 0.00569801
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 14
+[Iteration 2] New incumbent solution found! Solution value = 12
+
+Number of iterations = 750
+Mean of solution values = 12.6667
+
+Best solution found:
+Solution value = 12
+Number of rounds = 2
+Iteration = 2
+
+Burning sequence = 201 106 639 522 349 543 11 25 389 338 656 675 
+
+---------------------------------------------------------------------------------------------------------------------------------

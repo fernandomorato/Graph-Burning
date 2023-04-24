@@ -1,0 +1,69 @@
+
+ALPHA = 0.51
+Seed = 12023382065684795
+Instance = grid15
+N vertices = 225
+N edges = 420
+Density = 0.0166667
+Criterio para a primeira escolha = 1
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 3485] New incumbent solution found! Solution value = 8
+
+Number of iterations = 8334
+Mean of solution values = 9
+
+Best solution found:
+Solution value = 8
+Number of rounds = 1
+Iteration = 3485
+
+Burning sequence = 159 62 25 88 180 214 224 5 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 12023382064917523
+Instance = grid15
+N vertices = 225
+N edges = 420
+Density = 0.0166667
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 2] New incumbent solution found! Solution value = 9
+[Iteration 711] New incumbent solution found! Solution value = 8
+
+Number of iterations = 4898
+Mean of solution values = 9
+
+Best solution found:
+Solution value = 8
+Number of rounds = 1
+Iteration = 711
+
+Burning sequence = 70 121 189 2 213 164 224 14 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 12023382065061546
+Instance = grid15
+N vertices = 225
+N edges = 420
+Density = 0.0166667
+Criterio para a primeira escolha = 3
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 3] New incumbent solution found! Solution value = 9
+[Iteration 956] New incumbent solution found! Solution value = 8
+
+Number of iterations = 4725
+Mean of solution values = 9.00187
+
+Best solution found:
+Solution value = 8
+Number of rounds = 1
+Iteration = 956
+
+Burning sequence = 157 47 57 195 208 7 134 120 
+
+---------------------------------------------------------------------------------------------------------------------------------

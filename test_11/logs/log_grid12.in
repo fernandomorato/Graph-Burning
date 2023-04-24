@@ -1,0 +1,23 @@
+
+ALPHA = 0.51
+Seed = 12032086295582473
+Instance = grid12
+N vertices = 144
+N edges = 264
+Density = 0.025641
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 4] New incumbent solution found! Solution value = 8
+[Iteration 31] New incumbent solution found! Solution value = 7
+
+Number of iterations = 7906
+Mean of solution values = 7.14414
+
+Best solution found:
+Solution value = 7
+Number of rounds = 193
+Iteration = 31
+
+Burning sequence = 79 24 121 11 143 5 137 
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,66 @@
+
+ALPHA = 0.51
+Seed = 12023382022326350
+Instance = grid13
+N vertices = 169
+N edges = 312
+Density = 0.021978
+Criterio para a primeira escolha = 1
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+
+Number of iterations = 10168
+Mean of solution values = 8.00065
+
+Best solution found:
+Solution value = 8
+Number of rounds = 3069
+Iteration = 3
+
+Burning sequence = 129 19 92 148 12 156 0 26 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 12023382022353730
+Instance = grid13
+N vertices = 169
+N edges = 312
+Density = 0.021978
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 2] New incumbent solution found! Solution value = 8
+
+Number of iterations = 16389
+Mean of solution values = 8.0002
+
+Best solution found:
+Solution value = 8
+Number of rounds = 5062
+Iteration = 2
+
+Burning sequence = 4 113 131 37 168 52 162 149 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 12023382021499664
+Instance = grid13
+N vertices = 169
+N edges = 312
+Density = 0.021978
+Criterio para a primeira escolha = 3
+[Iteration 1] New incumbent solution found! Solution value = 9
+[Iteration 3] New incumbent solution found! Solution value = 8
+
+Number of iterations = 12647
+Mean of solution values = 8.00051
+
+Best solution found:
+Solution value = 8
+Number of rounds = 3908
+Iteration = 3
+
+Burning sequence = 121 154 37 40 6 73 88 17 
+
+---------------------------------------------------------------------------------------------------------------------------------
