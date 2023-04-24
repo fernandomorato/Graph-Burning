@@ -1,0 +1,22 @@
+
+ALPHA = 0.25
+Seed = 12034889527517041
+Instance = grid16
+N vertices = 256
+N edges = 480
+Density = 0.0147059
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 10
+[Iteration 7] New incumbent solution found! Solution value = 9
+
+Number of iterations = 3212
+Mean of solution values = 9.01684
+
+Best solution found:
+Solution value = 9
+Number of rounds = 292
+Iteration = 7
+
+Burning sequence = 164 14 239 16 39 141 90 249 240 
+
+---------------------------------------------------------------------------------------------------------------------------------
