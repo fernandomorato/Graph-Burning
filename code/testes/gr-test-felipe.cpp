@@ -129,13 +129,13 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 	vector<int> vertex_labels(n_vertices, INF);
 	// Round 1
 	vector<int> selected_vertices = select_vertices(vertices, centrality, graph_density, criterio);
-	if (fixa == 0) {
-		estava_cl = true;
-		for (auto x : selected_vertices) {
-			if (x == xd[fixa])
-				estava_rcl = true;
-		}
-	}
+	// if (fixa == 0) {
+	// 	estava_cl = true;
+	// 	for (auto x : selected_vertices) {
+	// 		if (x == xd[fixa])
+	// 			estava_rcl = true;
+	// 	}
+	// }
 	int current_activator = selected_vertices[rng() % ((int) selected_vertices.size())];
 	if (current_round <= fixa)
 		current_activator = xd[current_round - 1];
@@ -182,12 +182,12 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 			}
 		}
 		assert(!cl.empty());
-		if (current_round == fixa + 1) {
-			for (int x : cl) {
-				if (x == xd[fixa])
-					estava_cl = true;
-			}
-		}
+		// if (current_round == fixa + 1) {
+		// 	for (int x : cl) {
+		// 		if (x == xd[fixa])
+		// 			estava_cl = true;
+		// 	}
+		// }
 		// Agora que temos a nossa cl, precisamos definir a funcao de beneficio para compor uma RCL
 		// definimos b(v) = b* - | b* - l(v) |, onde b* = L_M - K_i + i e L_M = maior label
 		int L_M = 0;
@@ -199,7 +199,8 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 		int max_benefit = -INF;
 		int max_label = -INF;
 		auto b = [&](int v) {
-			return b_star - abs(b_star - vertex_labels[v]);
+			// return b_star - abs(b_star - vertex_labels[v]);
+			return vertex_labels[x];
 		};
 		for (int x : cl) {
 			min_benefit = min(min_benefit, b(x));
@@ -220,12 +221,12 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 			}
 		// }
 		assert(!rcl.empty());
-		if (current_round == fixa + 1) {
-			for (int x : rcl) {
-				if (x == xd[fixa])
-					estava_rcl = true;
-			}
-		}
+		// if (current_round == fixa + 1) {
+		// 	for (int x : rcl) {
+		// 		if (x == xd[fixa])
+		// 			estava_rcl = true;
+		// 	}
+		// }
 		current_activator = rcl[rng() % (int) rcl.size()];
 		if (current_round <= fixa)
 			current_activator = xd[current_round - 1];
@@ -415,8 +416,6 @@ int main(int argc, char **argv) {
 			fprintf(solution_file, "%d ", activator);
 		}
 		fprintf(solution_file, "\n");
-		fprintf(solution_file, "%d Estava na CL? %s\n", xd[fixa], (estava[it].first ? "Sim" : "Nao"));
-		fprintf(solution_file, "%d Estava na RCL? %s\n", xd[fixa], (estava[it].second ? "Sim" : "Nao"));
 		it++;
 	}
 	return 0;
