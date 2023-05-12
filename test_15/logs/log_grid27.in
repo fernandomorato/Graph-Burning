@@ -1,0 +1,55 @@
+
+ALPHA = 0.51
+Seed = 13647983655073746
+Instance = grid27
+N vertices = 729
+N edges = 1404
+Density = 0.00529101
+Usando betweeness centrality
+Criterio para a primeira escolha = 1
+[Iteration 1] New incumbent solution found! Solution value = 16
+[Iteration 2] New incumbent solution found! Solution value = 15
+[Iteration 42] New incumbent solution found! Solution value = 14
+
+Tot iterations = 3496
+48 estava na CL em 42 iteracoes
+48 estava na RCL em 0 iteracoes
+
+Number of iterations = 3496
+Mean of solution values = 15
+
+Best solution found:
+Solution value = 14
+Number of rounds = 1
+Iteration = 42
+
+Burning sequence = 4 700 52 676 150 332 344 474 605 378 517 546 715 435 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+ALPHA = 0.51
+Seed = 13648595614294552
+Instance = grid27
+N vertices = 729
+N edges = 1404
+Density = 0.00529101
+Usando betweeness centrality
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 15
+[Iteration 11] New incumbent solution found! Solution value = 14
+
+Tot iterations = 2589
+48 estava na CL em 40 iteracoes
+48 estava na RCL em 0 iteracoes
+
+Number of iterations = 2589
+Mean of solution values = 14.25
+
+Best solution found:
+Solution value = 14
+Number of rounds = 30
+Iteration = 11
+
+Burning sequence = 673 55 51 649 149 304 317 471 714 548 377 407 631 378 
+
+---------------------------------------------------------------------------------------------------------------------------------

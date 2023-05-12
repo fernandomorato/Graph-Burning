@@ -1,7 +1,7 @@
 mkdir logs
 mkdir output
 mkdir solutions
-g++ ../code/testes/gr.cpp -o gr
+g++ ../code/gr.cpp -o gr
 for i in 1 2 ; do
 	for filename in instances/*.in ; do
 		n_processes=$(ps -U fcpereira | grep -c gr)
