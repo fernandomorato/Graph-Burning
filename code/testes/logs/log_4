@@ -1,0 +1,26 @@
+
+ALPHA = 0.51
+Seed = 1924582600183
+Instance = grid13
+N vertices = 169
+N edges = 312
+Density = 0.021978
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 2] New incumbent solution found! Solution value = 7
+
+Tot iterations = 16277
+Estava na CL em 5378 iteracoes
+Estava na RCL em 5378 iteracoes
+
+Number of iterations = 16277
+Mean of solution values = 7.00019
+
+Best solution found:
+Solution value = 7
+Number of rounds = 5377
+Iteration = 2
+
+Burning sequence = 48 106 164 27 129 4 156 
+
+---------------------------------------------------------------------------------------------------------------------------------

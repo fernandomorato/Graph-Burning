@@ -115,9 +115,9 @@ vector<int> bfs(int source, int round, vector<int> &vertex_labels) {
 }
 
 int fixa = 0;
-vector<int> xd = {42, 86, 39, 6, 90, 0};
-bool estava_cl;
-bool estava_rcl;
+vector<int> xd = {48, 106, 164, 27, 129, 4, 156};
+bool estava_cl, estava_rcl;
+int cnt_cl, cnt_rcl;
 
 pair<vector<int>, bool> construction(int iteration, vector<double> centrality, int n_vertices, int n_edges, double graph_density, mt19937 &rng, double alpha, int criterio, int K_i) {
 	estava_cl = estava_rcl = false;
@@ -129,13 +129,13 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 	vector<int> vertex_labels(n_vertices, INF);
 	// Round 1
 	vector<int> selected_vertices = select_vertices(vertices, centrality, graph_density, criterio);
-	// if (fixa == 0) {
-	// 	estava_cl = true;
-	// 	for (auto x : selected_vertices) {
-	// 		if (x == xd[fixa])
-	// 			estava_rcl = true;
-	// 	}
-	// }
+	if (fixa == 0) {
+		estava_cl = true;
+		for (auto x : selected_vertices) {
+			if (x == xd[fixa])
+				estava_rcl = true;
+		}
+	}
 	int current_activator = selected_vertices[rng() % ((int) selected_vertices.size())];
 	if (current_round <= fixa)
 		current_activator = xd[current_round - 1];
@@ -182,12 +182,12 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 			}
 		}
 		assert(!cl.empty());
-		// if (current_round == fixa + 1) {
-		// 	for (int x : cl) {
-		// 		if (x == xd[fixa])
-		// 			estava_cl = true;
-		// 	}
-		// }
+		if (current_round == fixa + 1) {
+			for (int x : cl) {
+				if (x == xd[fixa])
+					estava_cl = true;
+			}
+		}
 		// Agora que temos a nossa cl, precisamos definir a funcao de beneficio para compor uma RCL
 		// definimos b(v) = b* - | b* - l(v) |, onde b* = L_M - K_i + i e L_M = maior label
 		int L_M = 0;
@@ -209,10 +209,10 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 		}
 		vector<int> rcl;
 		// if (safe.empty()) {
-		// 	for (int x : cl) {
-		// 		if (vertex_labels[x] == max_label)
-		// 			rcl.push_back(x);
-		// 	}
+			for (int x : cl) {
+				if (vertex_labels[x] == max_label)
+					rcl.push_back(x);
+			}
 		// } else {
 			for (int x : cl) {
 				if (1.0 * b(x) >= max_benefit - alpha * (max_benefit - min_benefit)) {
@@ -221,12 +221,12 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 			}
 		// }
 		assert(!rcl.empty());
-		// if (current_round == fixa + 1) {
-		// 	for (int x : rcl) {
-		// 		if (x == xd[fixa])
-		// 			estava_rcl = true;
-		// 	}
-		// }
+		if (current_round == fixa + 1) {
+			for (int x : rcl) {
+				if (x == xd[fixa])
+					estava_rcl = true;
+			}
+		}
 		current_activator = rcl[rng() % (int) rcl.size()];
 		if (current_round <= fixa)
 			current_activator = xd[current_round - 1];
@@ -270,6 +270,8 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 			burned.insert(cur);
 		}
 	} while ((int) burned.size() != n_vertices);
+	cnt_cl += (estava_cl ? 1 : 0);
+	cnt_rcl += (estava_rcl ? 1 : 0);
 	return make_pair(burning_sequence, true);
 }
 
@@ -391,6 +393,11 @@ int main(int argc, char **argv) {
 	} while (1.0 * (clock() - inicio) / CLOCKS_PER_SEC < time_limit);
 	double time_consumed = 1.0 * (clock() - inicio) / CLOCKS_PER_SEC;
 	// fprintf(log_file, "\nNumber of iterations = %d\nMean of solution values = %.6lf\n", n_iterations, sol_value_mean);
+	cout << '\n';
+	cout << "Tot iterations = " << n_iterations << '\n';
+	cout << "Estava na CL em " << cnt_cl << " iteracoes\n";
+	cout << "Estava na RCL em " << cnt_rcl << " iteracoes\n";
+
 	cout << "\nNumber of iterations = " << n_iterations << '\n';
 	cout << "Mean of solution values = " << sol_value_mean << '\n';
 	fprintf(output_file, "%s,%.4lf,%.4lf,%d,%d,%d\n", instance_name.c_str(), time_consumed, time_to_incumbent,

@@ -1,17 +1,28 @@
+make f=../gr
+filename=instances/grid13.in
+a=$(basename $filename .in)
+echo $a
+echo log_"$a"_0
+./gr -alpha 0.51 -tl 60 -ip "$filename" -op output/results.csv -sp solutions/sol_"${filename#*/}"_1 -criterio 2 -centralidade 1 -fixa 0 >> logs/log_"$a"_1
+./gr -alpha 0.51 -tl 60 -ip "$filename" -op output/results.csv -sp solutions/sol_"${filename#*/}"_2 -criterio 2 -centralidade 2 -fixa 0 >> logs/log_"$a"_2
+exit
 # make check
 # ./check < instances/grid10.in > solutions/grid10_sol4_desc.txt
 # exit
-mkdir logs
-mkdir output
-mkdir solutions
-g++ gr-test.cpp -o gr
+# mkdir logs
+# mkdir output
+# mkdir solutions
+g++ gr-test-felipe.cpp -o gr
 for filename in instances/*.in ; do
 	n_processes=$(ps -U morato | grep -c gr)
-	while [ $n_processes -ge 30 ]
-	do
-		sleep 10
-		n_processes=$(ps -U morato | grep -c gr)
-	done
-	echo "$filename"
-   	./gr -alpha 0.51 -tl 600 -ip "$filename" -op output/results.csv -sp solutions/sol_"${filename#*/}" -criterio 2 >> logs/log_"${filename#*/}" &
+	for i in $(seq 4 6) ; do
+		while [ $n_processes -ge 3 ]
+		do
+			sleep 10
+			n_processes=$(ps -U morato | grep -c gr)
+		done
+		echo "$filename"
+		a=$(basename $filename .in)
+	   	./gr -alpha 0.51 -tl 600 -ip "$filename" -op output/results.csv -sp solutions/sol_"${filename#*/}" -criterio 2 -fixa $i >> logs/log_$a_$i &
+   	done
 done
