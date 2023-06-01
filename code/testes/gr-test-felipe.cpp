@@ -61,19 +61,22 @@ void readInput(FILE* input_file, int *n_vertices, int *n_edges, double &density)
 }
  
 vector<int> select_vertices(vector<int> &candidates, vector<double> &centrality, double density, int criterio) {
-	int max_centrality = *max_element(centrality.begin(), centrality.end());
-	int bound = -1;
+	double max_centrality = *max_element(values.begin(), values.end());
+	double bound = -1;
 	if (criterio == 1) {
 		bound = (1 - density) * max_centrality;
 	} else if (criterio == 2) {
-		bound = max_centrality - 2 * standart_deviation(centrality);
+		bound = max_centrality - 2 * standart_deviation(centrality, candidates);
 	} else if (criterio == 3) {
-		bound = max_centrality - standart_deviation(centrality);
+		bound = max_centrality - standart_deviation(centrality, candidates);
 	} else {
 		assert(false);
 	}
-	assert(bound != -1);
+	// assert(bound != -1);
 	vector<int> selected_vertices;
+	sort(candidates.begin(), candidates.end(), [&](int a, int b) {
+		return centrality[a] > centrality[b];
+	});
 	for (int cur : candidates) {
 		if (centrality[cur] >= bound || (int) selected_vertices.size() < 5)
 			selected_vertices.push_back(cur);
@@ -115,11 +118,14 @@ vector<int> bfs(int source, int round, vector<int> &vertex_labels) {
 }
 
 int fixa = 0;
-vector<int> xd = {48, 106, 164, 27, 129, 4, 156};
+vector<int> instance_solution = {54, 188, 160, 245, 29, 95, 0, 255};
 bool estava_cl, estava_rcl;
 int cnt_cl, cnt_rcl;
+vector<int> was_in_cl;
+vector<int> was_in_rcl;
 
 pair<vector<int>, bool> construction(int iteration, vector<double> centrality, int n_vertices, int n_edges, double graph_density, mt19937 &rng, double alpha, int criterio, int K_i) {
+	cerr << "Iteration = " << iteration << '\n';
 	estava_cl = estava_rcl = false;
 	// Round Variables
 	int current_round = 1;
@@ -129,16 +135,36 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 	vector<int> vertex_labels(n_vertices, INF);
 	// Round 1
 	vector<int> selected_vertices = select_vertices(vertices, centrality, graph_density, criterio);
-	if (fixa == 0) {
+	if (current_round == fixa + 1) {
 		estava_cl = true;
 		for (auto x : selected_vertices) {
-			if (x == xd[fixa])
+			if (x == instance_solution[fixa])
 				estava_rcl = true;
 		}
+		if (estava_cl)
+			was_in_cl.push_back(iteration);
+		if (estava_rcl) {
+			was_in_rcl.push_back(iteration);
+			if (iteration == 1) {
+				auto copy = selected_vertices;
+				sort(copy.begin(), copy.end(), [&](int x, int y) {
+					return centrality[x] < centrality[y];
+				});
+				cout << "Numero de vertices na RCL " << (int) copy.size() << '\n';
+				cout << "Desvio padrão -> " << standart_deviation(centrality, vertices) << '\n';
+				cout << "Limitante -> " << centrality[copy[(int) copy.size() - 1]] - 2 * standart_deviation(centrality, vertices) << '\n';
+				for (auto v : copy) {
+					cout << v << " -> " << centrality[v] << '\n';
+				}
+				cout << '\n';
+			}
+		}
+		cnt_cl += (estava_cl ? 1 : 0);
+		cnt_rcl += (estava_rcl ? 1 : 0);
 	}
 	int current_activator = selected_vertices[rng() % ((int) selected_vertices.size())];
 	if (current_round <= fixa)
-		current_activator = xd[current_round - 1];
+		current_activator = instance_solution[current_round - 1];
 	burning_sequence.push_back(current_activator);
 	vertex_status[current_activator] = 2; // BURNED
 
@@ -174,6 +200,9 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 					int M = (int) component_edges.size(); // Here, (a, b) != (b, a), so the real number of edges is M / 2
 					double component_density = double(M) / double(1.0 * N * (N - 1));
 					eigenvector_centrality(centrality, component_vertices, component_edges, rng);
+					// if ((int) component_vertices.size() == 1) {
+					// 	cout << centrality[component_vertices[0]] << '\n';
+					// }
 					vector<int> cl_local = select_vertices(component_vertices, centrality, component_density, criterio);
 					for (int component_vertex : cl_local) { // maybe use STL merge()
 						cl.push_back(component_vertex);
@@ -184,9 +213,10 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 		assert(!cl.empty());
 		if (current_round == fixa + 1) {
 			for (int x : cl) {
-				if (x == xd[fixa])
+				if (x == instance_solution[fixa])
 					estava_cl = true;
 			}
+			if (estava_cl) was_in_cl.push_back(iteration);
 		}
 		// Agora que temos a nossa cl, precisamos definir a funcao de beneficio para compor uma RCL
 		// definimos b(v) = b* - | b* - l(v) |, onde b* = L_M - K_i + i e L_M = maior label
@@ -223,13 +253,27 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 		assert(!rcl.empty());
 		if (current_round == fixa + 1) {
 			for (int x : rcl) {
-				if (x == xd[fixa])
+				if (x == instance_solution[fixa])
 					estava_rcl = true;
 			}
+			if (iteration == 1) {
+				auto copy = rcl;
+				sort(copy.begin(), copy.end(), [&](int x, int y) {
+					return centrality[x] < centrality[y];
+				});
+				cout << "Numero de vertices na RCL " << (int) copy.size() << '\n';
+				// cout << "Desvio padrão -> " << standart_deviation(centrality, vertices) << '\n';
+				// cout << "Limitante -> " << centrality[copy[(int) copy.size() - 1]] - 2 * standart_deviation(centrality, vertices) << '\n';
+				for (auto v : copy) {
+					cout << v << " -> " << centrality[v] << '\n';
+				}
+				cout << '\n';
+			}
+			if (estava_rcl) was_in_rcl.push_back(iteration);
 		}
 		current_activator = rcl[rng() % (int) rcl.size()];
 		if (current_round <= fixa)
-			current_activator = xd[current_round - 1];
+			current_activator = instance_solution[current_round - 1];
 		safe.erase(current_activator);
 		targeted.erase(current_activator);
 		vertex_status[current_activator] = 2; // BURNED
@@ -270,8 +314,6 @@ pair<vector<int>, bool> construction(int iteration, vector<double> centrality, i
 			burned.insert(cur);
 		}
 	} while ((int) burned.size() != n_vertices);
-	cnt_cl += (estava_cl ? 1 : 0);
-	cnt_rcl += (estava_rcl ? 1 : 0);
 	return make_pair(burning_sequence, true);
 }
 
@@ -345,7 +387,8 @@ int main(int argc, char **argv) {
 	int freq_incumbent_solution = 0;
 	int iteration_incumbent_solution = 0;
 	clock_t inicio = clock();
-	int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices)) + 1; // Intial value = floor(2*sqrt(n)-1)	
+	// int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices)) + 1; // Intial value = floor(2*sqrt(n)-1)	
+	int incumbent_solution = 9;
 	// Iterations
 	cout << setprecision(2) << "\nALPHA = " << alpha << '\n';
 	cout << "Seed = " << seed << '\n';
@@ -360,7 +403,7 @@ int main(int argc, char **argv) {
 	vector<pair<int, int>> estava;
 	do {
 		n_iterations++;
-		pair<vector<int>, bool> ans = construction(n_iterations, centrality_scores, n_vertices, n_edges, graph_density, rng, alpha, criterio, incumbent_solution);
+		pair<vector<int>, bool> ans = construction(n_iterations, centrality_scores, n_vertices, n_edges, graph_density, rng, alpha, criterio, incumbent_solution - 1);
 		if (!ans.second) {
 			// cout << "Parou a execucao:\nSolucao parcial = ";
 			// for (auto x : ans.first) {
@@ -395,8 +438,14 @@ int main(int argc, char **argv) {
 	// fprintf(log_file, "\nNumber of iterations = %d\nMean of solution values = %.6lf\n", n_iterations, sol_value_mean);
 	cout << '\n';
 	cout << "Tot iterations = " << n_iterations << '\n';
-	cout << "Estava na CL em " << cnt_cl << " iteracoes\n";
-	cout << "Estava na RCL em " << cnt_rcl << " iteracoes\n";
+	cout << instance_solution[fixa] << " estava na CL em " << (int) was_in_cl.size() << " iteracoes, sao elas:\n";
+	// for (int x : was_in_cl)
+	// 	cout << x << ' ';
+	// cout << '\n';
+	cout << instance_solution[fixa] << " estava na RCL em " << (int) was_in_rcl.size() << " iteracoes, sao elas:\n";
+	// for (int x : was_in_rcl)
+	// 	cout << x << ' ';
+	// cout << '\n';
 
 	cout << "\nNumber of iterations = " << n_iterations << '\n';
 	cout << "Mean of solution values = " << sol_value_mean << '\n';

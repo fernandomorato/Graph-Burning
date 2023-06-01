@@ -1,2 +1,2 @@
 all:
-	g++ $f.cpp -o gr
+	g++ $f.cpp -o $f

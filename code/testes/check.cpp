@@ -80,7 +80,8 @@ int main() {
 	}
 	// vector<int> solution = {4, 27, 48, 106, 129, 156, 164};
 	// vector<int> solution = {4, 0, 3};
-	vector<int> solution = {48, 106, 164, 27, 129, 4, 156};
+	// vector<int> solution = {48, 106, 164, 27, 129, 4, 156};
+	vector<int> solution = {54, 188, 160, 245, 29, 95, 0, 255};
 	if (!check_solution(n, adj, solution)) {
 		cout << "INVALID SOLUTION\n";
 		exit(0);

@@ -6,18 +6,22 @@ using namespace std;
 enum Centrality {EIGENVECTOR, BETWEENNESS};
 
 void eigenvector_centrality(vector<double> &centrality, vector<int> &v, vector<pair<int, int>> &e, mt19937 &rng) {
+	if ((int) v.size() == 1) {
+		centrality[v[0]] = 1;
+		return;
+	}
 	double EPS = 1e-9;
 	int tamanho = (int) centrality.size();
 	vector<double> x0(tamanho), x1(tamanho);
 	uniform_real_distribution<double> unif(0, 1);
 	double norm = 0;
-	for (int i = 0; i < tamanho; i++) {
-		x1[i] = unif(rng);
-		norm += x1[i] * x1[i];
+	for (int i = 0; i < (int) v.size(); i++) {
+		x1[v[i]] = unif(rng);
+		norm += x1[v[i]] * x1[v[i]];
 	}
 	norm = sqrt(norm);
-	for (int i = 0; i < tamanho; i++) {
-		x1[i] /= norm;
+	for (int i = 0; i < (int) v.size(); i++) {
+		x1[v[i]] /= norm;
 	}
 	int iter = 0;
 	double lambda = 0, lambdaOld = 0, m = 0;
@@ -29,14 +33,14 @@ void eigenvector_centrality(vector<double> &centrality, vector<int> &v, vector<p
 			x1[b] += x0[a];
 		}
 		norm = 0;
-		for (int i = 0; i < tamanho; i++) {
-			norm += x1[i] * x1[i];
+		for (int i = 0; i < (int) v.size(); i++) {
+			norm += x1[v[i]] * x1[v[i]];
 		}
 		norm = sqrt(norm);
 		lambda = 0;
-		for (int i = 0; i < tamanho; i++) {
-			x1[i] /= norm;
-			lambda += x1[i] * x0[i];
+		for (int i = 0; i < (int) v.size(); i++) {
+			x1[v[i]] /= norm;
+			lambda += x1[v[i]] * x0[v[i]];
 		}
 		lambda = sqrt(lambda);
 		iter++;
@@ -49,7 +53,7 @@ void eigenvector_centrality(vector<double> &centrality, vector<int> &v, vector<p
 	}
 }
 
-void betweenness_centrality(vector<double> &centrality, vector<int> &V, vector<pair<int, int>> &E, mt19937 &rng) {
+void betweenness_centrality(vector<double> &centrality, vector<int> &V, vector<pair<int, int>> &E) {
 	map<int, vector<int>> adj; // lista de adjacencia local
 	for (auto e : E) {
 		adj[e.first].push_back(e.second);
@@ -107,6 +111,6 @@ void calculate_centrality(vector<double> &centrality, vector<int> &v, vector<pai
 		eigenvector_centrality(centrality, v, e, rng);
 	else {
 		assert(centralidade == 2);
-		betweenness_centrality(centrality, v, e, rng);
+		betweenness_centrality(centrality, v, e);
 	}
 }

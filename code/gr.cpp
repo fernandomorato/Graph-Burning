@@ -366,7 +366,7 @@ int main(int argc, char **argv) {
 	vector<pair<int, int>> estava;
 	do {
 		n_iterations++;
-		pair<vector<int>, bool> ans = construction(n_iterations, centrality_scores, n_vertices, n_edges, graph_density, rng, alpha, centralidade, criterio, incumbent_solution);
+		pair<vector<int>, bool> ans = construction(n_iterations, centrality_scores, n_vertices, n_edges, graph_density, rng, alpha, centralidade, criterio, incumbent_solution - 1);
 		if (!ans.second) {
 			// cout << "Parou a execucao:\nSolucao parcial = ";
 			// for (auto x : ans.first) {
