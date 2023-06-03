@@ -129,7 +129,7 @@ vector<int> was_in_cl;
 vector<int> was_in_rcl;
 
 pair<vector<int>, bool> construction(int iteration, vector<double> centrality, int n_vertices, int n_edges, double graph_density, mt19937 &rng, double alpha, int criterio, int K_i) {
-	cerr << "Iteration = " << iteration << '\n';
+	// cerr << "Iteration = " << iteration << '\n';
 	estava_cl = estava_rcl = false;
 	// Round Variables
 	int current_round = 1;
@@ -391,8 +391,8 @@ int main(int argc, char **argv) {
 	int freq_incumbent_solution = 0;
 	int iteration_incumbent_solution = 0;
 	clock_t inicio = clock();
-	// int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices)) + 1; // Intial value = floor(2*sqrt(n)-1)	
-	int incumbent_solution = 9;
+	int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices)) + 1; // Intial value = floor(2*sqrt(n)-1)	
+	// int incumbent_solution = 9;
 	// Iterations
 	cout << setprecision(2) << "\nALPHA = " << alpha << '\n';
 	cout << "Seed = " << seed << '\n';
