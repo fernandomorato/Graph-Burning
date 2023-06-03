@@ -1,0 +1,24 @@
+
+ALPHA = 0.51
+Seed = 15537855861373366
+Instance = grid16
+N vertices = 256
+N edges = 480
+Density = 0.0147059
+Criterio para a primeira escolha = 2
+
+Tot iterations = 22576
+54 estava na CL em 22576 iteracoes, sao elas:
+54 estava na RCL em 0 iteracoes, sao elas:
+
+Number of iterations = 22576
+Mean of solution values = 0
+
+Best solution found:
+Solution value = 9
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------

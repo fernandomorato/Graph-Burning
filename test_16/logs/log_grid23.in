@@ -1,0 +1,24 @@
+
+ALPHA = 0.51
+Seed = 15537855998788734
+Instance = grid23
+N vertices = 529
+N edges = 1012
+Density = 0.00724638
+Criterio para a primeira escolha = 2
+
+Tot iterations = 4949
+54 estava na CL em 4949 iteracoes, sao elas:
+54 estava na RCL em 0 iteracoes, sao elas:
+
+Number of iterations = 4949
+Mean of solution values = 0
+
+Best solution found:
+Solution value = 9
+Number of rounds = 0
+Iteration = 0
+
+Burning sequence = 
+
+---------------------------------------------------------------------------------------------------------------------------------

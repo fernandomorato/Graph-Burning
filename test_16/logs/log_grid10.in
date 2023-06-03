@@ -1,0 +1,25 @@
+
+ALPHA = 0.51
+Seed = 15537855745108487
+Instance = grid10
+N vertices = 100
+N edges = 180
+Density = 0.0363636
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 7
+
+Tot iterations = 151798
+54 estava na CL em 151798 iteracoes, sao elas:
+54 estava na RCL em 0 iteracoes, sao elas:
+
+Number of iterations = 151798
+Mean of solution values = 7
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 46 10 90 99 95 72 9 
+
+---------------------------------------------------------------------------------------------------------------------------------

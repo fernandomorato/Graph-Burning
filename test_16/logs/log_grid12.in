@@ -1,0 +1,35 @@
+
+ALPHA = 0.51
+Seed = 15537855785858456
+Instance = grid12
+N vertices = 144
+N edges = 264
+Density = 0.025641
+Criterio para a primeira escolha = 2
+Numero de vertices na RCL 5
+Desvio padrão -> 0
+Limitante -> 0.163869
+89 -> 0.154336
+54 -> 0.154348
+67 -> 0.154355
+65 -> 0.163862
+78 -> 0.163869
+
+[Iteration 1] New incumbent solution found! Solution value = 8
+[Iteration 77] New incumbent solution found! Solution value = 7
+
+Tot iterations = 31973
+54 estava na CL em 31973 iteracoes, sao elas:
+54 estava na RCL em 31973 iteracoes, sao elas:
+
+Number of iterations = 31973
+Mean of solution values = 7.5
+
+Best solution found:
+Solution value = 7
+Number of rounds = 1
+Iteration = 77
+
+Burning sequence = 67 122 25 130 11 4 72 
+
+---------------------------------------------------------------------------------------------------------------------------------

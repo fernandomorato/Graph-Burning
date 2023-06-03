@@ -1,0 +1,25 @@
+
+ALPHA = 0.51
+Seed = 15537856270959072
+Instance = grid4
+N vertices = 16
+N edges = 24
+Density = 0.2
+Criterio para a primeira escolha = 2
+[Iteration 1] New incumbent solution found! Solution value = 4
+
+Tot iterations = 5113312
+54 estava na CL em 5113312 iteracoes, sao elas:
+54 estava na RCL em 0 iteracoes, sao elas:
+
+Number of iterations = 5113312
+Mean of solution values = 4
+
+Best solution found:
+Solution value = 4
+Number of rounds = 1
+Iteration = 1
+
+Burning sequence = 9 15 0 3 
+
+---------------------------------------------------------------------------------------------------------------------------------

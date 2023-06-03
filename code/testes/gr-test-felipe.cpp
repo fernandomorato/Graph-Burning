@@ -61,7 +61,11 @@ void readInput(FILE* input_file, int *n_vertices, int *n_edges, double &density)
 }
  
 vector<int> select_vertices(vector<int> &candidates, vector<double> &centrality, double density, int criterio) {
-	double max_centrality = *max_element(values.begin(), values.end());
+	double max_centrality = -1e9;
+	for (int x : candidates) {
+		max_centrality = max(max_centrality, centrality[x]);
+	}
+	assert(max_centrality > -1e9);
 	double bound = -1;
 	if (criterio == 1) {
 		bound = (1 - density) * max_centrality;
