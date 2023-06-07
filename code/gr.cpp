@@ -203,7 +203,7 @@ int main(int argc, char **argv) {
 
 	for (int iteration = 1; ; iteration++) {
 		pair<vector<int>, bool> solution = construction(vertices, centrality, alpha, rng, incumbent_solution);
-		if (init + 1e9 - clock() < time_limit) {
+		if ((clock() - init) / CLOCKS_PER_SEC > time_limit) {
 			break;
 		}
 	}

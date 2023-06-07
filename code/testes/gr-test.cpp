@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 
-#include "load_input.h"
-#include "lib/vertex.h"
-#include "lib/utility.h"
-#include "lib/centrality.h"
+#include "../lib/vertex.h"
+#include "../lib/utility.h"
+#include "../lib/centrality.h"
+#include "../lib/load_input.h"
 
 using namespace std;
 
@@ -57,6 +57,7 @@ void print_instance(int n_vertices, int n_edges, vector<Vertex*> &vertices) {
 }
 
 void dfs(Vertex *cur, vector<int> &vertices, vector<pair<int, int>> &edges) {
+	cur->setVisited(true);
 	vertices.push_back(cur->getId());
 	for (Vertex *neig : cur->getNeighbors()) {
 		if (!neig->getVisited() && neig->getState() == 0) {
@@ -203,7 +204,7 @@ int main(int argc, char **argv) {
 
 	for (int iteration = 1; ; iteration++) {
 		pair<vector<int>, bool> solution = construction(vertices, centrality, alpha, rng, incumbent_solution);
-		if (init + 1e9 - clock() < time_limit) {
+		if ((clock() - init) / CLOCKS_PER_SEC > time_limit) {
 			break;
 		}
 	}

@@ -1,10 +1,11 @@
-make f=../gr
+make f=gr-test
 filename=instances/grid16.in
 a=$(basename $filename .in)
 # qtd_fixados=1
 alpha=0.51
 
-./gr -alpha $alpha -tl 1 -ip "$filename" -op output/results.csv -sp solutions/sol_"${filename#*/}"_maluco -seed 1638723292556 >> logs/log_maluco
+echo gr-test -alpha $alpha -tl 1 -ip "$filename" -op output/results.csv -sp solutions/sol_"${filename#*/}"_maluco -seed 1638723292556
+./gr-test -alpha $alpha -tl 1 -ip "$filename" -op output/results.csv -sp solutions/sol_"${filename#*/}"_maluco -seed 1638723292556 >> logs/log_maluco
 
 exit
 
