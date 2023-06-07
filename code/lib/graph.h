@@ -1,4 +1,6 @@
 #include <vector>
+#include "vertex.h"
+#include "edge.h"
 
 using namespace std;
 
@@ -42,7 +44,7 @@ public:
 	}
 
 	vector<double> getCentralityScores() {
-		return this->centralityScores;
+		return this->centrality;
 	}
 
 private:

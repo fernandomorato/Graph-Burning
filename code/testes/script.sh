@@ -1,8 +1,13 @@
-make f=gr-test-felipe
+make f=../gr
 filename=instances/grid16.in
 a=$(basename $filename .in)
-qtd_fixados=1
-alpha=0.6
+# qtd_fixados=1
+alpha=0.51
+
+./gr -alpha $alpha -tl 1 -ip "$filename" -op output/results.csv -sp solutions/sol_"${filename#*/}"_maluco -seed 1638723292556 >> logs/log_maluco
+
+exit
+
 for i in $(seq 0 7) ; do
 	echo $i
 	# echo Rodando com ALPHA = "$alpha" e fixando "$i" vertices inicialmente

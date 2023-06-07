@@ -1,6 +1,8 @@
 // #include "standart_algorithms.h"
 #include <bits/stdc++.h>
 
+#include "vertex.h"
+
 using namespace std;
 
 enum Centrality {EIGENVECTOR, BETWEENNESS};
@@ -98,7 +100,7 @@ void betweenness_centrality(vector<double> &centrality, vector<int> &V, vector<p
 	}
 }
 
-void calculate_centrality(vector<double> &centrality, vector<int> &v, vector<pair<int, int>> &e, mt19937 &rng, int centralidade) { // aprender a usar o enum
+void calculate_centrality(vector<Vertex*> graph_vertices, vector<double> &centrality, vector<int> &vertices, vector<pair<int, int>> &edges, mt19937 &rng) { // aprender a usar o enum
 	// switch (c) {
 	// 	case EIGENVECTOR:
 	// 		eigenvector_centrality(centrality, v, e, rng);
@@ -107,10 +109,12 @@ void calculate_centrality(vector<double> &centrality, vector<int> &v, vector<pai
 	// 	default:
 	// 		assert(false);
 	// }
-	if (centralidade == 1)
-		eigenvector_centrality(centrality, v, e, rng);
-	else {
-		assert(centralidade == 2);
-		betweenness_centrality(centrality, v, e);
+	set<int> stv(vertices.begin(), vertices.end());
+	vector<Vertex*> aux;
+	for (Vertex *vv : graph_vertices) {
+		if (stv.count(vv->getId())) {
+			vv->setCentrality(centrality[vv->getId()]);
+		}
 	}
+	eigenvector_centrality(centrality, vertices, edges, rng);
 }

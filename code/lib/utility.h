@@ -14,13 +14,12 @@ T standart_deviation(vector<T> &values) {
 	return sqrt(accumulate(values.begin(), values.end(), 0.0, deviation) / (sz - 1));
 }
 
-template <typename T>
-T standart_deviation(vector<T> &values, vector<int> indices) {
-	vector<int> v((int) indices.size());
-	for (int i = 0; i < (int) indices.size(); i++) {
-		v[i] = values[indices[i]];
+double standart_deviation(vector<Vertex*> vertices) {
+	vector<double> values(vertices.size());
+	for (int i = 0; i < (int) vertices.size(); i++) {
+		values[i] = vertices[i]->getCentrality();
 	}
-	return standart_deviation(v);
+	return standart_deviation(values);
 }
 
 // double graph_density(int n, int m) {
