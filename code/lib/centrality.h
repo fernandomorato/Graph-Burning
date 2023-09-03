@@ -100,7 +100,7 @@ void betweenness_centrality(vector<double> &centrality, vector<int> &V, vector<p
 	}
 }
 
-void calculate_centrality(vector<Vertex*> graph_vertices, vector<double> &centrality, vector<int> &vertices, vector<pair<int, int>> &edges, mt19937 &rng) { // aprender a usar o enum
+void calculate_centrality(vector<Vertex*> graph_vertices, vector<double> &centrality, vector<Vertex*> &vertices, vector<pair<int, int>> &edges, mt19937 &rng) { // aprender a usar o enum
 	// switch (c) {
 	// 	case EIGENVECTOR:
 	// 		eigenvector_centrality(centrality, v, e, rng);
@@ -109,12 +109,16 @@ void calculate_centrality(vector<Vertex*> graph_vertices, vector<double> &centra
 	// 	default:
 	// 		assert(false);
 	// }
-	set<int> stv(vertices.begin(), vertices.end());
+	vector<int> v((int) vertices.size());
+	for (int i = 0; i < (int) v.size(); i++) {
+		v[i] = vertices[i]->getId();
+	}
+	set<int> stv(v.begin(), v.end());
 	vector<Vertex*> aux;
 	for (Vertex *vv : graph_vertices) {
 		if (stv.count(vv->getId())) {
 			vv->setCentrality(centrality[vv->getId()]);
 		}
 	}
-	eigenvector_centrality(centrality, vertices, edges, rng);
+	eigenvector_centrality(centrality, v, edges, rng);
 }

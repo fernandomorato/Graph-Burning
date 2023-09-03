@@ -10,7 +10,7 @@ using namespace std;
 /******************
 * Argument parser *
 ******************/
-void parse_args(int argc, char **argv, int &time_limit, string &input_path, double &alpha, long long &seed) {
+void parse_args(int argc, char **argv, int &time_limit, string &input_path, string &output_path, string &solution_path, double &alpha, long long &seed) {
 	bool has_seed = false;
 	for (int i = 1; i < argc; i++) {
 		string str = argv[i];
@@ -19,6 +19,10 @@ void parse_args(int argc, char **argv, int &time_limit, string &input_path, doub
 				time_limit = atoi(argv[i + 1]);
 			else if(str.substr(1) == "ip")
 				input_path = argv[i + 1];
+			else if(str.substr(1) == "op")
+				output_path = argv[i + 1];
+			else if(str.substr(1) == "sp")
+				solution_path = argv[i + 1];
 			else if (str.substr(1) == "alpha")
 				alpha = atof(argv[i + 1]);
 			else if (str.substr(1) == "seed") {
@@ -56,9 +60,9 @@ void print_instance(int n_vertices, int n_edges, vector<Vertex*> &vertices) {
 	}
 }
 
-void dfs(Vertex *cur, vector<int> &vertices, vector<pair<int, int>> &edges) {
+void dfs(Vertex *cur, vector<Vertex*> &vertices, vector<pair<int, int>> &edges) {
 	cur->setVisited(true);
-	vertices.push_back(cur->getId());
+	vertices.push_back(cur);
 	for (Vertex *neig : cur->getNeighbors()) {
 		if (!neig->getVisited() && neig->getState() == 0) {
 			edges.emplace_back(min(cur->getId(), neig->getId()), max(cur->getId(), neig->getId()));
@@ -109,8 +113,10 @@ void bfs(Vertex *source, int best_so_far) {
 * Construction phase  *
 **********************/
 pair<vector<int>, bool> construction(vector<Vertex*> vertices, vector<double> &centrality, double alpha, mt19937 &rng, int best_so_far) {
+	int cnt_safe_vertices = 0;
 	for (Vertex *v : vertices) {
 		v->reset();
+		cnt_safe_vertices++;
 	}
 	vector<int> burning_sequence;
 	for (int round = 1, ok = 1; ok; round++) {
@@ -121,12 +127,13 @@ pair<vector<int>, bool> construction(vector<Vertex*> vertices, vector<double> &c
 		int comps = 0;
 		for (Vertex *v : vertices) {
 			if (v->getVisited() == 0 && v->getState() == 0) {
-				vector<int> component_vertices;
+				assert(cnt_safe_vertices > 0);
+				vector<Vertex*> component_vertices;
 				vector<pair<int, int>> component_edges;
 				v->setVisited(++comps);
 				dfs(v, component_vertices, component_edges);
 				calculate_centrality(vertices, centrality, component_vertices, component_edges, rng);
-				vector<Vertex*> local_candidate_list = select_vertices(vertices);
+				vector<Vertex*> local_candidate_list = select_vertices(component_vertices);
 				for (Vertex *vv : local_candidate_list) {
 					candidate_list.push_back(vv);
 				}
@@ -146,35 +153,36 @@ pair<vector<int>, bool> construction(vector<Vertex*> vertices, vector<double> &c
 						restricted_candidate_list.push_back(v);
 				}
 			} else {
-				int max_benefit = 0;
-				int min_benefit = (int) 1e9;
+				sort(candidate_list.begin(), candidate_list.end(), [&](auto v, auto u) {
+					return b(v) > b(u);
+				});
+				int max_benefit = b(candidate_list[0]);
+				int min_benefit = b(candidate_list.back());
 				for (Vertex *v : candidate_list) {
-					max_benefit = max(max_benefit, b(v));
-					min_benefit = min(min_benefit, b(v));
-				}
-				for (Vertex *v : candidate_list) {
-					if (1.0 * b(v) >= max_benefit - alpha * (max_benefit - min_benefit)) {
+					if (1.0 * b(v) >= max_benefit - alpha * (max_benefit - min_benefit) or (int) restricted_candidate_list.size() < 5) {
 						restricted_candidate_list.push_back(v);
 					}
 				}
 			}
 		}
 		Vertex *current_activator = restricted_candidate_list[rng() % ((int) restricted_candidate_list.size())];
+		assert(current_activator->getState() != 2);
 		current_activator->setLabel(round); // burned
 		burning_sequence.push_back(current_activator->getId());
 		bfs(current_activator, best_so_far);
-		int cnt_safe_vertices = 0;
+		// int cnt_safe_vertices = 0;
+		int cnt_burned_vertices = 0;
 		for (Vertex *v : vertices) {
 			if (v->getLabel() == round) 
 				v->setState(2);
 			cnt_safe_vertices += (v->getState() == 0 ? 1 : 0);
+			cnt_burned_vertices += (v->getState() == 2 ? 1 : 0);
 		}
-		if (cnt_safe_vertices == 0 or (int) burning_sequence.size() > best_so_far)
+		if ((int) burning_sequence.size() > best_so_far or cnt_burned_vertices == (int) vertices.size())
 			ok = 0;
 	}
 	return make_pair(burning_sequence, (int) burning_sequence.size() <= best_so_far);
 }
-
 
 int main(int argc, char **argv) {
 
@@ -183,15 +191,15 @@ int main(int argc, char **argv) {
 	}
 	printf("\n\n");
 
-	FILE *input_file;
+	FILE *input_file, *output_file, *solution_file;
 	double total_time, alpha;
 	int n_vertices, n_edges, time_limit;
-	string instance_name, input_path;
+	string instance_name, input_path, output_path, solution_path;
 	vector<Vertex*> vertices;
 	vector<double> centrality;
 	long long seed;
 
-	parse_args(argc, argv, time_limit, input_path, alpha, seed);
+	parse_args(argc, argv, time_limit, input_path, output_path, solution_path, alpha, seed);
 	instance_name = input_path.substr(input_path.find_last_of("/") + 1, input_path.find_last_of(".") - (input_path.find_last_of("/") + 1));
 	input_file = fopen(input_path.c_str(), "r");
 	load_input(input_file, n_vertices, n_edges, vertices);
@@ -200,11 +208,22 @@ int main(int argc, char **argv) {
 	clock_t init = clock();
 	mt19937 rng(seed);
 	int incumbent_solution = (int) floor(2.0 * sqrt((double) n_vertices));
+	int iteration_incumbent_solution = 0;
+	double time_to_incumbent_solution = 0;
+	vector<int> burning_sequence;
 	centrality.resize(n_vertices);
 
 	for (int iteration = 1; ; iteration++) {
 		pair<vector<int>, bool> solution = construction(vertices, centrality, alpha, rng, incumbent_solution);
+		// cerr << (int) solution.first.size() << ' ' << (solution.second ? "good" : "not good") << endl;
+		if (solution.second && incumbent_solution > (int) solution.first.size()) {
+			iteration_incumbent_solution = iteration;
+			time_to_incumbent_solution = (clock() - init) / CLOCKS_PER_SEC;
+			incumbent_solution = (int) solution.first.size();
+			burning_sequence = solution.first;
+		}
 		if ((clock() - init) / CLOCKS_PER_SEC > time_limit) {
+			total_time = (clock() - init) / CLOCKS_PER_SEC;
 			break;
 		}
 	}
@@ -213,5 +232,20 @@ int main(int argc, char **argv) {
 
 	fclose(input_file);
 
+	output_file = fopen(output_path.c_str(), "a");
+	fprintf(output_file, "%s,", instance_name.c_str());
+	fprintf(output_file, "%.4lf,", total_time);
+	fprintf(output_file, "%.4lf,", time_to_incumbent_solution);
+	fprintf(output_file, "%d,", iteration_incumbent_solution);
+	fprintf(output_file, "%d\n", incumbent_solution);
+	fclose(output_file);
+
+	solution_file = fopen(solution_path.c_str(), "w");
+	fprintf(solution_file, "%d\n", (int) burning_sequence.size());
+	for (int x : burning_sequence) {
+		fprintf(solution_file, "%d ", x);
+	}
+	fprintf(solution_file, "\n");
+	fclose(solution_file);
 	exit(0);
 }
