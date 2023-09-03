@@ -1,0 +1,43 @@
+./gr -alpha 0.51 -tl 600 -ip instances/grid3.in -op output/results.csv -sp solutions/sol_grid3.in 
+
+n_vertices: 9
+n_edges: 12
+
+vertex 0
+degree: 2
+neighs: [1 3]
+
+vertex 1
+degree: 3
+neighs: [0 2 4]
+
+vertex 2
+degree: 2
+neighs: [1 5]
+
+vertex 3
+degree: 3
+neighs: [0 4 6]
+
+vertex 4
+degree: 4
+neighs: [1 3 5 7]
+
+vertex 5
+degree: 3
+neighs: [2 4 8]
+
+vertex 6
+degree: 2
+neighs: [3 7]
+
+vertex 7
+degree: 3
+neighs: [4 6 8]
+
+vertex 8
+degree: 2
+neighs: [5 7]
+
+Elapsed time: 601.00000000 s
+
