@@ -1,0 +1,910 @@
+./gr-alpha0.51-seed42-tl600-ipintances/adjnoun.in-opoutput/results.csv-spsolutions/sol_adjnoun.in-fix0
+
+n_vertices: 112
+n_edges: 425
+
+vertex 0
+degree: 3
+neighs: [1 2 3]
+
+vertex 1
+degree: 14
+neighs: [0 2 9 14 17 18 19 28 41 45 46 51 91 102]
+
+vertex 2
+degree: 33
+neighs: [0 1 3 9 11 14 17 21 22 23 24 25 26 27 31 34 36 41 42 45 50 51 54 66 73 83 93 97 98 102 104 105 111]
+
+vertex 3
+degree: 9
+neighs: [0 2 9 10 18 41 43 51 85]
+
+vertex 4
+degree: 2
+neighs: [5 89]
+
+vertex 5
+degree: 7
+neighs: [4 6 17 27 32 39 43]
+
+vertex 6
+degree: 6
+neighs: [5 7 32 51 52 55]
+
+vertex 7
+degree: 11
+neighs: [6 15 17 21 37 38 51 70 75 87 106]
+
+vertex 8
+degree: 1
+neighs: [9]
+
+vertex 9
+degree: 17
+neighs: [1 2 3 8 12 17 24 25 26 39 40 42 59 60 61 62 89]
+
+vertex 10
+degree: 4
+neighs: [3 11 12 50]
+
+vertex 11
+degree: 7
+neighs: [2 10 40 63 69 98 104]
+
+vertex 12
+degree: 10
+neighs: [9 10 17 18 43 50 87 88 102 104]
+
+vertex 13
+degree: 6
+neighs: [14 15 16 17 18 102]
+
+vertex 14
+degree: 12
+neighs: [1 2 13 16 17 25 36 37 59 68 71 105]
+
+vertex 15
+degree: 12
+neighs: [7 13 17 32 38 43 48 75 76 79 88 104]
+
+vertex 16
+degree: 3
+neighs: [13 14 68]
+
+vertex 17
+degree: 49
+neighs: [1 2 5 7 9 12 13 14 15 21 22 24 25 26 27 28 31 32 34 35 36 37 38 43 44 50 51 52 54 65 66 67 70 72 77 80 82 83 84 85 86 87 88 89 93 98 102 103 104]
+
+vertex 18
+degree: 14
+neighs: [1 3 12 13 21 29 34 43 44 50 51 53 54 60]
+
+vertex 19
+degree: 9
+neighs: [1 20 21 22 23 24 25 26 27]
+
+vertex 20
+degree: 5
+neighs: [19 43 79 94 108]
+
+vertex 21
+degree: 10
+neighs: [2 7 17 18 19 28 43 48 50 51]
+
+vertex 22
+degree: 5
+neighs: [2 17 19 45 94]
+
+vertex 23
+degree: 8
+neighs: [2 19 43 47 51 59 69 105]
+
+vertex 24
+degree: 15
+neighs: [2 9 17 19 36 43 47 49 68 75 76 87 103 104 108]
+
+vertex 25
+degree: 14
+neighs: [2 9 14 17 19 30 41 46 48 51 59 77 88 104]
+
+vertex 26
+degree: 11
+neighs: [2 9 17 19 43 51 56 68 79 80 104]
+
+vertex 27
+degree: 15
+neighs: [2 5 17 19 43 52 54 63 68 76 79 80 87 96 103]
+
+vertex 28
+degree: 13
+neighs: [1 17 21 29 30 31 32 33 34 35 44 89 92]
+
+vertex 29
+degree: 5
+neighs: [18 28 58 74 79]
+
+vertex 30
+degree: 6
+neighs: [25 28 51 79 84 92]
+
+vertex 31
+degree: 12
+neighs: [2 17 28 32 41 43 51 79 86 103 104 108]
+
+vertex 32
+degree: 10
+neighs: [5 6 15 17 28 31 51 52 70 100]
+
+vertex 33
+degree: 5
+neighs: [28 76 84 104 107]
+
+vertex 34
+degree: 7
+neighs: [2 17 18 28 51 54 107]
+
+vertex 35
+degree: 6
+neighs: [17 28 48 51 71 104]
+
+vertex 36
+degree: 7
+neighs: [2 14 17 24 43 55 87]
+
+vertex 37
+degree: 10
+neighs: [7 14 17 38 47 57 58 59 72 103]
+
+vertex 38
+degree: 9
+neighs: [7 15 17 37 39 40 41 51 104]
+
+vertex 39
+degree: 5
+neighs: [5 9 38 43 103]
+
+vertex 40
+degree: 4
+neighs: [9 11 38 56]
+
+vertex 41
+degree: 8
+neighs: [1 2 3 25 31 38 42 43]
+
+vertex 42
+degree: 7
+neighs: [2 9 41 51 56 79 90]
+
+vertex 43
+degree: 28
+neighs: [3 5 12 15 17 18 20 21 23 24 26 27 31 36 39 41 44 48 59 63 66 70 80 81 83 98 99 100]
+
+vertex 44
+degree: 7
+neighs: [17 18 28 43 45 50 102]
+
+vertex 45
+degree: 6
+neighs: [1 2 22 44 52 73]
+
+vertex 46
+degree: 3
+neighs: [1 25 104]
+
+vertex 47
+degree: 5
+neighs: [23 24 37 48 49]
+
+vertex 48
+degree: 10
+neighs: [15 21 25 35 43 47 50 76 88 104]
+
+vertex 49
+degree: 5
+neighs: [24 47 51 59 68]
+
+vertex 50
+degree: 15
+neighs: [2 10 12 17 18 21 44 48 51 52 53 54 78 102 104]
+
+vertex 51
+degree: 28
+neighs: [1 2 3 6 7 17 18 21 23 25 26 30 31 32 34 35 38 42 49 50 54 57 59 66 67 68 101 106]
+
+vertex 52
+degree: 7
+neighs: [6 17 27 32 45 50 56]
+
+vertex 53
+degree: 6
+neighs: [18 50 54 73 89 102]
+
+vertex 54
+degree: 13
+neighs: [2 17 18 27 34 50 51 53 68 70 72 75 78]
+
+vertex 55
+degree: 3
+neighs: [6 36 70]
+
+vertex 56
+degree: 4
+neighs: [26 40 42 52]
+
+vertex 57
+degree: 3
+neighs: [37 51 75]
+
+vertex 58
+degree: 2
+neighs: [29 37]
+
+vertex 59
+degree: 13
+neighs: [9 14 23 25 37 43 49 51 65 70 71 72 104]
+
+vertex 60
+degree: 5
+neighs: [9 18 71 76 101]
+
+vertex 61
+degree: 2
+neighs: [9 104]
+
+vertex 62
+degree: 2
+neighs: [9 71]
+
+vertex 63
+degree: 5
+neighs: [11 27 43 64 65]
+
+vertex 64
+degree: 1
+neighs: [63]
+
+vertex 65
+degree: 6
+neighs: [17 59 63 84 87 103]
+
+vertex 66
+degree: 7
+neighs: [2 17 43 51 72 75 102]
+
+vertex 67
+degree: 4
+neighs: [17 51 76 87]
+
+vertex 68
+degree: 12
+neighs: [14 16 24 26 27 49 51 54 70 73 75 84]
+
+vertex 69
+degree: 2
+neighs: [11 23]
+
+vertex 70
+degree: 12
+neighs: [7 17 32 43 54 55 59 68 75 87 102 105]
+
+vertex 71
+degree: 6
+neighs: [14 35 59 60 62 73]
+
+vertex 72
+degree: 7
+neighs: [17 37 54 59 66 80 105]
+
+vertex 73
+degree: 7
+neighs: [2 45 53 68 71 76 103]
+
+vertex 74
+degree: 1
+neighs: [29]
+
+vertex 75
+degree: 10
+neighs: [7 15 24 54 57 66 68 70 76 77]
+
+vertex 76
+degree: 12
+neighs: [15 24 27 33 48 60 67 73 75 80 92 106]
+
+vertex 77
+degree: 3
+neighs: [17 25 75]
+
+vertex 78
+degree: 3
+neighs: [50 54 79]
+
+vertex 79
+degree: 13
+neighs: [15 20 26 27 29 30 31 42 78 81 83 109 110]
+
+vertex 80
+degree: 8
+neighs: [17 26 27 43 72 76 81 106]
+
+vertex 81
+degree: 6
+neighs: [43 79 80 94 98 104]
+
+vertex 82
+degree: 1
+neighs: [17]
+
+vertex 83
+degree: 5
+neighs: [2 17 43 79 87]
+
+vertex 84
+degree: 6
+neighs: [17 30 33 65 68 104]
+
+vertex 85
+degree: 2
+neighs: [3 17]
+
+vertex 86
+degree: 2
+neighs: [17 31]
+
+vertex 87
+degree: 10
+neighs: [7 12 17 24 27 36 65 67 70 83]
+
+vertex 88
+degree: 6
+neighs: [12 15 17 25 48 106]
+
+vertex 89
+degree: 7
+neighs: [4 9 17 28 53 92 99]
+
+vertex 90
+degree: 1
+neighs: [42]
+
+vertex 91
+degree: 1
+neighs: [1]
+
+vertex 92
+degree: 6
+neighs: [28 30 76 89 95 96]
+
+vertex 93
+degree: 2
+neighs: [2 17]
+
+vertex 94
+degree: 3
+neighs: [20 22 81]
+
+vertex 95
+degree: 1
+neighs: [92]
+
+vertex 96
+degree: 3
+neighs: [27 92 106]
+
+vertex 97
+degree: 1
+neighs: [2]
+
+vertex 98
+degree: 5
+neighs: [2 11 17 43 81]
+
+vertex 99
+degree: 2
+neighs: [43 89]
+
+vertex 100
+degree: 3
+neighs: [32 43 110]
+
+vertex 101
+degree: 2
+neighs: [51 60]
+
+vertex 102
+degree: 10
+neighs: [1 2 12 13 17 44 50 53 66 70]
+
+vertex 103
+degree: 9
+neighs: [17 24 27 31 37 39 65 73 104]
+
+vertex 104
+degree: 21
+neighs: [2 11 12 15 17 24 25 26 31 33 35 38 46 48 50 59 61 81 84 103 105]
+
+vertex 105
+degree: 7
+neighs: [2 14 23 70 72 104 108]
+
+vertex 106
+degree: 6
+neighs: [7 51 76 80 88 96]
+
+vertex 107
+degree: 2
+neighs: [33 34]
+
+vertex 108
+degree: 4
+neighs: [20 24 31 105]
+
+vertex 109
+degree: 1
+neighs: [79]
+
+vertex 110
+degree: 2
+neighs: [79 100]
+
+vertex 111
+degree: 1
+neighs: [2]
+
+Elapsed time: 0.00000 s
+
+./gr-alpha0.51-seed42-tl600-ipintances/adjnoun.in-opoutput/results.csv-spsolutions/sol_adjnoun.in-fix0
+
+n_vertices: 112
+n_edges: 425
+
+vertex 0
+degree: 3
+neighs: [1 2 3]
+
+vertex 1
+degree: 14
+neighs: [0 2 9 14 17 18 19 28 41 45 46 51 91 102]
+
+vertex 2
+degree: 33
+neighs: [0 1 3 9 11 14 17 21 22 23 24 25 26 27 31 34 36 41 42 45 50 51 54 66 73 83 93 97 98 102 104 105 111]
+
+vertex 3
+degree: 9
+neighs: [0 2 9 10 18 41 43 51 85]
+
+vertex 4
+degree: 2
+neighs: [5 89]
+
+vertex 5
+degree: 7
+neighs: [4 6 17 27 32 39 43]
+
+vertex 6
+degree: 6
+neighs: [5 7 32 51 52 55]
+
+vertex 7
+degree: 11
+neighs: [6 15 17 21 37 38 51 70 75 87 106]
+
+vertex 8
+degree: 1
+neighs: [9]
+
+vertex 9
+degree: 17
+neighs: [1 2 3 8 12 17 24 25 26 39 40 42 59 60 61 62 89]
+
+vertex 10
+degree: 4
+neighs: [3 11 12 50]
+
+vertex 11
+degree: 7
+neighs: [2 10 40 63 69 98 104]
+
+vertex 12
+degree: 10
+neighs: [9 10 17 18 43 50 87 88 102 104]
+
+vertex 13
+degree: 6
+neighs: [14 15 16 17 18 102]
+
+vertex 14
+degree: 12
+neighs: [1 2 13 16 17 25 36 37 59 68 71 105]
+
+vertex 15
+degree: 12
+neighs: [7 13 17 32 38 43 48 75 76 79 88 104]
+
+vertex 16
+degree: 3
+neighs: [13 14 68]
+
+vertex 17
+degree: 49
+neighs: [1 2 5 7 9 12 13 14 15 21 22 24 25 26 27 28 31 32 34 35 36 37 38 43 44 50 51 52 54 65 66 67 70 72 77 80 82 83 84 85 86 87 88 89 93 98 102 103 104]
+
+vertex 18
+degree: 14
+neighs: [1 3 12 13 21 29 34 43 44 50 51 53 54 60]
+
+vertex 19
+degree: 9
+neighs: [1 20 21 22 23 24 25 26 27]
+
+vertex 20
+degree: 5
+neighs: [19 43 79 94 108]
+
+vertex 21
+degree: 10
+neighs: [2 7 17 18 19 28 43 48 50 51]
+
+vertex 22
+degree: 5
+neighs: [2 17 19 45 94]
+
+vertex 23
+degree: 8
+neighs: [2 19 43 47 51 59 69 105]
+
+vertex 24
+degree: 15
+neighs: [2 9 17 19 36 43 47 49 68 75 76 87 103 104 108]
+
+vertex 25
+degree: 14
+neighs: [2 9 14 17 19 30 41 46 48 51 59 77 88 104]
+
+vertex 26
+degree: 11
+neighs: [2 9 17 19 43 51 56 68 79 80 104]
+
+vertex 27
+degree: 15
+neighs: [2 5 17 19 43 52 54 63 68 76 79 80 87 96 103]
+
+vertex 28
+degree: 13
+neighs: [1 17 21 29 30 31 32 33 34 35 44 89 92]
+
+vertex 29
+degree: 5
+neighs: [18 28 58 74 79]
+
+vertex 30
+degree: 6
+neighs: [25 28 51 79 84 92]
+
+vertex 31
+degree: 12
+neighs: [2 17 28 32 41 43 51 79 86 103 104 108]
+
+vertex 32
+degree: 10
+neighs: [5 6 15 17 28 31 51 52 70 100]
+
+vertex 33
+degree: 5
+neighs: [28 76 84 104 107]
+
+vertex 34
+degree: 7
+neighs: [2 17 18 28 51 54 107]
+
+vertex 35
+degree: 6
+neighs: [17 28 48 51 71 104]
+
+vertex 36
+degree: 7
+neighs: [2 14 17 24 43 55 87]
+
+vertex 37
+degree: 10
+neighs: [7 14 17 38 47 57 58 59 72 103]
+
+vertex 38
+degree: 9
+neighs: [7 15 17 37 39 40 41 51 104]
+
+vertex 39
+degree: 5
+neighs: [5 9 38 43 103]
+
+vertex 40
+degree: 4
+neighs: [9 11 38 56]
+
+vertex 41
+degree: 8
+neighs: [1 2 3 25 31 38 42 43]
+
+vertex 42
+degree: 7
+neighs: [2 9 41 51 56 79 90]
+
+vertex 43
+degree: 28
+neighs: [3 5 12 15 17 18 20 21 23 24 26 27 31 36 39 41 44 48 59 63 66 70 80 81 83 98 99 100]
+
+vertex 44
+degree: 7
+neighs: [17 18 28 43 45 50 102]
+
+vertex 45
+degree: 6
+neighs: [1 2 22 44 52 73]
+
+vertex 46
+degree: 3
+neighs: [1 25 104]
+
+vertex 47
+degree: 5
+neighs: [23 24 37 48 49]
+
+vertex 48
+degree: 10
+neighs: [15 21 25 35 43 47 50 76 88 104]
+
+vertex 49
+degree: 5
+neighs: [24 47 51 59 68]
+
+vertex 50
+degree: 15
+neighs: [2 10 12 17 18 21 44 48 51 52 53 54 78 102 104]
+
+vertex 51
+degree: 28
+neighs: [1 2 3 6 7 17 18 21 23 25 26 30 31 32 34 35 38 42 49 50 54 57 59 66 67 68 101 106]
+
+vertex 52
+degree: 7
+neighs: [6 17 27 32 45 50 56]
+
+vertex 53
+degree: 6
+neighs: [18 50 54 73 89 102]
+
+vertex 54
+degree: 13
+neighs: [2 17 18 27 34 50 51 53 68 70 72 75 78]
+
+vertex 55
+degree: 3
+neighs: [6 36 70]
+
+vertex 56
+degree: 4
+neighs: [26 40 42 52]
+
+vertex 57
+degree: 3
+neighs: [37 51 75]
+
+vertex 58
+degree: 2
+neighs: [29 37]
+
+vertex 59
+degree: 13
+neighs: [9 14 23 25 37 43 49 51 65 70 71 72 104]
+
+vertex 60
+degree: 5
+neighs: [9 18 71 76 101]
+
+vertex 61
+degree: 2
+neighs: [9 104]
+
+vertex 62
+degree: 2
+neighs: [9 71]
+
+vertex 63
+degree: 5
+neighs: [11 27 43 64 65]
+
+vertex 64
+degree: 1
+neighs: [63]
+
+vertex 65
+degree: 6
+neighs: [17 59 63 84 87 103]
+
+vertex 66
+degree: 7
+neighs: [2 17 43 51 72 75 102]
+
+vertex 67
+degree: 4
+neighs: [17 51 76 87]
+
+vertex 68
+degree: 12
+neighs: [14 16 24 26 27 49 51 54 70 73 75 84]
+
+vertex 69
+degree: 2
+neighs: [11 23]
+
+vertex 70
+degree: 12
+neighs: [7 17 32 43 54 55 59 68 75 87 102 105]
+
+vertex 71
+degree: 6
+neighs: [14 35 59 60 62 73]
+
+vertex 72
+degree: 7
+neighs: [17 37 54 59 66 80 105]
+
+vertex 73
+degree: 7
+neighs: [2 45 53 68 71 76 103]
+
+vertex 74
+degree: 1
+neighs: [29]
+
+vertex 75
+degree: 10
+neighs: [7 15 24 54 57 66 68 70 76 77]
+
+vertex 76
+degree: 12
+neighs: [15 24 27 33 48 60 67 73 75 80 92 106]
+
+vertex 77
+degree: 3
+neighs: [17 25 75]
+
+vertex 78
+degree: 3
+neighs: [50 54 79]
+
+vertex 79
+degree: 13
+neighs: [15 20 26 27 29 30 31 42 78 81 83 109 110]
+
+vertex 80
+degree: 8
+neighs: [17 26 27 43 72 76 81 106]
+
+vertex 81
+degree: 6
+neighs: [43 79 80 94 98 104]
+
+vertex 82
+degree: 1
+neighs: [17]
+
+vertex 83
+degree: 5
+neighs: [2 17 43 79 87]
+
+vertex 84
+degree: 6
+neighs: [17 30 33 65 68 104]
+
+vertex 85
+degree: 2
+neighs: [3 17]
+
+vertex 86
+degree: 2
+neighs: [17 31]
+
+vertex 87
+degree: 10
+neighs: [7 12 17 24 27 36 65 67 70 83]
+
+vertex 88
+degree: 6
+neighs: [12 15 17 25 48 106]
+
+vertex 89
+degree: 7
+neighs: [4 9 17 28 53 92 99]
+
+vertex 90
+degree: 1
+neighs: [42]
+
+vertex 91
+degree: 1
+neighs: [1]
+
+vertex 92
+degree: 6
+neighs: [28 30 76 89 95 96]
+
+vertex 93
+degree: 2
+neighs: [2 17]
+
+vertex 94
+degree: 3
+neighs: [20 22 81]
+
+vertex 95
+degree: 1
+neighs: [92]
+
+vertex 96
+degree: 3
+neighs: [27 92 106]
+
+vertex 97
+degree: 1
+neighs: [2]
+
+vertex 98
+degree: 5
+neighs: [2 11 17 43 81]
+
+vertex 99
+degree: 2
+neighs: [43 89]
+
+vertex 100
+degree: 3
+neighs: [32 43 110]
+
+vertex 101
+degree: 2
+neighs: [51 60]
+
+vertex 102
+degree: 10
+neighs: [1 2 12 13 17 44 50 53 66 70]
+
+vertex 103
+degree: 9
+neighs: [17 24 27 31 37 39 65 73 104]
+
+vertex 104
+degree: 21
+neighs: [2 11 12 15 17 24 25 26 31 33 35 38 46 48 50 59 61 81 84 103 105]
+
+vertex 105
+degree: 7
+neighs: [2 14 23 70 72 104 108]
+
+vertex 106
+degree: 6
+neighs: [7 51 76 80 88 96]
+
+vertex 107
+degree: 2
+neighs: [33 34]
+
+vertex 108
+degree: 4
+neighs: [20 24 31 105]
+
+vertex 109
+degree: 1
+neighs: [79]
+
+vertex 110
+degree: 2
+neighs: [79 100]
+
+vertex 111
+degree: 1
+neighs: [2]
+
+Elapsed time: 601.00000 s
+

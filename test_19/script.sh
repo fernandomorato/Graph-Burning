@@ -2,7 +2,7 @@ mkdir logs
 mkdir output
 mkdir solutions
 g++ ../code/gr.cpp -O2 -o gr
-for filename in instances/*.in ; do
+for filename in intances/*.in ; do
 	n_processes=$(ps -U fcpereira | grep -c gr)
 	while [ $n_processes -ge 30 ]
 	do

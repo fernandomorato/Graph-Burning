@@ -1,0 +1,373 @@
+./gr-alpha0.51-seed42-tl600-ipintances/grid3.in-opoutput/results.csv-spsolutions/sol_grid3.in-fix0-fspsolutions/fixed_solution.sol-stpstats/stats_0.txt
+
+n_vertices: 9
+n_edges: 12
+
+vertex 0
+degree: 2
+neighs: [1 3]
+
+vertex 1
+degree: 3
+neighs: [0 2 4]
+
+vertex 2
+degree: 2
+neighs: [1 5]
+
+vertex 3
+degree: 3
+neighs: [0 4 6]
+
+vertex 4
+degree: 4
+neighs: [1 3 5 7]
+
+vertex 5
+degree: 3
+neighs: [2 4 8]
+
+vertex 6
+degree: 2
+neighs: [3 7]
+
+vertex 7
+degree: 3
+neighs: [4 6 8]
+
+vertex 8
+degree: 2
+neighs: [5 7]
+
+./gr-alpha0.51-seed42-tl600-ipintances/grid3.in-opoutput/results.csv-spsolutions/sol_grid3.in-fix0-fspsolutions/fixed_solution.sol-stpstats/stats_1.txt
+
+n_vertices: 9
+n_edges: 12
+
+vertex 0
+degree: 2
+neighs: [1 3]
+
+vertex 1
+degree: 3
+neighs: [0 2 4]
+
+vertex 2
+degree: 2
+neighs: [1 5]
+
+vertex 3
+degree: 3
+neighs: [0 4 6]
+
+vertex 4
+degree: 4
+neighs: [1 3 5 7]
+
+vertex 5
+degree: 3
+neighs: [2 4 8]
+
+vertex 6
+degree: 2
+neighs: [3 7]
+
+vertex 7
+degree: 3
+neighs: [4 6 8]
+
+vertex 8
+degree: 2
+neighs: [5 7]
+
+./gr-alpha0.51-seed42-tl600-ipintances/grid3.in-opoutput/results.csv-spsolutions/sol_grid3.in-fix0-fspsolutions/fixed_solution.sol-stpstats/stats_2.txt
+
+n_vertices: 9
+n_edges: 12
+
+vertex 0
+degree: 2
+neighs: [1 3]
+
+vertex 1
+degree: 3
+neighs: [0 2 4]
+
+vertex 2
+degree: 2
+neighs: [1 5]
+
+vertex 3
+degree: 3
+neighs: [0 4 6]
+
+vertex 4
+degree: 4
+neighs: [1 3 5 7]
+
+vertex 5
+degree: 3
+neighs: [2 4 8]
+
+vertex 6
+degree: 2
+neighs: [3 7]
+
+vertex 7
+degree: 3
+neighs: [4 6 8]
+
+vertex 8
+degree: 2
+neighs: [5 7]
+
+./gr-alpha0.51-seed42-tl600-ipintances/grid3.in-opoutput/results.csv-spsolutions/sol_grid3.in-fix0-fspsolutions/fixed_solution.sol-stpstats/stats_3.txt
+
+n_vertices: 9
+n_edges: 12
+
+vertex 0
+degree: 2
+neighs: [1 3]
+
+vertex 1
+degree: 3
+neighs: [0 2 4]
+
+vertex 2
+degree: 2
+neighs: [1 5]
+
+vertex 3
+degree: 3
+neighs: [0 4 6]
+
+vertex 4
+degree: 4
+neighs: [1 3 5 7]
+
+vertex 5
+degree: 3
+neighs: [2 4 8]
+
+vertex 6
+degree: 2
+neighs: [3 7]
+
+vertex 7
+degree: 3
+neighs: [4 6 8]
+
+vertex 8
+degree: 2
+neighs: [5 7]
+
+./gr-alpha0.51-seed42-tl600-ipintances/grid3.in-opoutput/results.csv-spsolutions/sol_grid3.in-fix0-fspsolutions/fixed_solution.sol-stpstats/stats_4.txt
+
+n_vertices: 9
+n_edges: 12
+
+vertex 0
+degree: 2
+neighs: [1 3]
+
+vertex 1
+degree: 3
+neighs: [0 2 4]
+
+vertex 2
+degree: 2
+neighs: [1 5]
+
+vertex 3
+degree: 3
+neighs: [0 4 6]
+
+vertex 4
+degree: 4
+neighs: [1 3 5 7]
+
+vertex 5
+degree: 3
+neighs: [2 4 8]
+
+vertex 6
+degree: 2
+neighs: [3 7]
+
+vertex 7
+degree: 3
+neighs: [4 6 8]
+
+vertex 8
+degree: 2
+neighs: [5 7]
+
+./gr-alpha0.51-seed42-tl600-ipintances/grid3.in-opoutput/results.csv-spsolutions/sol_grid3.in-fix0-fspsolutions/fixed_solution.sol-stpstats/stats_5.txt
+
+n_vertices: 9
+n_edges: 12
+
+vertex 0
+degree: 2
+neighs: [1 3]
+
+vertex 1
+degree: 3
+neighs: [0 2 4]
+
+vertex 2
+degree: 2
+neighs: [1 5]
+
+vertex 3
+degree: 3
+neighs: [0 4 6]
+
+vertex 4
+degree: 4
+neighs: [1 3 5 7]
+
+vertex 5
+degree: 3
+neighs: [2 4 8]
+
+vertex 6
+degree: 2
+neighs: [3 7]
+
+vertex 7
+degree: 3
+neighs: [4 6 8]
+
+vertex 8
+degree: 2
+neighs: [5 7]
+
+./gr-alpha0.51-seed42-tl600-ipintances/grid3.in-opoutput/results.csv-spsolutions/sol_grid3.in-fix0-fspsolutions/fixed_solution.sol-stpstats/stats_6.txt
+
+n_vertices: 9
+n_edges: 12
+
+vertex 0
+degree: 2
+neighs: [1 3]
+
+vertex 1
+degree: 3
+neighs: [0 2 4]
+
+vertex 2
+degree: 2
+neighs: [1 5]
+
+vertex 3
+degree: 3
+neighs: [0 4 6]
+
+vertex 4
+degree: 4
+neighs: [1 3 5 7]
+
+vertex 5
+degree: 3
+neighs: [2 4 8]
+
+vertex 6
+degree: 2
+neighs: [3 7]
+
+vertex 7
+degree: 3
+neighs: [4 6 8]
+
+vertex 8
+degree: 2
+neighs: [5 7]
+
+./gr-alpha0.51-seed42-tl600-ipintances/grid3.in-opoutput/results.csv-spsolutions/sol_grid3.in-fix0
+
+n_vertices: 9
+n_edges: 12
+
+vertex 0
+degree: 2
+neighs: [1 3]
+
+vertex 1
+degree: 3
+neighs: [0 2 4]
+
+vertex 2
+degree: 2
+neighs: [1 5]
+
+vertex 3
+degree: 3
+neighs: [0 4 6]
+
+vertex 4
+degree: 4
+neighs: [1 3 5 7]
+
+vertex 5
+degree: 3
+neighs: [2 4 8]
+
+vertex 6
+degree: 2
+neighs: [3 7]
+
+vertex 7
+degree: 3
+neighs: [4 6 8]
+
+vertex 8
+degree: 2
+neighs: [5 7]
+
+Elapsed time: 0.00000 s
+
+./gr-alpha0.51-seed42-tl600-ipintances/grid3.in-opoutput/results.csv-spsolutions/sol_grid3.in-fix0
+
+n_vertices: 9
+n_edges: 12
+
+vertex 0
+degree: 2
+neighs: [1 3]
+
+vertex 1
+degree: 3
+neighs: [0 2 4]
+
+vertex 2
+degree: 2
+neighs: [1 5]
+
+vertex 3
+degree: 3
+neighs: [0 4 6]
+
+vertex 4
+degree: 4
+neighs: [1 3 5 7]
+
+vertex 5
+degree: 3
+neighs: [2 4 8]
+
+vertex 6
+degree: 2
+neighs: [3 7]
+
+vertex 7
+degree: 3
+neighs: [4 6 8]
+
+vertex 8
+degree: 2
+neighs: [5 7]
+
+Elapsed time: 601.00000 s
+
