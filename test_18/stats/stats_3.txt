@@ -1,0 +1,11 @@
+Information reguarding vertex 27
+Candidate List information:
+	- Number of candidate lists generated: 1
+	- Number of times 27 was present at the candidate list: 1
+	- Value of vertex in candidate list 0.00000
+	- Candidate list bound -1.00000
+Restricted Candidate List information:
+	- Number of restricted candidate lists generated: 1
+	- Number of times 27 was present at the restricted candidate list: 1
+	- Value of vertex in restricted candidate list 9.00000
+	- Restricted candidate list bound 9.47000

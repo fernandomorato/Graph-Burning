@@ -114,11 +114,10 @@ void calculate_centrality(vector<Vertex*> graph_vertices, vector<double> &centra
 		v[i] = vertices[i]->getId();
 	}
 	set<int> stv(v.begin(), v.end());
-	vector<Vertex*> aux;
+	eigenvector_centrality(centrality, v, edges, rng);
 	for (Vertex *vv : graph_vertices) {
 		if (stv.count(vv->getId())) {
 			vv->setCentrality(centrality[vv->getId()]);
 		}
 	}
-	eigenvector_centrality(centrality, v, edges, rng);
 }

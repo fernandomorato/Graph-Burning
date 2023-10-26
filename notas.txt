@@ -1,0 +1,11 @@
+(-1) - Criar alertas de citações aos principais papers do Graph-Burning [ done ]
+(-0.5) - Ler os novos papers adquiridos em (-1) (em paralelo com 1, 2 e 3)
+0 - Triple check no algoritmo para não ter mais bugs!!!!
+1 - Refazer os testes com todos os grids usando essa versão da heurística
+2 - Do grid3 até o grid12, também não alcançamos a solução ótima?
+	- Se sim: então verificar se é o mesmo problema do grid13, isto é, o vertice desejado está muito longe de ter a centralidade minima para fazer parte da CL
+	- Se não: verificar também para as grids de 14 a 30
+3 - E se trocarmos eigenvector para betweeness?
+	- Se a betweeness nao funcionar, pensar em outra estrategia
+		Possiveis opcoes:
+			- Matheuristic com relaxaçao linear ou outras coisas

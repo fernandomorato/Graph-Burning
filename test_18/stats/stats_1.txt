@@ -1,0 +1,11 @@
+Information reguarding vertex 106
+Candidate List information:
+	- Number of candidate lists generated: 1
+	- Number of times 106 was present at the candidate list: 0
+	- Value of vertex in candidate list 0.00818
+	- Candidate list bound 0.24362
+Restricted Candidate List information:
+	- Number of restricted candidate lists generated: 1
+	- Number of times 106 was present at the restricted candidate list: 0
+	- Value of vertex in restricted candidate list 0.00000
+	- Restricted candidate list bound 9.98000
